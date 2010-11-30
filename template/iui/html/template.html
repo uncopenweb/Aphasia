@@ -25,21 +25,6 @@
   
   var tabs = [
         {
-            "name": "",
-            "nameTag":"",
-            "image": "",
-            "audioImages": [
-                {
-                    "pic":"",
-                    "word":""
-                },
-                {
-                    "pic":"",
-                    "word":""
-                }
-            ]
-        },
-        {
             "name": "#school",
             "nameTag":"school",
             "image": "school.jpg",
@@ -126,6 +111,8 @@
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             createTabs();
+            var a = dojo.create("a",null,toolbar);
+            var span = dojo.create("span",{innerHTML:" "},a);
             dojo.forEach(tabs, function(tab) {
                 var a = dojo.create("a",null,toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
