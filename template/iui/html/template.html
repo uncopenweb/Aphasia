@@ -25,7 +25,7 @@
   
   var tabs = [
         {
-            "name": "#school",
+            "name": "school",
             "nameTag":"school",
             "image": "school.jpg",
             "audioImages": [
@@ -40,7 +40,7 @@
             ]
         },
         {
-            "name": "#family",
+            "name": "family",
             "nameTag":"family",
             "image": "family.jpg",
             "audioImages": [
@@ -55,7 +55,7 @@
             ]
         },  
         {
-            "name": "#career",
+            "name": "career",
             "nameTag":"career",
             "image": "career.jpg",
             "audioImages": [
@@ -70,7 +70,7 @@
             ]
         }, 
         {
-            "name": "#animal",
+            "name": "animal",
             "nameTag":"animal",
             "image": "animals.jpg",
             "audioImages": [
@@ -85,7 +85,7 @@
             ]
         }, 
         {
-            "name": "#plant",
+            "name": "plant",
             "nameTag":"plant",
             "image": "plant.jpg",
             "audioImages": [
@@ -113,13 +113,7 @@
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    alert(a.href);
-                    if (a.href=="http://gb.cs.unc.edu/local/Dropbox/Wai/template/iui/html/template.html"+tab.name) {
-                        a.href="http://gb.cs.unc.edu/local/Dropbox/Wai/template/iui/html/template.html";
-                    }
-                    else {
                         a.href=tab.name;
-                    }
                 });
             });
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
