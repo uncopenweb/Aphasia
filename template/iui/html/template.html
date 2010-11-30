@@ -37,8 +37,7 @@
                     "pic":"socialStudies.gif",
                     "word":"social studies"
                 }
-            ],
-            "disable":true
+            ]
         },
         {
             "name": "#family",
@@ -53,8 +52,7 @@
                     "pic":"father.jpg",
                     "word":"father"
                 }
-            ],
-            "disable":true
+            ]
         },  
         {
             "name": "#career",
@@ -69,8 +67,7 @@
                     "pic":"janitor.gif",
                     "word":"janitor"
                 }
-            ],
-            "disable":true
+            ]
         }, 
         {
             "name": "#animal",
@@ -85,8 +82,7 @@
                     "pic":"frog.jpg",
                     "word":"frog"
                 }
-            ],
-            "disable":true
+            ]
         }, 
         {
             "name": "#plant",
@@ -101,8 +97,7 @@
                     "pic":"pine.jpg",
                     "word":"pine"
                 }
-            ],
-            "disable":true
+            ]
         }   
     ]
     
@@ -125,8 +120,8 @@
                         a.setAttribute("href",tab.name);
                     }
                     else {
-                        if (a.href!=null) {
-                            a.removeAttibute("href");
+                        if (a.href!="javascript://") {
+                            a.href = "javascript://";
                         }
                     }
                 });
