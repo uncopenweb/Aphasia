@@ -116,7 +116,7 @@
                     if (a.href=="http://gb.cs.unc.edu/local/Dropbox/Wai/template/iui/html/template.html"+tab.name) {
                         a.href = "javascript://";
                     }
-                    else {
+                    else if (a.href = "javascript://") {
                         a.href=tab.name;
                     }
                 });
