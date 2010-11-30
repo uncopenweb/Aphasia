@@ -113,6 +113,7 @@
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
+                    alert(a.href);
                     if (a.href==tab.name) {
                         alert(a.href);
                         a.href = "javascript://";
