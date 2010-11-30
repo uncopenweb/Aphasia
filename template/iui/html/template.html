@@ -105,6 +105,8 @@
             "disable":true
         }   
     ]
+    
+    var currentTab = null;
   
         function startUp() {
             uow.getAudio().addCallback(start);
@@ -118,13 +120,14 @@
                 var a = dojo.create("a",null,toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    if (tab.disable) {
-                        a.setAttribute('href', tab.name);
-                        tab.disable = false;
+                    if (currentTab != a) {
+                        currentTab = a;
+                        a.setAttribute("href",tab.name);
                     }
                     else {
-                        a.removeAttribute('href');
-                        tab.disable = true;
+                        if (a.href!=null) {
+                            a.removeAttibute("href");
+                        }
                     }
                 });
             });
