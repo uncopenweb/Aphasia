@@ -115,7 +115,7 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (a.href=="http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/template.html"+tab.name) {
                         alert(a.href);
-                        a.removeAttribute("href");
+                        a.href = "javascript://";
                     }
                     else {
                         a.href=tab.name;
