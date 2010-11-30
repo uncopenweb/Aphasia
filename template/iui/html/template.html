@@ -113,10 +113,11 @@
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
+                    alert(a.href);
                     if (a.href=="http://gb.cs.unc.edu/local/Dropbox/Wai/template/iui/html/template.html"+tab.name) {
-                        a.href = "javascript://";
+                        a.removeAttribute("href");
                     }
-                    else if (a.href = "javascript://") {
+                    else {
                         a.href=tab.name;
                     }
                 });
