@@ -112,7 +112,7 @@
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             createTabs();
             var a = dojo.create("a",null,toolbar);
-            var span = dojo.create("span",{innerHTML:" "},a);
+            var img = dojo.create("img",{src:""},a);
             dojo.forEach(tabs, function(tab) {
                 var a = dojo.create("a",null,toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
