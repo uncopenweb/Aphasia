@@ -126,7 +126,6 @@
                 var a = dojo.create("a",{href:"javascript://"},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    alert(currentTab.href);
                     if (currentTab != a) {
                         currentTab = a;
                         a.setAttribute("href",tab.name);
@@ -136,6 +135,7 @@
                             a.href = "javascript://";
                         }
                     }
+                    alert(currentTab.href);
                 });
             });
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
