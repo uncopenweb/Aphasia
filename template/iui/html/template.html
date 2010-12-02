@@ -117,6 +117,7 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != a) {
                         currentTab = a;
+                        currentTab.href = tab.name;
                     }
                     else {
                         a.href = "javascript://";
