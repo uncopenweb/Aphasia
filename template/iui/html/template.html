@@ -126,9 +126,10 @@
                 var a = dojo.create("a",{href:"javascript://"},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
+                    alert(currentTab.href);
                     if (currentTab != a) {
                         currentTab = a;
-                        currentTab.setAttribute("href",tab.name);
+                        a.setAttribute("href",tab.name);
                     }
                     else {
                         if (a.href!="javascript://") {
