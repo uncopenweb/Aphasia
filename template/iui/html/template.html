@@ -137,6 +137,7 @@
                         dojo.connect(a,'onmouseup',function() {
                             self.audio.stop({channel:"sound"});
                             self.audio.say({text:stuff.word, channel:"sound"});
+                            alert("hello");
                         });
                 });
             });
