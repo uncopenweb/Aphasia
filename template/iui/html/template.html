@@ -123,10 +123,10 @@
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             createTabs();
             dojo.forEach(tabs, function(tab) {
-                var a = dojo.create("a",{href:"javascript://"},toolbar);
+                var a = dojo.create("a",{href:""},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    if (currentTab != a) {
+                    if (currentTab==null || currentTab != a) {
                         currentTab = a;
                         a.setAttribute("href",tab.name);
                     }
