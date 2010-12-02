@@ -118,6 +118,7 @@
                     if (currentTab != a) {
                         currentTab = a;
                         currentTab.href = tab.name;
+                        dojo.byId(tab.nameTag).selected = true;
                     }
                     else {
                         a.href = "javascript://";
