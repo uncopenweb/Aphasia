@@ -111,7 +111,7 @@
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             createTabs(audio);
-            audio.say({text:"hello",channel:"sound"});
+            audio.play({url:"/school",channel:"sound"});
             dojo.forEach(tabs, function(tab) {
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
