@@ -135,6 +135,7 @@
                     var img = dojo.create("img",{src:stuff.pic, height:"20%", width:"25%"},a);
                         var self = this;
                         dojo.connect(a,'onmouseup',function() {
+                            alert("hello!");
                             self.audio.stop({channel:"sound"});
                             self.audio.say({text:stuff.word, channel:"sound"});                            
                         });
