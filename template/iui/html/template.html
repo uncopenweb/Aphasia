@@ -111,7 +111,6 @@
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             createTabs(audio);
-            audio.play({url:"school",channel:"sound"});
             dojo.forEach(tabs, function(tab) {
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
@@ -134,14 +133,15 @@
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var a = dojo.create("a",{href:"javascript:;"},div);
                     var img = dojo.create("img",{src:stuff.pic, height:"20%", width:"25%"},a);
-                        //var self = this;
-                        dojo.connect(a,'onmouseup',function() {
-                            audio.stop({channel:"sound"});
-                            audio.say({text:stuff.word, channel:"sound"});                            
-                        });
+                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                 });
             });
         }
+        function playSound(audio, word) {
+            alert("hello");
+            audio.stop({channel:"sound"});
+            audio.say({text:word, channel:"sound"});                            
+       }
         dojo.addOnLoad(startUp);
   </script>
 </head>
