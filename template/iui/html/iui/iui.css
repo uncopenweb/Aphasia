@@ -81,6 +81,10 @@ table {
     border-collapse: collapse;
 }
 
+td {
+    border:1px solid #98bf21;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
