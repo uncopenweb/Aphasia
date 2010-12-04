@@ -124,7 +124,8 @@
                         a.href = "javascript://";
                     }
                 });
-                var leftTable = dojo.create("table", {border:"1", selected:"true"},dojo.body());
+            });
+            var leftTable = dojo.create("table", {border:"1", selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",null,tr);
                 var tr = dojo.create("tr",null,leftTable);
@@ -134,8 +135,8 @@
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",null,tr);
                 
-                var rightTable = dojo.create("table",{className:"rightColumn"},dojo.body());
-            });
+            var rightTable = dojo.create("table",{className:"rightColumn"},dojo.body());
+            
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
         }
         function createTabs(audio) {
