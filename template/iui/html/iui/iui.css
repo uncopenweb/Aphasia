@@ -21,7 +21,7 @@ body > *:not(.toolbar) {
     left: 0;
     top: 70px;
     width: 100%;
-    height: auto;
+    height: 280px;
     min-height: 280px;
     -webkit-transition-duration: 300ms;
     -webkit-transition-property: -webkit-transform;
