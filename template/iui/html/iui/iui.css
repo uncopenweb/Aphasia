@@ -71,6 +71,16 @@ body >.menu{
     position: fixed;
 }
 
+table {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 55px;
+    height:276px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
