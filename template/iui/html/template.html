@@ -128,14 +128,14 @@
             var leftDiv = dojo.create("div",{selected:"true"}, dojo.body());
             var leftTable = dojo.create("table", {selected:"true"},leftDiv);
             console.log(leftTable);
-                var tr = dojo.create("tr",{height:"45px"},leftTable);
-                var td = dojo.create("td",{height:"45px"},tr);
-                var tr = dojo.create("tr",{height:"45px"},leftTable);
-                var td = dojo.create("td",{height:"45px"},tr);
-                var tr = dojo.create("tr",{height:"45px"},leftTable);
-                var td = dojo.create("td",{height:"45px"},tr);
-                var tr = dojo.create("tr",{height:"45px"},leftTable);
-                var td = dojo.create("td",{height:"45px"},tr);
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{id:"left"},tr);
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{id:"left"},tr);
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{id:"left"},tr);
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{id:"left"},tr);
                 
             var rightTable = dojo.create("table",{className:"rightColumn"},dojo.body());
             
