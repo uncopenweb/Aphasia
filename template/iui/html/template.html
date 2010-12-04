@@ -137,7 +137,11 @@
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{style:{"height":"56px"}},tr);
                 
-            var rightTable = dojo.create("table",{className:"rightColumn"},dojo.body());
+            var rightTable = dojo.create("table",{style:{"align":"right"},selected:"true"},dojo.body());
+            var tr = dojo.create("tr",null,leftTable);
+            var td = dojo.create("td",{style:{"height":"111px"}},tr);
+            var tr = dojo.create("tr",null,leftTable);
+            var td = dojo.create("td",{style:{"height":"111px"}},tr);
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
         }
