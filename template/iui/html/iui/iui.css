@@ -71,7 +71,7 @@ body >.menu{
     position: fixed;
 }
 
-table {
+/* table {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -84,7 +84,7 @@ table {
 td {
     border-color: #98bf21;
     border-bottom: 1px #6699CC solid;
-}
+} */
 
 .toolbar > h1 {
     position: absolute;
