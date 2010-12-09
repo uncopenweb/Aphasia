@@ -85,7 +85,7 @@ td {
 }
 
 img {
-    white-space: pre-wrap;
+    margin: 10px 10px 10px 10px;
 }
 
 .toolbar > h1 {
