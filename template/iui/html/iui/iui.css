@@ -84,6 +84,10 @@ td {
     width: 55px;
 }
 
+img {
+    white-space: pre-wrap;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
