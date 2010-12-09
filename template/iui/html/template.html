@@ -130,8 +130,9 @@
                 });
             });
             
-            var leftDiv = dojo.create("div",null,dojo.body());
-            var leftTable = dojo.create("table",{style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},leftDiv);
+            var leftTable = dojo.create("table",{style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{style:{"height":"55px"}},tr);
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{style:{"height":"55px"}},tr);
             
