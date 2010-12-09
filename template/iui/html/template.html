@@ -115,6 +115,7 @@
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != a) {
+                        alert(currentTab.id);
                         currentTab = a;
                         a.href = tab.name;
                         document.getElementById(tab.nameTag).setAttribute("selected","true");
