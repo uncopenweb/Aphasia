@@ -130,7 +130,7 @@
                 });
             });
             
-            var leftDiv = dojo.create("div",{selected:"true"},dojo.body());
+            var leftDiv = dojo.create("div",{style:{"float":"left"},selected:"true"},dojo.body());
             var leftTable = dojo.create("table",{style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},leftDiv);
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
@@ -141,7 +141,7 @@
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
             
-            var rightDiv = dojo.create("div",{selected:"true"},dojo.body());
+            var rightDiv = dojo.create("div",{style:{"float":"left"},selected:"true"},dojo.body());
             var rightTable = dojo.create("table",{style:{"position":"absolute","width":"55px","height":"225px","left":"262px","top":"70px"},selected:"true"},rightDiv);
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{style:{"height":"112px"}, innerHTML:"hello"},tr);
