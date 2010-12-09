@@ -82,7 +82,7 @@ table {
     border-collapse: collapse;
 }
 
-td {
+tr, td {
     border-color: #98bf21;
     border-width: 1px;
 }
