@@ -130,7 +130,8 @@
                 });
             });
             
-            var leftTable = dojo.create("table",{style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
+            var leftDiv = dojo.create("div",null,dojo.body());
+            var leftTable = dojo.create("table",{style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},leftDiv);
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{style:{"height":"12px"}},tr);
                 tr = dojo.create("tr",null,leftTable);
