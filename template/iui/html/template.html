@@ -114,11 +114,13 @@
                 var a = dojo.create("a",{href:tab.name},toolbar);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    if (currentTab != a) {
-                        currentTab = a;
-                        alert(currentTab.id);
+                    if (currentTab != tab) {
+                        if (currentTab!=null) {
+                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                        }
+                        currentTab = tab;
                         a.href = tab.name;
-                        document.getElementById(tab.nameTag).setAttribute("selected","true");
+                        document.getElementById(currentTab.nameTag).setAttribute("selected","true");
                     }
                     else {
                         a.href = "javascript://";
