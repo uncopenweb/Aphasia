@@ -132,9 +132,13 @@
             
             var leftTable = dojo.create("table",{style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",{selected:"true"},leftTable);
-                var td = dojo.create("td",{style:{"height":"55px"}, selected:"true"},tr);
+                var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
                 var tr = dojo.create("tr",{selected:"true"},leftTable);
-                var td = dojo.create("td",{style:{"height":"55px"}, selected:"true"},tr);
+                var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
+                var tr = dojo.create("tr",{selected:"true"},leftTable);
+                var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
+                var tr = dojo.create("tr",{selected:"true"},leftTable);
+                var td = dojo.create("td",{style:{"height":"55px"}, innerHTML:"hello"},tr);
             
             var rightDiv = dojo.create("div",{style:{"float":"left"},selected:"true"},dojo.body());
             var rightTable = dojo.create("table",{style:{"position":"absolute","width":100,"height":30,"left":"100px","top":100},selected:"true"},dojo.body());
