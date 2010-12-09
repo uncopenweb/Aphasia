@@ -82,9 +82,9 @@ table {
     border-collapse: collapse;
 }
 
-tr, td {
+td {
     border-color: #98bf21;
-    border-width: 1px;
+    border-bottom: 1px #6699CC solid;
 }
 
 .toolbar > h1 {
