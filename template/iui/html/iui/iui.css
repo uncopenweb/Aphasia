@@ -77,11 +77,11 @@ table {
     top: 70px;
     border: 1px solid #98bf21;
 }
-
-/*td {
+td {
     border-color: #98bf21;
     border-bottom: 1px #6699CC solid;
-} */
+    background-color: #9999CC
+}
 
 .toolbar > h1 {
     position: absolute;
