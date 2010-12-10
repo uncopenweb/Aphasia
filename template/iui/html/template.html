@@ -196,8 +196,10 @@
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"55px","height":"215px","left":"262px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"107px"}, innerHTML:"Display Text Button"},tr);
+                dojo.connect(td,'onmouseup',dojo.hitch(this,display,captions));
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"108px"}, innerHTML:"Keyboard Button"},tr);
+                dojo.connect(td,'onmouseup',dojo.hitch(this,keyboard));
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
     
@@ -241,10 +243,20 @@
                 });
             });
         }
+        
         function playSound(audio, word) {
             audio.stop({channel:"sound"});
             audio.say({text:word, channel:"sound"});                            
        }
+       
+       function display(captions) {
+       
+       }
+       
+       function keyboard() {
+       
+       }
+       
         dojo.addOnLoad(startUp);
   </script>
 </head>
