@@ -117,7 +117,7 @@
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"font-size": "75%","width":"99.9%","height":"70px"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr"},imgTable);
             dojo.forEach(topTabs, function(tab) {
-                var td = dojo.create("td",{id:"#tTd",align:"center",style:{"width":"33.3%"}}, tr);
+                var td = dojo.create("td",{id:"#tTd",align:"center",style:{"border":"1px solid black","width":"33.3%"}}, tr);
                 var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true"},td);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
