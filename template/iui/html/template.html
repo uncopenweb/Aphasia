@@ -136,18 +136,18 @@
                 });
             });
             
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'55px',"top":'70px',"height":'200px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"55px"}, innerHTML:"Please give me a moment to respond."},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}, innerHTML:"Please give me a moment to respond."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"56px"}, innerHTML:"I don't understand"},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}, innerHTML:"I don't understand"},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"I don't understand"));
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"56px"}, innerHTML:"Can you repeat that, please?"},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}, innerHTML:"Can you repeat that, please?"},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Can you repeat that, please?"));
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"55px"},innerHTML:"I need help."},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"},innerHTML:"I need help."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"I need help"));
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"55px","height":"225px","left":"262px","top":"70px"},selected:"true"},dojo.body());
