@@ -115,7 +115,7 @@
                 var imgDiv = dojo.create("div",{style:{"width":"12px"}},toolbar);
                 var a = dojo.create("a",{href:tab.name},imgDiv);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
-                var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},imgDiv);
+                //var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},imgDiv);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
