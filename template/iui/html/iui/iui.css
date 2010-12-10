@@ -71,6 +71,10 @@ body >.menu{
     position: fixed;
 }
 
+#tTable, #tTd, #tTr {
+    border: 1px solid black;
+}
+
 #sideTable {
     width: 55px;
     height:200px;
