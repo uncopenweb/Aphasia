@@ -73,6 +73,7 @@ body >.menu{
 
 #tTable, #tTd, #tTr {
     border: 1px solid black;
+    border-collapse:collapse;
 }
 
 #sideTable {
