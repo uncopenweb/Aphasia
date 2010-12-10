@@ -136,7 +136,7 @@
                 });
             });
             
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"position":"absolute","width":'55px',"top":'70px',"height":'200px'},selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"position":"fixed","width":'55px',"top":'70px',"height":'200px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}, innerHTML:"Please give me a moment to respond."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
