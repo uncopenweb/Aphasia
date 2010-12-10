@@ -136,7 +136,7 @@
                 });
             });
             
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"55px"}, innerHTML:"Please give me a moment to respond."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
@@ -150,7 +150,7 @@
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"55px"},innerHTML:"I need help."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"I need help"));
             
-            var rightTable = dojo.create("table",{id:"sideTable",style:{"position":"absolute","width":"55px","height":"225px","left":"262px","top":"70px"},selected:"true"},dojo.body());
+            var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"55px","height":"225px","left":"262px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"112px"}, innerHTML:"Display Text Button"},tr);
             var tr = dojo.create("tr",null,rightTable);
@@ -158,7 +158,7 @@
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
     
-            var imgTable2 = dojo.create("table",{selected:"true",style:{"font-size": "60%","width":"99.9%","height":"70px", "top":"245px"}},footer);
+            var imgTable2 = dojo.create("table",{selected:"true",style:{"font-size": "60%","width":"99.9%","height":"70px", "top":"235px"}},footer);
             var tr = dojo.create("tr",null,imgTable2);
             dojo.forEach(bottomTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"33.3%"}}, tr);
