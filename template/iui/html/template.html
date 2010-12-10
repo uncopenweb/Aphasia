@@ -113,8 +113,8 @@
             createTabs(audio);
             
             var imgTable = dojo.create("table",{},toolbar);
+            var tr = dojo.create("tr",{style:{"width":"12px"}},imgTable);
             dojo.forEach(tabs, function(tab) {
-                var tr = dojo.create("tr",{style:{"width":"12px"}},imgTable);
                 var td = dojo.create("td",null, tr);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
