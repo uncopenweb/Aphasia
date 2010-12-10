@@ -111,11 +111,15 @@
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
             createTabs(audio);
+            
+            var imgTable = dojo.create("table",{},toolbar);
             dojo.forEach(tabs, function(tab) {
-                var imgDiv = dojo.create("div",{style:{"width":"12px"}},toolbar);
-                var a = dojo.create("a",{href:tab.name},imgDiv);
+                var tr = dojo.create("tr",{style:{"width":"12px"}},imgTable);
+                var td = dojo.create("td",null, tr);
+                var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
-                //var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},imgDiv);
+                var td = dojo.create("td",null,tr);
+                var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},td);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
