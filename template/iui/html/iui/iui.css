@@ -68,7 +68,7 @@ body >.menu{
     padding: 0 10px 10px 10px;
     bottom:0px;
     margin-top: 235px;
-    position: absolute;
+    position: fixed;
 }
 
 #sideTable {
