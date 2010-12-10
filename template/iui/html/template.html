@@ -133,7 +133,6 @@
             var leftTable = dojo.create("table",{style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"55px"}},tr);
-                var a = dojo.create("a",{href:"javascript:;", innerHTML:"Please give me a moment to respond."},td);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"56px"}},tr);
