@@ -119,8 +119,8 @@
             dojo.forEach(topTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"118.5px"}}, tr);
                 var a = dojo.create("a",{href:tab.name},td);
-                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},td);
+                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
@@ -163,8 +163,8 @@
             dojo.forEach(bottomTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"118.5px"}}, tr);
                 var a = dojo.create("a",{href:tab.name},td);
-                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 var caption = dojo.create("caption",{innerHTML:tab.nameTag, selected:"true"},td);
+                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
