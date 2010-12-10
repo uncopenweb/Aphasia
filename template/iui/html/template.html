@@ -229,7 +229,7 @@
             dojo.forEach(topTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"200px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
-                    var imgDiv = dojo.create("div",{style:{"width":"66px","height":"66px","float":"left"}},div);
+                    var imgDiv = dojo.create("div",{style:{"width":"50px","height":"50px","float":"left"}},div);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"20%", width:"25%"},a);
                     var caption = dojo.create("caption",{style:{"align":"center","font-size": "70%"}, innerHTML:stuff.word, selected:"true"},imgDiv);
