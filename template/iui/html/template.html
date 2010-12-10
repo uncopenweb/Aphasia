@@ -114,7 +114,7 @@
             
             createTabs(audio);
             
-            var imgTable = dojo.create("table",{selected:"true",style:{"position":"absolute","width":"356px","height":"70px"}},toolbar);
+            var imgTable = dojo.create("table",{selected:"true",style:{"position":"absolute","width":"100%","height":"70px"}},toolbar);
             var tr = dojo.create("tr",null,imgTable);
             dojo.forEach(topTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"118.5px"}}, tr);
@@ -158,7 +158,7 @@
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
     
-            var imgTable2 = dojo.create("table",{selected:"true",style:{"width":"356px","height":"70px", "top":"245px"}},footer);
+            var imgTable2 = dojo.create("table",{selected:"true",style:{"width":"100%","height":"70px", "top":"245px"}},footer);
             var tr = dojo.create("tr",null,imgTable2);
             dojo.forEach(bottomTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"118.5px"}}, tr);
