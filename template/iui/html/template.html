@@ -118,7 +118,7 @@
                 var td = dojo.create("td",{"width":"50px"}, tr);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
-                var caption = dojo.create("td",{className:"caption",{style:{"align":"top"},innerHTML:tab.nameTag, selected:"true"},td);
+                var caption = dojo.create("caption",{{align:"top",innerHTML:tab.nameTag, selected:"true"},td);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
