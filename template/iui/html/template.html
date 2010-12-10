@@ -133,18 +133,28 @@
             var leftTable = dojo.create("table",{style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"55px"}, innerHTML:"Please give me a moment to respond."},tr);
+                var a = dojo.create("a",{href:"javascript:;"},td);
+                    dojo.connect(a, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"56px"}, innerHTML:"I don't understand"},tr);
+                var a = dojo.create("a",{href:"javascript:;"},td);
+                    dojo.connect(a, 'onmouseup',dojo.hitch(this,playSound,audio,"I don't understand"));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"56px"}, innerHTML:"Can you repeat that, please?"},tr);
+                var a = dojo.create("a",{href:"javascript:;"},td);
+                    dojo.connect(a, 'onmouseup',dojo.hitch(this,playSound,audio,"Can you repeat that, please?"));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"td1",style:{"height":"55px"}, innerHTML:"I need help."},tr);
+                var a = dojo.create("a",{href:"javascript:;"},td);
+                    dojo.connect(a, 'onmouseup',dojo.hitch(this,playSound,audio,"I need help"));
             
             var rightTable = dojo.create("table",{style:{"position":"absolute","width":"55px","height":"225px","left":"262px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"td2",style:{"height":"112px"}, innerHTML:"Display Text Button"},tr);
+            var a = dojo.create("a",{href:"javascript:;"}, td);
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"td2",style:{"height":"112px"}, innerHTML:"Keyboard Button"},tr);
+            var a = dojo.create("a",{href:"javascript:;"}, td);
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
         }
