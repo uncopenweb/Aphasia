@@ -115,6 +115,7 @@
                 var imgDiv = dojo.create("div",null,toolbar);
                 var a = dojo.create("a",{href:tab.name},imgDiv);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
+                var caption = dojo.create("div",{innerHTML:tab.nameTag},imgDiv);
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
@@ -126,10 +127,8 @@
                     }
                     else {
                         a.href = "javascript://";
-                        //document.getElementById(tab.nameTag).setAttribute("selected","false");
                     }
                 });
-                var caption = dojo.create("div",{innerHTML:tab.nameTag},imgDiv);
             });
             
             var leftTable = dojo.create("table",{style:{"position":"absolute","width":'55px',"top":'70px',"height":'225px'},selected:"true"},dojo.body());
