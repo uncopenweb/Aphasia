@@ -113,9 +113,9 @@
             createTabs(audio);
             
             var imgTable = dojo.create("table",{selected:"true"},toolbar);
-            var tr = dojo.create("tr",{style:{"width":"200px"}},imgTable);
+            var tr = dojo.create("tr",{style:{"width":"160px"}},imgTable);
             dojo.forEach(tabs, function(tab) {
-                var td = dojo.create("td",{"width":"50px"}, tr);
+                var td = dojo.create("td",{"width":"40px"}, tr);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"51px", width:"55px"}, a);
                 var caption = dojo.create("caption",{align:"top",innerHTML:tab.nameTag, selected:"true"},td);
