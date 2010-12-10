@@ -24,6 +24,7 @@
   <script type = "text/javascript">
   
   var tabs = [
+    "topTabs": [
         {
             "name": "#school",
             "nameTag":"school",
@@ -53,7 +54,9 @@
                     "word":"father"
                 }
             ]
-        },
+        }
+    ],
+    "bottomTabs": [
         {
             "name": "#career",
             "nameTag":"career",
@@ -100,6 +103,7 @@
             ]
         }   
     ]
+]
     
     var currentTab = null;
   
@@ -114,7 +118,7 @@
             
             var imgTable = dojo.create("table",{selected:"true",style:{"position":"absolute","width":"356px","height":"70px"}},toolbar);
             var tr = dojo.create("tr",null,imgTable);
-            dojo.forEach(tabs, function(tab) {
+            dojo.forEach(tabs.topTabs, function(tab) {
                 var td = dojo.create("td",{style:{"width":"118.5px"}}, tr);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
