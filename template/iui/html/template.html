@@ -159,7 +159,7 @@
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
         }
         function createTabs(audio) {
-            dojo.forEach(tabs, function(tab) {
+            dojo.forEach(topTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"200px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var a = dojo.create("a",{href:"javascript:;"},div);
