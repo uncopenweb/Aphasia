@@ -118,7 +118,7 @@
             var tr = dojo.create("tr",null,imgTable);
             dojo.forEach(topTabs, function(tab) {
                 var td = dojo.create("td",{align:"center",style:{"width":"33.3%"}}, tr);
-                var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", align:"center"},td);
+                var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true"},td);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
