@@ -71,13 +71,13 @@ body >.menu{
     position: fixed;
 }
 
-table {
+#sideTable {
     width: 55px;
     height:225px;
     top: 70px;
     border: 1px solid #98bf21;
 }
-#td1 {
+#sidetd1 {
     border-color: #98bf21;
     border-bottom: 1px #6699CC solid;
     background-color: green;
@@ -85,7 +85,7 @@ table {
     font-size: 60%;
 }
 
-#td2 {
+#sidetd2 {
     border-color: #98bf21;
     border-bottom: 1px #6699CC solid;
     background-color: orange;
