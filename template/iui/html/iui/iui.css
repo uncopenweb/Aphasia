@@ -302,7 +302,7 @@ body > .panel {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding: 10px;
+    padding: 5px;
 }
 
 .panel > ul, 
