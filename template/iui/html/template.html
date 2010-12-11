@@ -255,11 +255,13 @@
        function display() {
           if (currentTab!=null) {
             for (var i=0; i<document.getElementsByTagName("div").length; i++) {
-                if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "block"){
-                    document.getElementsByTagName("div").item(i).style.display="none";
-                }
-                else if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "none"){
-                    document.getElementsByTagName("div").item(i).style.display="block";
+                if(document.getElementsById(div).item(i).parentNode.parentNode.id == currentTab.nameTag) {
+                    if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "block"){
+                        document.getElementsByTagName("div").item(i).style.display="none";
+                    }
+                    else if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "none"){
+                        document.getElementsByTagName("div").item(i).style.display="block";
+                    }
                 }
             }
          }
