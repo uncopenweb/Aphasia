@@ -253,12 +253,13 @@
        }
        
        function display() {
-            for (i=0; i<document.getElementsByTagName("mainCap").length; i++) {
-                if (document.getElementsByTagName("mainCap").item(i).style.display = "block"){
-                    document.getElementsByTagName("mainCap").item(i).style.display="none";
+            for (i=0; i<document.getElementById("mainCap").length; i++) {
+                alert(document.getElementById.item(i));
+                if (document.getElementById("mainCap").item(i).style.display = "block"){
+                    document.getElementById("mainCap").item(i).style.display="none";
                 }
                 else {
-                    document.getElementsByTagName("mainCap").item(i).style.display="block";
+                    document.getElementById("mainCap").item(i).style.display="block";
                 }
             }
        }
