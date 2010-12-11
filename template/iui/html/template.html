@@ -230,7 +230,7 @@
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"68px","height":"72px","float":"left"}},div);
-                    var caption = dojo.create("div",{className:"panel", style:{"font-size": "70%"}, innerHTML:stuff.word, selected:"true"},imgDiv);
+                    var caption = dojo.create("div",{className:"panel", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
