@@ -167,11 +167,11 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
-                            document.getElementsByClass(currentTab.nameTag).setAttribute("selected","false");
+                            document.getElementsByClassName(currentTab.nameTag).setAttribute("selected","false");
                         }
                         currentTab = tab;
                         a.href = tab.name;
-                        document.getElementsByClass(currentTab.nameTag).setAttribute("selected","true");
+                        document.getElementsByClassName(currentTab.nameTag).setAttribute("selected","true");
                     }
                     else {
                         a.href = "javascript://";
