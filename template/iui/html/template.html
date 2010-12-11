@@ -253,13 +253,14 @@
        }
        
        function display() {
-            for (var i=0; i<document.getElementsByTagname("div").length; i++) {
-                alert(document.getElementsByTagname("div").item(i));
-                if (document.getElementsByTagname("div").item(i).style.display = "block"){
-                    document.getElementsByTagname("div").item(i).style.display="none";
+            alert(document.getElementsByTagName("div").length);
+            for (var i=0; i<document.getElementsByTagName("div").length; i++) {
+                alert(document.getElementsByTagName("div").item(i));
+                if (document.getElementsByTagName("div").item(i).style.display = "block"){
+                    document.getElementsByTagName("div").item(i).style.display="none";
                 }
                 else {
-                    document.getElementsByTagname("div").item(i).style.display="block";
+                    document.getElementsByTagName("div").item(i).style.display="block";
                 }
             }
        }
