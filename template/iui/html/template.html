@@ -253,12 +253,11 @@
        }
        
        function display() {
-            alert(document.getElementsByTagName("div").length);
             for (var i=0; i<document.getElementsByTagName("div").length; i++) {
                 if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "block"){
                     document.getElementsByTagName("div").item(i).style.display="none";
                 }
-                else {
+                else if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "none"){
                     document.getElementsByTagName("div").item(i).style.display="block";
                 }
             }
