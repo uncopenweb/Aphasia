@@ -261,11 +261,12 @@
             for (var i=0; i<document.getElementsByTagName("div").length; i++) {
                 if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "block"){
                     document.getElementsByTagName("div").item(i).style.display="none";
-                    document.getElementsByTagName("div").item(i).id="mainCap";
                 }
                 else if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "none"){
                     document.getElementsByTagName("div").item(i).style.display="block";
-                    document.getElementsByTagName("div").item(i).id="mainCap";
+                }
+                else if (document.getElementByTagName("div").item(i).id!="mainCap") {
+                    document.getElementByTagName("div").item(i).id = document.getElementByTagName("div").item(i).id;
                 }
             }
        }
