@@ -167,7 +167,9 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
-                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                            if (document.getElementById(currentTab.nameTag)!=null) {
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                            }
                         }
                         currentTab = tab;
                         a.href = tab.name;
