@@ -253,7 +253,9 @@
        }
        
        function display() {
-            dojo.byId("mainCap").style.display="none";
+            dojo.forEach(document.getElementById("mainCap"), function(caption) {
+                caption.style.display="none";
+            }
        }
        
        function keyboard() {
