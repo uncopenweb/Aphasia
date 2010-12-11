@@ -207,7 +207,7 @@
             var tr = dojo.create("tr",null,imgTable2);
             dojo.forEach(bottomTabs, function(tab) {
                 var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border":"1px solid black"}}, tr);
-                var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
+                var caption = dojo.create("div",{className:"panel",innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
