@@ -213,7 +213,12 @@ window.iui =
 		{
 			if (child.nodeType == 1 && child.getAttribute("selected") == "true")
 				return child;
-		}	 
+		}
+		for (var child = document.body.firstChild.firstChild.firstChild; child; child = child.nextSibling)
+		{
+			if (child.nodeType == 1 && child.getAttribute("selected") == "true")
+				return child;
+		}	        
 	},
 	isNativeUrl: function(href)
 	{
