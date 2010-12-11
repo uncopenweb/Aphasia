@@ -253,10 +253,14 @@
        }
        
        function display() {
-            dojo.forEach(document.getElementById("mainCap"), function(caption) {
-                console.log(document.getElementById("mainCap"));
-                caption.style.display="none";
-            });
+            for (i=0; i<document.getElementsByTagName("mainCap").length; i++) {
+                if (document.getElementsByTagName("mainCap").item(i).style.display = "block"){
+                    document.getElementsByTagName("mainCap").item(i).style.display="none";
+                }
+                else {
+                    document.getElementsByTagName("mainCap").item(i).style.display="block";
+                }
+            }
        }
        
        function keyboard() {
