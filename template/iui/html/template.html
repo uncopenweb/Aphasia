@@ -167,11 +167,11 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
-                            document.getElementsByClassName(currentTab.nameTag).setAttribute("selected","false");
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","false");
                         }
                         currentTab = tab;
                         a.href = tab.name;
-                        document.getElementsByClassName(currentTab.nameTag).setAttribute("selected","true");
+                        document.getElementById(currentTab.nameTag).setAttribute("selected","true");
                     }
                     else {
                         a.href = "javascript://";
@@ -227,7 +227,7 @@
         }
         function createTabs(audio) {
             dojo.forEach(topTabs, function(tab) {
-                var div = dojo.create("div",{className:tab.nameTag,style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
+                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"68px","height":"72px","float":"left"}},div);
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
