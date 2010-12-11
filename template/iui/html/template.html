@@ -231,8 +231,8 @@
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var imgDiv = dojo.create("div",{style:{"caption-side":"top","width":"60px","height":"70px","float":"left"}},div);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"85%"},a);
-                    var caption = dojo.create("caption",{style:{"align":"center","font-size": "50%"}, innerHTML:stuff.word, selected:"true"},imgDiv);
+                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"85%", alt:stuff.word},a);
+                    //var caption = dojo.create("caption",{style:{"align":"center","font-size": "50%"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                         dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                 });
             });
