@@ -199,7 +199,7 @@
                 dojo.connect(td,'onmouseup',dojo.hitch(this,display));
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"108px"}, innerHTML:"Keyboard Button"},tr);
-                dojo.connect(td,'onmouseup',dojo.hitch(this,keyboard));
+                dojo.connect(td,'onmouseup',dojo.hitch(this,keyboard,audio));
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
     
@@ -268,11 +268,13 @@
          }
        }
        
-       function keyboard() {
-            alert("hello");
+       function keyboard(audio) {
             var form = dojo.create("form",{id:"form",selected:"true"},dojo.body());
             var word = dojo.create("input",{id:"word",type:"text"},form);
             var speak = dojo.create("input",{id:"speak",type:"submit",value:"speak"},form);
+                dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
+                   alert(form.elements[0].value);
+                });
        }
        
         dojo.addOnLoad(startUp);
