@@ -274,7 +274,7 @@
             var speak = dojo.create("input",{id:"speak",type:"submit",value:"speak"},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    alert(form.elements[0].value);
-                });
+                }));
        }
        
         dojo.addOnLoad(startUp);
