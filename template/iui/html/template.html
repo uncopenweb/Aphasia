@@ -249,7 +249,6 @@
         }
         
         function playSound(audio, word) {
-            alert("hello");
             audio.stop({channel:"sound"});
             audio.say({text:word, channel:"sound"});                            
        }
@@ -272,7 +271,7 @@
        function keyboard(audio) {
             var form = dojo.create("form",{id:"form",selected:"true"},dojo.body());
             var word = dojo.create("input",{id:"word",type:"text"},form);
-            var speak = dojo.create("input",{id:"speak",type:"button",value:"speak"},form);
+            var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick="javascript:;"},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
                 }));
