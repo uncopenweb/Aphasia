@@ -86,11 +86,9 @@ body >.menu{
  
 .white_content {
 	display: none;
-	position: absolute;
 	width: 25%;
 	height: 25%;
 	background-color: gray;
-	overflow: auto;
 }
 
 #tTable, #tTd, #tTr {
