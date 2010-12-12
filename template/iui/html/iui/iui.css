@@ -71,7 +71,7 @@ body >.menu{
     position: fixed;
 }
 
-.black_overlay{
+body>.black_overlay{
 	display: none;
 	position: absolute;
 	top: 0%;
@@ -84,7 +84,7 @@ body >.menu{
 	filter: alpha(opacity=80);
 }
  
-.white_content {
+body>.white_content {
 	display: none;
 	width: 25%;
 	height: 25%;
