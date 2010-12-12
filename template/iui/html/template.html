@@ -269,7 +269,9 @@
        }
        
        function keyboard() {
-       
+            var form = dojo.create("form",{id:"form"},dojo.body());
+            var word = dojo.create("input",{id:"word",type:"text"},form);
+            var speak = dojo.create("input",{id:"speak",type:"submit",value:"speak"},form);
        }
        
         dojo.addOnLoad(startUp);
