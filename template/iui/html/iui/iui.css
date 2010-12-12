@@ -87,8 +87,6 @@ body >.menu{
 .white_content {
 	display: none;
 	position: absolute;
-	top: 25%;
-	left: 25%;
 	width: 50%;
 	height: 50%;
 	background-color: white;
