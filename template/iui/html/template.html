@@ -165,6 +165,7 @@
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
+                    alert(tab);
                     if (currentTab != tab) {
                         if (currentTab!=null) {
                             alert(currentTab.nameTag);
