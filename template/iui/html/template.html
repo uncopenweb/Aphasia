@@ -207,12 +207,7 @@
                 dojo.connect(td,'onmouseup',function() {
                     if (currentTab != document.getElementById("#form")) {
                         if (currentTab!=null) {
-                            if (currentTab.nameTag!=null) {
-                                document.getElementById(currentTab.nameTag).setAttribute("selected","false");
-                            }
-                            else {
-                                document.getElementById("form").setAttribute("selected","false");
-                            }
+                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
                         }
                         currentTab = document.getElementById("form");
                         td.href = "form";
@@ -235,7 +230,12 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
-                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                            if (currentTab.nameTag!=null) {
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                            }
+                            else {
+                                document.getElementById("form").setAttribute("selected","false");
+                            }
                         }
                         currentTab = tab;
                         a.href = tab.name;
