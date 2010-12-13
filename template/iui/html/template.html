@@ -205,7 +205,7 @@
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"108px"}, innerHTML:"Keyboard Button"},tr);
                 dojo.connect(td,'onmouseup',function() {
-                    if (currentTab != document.getElementById("#form")) {
+                    if (currentTab != document.getElementById("form")) {
                         if (currentTab!=null) {
                             document.getElementById(currentTab.nameTag).setAttribute("selected","false");
                         }
