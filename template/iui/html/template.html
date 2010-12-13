@@ -199,7 +199,19 @@
                 dojo.connect(td,'onmouseup',dojo.hitch(this,display));
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"108px"}, innerHTML:"Keyboard Button"},tr);
-                dojo.connect(td,'onmouseup',dojo.hitch(this,keyboard,audio));
+                dojo.connect(td,'onmouseup',function() {
+                    if (currentTab != document.getElementById("#form")) {
+                        if (currentTab!=null) {
+                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                        }
+                        currentTab = document.getElementById("#form");
+                        td.href = "form";
+                        document.getElementById("form").setAttribute("selected","true");
+                    }
+                    else {
+                        td.href = "javascript://";
+                    }
+                });
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
     
@@ -246,6 +258,14 @@
                         dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                 });
             });
+            
+            var formDiv = dojo.create("div",{id:"#form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
+            var form = dojo.create("form",{className:"white_content",id:"form",selected:"true"},formDiv);
+            var word = dojo.create("textarea",{id:"word"},form);
+            var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;"},form);
+                dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
+                   playSound(audio,form.elements[0].value);
+                }));
         }
         
         function playSound(audio, word) {
@@ -266,16 +286,6 @@
                 }
             }
          }
-       }
-       
-       function keyboard(audio) {
-            dojo.body().display = "none";
-            var form = dojo.create("form",{className:"white_content",id:"form",selected:"true"},dojo.body());
-            var word = dojo.create("textarea",{id:"word"},form);
-            var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;"},form);
-                dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
-                   playSound(audio,form.elements[0].value);
-                }));
        }
        
         dojo.addOnLoad(startUp);
