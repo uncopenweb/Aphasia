@@ -202,7 +202,7 @@
                 dojo.connect(td,'onmouseup',function() {
                     if (currentTab != document.getElementById("#form")) {
                         if (currentTab!=null) {
-                            document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                            document.getElementById("form").setAttribute("selected","false");
                         }
                         currentTab = document.getElementById("#form");
                         td.href = "form";
