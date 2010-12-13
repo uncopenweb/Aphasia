@@ -259,8 +259,8 @@
                 });
             });
             
-            var formDiv = dojo.create("div",{id:"#form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
-            var form = dojo.create("form",{id:"form",selected:"true"},formDiv);
+            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
+            var form = dojo.create("form",null,formDiv);
             var word = dojo.create("textarea",{id:"word"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;"},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
