@@ -167,6 +167,7 @@
                 dojo.connect(a, 'onmouseup', function() {
                     if (currentTab != tab) {
                         if (currentTab!=null) {
+                            alert(currentTab.nameTag);
                             if (currentTab.nameTag!=null) {
                                 document.getElementById(currentTab.nameTag).setAttribute("selected","false");
                             }
