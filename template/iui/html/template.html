@@ -269,14 +269,13 @@
        }
        
        function keyboard(audio) {
+            dojo.body().display = "none";
             var form = dojo.create("form",{className:"white_content",id:"form",selected:"true"},dojo.body());
             var word = dojo.create("textarea",{id:"word"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;"},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
                 }));
-                
-            var rest = dojo.create("div",{className:"black_overlay"},dojo.body());
        }
        
         dojo.addOnLoad(startUp);
