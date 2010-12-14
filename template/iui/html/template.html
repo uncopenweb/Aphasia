@@ -271,7 +271,7 @@
             
             var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
-            var word = dojo.create("textarea",{id:"word",cols:"20",rows:"20"},form);
+            var word = dojo.create("textarea",{id:"word",cols:"20",rows:"10"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;"},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
