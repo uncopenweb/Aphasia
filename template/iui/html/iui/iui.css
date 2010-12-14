@@ -55,7 +55,6 @@ body > .toolbar {
     -moz-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
-    /*padding: 0 10px 10px 10px; */
     height: 70px;
 }
 
@@ -65,9 +64,8 @@ body >.menu{
     -moz-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
-    /*padding: 0 10px 10px 10px;*/
     bottom:0px;
-    margin-top: 225px;
+    margin-top: 220px;
     position: fixed;
 }
 
