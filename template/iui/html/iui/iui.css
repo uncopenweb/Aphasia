@@ -28,10 +28,10 @@ body > *:not(.toolbar) {
     -webkit-transform: translateX(0%);
 }
 
-body[orient="landscape"] > *:not(.toolbar) {
+/* body[orient="landscape"] > *:not(.toolbar) {
     height: auto;
     min-height: 268px;
-}
+} */
 
 body > *[selected="true"] {
     display: block;
@@ -117,10 +117,10 @@ body >.menu{
     color: #FFFFFF;
 }
 
-body[orient="landscape"] > .toolbar > h1 {
+/* body[orient="landscape"] > .toolbar > h1 {
     margin-left: -125px;
     width: 250px;
-}
+} */
 
 .button {
     position: absolute;
