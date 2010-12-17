@@ -13,7 +13,7 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-body[orient="portrait"] > *:not(.toolbar) {
+body > *:not(.toolbar) {
     display: none;
     position: absolute;
     margin: 0;
