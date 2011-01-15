@@ -185,7 +185,7 @@
             });
             
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"top":'70px',"height":'80%'},selected:"true"},dojo.body());
-                var tr = dojo.create("tr",style:{"height":"20%"},leftTable);
+                var tr = dojo.create("tr",{style:{"height":"20%"}},leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"width":'12.5%'}, innerHTML:"Please give me a moment to respond."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,audio,"Please give me a moment to respond."));
                 var tr = dojo.create("tr",null,leftTable);
