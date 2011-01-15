@@ -200,10 +200,10 @@
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
-            var td = dojo.create("td",{id:"sidetd2",style:{"height":"40%","width":'12.5%'}, innerHTML:"Display Text Button"},tr);
+            var td = dojo.create("td",{id:"sidetd2",style:{"height":"252px","width":'12.5%'}, innerHTML:"Display Text Button"},tr);
                 dojo.connect(td,'onmouseup',dojo.hitch(this,display));
             var tr = dojo.create("tr",null,rightTable);
-            var td = dojo.create("td",{id:"sidetd2",style:{"height":"40%","width":'12.5%'}, innerHTML:"Keyboard Button"},tr);
+            var td = dojo.create("td",{id:"sidetd2",style:{"height":"252px","width":'12.5%'}, innerHTML:"Keyboard Button"},tr);
                 dojo.connect(td,'onmouseup',function() {
                     if (currentTab != document.getElementById("form")) {
                         if (currentTab!=null) {
