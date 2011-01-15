@@ -86,6 +86,7 @@ body >.menu{
     background-color: green;
     width: 55px;
     font-size: 60%;
+    height: 20%;
 }
 
 #sidetd2 {
@@ -94,6 +95,7 @@ body >.menu{
     background-color: orange;
     width: 55px;
     font-size: 60%;
+    height: 40%;
 }
 
 #mainImg {
