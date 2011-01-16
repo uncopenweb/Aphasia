@@ -64,8 +64,8 @@ body >.menu{
     -moz-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
-    top: 80%;
-    bottom: 85%;
+    top: 90%;
+    bottom: 100%;
     position: fixed;
 }
 
