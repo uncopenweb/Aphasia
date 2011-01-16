@@ -76,7 +76,7 @@ body >.menu{
 #sideTable {
     width: 55px;
     height:200px;
-    border: 1px solid #98bf21;
+    border-right: 1px solid #98bf21;
 }
 #sidetd1 {
     border-color: #98bf21;
