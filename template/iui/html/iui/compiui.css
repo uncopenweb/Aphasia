@@ -54,7 +54,6 @@ body > .toolbar {
     -moz-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
-    bottom: 10%;
 }
 
 body >.menu{
@@ -77,7 +76,7 @@ body >.menu{
 #sideTable {
     width: 55px;
     height:200px;
-    top: 10%;
+    top: 12%;
     border: 1px solid #98bf21;
 }
 #sidetd1 {
