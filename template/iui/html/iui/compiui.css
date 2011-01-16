@@ -56,7 +56,6 @@ body > .toolbar {
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
     height: 17%;
-    position: fixed;
 }
 
 body >.menu{
