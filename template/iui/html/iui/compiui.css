@@ -64,7 +64,7 @@ body >.menu{
     -moz-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     border-top: 1px solid #6d84a2;
-    bottom:0%;
+    bottom:30%;
     margin-top: 80%;
     position: absolute;
 }
