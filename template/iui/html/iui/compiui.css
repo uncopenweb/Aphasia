@@ -19,7 +19,6 @@ body > *:not(.toolbar) {
     margin: 0;
     padding: 0;
     left: 0;
-    top: 12%;
     width: 100%;
     height: 80%;
     min-height: 235px;
