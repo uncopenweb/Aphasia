@@ -99,6 +99,10 @@ body >.menu{
     margin: 0px 6px 0px 5px;
 }
 
+#mainCap {
+    font-size: 150%;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
