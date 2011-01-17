@@ -264,12 +264,12 @@
                     var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"25%","height":"26%","float":"left"}},div);
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
+                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                 });
             });
             
-            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
+            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"left":"12.5%","width":"75%","height":"80%"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
             var word = dojo.create("textarea",{id:"word",cols:"30",rows:"12"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
