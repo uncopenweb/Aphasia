@@ -82,7 +82,7 @@ body >.menu{
     border-bottom: 1px #6699CC solid;
     background-color: green;
     width: 55px;
-    font-size: 120%;
+    font-size: 100%;
     height: 25%;
 }
 
@@ -91,7 +91,7 @@ body >.menu{
     border-bottom: 1px #6699CC solid;
     background-color: orange;
     width: 55px;
-    font-size: 120%;
+    font-size: 100%;
     height: 50%;
 }
 
@@ -100,7 +100,7 @@ body >.menu{
 }
 
 #mainCap {
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .toolbar > h1 {
