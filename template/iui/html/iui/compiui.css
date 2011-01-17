@@ -103,6 +103,10 @@ body >.menu{
     font-size: 100%;
 }
 
+#taba {
+    font-size: 100%;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
