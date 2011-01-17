@@ -259,9 +259,9 @@
                 });
             });
             dojo.forEach(bottomTabs, function(tab) {
-                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"left":"12.5%","width":"54%","height":"80%"}},dojo.body());
+                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"left":"12.5%","width":"70%","height":"80%"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
-                    var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"25%","height":"26%","float":"left"}},div);
+                    var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
@@ -269,9 +269,9 @@
                 });
             });
             
-            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"left":"15%","width":"54%","height":"80%"}}, dojo.body());
+            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"left":"15%","width":"70%","height":"80%"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
-            var word = dojo.create("textarea",{id:"word",cols:"35",rows:"17", style:{"height":"100%", "width":"90%"}},form);
+            var word = dojo.create("textarea",{id:"word",cols:"35",rows:"17", style:{"height":"100%", "width":"100%"}},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
