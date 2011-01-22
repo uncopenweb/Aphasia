@@ -343,22 +343,22 @@
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
-                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
+                    var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
+                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"68px","height":"72px","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
+                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"100%", "width":"100%"}, alt:stuff.phrase},a1);
                                 dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
                 });
             });
             
             dojo.forEach(bottomTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                    var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
+                    var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
                         var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
                             var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
+                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"100%", "width":"100%"}, alt:stuff.phrase},a1);
                                     dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
                 });
             });
@@ -381,7 +381,7 @@
        function display() {
           if (currentTab!=null) {
             for (var i=0; i<document.getElementsByTagName("div").length; i++) {
-                if(document.getElementsByTagName("div").item(i).parentNode.parentNode.id == currentTab.nameTag) {
+                if(document.getElementsByTagName("div").item(i).parentNode.parentNode.id == currentTab.nameTag && document.getElementsByTagName("div").item(i).id!="Cap") {
                     if (document.getElementsByTagName("div").item(i).id = "mainCap" && document.getElementsByTagName("div").item(i).style.display == "block"){
                         document.getElementsByTagName("div").item(i).style.display="none";
                     }
