@@ -334,7 +334,7 @@
                     var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"300%", "width":"300%"}, alt:stuff.phrase},a1);
+                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"200%", "width":"200%"}, alt:stuff.phrase},a1);
                                 dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
                 });
             });
@@ -343,9 +343,9 @@
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
                         var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
-                            var caption = dojo.create("div",{id:"Cap", style:{"font-size": "250%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
+                            var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"300%", "width":"300%"}, alt:stuff.phrase},a1);
+                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"200%", "width":"200%"}, alt:stuff.phrase},a1);
                                     dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
                 });
             });
