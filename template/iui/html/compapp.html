@@ -32,46 +32,55 @@
                 {
                     "pic":"math.jpg",
                     "word":"math",
+                    "nametag":"1",
                     "phrase":"numbers are cool"
                 },
                 {
                     "pic":"socialStudies.gif",
                     "word":"culture",
+                    "nametag":"2",
                     "phrase":"learning culture around the world"
                 },
                 {
                     "pic":"english.jpg",
                     "word":"english",
+                    "nametag":"3",
                     "phrase":"Americans speak english"
                 },
                 {
                     "pic":"chemistry.jpg",
                     "word":"chemistry",
+                    "nametag":"4",
                     "phrase":"foundation to pharmacy"
                 },
                 {
                     "pic":"biology.jpg",
                     "word":"biology",
+                    "nametag":"5",
                     "phrase":"studying the mechanism of life"
                 },
                 {
                     "pic":"psychology.jpg",
                     "word":"psychology",
+                    "nametag":"6",
                     "phrase":"studying the human mind"
                 },
                 {
                     "pic":"art.gif",
                     "word":"art",
+                    "nametag":"7",
                     "phrase":"i want to be an artist"
                 },
                 {
                     "pic":"economics.gif",
                     "word":"economics",
+                    "nametag":"8",
                     "phrase":"how does money work"
                 },
                 {
                     "pic":"physics.jpg",
                     "word":"physics",
+                    "nametag":"9",
                     "phrase":"newton discovered gravity"
                 }
             ]
@@ -84,11 +93,13 @@
                 {
                     "pic":"mother.jpg",
                     "word":"mother",
+                    "nametag":"10",
                     "phrase":"mother gave birth to me"
                 },
                 {
                     "pic":"father.jpg",
                     "word":"father",
+                    "nametag":"11",
                     "phrase":"I took my father's last name"
                 }
             ]
@@ -101,11 +112,13 @@
                 {
                     "pic":"teacher.jpg",
                     "word":"teacher",
+                    "nametag":"12",
                     "phrase":"I learn from the teacher"
                 },
                 {
                     "pic":"janitor.gif",
                     "word":"janitor",
+                    "nametag":"13",
                     "phrase":"janitor keeps place clean"
                 }
             ]
@@ -120,11 +133,13 @@
                 {
                     "pic":"cat.jpg",
                     "word":"cat",
+                    "nametag":"14",
                     "phrase":"cat catches mouse"
                 },
                 {
                     "pic":"frog.jpg",
                     "word":"frog",
+                    "nametag":"15",
                     "phrase":"frog goes rabbit rabbit"
                 }
             ]
@@ -137,11 +152,13 @@
                 {
                     "pic":"rose.jpg",
                     "word":"rose",
+                    "nametag":"16",
                     "phrase":"rose smells good"
                 },
                 {
                     "pic":"pine.jpg",
                     "word":"pine",
+                    "nametag":"17",
                     "phrase":"pine tree survives year-round"
                 }
             ]
@@ -154,11 +171,13 @@
                 {
                     "pic":"algebra.jpg",
                     "word":"algebra",
+                    "nametag":"18",
                     "phrase":"manipulating number in equations"
                 },
                 {
                     "pic":"geometry.gif",
                     "word":"geometry",
+                    "nametag":"19",
                     "phrase":"learning about properties of shapes"
                 }
             ]
@@ -289,8 +308,8 @@
                                     }
                                 }
                                 currentTab = stuff;
-                                a.href = "#"+stuff.pic;
-                                document.getElementById(currentTab.pic).setAttribute("selected","true");
+                                a.href = "#"+stuff.nametag;
+                                document.getElementById(currentTab.nametag).setAttribute("selected","true");
                             }
                         });
                 });
@@ -311,7 +330,7 @@
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:"#"+stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
+                var div = dojo.create("div",{id:"#"+stuff.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
                     var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
@@ -322,7 +341,7 @@
             
             dojo.forEach(bottomTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                    var div = dojo.create("div",{id:"#"+stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
+                    var div = dojo.create("div",{id:"#"+stuff.nametag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
                         var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                             var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
