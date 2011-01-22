@@ -194,10 +194,7 @@
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
             audio.setProperty({name:'rate',value: 100, channel:'sound'});
-            //audio.setProperty({name:'voice',value: 'en+f1', channel:'sound'});
-            audio.getEngineInfo('espeak').addCallback(function(response) {
-               //var voices = response.voices.values;
-            });
+            audio.setProperty({name:'voice',value: 'en', channel:'sound'});
 
             
             createTabs(audio);
