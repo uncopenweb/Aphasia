@@ -289,8 +289,8 @@
                                     }
                                 }
                                 currentTab = stuff;
-                                a.href = stuff.word;
-                                document.getElementById(currentTab.word).setAttribute("selected","true");
+                                a.href = stuff.pic;
+                                document.getElementById(currentTab.pic).setAttribute("selected","true");
                             }
                         });
                 });
@@ -311,7 +311,7 @@
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:stuff.word,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
+                var div = dojo.create("div",{id:"#"+stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
                     var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
@@ -322,7 +322,7 @@
             
             dojo.forEach(bottomTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                    var div = dojo.create("div",{id:stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
+                    var div = dojo.create("div",{id:"#"+stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              
                         var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                             var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
