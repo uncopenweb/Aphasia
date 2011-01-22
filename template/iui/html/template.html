@@ -344,7 +344,7 @@
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
-                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100px","height":"72px","float":"left"}},div);
+                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"204px","height":"216px","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                             var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"100%", "width":"100%"}, alt:stuff.phrase},a1);
@@ -355,7 +355,7 @@
             dojo.forEach(bottomTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
-                        var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100px","height":"72px","float":"left"}},div);
+                        var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"204px","height":"216px","float":"left"}},div);
                             var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                                 var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"100%", "width":"100%"}, alt:stuff.phrase},a1);
