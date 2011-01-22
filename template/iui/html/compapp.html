@@ -276,7 +276,8 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        dojo.connect(a, 'onmouseup',dojo.hitch(this,'bigImage',audio,stuff.pic,stuff.phrase));
                 });
             });
             dojo.forEach(bottomTabs, function(tab) {
@@ -286,7 +287,8 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        dojo.connect(a,'onmouseup',dojo.hitch(this,'bigImage',audio,stuff.pic,stuff.phrase));
                 });
             });
             
@@ -297,6 +299,15 @@
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
                 }));
+        }
+        
+        function bigImage(audio,image,phrase) {
+            var div = dojo.create("div",{id:image,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
+            var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
+                var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:phrase, selected:"true"},imgDiv);
+                var a = dojo.create("a",{href:"javascript:;"},imgDiv);
+                var img = dojo.create("img",{src:image, id:"mainImg",height:"100%", width:"100%", alt:phrase},a);
+                dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,phrase));
         }
         
         function playSound(audio, word) {
