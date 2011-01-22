@@ -31,39 +31,57 @@
             "audioImages": [
                 {
                     "pic":"math.jpg",
-                    "word":"math"
+                    "nameTag":"1",
+                    "word":"math",
+                    "phrase":"numbers are cool"
                 },
                 {
                     "pic":"socialStudies.gif",
-                    "word":"culture"
+                    "nameTag":"2",
+                    "word":"culture",
+                    "phrase":"learning about culture around the world"
                 },
                 {
                     "pic":"english.jpg",
-                    "word":"english"
+                    "nameTag":"3",
+                    "word":"english",
+                    "phrase":"americans speak english"
                 },
                 {
                     "pic":"chemistry.jpg",
-                    "word":"chemistry"
+                    "nameTag":"4",
+                    "word":"chemistry",
+                    "phrase":"foundation to pharmacy"
                 },
                 {
                     "pic":"biology.jpg",
-                    "word":"biology"
+                    "nameTag":"5",
+                    "word":"biology",
+                    "phrase":"studying the mechanism of life"
                 },
                 {
                     "pic":"psychology.jpg",
-                    "word":"psychology"
+                    "nameTag":"6",
+                    "word":"psychology",
+                    "phrase":"studying the human mind"
                 },
                 {
                     "pic":"art.gif",
-                    "word":"art"
+                    "nameTag":"7",
+                    "word":"art",
+                    "phrase":"I want to be an artist"
                 },
                 {
                     "pic":"economics.gif",
-                    "word":"economics"
+                    "nameTag":"8",
+                    "word":"economics",
+                    "phrase":"how does money work"
                 },
                 {
                     "pic":"physics.jpg",
-                    "word":"physics"
+                    "nameTag":"9",
+                    "word":"physics",
+                    "phrase":"newton discovered gravity"
                 }
             ]
         },
@@ -74,11 +92,15 @@
             "audioImages": [
                 {
                     "pic":"mother.jpg",
-                    "word":"mother"
+                    "nameTag":"10",
+                    "word":"mother",
+                    "phrase":"mother gave birth to me"
                 },
                 {
                     "pic":"father.jpg",
-                    "word":"father"
+                    "nameTag":"11",
+                    "word":"father",
+                    "phrase":"I took my father's last name"
                 }
             ]
         },
@@ -89,11 +111,15 @@
             "audioImages": [
                 {
                     "pic":"teacher.jpg",
-                    "word":"teacher"
+                    "nameTag":"12",
+                    "word":"teacher",
+                    "phrase":"I learn from the teacher"
                 },
                 {
                     "pic":"janitor.gif",
-                    "word":"janitor"
+                    "nameTag":"13",
+                    "word":"janitor",
+                    "phrase":"janitor keeps place clean"
                 }
             ]
         }
@@ -106,11 +132,15 @@
             "audioImages": [
                 {
                     "pic":"cat.jpg",
-                    "word":"cat"
+                    "nameTag":"14",
+                    "word":"cat",
+                    "phrase":"cat catches mouse"
                 },
                 {
                     "pic":"frog.jpg",
-                    "word":"frog"
+                    "nameTag":"15",
+                    "word":"frog",
+                    "phrase":"frog goes rabbit rabbit"
                 }
             ]
         }, 
@@ -121,11 +151,15 @@
             "audioImages": [
                 {
                     "pic":"rose.jpg",
-                    "word":"rose"
+                    "nameTag":"16",
+                    "word":"rose",
+                    "phrase":"rose smells good"
                 },
                 {
                     "pic":"pine.jpg",
-                    "word":"pine"
+                    "nameTag":"17",
+                    "word":"pine",
+                    "phrase":"pine tree survives year round"
                 }
             ]
         },
@@ -136,11 +170,15 @@
             "audioImages": [
                 {
                     "pic":"algebra.jpg",
-                    "word":"algebra"
+                    "nameTag":"18",
+                    "word":"algebra",
+                    "phrase":"manipulating numbers in equations"
                 },
                 {
                     "pic":"geometry.gif",
-                    "word":"geometry"
+                    "nameTag":"19",
+                    "word":"geometry",
+                    "phrase":"learning about properties of shapes"
                 }
             ]
         } 
@@ -154,6 +192,9 @@
         function start(audio) { 
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
+            
+            audio.setProperty({name:'rate',value: 90, channel:'sound'});
+            audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
             
             createTabs(audio);
             
@@ -255,7 +296,22 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        dojo.connect(a,'onmouseup',function() {
+                            if (currentTab != stuff) {
+                                if (currentTab!=null) {
+                                    if (currentTab.nameTag!=null) {
+                                        document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                                    }
+                                    else {
+                                        document.getElementById("form").setAttribute("selected","false");
+                                    }
+                                }
+                                currentTab = stuff;
+                                a.href = "#"+stuff.nameTag;
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","true");
+                            }
+                        });
                 });
             });
             dojo.forEach(bottomTabs, function(tab) {
@@ -265,9 +321,48 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        dojo.connect(a,'onmouseup',function() {
+                            if (currentTab != stuff) {
+                                if (currentTab!=null) {
+                                    if (currentTab.nameTag!=null) {
+                                        document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                                    }
+                                    else {
+                                        document.getElementById("form").setAttribute("selected","false");
+                                    }
+                                }
+                                currentTab = stuff;
+                                a.href = "#"+stuff.nameTag;
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","true");
+                            }
+                        });
                 });
             });
+            
+            
+            dojo.forEach(topTabs, function(tab) {
+                dojo.forEach(tab.audioImages,function(stuff) {
+                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
+                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
+                        var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
+                        var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
+                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
+                                dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
+                });
+            });
+            
+            dojo.forEach(bottomTabs, function(tab) {
+                dojo.forEach(tab.audioImages,function(stuff) {
+                    var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
+                        var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
+                            var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
+                            var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
+                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
+                                    dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
+                });
+            });
+            
             
             var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
