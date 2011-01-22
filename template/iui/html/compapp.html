@@ -278,6 +278,21 @@
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                         //dojo.connect(a, 'onmouseup',dojo.hitch(this,'bigImage',audio,stuff.pic,stuff.phrase));
+                        dojo.connect(a,'onmouseup',function() {
+                            if (currentTab != stuff) {
+                                if (currentTab!=null) {
+                                    if (currentTab.nameTag!=null) {
+                                        document.getElementById(currentTab.nameTag).setAttribute("selected","false");
+                                    }
+                                    else {
+                                        document.getElementById("form").setAttribute("selected","false");
+                                    }
+                                }
+                                currentTab = stuff;
+                                a.href = stuff.pic;
+                                document.getElementById(currentTab.nameTag).setAttribute("selected","true");
+                            }
+                        });
                 });
             });
             dojo.forEach(bottomTabs, function(tab) {
@@ -323,9 +338,6 @@
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
                    playSound(audio,form.elements[0].value);
                 }));
-        }
-        
-        function bigImage(audio,image,phrase) {
         }
         
         function playSound(audio, word) {
