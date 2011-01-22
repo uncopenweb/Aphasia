@@ -305,7 +305,7 @@
                         var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                         var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"100%", width:"100%", alt:stuff.phrase},a1);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
+                        dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
                 });
             });
             
