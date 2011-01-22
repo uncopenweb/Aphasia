@@ -301,7 +301,7 @@
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:tab.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
+                var div = dojo.create("div",{id:stuff.pic,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());              var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                         var caption = dojo.create("div",{id:"Cap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                         var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"100%", width:"100%", alt:stuff.phrase},a1);
