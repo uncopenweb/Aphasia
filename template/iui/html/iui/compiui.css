@@ -107,6 +107,10 @@ body >.menu{
     font-size: 100%;
 }
 
+#Cap {
+    font-size: 200%;
+}
+
 .toolbar > h1 {
     position: absolute;
     overflow: hidden;
