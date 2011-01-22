@@ -196,8 +196,7 @@
             audio.setProperty({name:'rate',value: 100, channel:'sound'});
             //audio.setProperty({name:'voice',value: 'en+f1', channel:'sound'});
             audio.getEngineInfo('espeak').addAfter(function(response) {
-               var voices = response.voices.values;
-               alert(voices);
+               //var voices = response.voices.values;
             });
 
             
