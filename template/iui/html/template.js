@@ -209,3 +209,7 @@ dojo.declare('template',[], {
          }
        }
 });
+
+dojo.ready(function() {
+    var template = new template();
+});
