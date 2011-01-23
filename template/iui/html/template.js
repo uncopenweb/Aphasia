@@ -211,8 +211,5 @@ dojo.declare('template',[], {
 });
 
 dojo.ready(function() {
-    function start() {
-        alert("hello");
-        var template = new template();
-    }
+    new template();
 });
