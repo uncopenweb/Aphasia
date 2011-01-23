@@ -296,7 +296,7 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                         dojo.connect(a,'onmouseup',function() {
                             if (currentTab != stuff) {
                                 if (currentTab!=null) {
@@ -321,7 +321,7 @@
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
+                        //dojo.connect(a,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.word));
                         dojo.connect(a,'onmouseup',function() {
                             if (currentTab != stuff) {
                                 if (currentTab!=null) {
@@ -374,6 +374,7 @@
         }
         
         function playSound(audio, word) {
+            alert(word);
             audio.stop({channel:"sound"});
             audio.say({text:word, channel:"sound"});                            
        }
