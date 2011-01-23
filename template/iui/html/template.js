@@ -158,6 +158,7 @@ dojo.declare('template',[], {
                 });
             });
             
+            var self = this;
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
@@ -166,7 +167,7 @@ dojo.declare('template',[], {
                         var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                             var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
-                                dojo.connect(img,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
+                                dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',audio,stuff.phrase));    
                 });
             });
             
@@ -177,7 +178,7 @@ dojo.declare('template',[], {
                             var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                                 var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
-                                    dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',audio,stuff.phrase));    
+                                    dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',audio,stuff.phrase));    
                 });
             });
             
