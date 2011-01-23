@@ -190,6 +190,7 @@ dojo.declare('template',[], {
         },
         
         playSound: function(audio, word) {
+            alert("hello");
             audio.stop({channel:"sound"});
             audio.say({text:word, channel:"sound"});                            
        },
