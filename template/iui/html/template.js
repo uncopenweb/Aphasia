@@ -7,13 +7,14 @@ dojo.declare('template',[], {
        },
        
        start: function(audio) { 
+            this.audio = audio;
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
-            audio.setProperty({name:'rate',value: 90, channel:'sound'});
-            audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
+            this.audio.setProperty({name:'rate',value: 90, channel:'sound'});
+            this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
             
-            this.createTabs(audio);
+            this.createTabs();
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"70px"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
@@ -45,16 +46,16 @@ dojo.declare('template',[], {
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"}, innerHTML:"Please give me a moment to respond."},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',audio,"Please give me a moment to respond."));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Please give me a moment to respond."));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"48px"}, innerHTML:"I don't understand"},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',audio,"I don't understand"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I don't understand"));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"48px"}, innerHTML:"Can you repeat that, please?"},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',audio,"Can you repeat that, please?"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Can you repeat that, please?"));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"},innerHTML:"I need help."},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',audio,"I need help"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"51px","height":"215px","left":"265px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
@@ -106,7 +107,7 @@ dojo.declare('template',[], {
             });
         },
         
-        createTabs: function(audio) {
+        createTabs: function() {
             dojo.forEach(topTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
@@ -167,7 +168,7 @@ dojo.declare('template',[], {
                         var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                             var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
-                                dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',audio,stuff.phrase));    
+                                dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
                 });
             });
             
@@ -178,7 +179,7 @@ dojo.declare('template',[], {
                             var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                                 var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
-                                    dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',audio,stuff.phrase));    
+                                    dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
                 });
             });
             
@@ -187,12 +188,12 @@ dojo.declare('template',[], {
             var form = dojo.create("form",null,formDiv);
             var word = dojo.create("textarea",{id:"word",cols:"30",rows:"12"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
-                dojo.connect(speak,'onmouseup',dojo.hitch(this, 'playSound', audio, form.elements[0].value));
+                dojo.connect(speak,'onmouseup',dojo.hitch(this, 'playSound', form.elements[0].value));
         },
         
-        playSound: function(audio, word) {
-            audio.stop({channel:"sound"});
-            audio.say({text:word, channel:"sound"});                            
+        playSound: function(word) {
+            this.audio.stop({channel:"sound"});
+            this.audio.say({text:word, channel:"sound"});                            
        },
        
        display: function() {
