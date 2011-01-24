@@ -15,7 +15,7 @@ dojo.declare('compapp',[], {
             this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
 
             
-            createTabs();
+            this.display();
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
