@@ -3,7 +3,7 @@ dojo.provide('compapp');
 dojo.declare('compapp',[], {
 
         constructor: function() {
-            uow.getAudio().addCallback(this.start);
+            uow.getAudio().addCallback(dojo.hitch(this,'start'));
         },
         
         start: function(audio) { 
@@ -43,16 +43,16 @@ dojo.declare('compapp',[], {
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'80%'},selected:"true"},dojo.body());
                 //var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"Please give me a moment to respond."},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,"Please give me a moment to respond."));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Please give me a moment to respond."));
                 //var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"I don't understand"},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,"I don't understand"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I don't understand"));
                 //var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'},innerHTML:"Can you repeat that, please?"},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,"Can you repeat that, please?"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Can you repeat that, please?"));
                 //var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"I need help."},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,playSound,"I need help"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
             //var tr = dojo.create("tr",{style:{"width":'12.5%'}},rightTable);
