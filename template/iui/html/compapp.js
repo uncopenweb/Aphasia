@@ -14,6 +14,8 @@ dojo.declare('compapp',[], {
             
             this.createTabs();
             
+            var self = this;
+            
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
             dojo.forEach(topTabs, function(tab) {
@@ -22,18 +24,18 @@ dojo.declare('compapp',[], {
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    if (this.currentTab != tab) {
-                        if (this.currentTab!=null) {
-                            if (this.currentTab.nameTag!=null) {
-                                document.getElementById(this.currentTab.nameTag).setAttribute("selected","false");
+                    if (self.currentTab != tab) {
+                        if (self.currentTab!=null) {
+                            if (self.currentTab.nameTag!=null) {
+                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                             }
                             else {
                                 document.getElementById("form").setAttribute("selected","false");
                             }
                         }
-                        this.currentTab = tab;
+                        self.currentTab = tab;
                         a.href = tab.name;
-                        document.getElementById(this.currentTab.nameTag).setAttribute("selected","true");
+                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                     }
                     else {
                         a.href = "javascript://";
@@ -56,13 +58,13 @@ dojo.declare('compapp',[], {
                 dojo.connect(td,'onmouseup',dojo.hitch(this,'display'));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
                 dojo.connect(td,'onmouseup',function() {
-                    if (this.currentTab != document.getElementById("form")) {
-                        if (this.currentTab!=null) {
-                            document.getElementById(this.currentTab.nameTag).setAttribute("selected","false");
+                    if (self.currentTab != document.getElementById("form")) {
+                        if (self.currentTab!=null) {
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                         }
-                        this.currentTab = document.getElementById("form");
+                        self.currentTab = document.getElementById("form");
                         td.href = "form";
-                        this.currentTab.setAttribute("selected","true");
+                        self.currentTab.setAttribute("selected","true");
                     }
                     else {
                         td.href = "javascript://";
@@ -79,18 +81,18 @@ dojo.declare('compapp',[], {
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
                 dojo.connect(a, 'onmouseup', function() {
-                    if (this.currentTab != tab) {
-                        if (this.currentTab!=null) {
-                            if (this.currentTab.nameTag!=null) {
-                                document.getElementById(this.currentTab.nameTag).setAttribute("selected","false");
+                    if (self.currentTab != tab) {
+                        if (self.currentTab!=null) {
+                            if (self.currentTab.nameTag!=null) {
+                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                             }
                             else {
                                 document.getElementById("form").setAttribute("selected","false");
                             }
                         }
-                        this.currentTab = tab;
+                        self.currentTab = tab;
                         a.href = tab.name;
-                        document.getElementById(this.currentTab.nameTag).setAttribute("selected","true");
+                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                     }
                     else {
                         a.href = "javascript://";
@@ -108,18 +110,18 @@ dojo.declare('compapp',[], {
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',function() {
-                            if (this.currentTab != stuff) {
-                                if (this.currentTab!=null) {
-                                    if (this.currentTab.nameTag!=null) {
-                                        document.getElementById(this.currentTab.nameTag).setAttribute("selected","false");
+                            if (self.currentTab != stuff) {
+                                if (self.currentTab!=null) {
+                                    if (self.currentTab.nameTag!=null) {
+                                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                                     }
                                     else {
                                         document.getElementById("form").setAttribute("selected","false");
                                     }
                                 }
-                                this.currentTab = stuff;
+                                self.currentTab = stuff;
                                 a.href = "#"+stuff.nameTag;
-                                document.getElementById(this.currentTab.nameTag).setAttribute("selected","true");
+                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                             }
                         });
                 });
@@ -132,18 +134,18 @@ dojo.declare('compapp',[], {
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',function() {
-                            if (this.currentTab != stuff) {
-                                if (this.currentTab!=null) {
-                                    if (this.currentTab.nameTag!=null) {
-                                        document.getElementById(this.currentTab.nameTag).setAttribute("selected","false");
+                            if (self.currentTab != stuff) {
+                                if (self.currentTab!=null) {
+                                    if (self.currentTab.nameTag!=null) {
+                                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                                     }
                                     else {
                                         document.getElementById("form").setAttribute("selected","false");
                                     }
                                 }
-                                this.currentTab = stuff;
+                                self.currentTab = stuff;
                                 a.href = "#"+stuff.nameTag;
-                                document.getElementById(this.currentTab.nameTag).setAttribute("selected","true");
+                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                             }
                         });
                 });
