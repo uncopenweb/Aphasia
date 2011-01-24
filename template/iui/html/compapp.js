@@ -1,196 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Template</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  <link rel="icon" type="image/png" href="iui/iui-favicon.png">
-  <link rel="apple-touch-icon" href="iui/iui-logo-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="stylesheet" href="iui/compiui.css" type="text/css" />
+dojo.provide('compapp');
 
-  <link rel="stylesheet" title="Default" href="iui/t/default/default-theme.css"  type="text/css"/>
-  <link rel="stylesheet" href="css/iui-panel-list.css" type="text/css" />
-  
-  <script type = 'text/javascript'>
-    var djConfig = {
-        isDebug: false,
-        parseOnLoad: true,
-        baseUrl: './'
-      };
-  </script>
-  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript"></script>
-  <script type="text/javascript" src="/libs/uow/trace.js"></script>
-  <script type="text/javascript" src="/libs/uow.js"></script>
-  <script type="text/javascript" src="compapp.js"></script>
-  <script type = "text/javascript">
-  
-    var topTabs = [
-        {
-            "name": "#school",
-            "nameTag":"school",
-            "image": "school.jpg",
-            "audioImages": [
-                {
-                    "pic":"math.jpg",
-                    "word":"math",
-                    "nameTag":"1",
-                    "phrase":"numbers are cool"
-                },
-                {
-                    "pic":"socialStudies.gif",
-                    "word":"culture",
-                    "nameTag":"2",
-                    "phrase":"learning culture around the world"
-                },
-                {
-                    "pic":"english.jpg",
-                    "word":"english",
-                    "nameTag":"3",
-                    "phrase":"Americans speak english"
-                },
-                {
-                    "pic":"chemistry.jpg",
-                    "word":"chemistry",
-                    "nameTag":"4",
-                    "phrase":"foundation to pharmacy"
-                },
-                {
-                    "pic":"biology.jpg",
-                    "word":"biology",
-                    "nameTag":"5",
-                    "phrase":"studying the mechanism of life"
-                },
-                {
-                    "pic":"psychology.jpg",
-                    "word":"psychology",
-                    "nameTag":"6",
-                    "phrase":"studying the human mind"
-                },
-                {
-                    "pic":"art.gif",
-                    "word":"art",
-                    "nameTag":"7",
-                    "phrase":"i want to be an artist"
-                },
-                {
-                    "pic":"economics.gif",
-                    "word":"economics",
-                    "nameTag":"8",
-                    "phrase":"how does money work"
-                },
-                {
-                    "pic":"physics.jpg",
-                    "word":"physics",
-                    "nameTag":"9",
-                    "phrase":"newton discovered gravity"
-                }
-            ]
-        },
-        {
-            "name": "#family",
-            "nameTag":"family",
-            "image": "family.jpg",
-            "audioImages": [
-                {
-                    "pic":"mother.jpg",
-                    "word":"mother",
-                    "nameTag":"10",
-                    "phrase":"mother gave birth to me"
-                },
-                {
-                    "pic":"father.jpg",
-                    "word":"father",
-                    "nameTag":"11",
-                    "phrase":"I took my father's last name"
-                }
-            ]
-        },
-        {
-            "name": "#career",
-            "nameTag":"career",
-            "image": "career.jpg",
-            "audioImages": [
-                {
-                    "pic":"teacher.jpg",
-                    "word":"teacher",
-                    "nameTag":"12",
-                    "phrase":"I learn from the teacher"
-                },
-                {
-                    "pic":"janitor.gif",
-                    "word":"janitor",
-                    "nameTag":"13",
-                    "phrase":"janitor keeps place clean"
-                }
-            ]
-        }
-    ]
-    var bottomTabs = [
-        {
-            "name": "#animal",
-            "nameTag":"animal",
-            "image": "animals.jpg",
-            "audioImages": [
-                {
-                    "pic":"cat.jpg",
-                    "word":"cat",
-                    "nameTag":"14",
-                    "phrase":"cat catches mouse"
-                },
-                {
-                    "pic":"frog.jpg",
-                    "word":"frog",
-                    "nameTag":"15",
-                    "phrase":"frog goes rabbit rabbit"
-                }
-            ]
-        }, 
-        {
-            "name": "#plant",
-            "nameTag":"plant",
-            "image": "plant.jpg",
-            "audioImages": [
-                {
-                    "pic":"rose.jpg",
-                    "word":"rose",
-                    "nameTag":"16",
-                    "phrase":"rose smells good"
-                },
-                {
-                    "pic":"pine.jpg",
-                    "word":"pine",
-                    "nameTag":"17",
-                    "phrase":"pine tree survives year-round"
-                }
-            ]
-        },
-        {
-            "name": "#math",
-            "nameTag":"math",
-            "image": "number.gif",
-            "audioImages": [
-                {
-                    "pic":"algebra.jpg",
-                    "word":"algebra",
-                    "nameTag":"18",
-                    "phrase":"manipulating number in equations"
-                },
-                {
-                    "pic":"geometry.gif",
-                    "word":"geometry",
-                    "nameTag":"19",
-                    "phrase":"learning about properties of shapes"
-                }
-            ]
-        } 
-    ]
-    
-    var currentTab = null;
-  
-        /*function startUp() {
+dojo.declare('compapp',[], {
+
+        constructor: function() {
             uow.getAudio().addCallback(start);
-        }
-        function start(audio) { 
+        },
+        
+        start: function(audio) { 
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
@@ -198,7 +14,7 @@
             audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
 
             
-            createTabs(audio);
+            this.createTabs(audio);
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
@@ -290,7 +106,7 @@
                 });
             });
         }
-        function createTabs(audio) {
+        createTabs: function(audio) {
             dojo.forEach(topTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
@@ -344,7 +160,7 @@
                 });
             });
             
-            
+            var self = this;
             
             dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
@@ -373,16 +189,16 @@
             var word = dojo.create("textarea",{id:"word",cols:"35",rows:"17",style:{"height":"100%", "width":"100%"}},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
                 dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
-                   playSound(audio,form.elements[0].value);
+                   self.playSound(audio,form.elements[0].value);
                 }));
-        }
+        },
         
-        function playSound(audio, word) {
+        playSound: function(audio, word) {
             audio.stop({channel:"sound"});
             audio.say({text:word, channel:"sound"});                            
-       }
+       },
        
-       function display() {
+       display: function() {
           if (currentTab!=null) {
             for (var i=0; i<document.getElementsByTagName("div").length; i++) {
                 if(document.getElementsByTagName("div").item(i).parentNode.parentNode.id == currentTab.nameTag && document.getElementsByTagName("div").item(i).id!="Cap") {
@@ -396,10 +212,9 @@
             }
          }
        }
-       
-        dojo.addOnLoad(startUp); */
-  </script>
-</head>
-<body>
-</body>
-</html>
+
+});
+
+dojo.ready(function() {
+    new compapp();
+});
