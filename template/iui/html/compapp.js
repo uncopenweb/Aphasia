@@ -11,11 +11,7 @@ dojo.declare('compapp',[], {
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
-            this.audio.setProperty({name:'rate',value: 90, channel:'sound'});
-            this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
-
-            
-            this.display();
+            this.createTabs();
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
@@ -196,6 +192,9 @@ dojo.declare('compapp',[], {
         },
         
         playSound: function(word) {
+            this.audio.setProperty({name:'rate',value: 90, channel:'sound'});
+            this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
+            
             this.audio.stop({channel:"sound"});
             this.audio.say({text:word, channel:"sound"});                            
        },
