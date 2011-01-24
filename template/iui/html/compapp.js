@@ -57,7 +57,7 @@ dojo.declare('compapp',[], {
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
             //var tr = dojo.create("tr",{style:{"width":'12.5%'}},rightTable);
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
-                dojo.connect(td,'onmouseup',dojo.hitch(this,display));
+                dojo.connect(td,'onmouseup',dojo.hitch(this,'display'));
             //var tr = dojo.create("tr",{style:{"width":'12.5%'}},rightTable);
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
                 dojo.connect(td,'onmouseup',function() {
