@@ -11,8 +11,8 @@ dojo.declare('template',[], {
             var toolbar = dojo.create("div", {className:"toolbar"},dojo.body());
             var deBody = dojo.create("div", {className:"panel",selected:"true", id:""}, dojo.body());
             
-            this.audio.setProperty({name:'rate',value: 90, channel:'sound'});
-            this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
+            this.audio.setProperty({name:'rate',value: 90, channel:'music'});
+            this.audio.setProperty({name:'voice',value: 'default+f4',channel:'music'});
             
             this.createTabs();
             
