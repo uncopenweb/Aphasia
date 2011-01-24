@@ -102,6 +102,7 @@ dojo.declare('compapp',[], {
         },
         
         createTabs: function() {
+            var self = this;
             dojo.forEach(topTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
