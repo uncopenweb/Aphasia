@@ -188,7 +188,11 @@ dojo.declare('template',[], {
             var form = dojo.create("form",null,formDiv);
             var word = dojo.create("textarea",{id:"word",cols:"30",rows:"12"},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
-                dojo.connect(speak,'onmouseup',dojo.hitch(self, 'playSound', document.forms[0].elements[0].value));
+                //dojo.connect(speak,'onmouseup',dojo.hitch(self, 'playSound', document.forms[0].elements[0].value));
+                dojo.connect(speak,'onmouseup',dojo.hitch(this, function() {
+                   self.playSound(form.elements[0].value);
+                }));
+
         },
         
         playSound: function(word) {
