@@ -192,8 +192,8 @@ dojo.declare('template',[], {
         },
         
         playSound: function(word) {
-            this.audio.stop({channel:"sound"});
-            this.audio.say({text:word, channel:"sound"});                            
+            this.audio.stop({channel:'music'});
+            this.audio.say({text:word, channel:'music'});                            
        },
        
        display: function() {
