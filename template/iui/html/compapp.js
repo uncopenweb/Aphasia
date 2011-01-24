@@ -167,7 +167,7 @@ dojo.declare('compapp',[], {
                         var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                         var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                             var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
-                                dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',stuff.phrase));    
+                                dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
                 });
             });
             
@@ -178,7 +178,7 @@ dojo.declare('compapp',[], {
                             var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                             var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                                 var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
-                                    dojo.connect(a1,'onmouseup',dojo.hitch(this,'playSound',stuff.phrase));    
+                                    dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
                 });
             });
             
