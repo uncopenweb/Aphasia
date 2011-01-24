@@ -117,7 +117,7 @@ dojo.declare('compapp',[], {
                                         document.getElementById("form").setAttribute("selected","false");
                                     }
                                 }
-                                currentTab = stuff;
+                                this.currentTab = stuff;
                                 a.href = "#"+stuff.nameTag;
                                 document.getElementById(this.currentTab.nameTag).setAttribute("selected","true");
                             }
