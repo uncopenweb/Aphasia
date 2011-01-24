@@ -3,7 +3,7 @@ dojo.provide('compapp');
 dojo.declare('compapp',[], {
 
         constructor: function() {
-            uow.getAudio().addCallback(start);
+            uow.getAudio().addCallback(this.start);
         },
         
         start: function(audio) { 
