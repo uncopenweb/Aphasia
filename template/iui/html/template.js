@@ -82,29 +82,33 @@ dojo.declare('template',[], {
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"70px", "top":"235px"}},footer);
             var tr = dojo.create("tr",null,imgTable2);
             dojo.forEach(bottomTabs, function(tab) {
-                var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border":"1px solid black"}}, tr);
-                var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
-                var a = dojo.create("a",{href:tab.name},td);
-                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
-                dojo.connect(a, 'onmouseup', function() {
-                    if (self.currentTab != tab) {
-                        if (self.currentTab!=null) {
-                            if (self.currentTab.nameTag!=null) {
-                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
-                            }
-                            else {
-                                document.getElementById("form").setAttribute("selected","false");
-                            }
-                        }
-                        self.currentTab = tab;
-                        a.href = tab.name;
-                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                    }
-                    else {
-                        a.href = "javascript://";
-                    }
-                });
+                createBorderBar(tab);
             });
+        });
+    },
+        
+        createBorderBar: function(tab) {
+            var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border":"1px solid black"}}, tr);
+            var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
+            var a = dojo.create("a",{href:tab.name},td);
+            var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
+            dojo.connect(a, 'onmouseup', function() {
+                if (self.currentTab != tab) {
+                    if (self.currentTab!=null) {
+                        if (self.currentTab.nameTag!=null) {
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                        }
+                        else {
+                            document.getElementById("form").setAttribute("selected","false");
+                        }
+                    }
+                    self.currentTab = tab;
+                    a.href = tab.name;
+                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
+                }
+                else {
+                    a.href = "javascript://";
+                }
         },
         
         createTabs: function() {
