@@ -22,7 +22,7 @@ dojo.declare('template',[], {
                 self.createBorderBar(self,tab, tr);
             });
             
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
+            /*var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"}, innerHTML:"Please give me a moment to respond."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Please give me a moment to respond."));
@@ -34,7 +34,15 @@ dojo.declare('template',[], {
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Can you repeat that, please?"));
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"},innerHTML:"I need help."},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));
+                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help")); */
+                    
+            var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
+            dojo.forEach(leftPhrases, function(aPhrase) {
+                var tr = dojo.create("tr",null,leftTable);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"}, innerHTML:aPhrase},tr);
+                    dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
+            });
                     
             
             
