@@ -35,6 +35,8 @@ dojo.declare('template',[], {
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"},innerHTML:"I need help."},tr);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));
+                    
+            
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"51px","height":"215px","left":"265px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
@@ -56,8 +58,7 @@ dojo.declare('template',[], {
                     }
                 });
             
-            var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
-    
+            var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());   
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"70px", "top":"235px"}},footer);
             var tr = dojo.create("tr",null,imgTable2);
             dojo.forEach(bottomTabs, function(tab) {
