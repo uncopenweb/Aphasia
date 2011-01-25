@@ -111,7 +111,7 @@ dojo.declare('template',[], {
                             }
                         });
                 });*/
-                createMoreTabs(self,tab);
+                this.createMoreTabs(self,tab);
             });
             dojo.forEach(bottomTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
