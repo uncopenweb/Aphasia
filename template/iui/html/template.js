@@ -88,6 +88,7 @@ dojo.declare('template',[], {
                 else {
                     a.href = "javascript://";
                 }
+            });
         },
         
         createTabs: function() {
