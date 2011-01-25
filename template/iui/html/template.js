@@ -21,20 +21,6 @@ dojo.declare('template',[], {
             dojo.forEach(topTabs, function(tab) {
                 self.createBorderBar(self,tab, tr);
             });
-            
-            /*var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
-                var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"}, innerHTML:"Please give me a moment to respond."},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Please give me a moment to respond."));
-                var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"48px"}, innerHTML:"I don't understand"},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I don't understand"));
-                var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"48px"}, innerHTML:"Can you repeat that, please?"},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Can you repeat that, please?"));
-                var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"},innerHTML:"I need help."},tr);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help")); */
                     
             var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
@@ -103,7 +89,7 @@ dojo.declare('template',[], {
             var self = this;
             
             dojo.forEach(topTabs, function(tab) {
-                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
+                /*var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"68px","height":"72px","float":"left"}},div);
                     var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
@@ -124,7 +110,8 @@ dojo.declare('template',[], {
                                 document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                             }
                         });
-                });
+                });*/
+                createMoreTabs(self,tab);
             });
             dojo.forEach(bottomTabs, function(tab) {
                 var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
@@ -151,9 +138,7 @@ dojo.declare('template',[], {
                 });
             });
             
-            var self = this;
-            
-            dojo.forEach(topTabs, function(tab) {
+            /*dojo.forEach(topTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
                     var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
                     var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"204px","height":"216px","float":"left"}},div);
@@ -162,7 +147,7 @@ dojo.declare('template',[], {
                             var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
                                 dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
                 });
-            });
+            });*/
             
             dojo.forEach(bottomTabs, function(tab) {
                 dojo.forEach(tab.audioImages,function(stuff) {
@@ -186,13 +171,48 @@ dojo.declare('template',[], {
 
         },
         
+        createMoreTabs: function(self,tab) {     
+        
+            var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());
+            dojo.forEach(tab.audioImages,function(stuff) {
+                var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"68px","height":"72px","float":"left"}},div);
+                var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "70%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
+                var a = dojo.create("a",{href:"javascript:;"},imgDiv);
+                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"75%", width:"75%", alt:stuff.word},a);
+                    dojo.connect(a,'onmouseup',function() {
+                        if (self.currentTab != stuff) {
+                            if (self.currentTab!=null) {
+                                if (self.currentTab.nameTag!=null) {
+                                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                                }
+                                else {
+                                    document.getElementById("form").setAttribute("selected","false");
+                                }
+                            }
+                            self.currentTab = stuff;
+                            a.href = "#"+stuff.nameTag;
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
+                        }
+                    });
+            }); 
+
+            dojo.forEach(tab.audioImages,function(stuff) {
+                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}},dojo.body());              
+                var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"204px","height":"216px","float":"left"}},div);
+                    var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
+                    var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
+                        var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"90%", "width":"90%"}, alt:stuff.phrase},a1);
+                            dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
+            });            
+        },
+        
         playSound: function(word) {
             this.audio.setProperty({name:'rate',value: 90, channel:'music'});
             this.audio.setProperty({name:'voice',value: 'default+f4',channel:'music'}); 
         
             this.audio.stop({channel:'music'});
             this.audio.say({text:word, channel:'music'});            
-       },
+        },
        
        display: function() {
           if (this.currentTab!=null) {
