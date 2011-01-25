@@ -64,8 +64,7 @@ dojo.declare('template',[], {
             dojo.forEach(bottomTabs, function(tab) {
                 createBorderBar(tab);
             });
-        });
-    },
+        },
         
         createBorderBar: function(tab) {
             var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border":"1px solid black"}}, tr);
