@@ -34,7 +34,7 @@ dojo.declare('compapp',[], {
                 var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"I need help."},leftTable);
                     dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));*/
                 dojo.forEach(leftPhrases, function(aPhrase) {
-                    var td = dojo.create("table",{id:"sided1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
+                    var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
                 });
             
