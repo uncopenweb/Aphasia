@@ -141,7 +141,7 @@ dojo.declare('template',[], {
         },
         
         playSound: function(word) {
-            this.audio.setProperty({name:'rate',value: 90, channel:'music'});
+            this.audio.setProperty({name:'rate',value: 135, channel:'music'});
             this.audio.setProperty({name:'voice',value: 'default+f4',channel:'music'}); 
         
             this.audio.stop({channel:'music'});
