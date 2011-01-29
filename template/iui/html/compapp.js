@@ -21,14 +21,16 @@ dojo.declare('compapp',[], {
             dojo.forEach(topTabs, function(tab) {
                 self.createBorderBar(self,tab,tr);
             });
-
-            
+       
             var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'80%'},selected:"true"},dojo.body());
                 dojo.forEach(leftPhrases, function(aPhrase) {
                     var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
                 });
+            
+            
+            
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
@@ -48,8 +50,7 @@ dojo.declare('compapp',[], {
                     }
                 });
             
-            var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());
-    
+            var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"17%"}, height:"17%"},footer);
             var tr = dojo.create("tr",null,imgTable2);
                 dojo.forEach(bottomTabs, function(tab) {
@@ -84,78 +85,6 @@ dojo.declare('compapp',[], {
         
         createTabs: function() {
             var self = this;
-/*             dojo.forEach(topTabs, function(tab) {
-                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
-                dojo.forEach(tab.audioImages,function(stuff) {
-                    var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
-                    var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-                    var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',function() {
-                            if (self.currentTab != stuff) {
-                                if (self.currentTab!=null) {
-                                    if (self.currentTab.nameTag!=null) {
-                                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
-                                    }
-                                    else {
-                                        document.getElementById("form").setAttribute("selected","false");
-                                    }
-                                }
-                                self.currentTab = stuff;
-                                a.href = "#"+stuff.nameTag;
-                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                            }
-                        });
-                });
-            });
-            dojo.forEach(bottomTabs, function(tab) {
-                var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
-                dojo.forEach(tab.audioImages,function(stuff) {
-                    var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
-                    var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-                    var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',function() {
-                            if (self.currentTab != stuff) {
-                                if (self.currentTab!=null) {
-                                    if (self.currentTab.nameTag!=null) {
-                                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
-                                    }
-                                    else {
-                                        document.getElementById("form").setAttribute("selected","false");
-                                    }
-                                }
-                                self.currentTab = stuff;
-                                a.href = "#"+stuff.nameTag;
-                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                            }
-                        });
-                });
-            });
-            
-            var self = this;
-            
-            dojo.forEach(topTabs, function(tab) {
-                dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
-                    var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
-                        var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
-                        var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                            var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
-                                dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
-                });
-            });
-            
-            dojo.forEach(bottomTabs, function(tab) {
-                dojo.forEach(tab.audioImages,function(stuff) {
-                    var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
-                        var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
-                            var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
-                            var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
-                                    dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
-                });
-            }); */
             
             dojo.forEach(topTabs, function(tab) {
                 self.createMoreTabs(self, tab);
