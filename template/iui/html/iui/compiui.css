@@ -71,7 +71,7 @@ body >.menu{
 #tTable, #tTd, #tTr {
     border-right-style: 1px solid black;
     border-collapse:collapse;
-    border-bottom-style: none;
+    border-bottom-style: 0px solid black;
 }
 
 #sideTable {
