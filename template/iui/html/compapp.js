@@ -137,7 +137,7 @@ dojo.declare('compapp',[], {
         },
         
         playSound: function(word) {
-            this.audio.setProperty({name:'rate',value: 200, channel:'sound'});
+            this.audio.setProperty({name:'rate',value: 135, channel:'sound'});
             this.audio.setProperty({name:'voice',value: 'default+f4',channel:'sound'});
             
             this.audio.stop({channel:"sound"});
