@@ -25,14 +25,6 @@ dojo.declare('compapp',[], {
             
             var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'80%'},selected:"true"},dojo.body());
-                /*var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"Please give me a moment to respond."},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Please give me a moment to respond."));
-                var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"I don't understand"},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I don't understand"));
-                var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'},innerHTML:"Can you repeat that, please?"},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"Can you repeat that, please?"));
-                var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"I need help."},leftTable);
-                    dojo.connect(td, 'onmouseup',dojo.hitch(this,'playSound',"I need help"));*/
                 dojo.forEach(leftPhrases, function(aPhrase) {
                     var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
@@ -60,7 +52,7 @@ dojo.declare('compapp',[], {
     
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"17%"}, height:"17%"},footer);
             var tr = dojo.create("tr",null,imgTable2);
-            dojo.forEach(bottomTabs, function(tab) {
+            /*dojo.forEach(bottomTabs, function(tab) {
                 var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border-right-style":"1px solid black","padding-top":"10px","padding-bottom":"25px"}}, tr);
                 var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
                 var a = dojo.create("a",{href:tab.name},td);
@@ -83,6 +75,9 @@ dojo.declare('compapp',[], {
                         a.href = "javascript://";
                     }
                 });
+            });*/
+            dojo.forEach(bottomTabs, function(tab) {
+                self.createBorderBar(self, tab, tr);
             });
         },
         
