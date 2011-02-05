@@ -108,7 +108,7 @@ dojo.declare('compapp',[], {
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                 var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
                 var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"65%", width:"65%", alt:stuff.word},a);
+                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                     dojo.connect(a,'onmouseup',function() {
                         if (self.currentTab != stuff) {
                             if (self.currentTab!=null) {
@@ -131,7 +131,7 @@ dojo.declare('compapp',[], {
                 var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
                     var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                     var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                        var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"250%", "width":"100%"}, alt:stuff.phrase},a1);
+                        var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"200%", "width":"80%"}, alt:stuff.phrase},a1);
                             dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
             });            
         },
