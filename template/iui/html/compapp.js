@@ -22,10 +22,10 @@ dojo.declare('compapp',[], {
                 self.createBorderBar(self,tab,tr);
             });
        
-            var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
+            var leftPhrases = ["Thank you.", "How about you?", "Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'80%'},selected:"true"},dojo.body());
                 dojo.forEach(leftPhrases, function(aPhrase) {
-                    var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
+                    var td = dojo.create("table",{id:"sidetd1",style:{"height":"16%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
                 });
             
