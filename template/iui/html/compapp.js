@@ -131,7 +131,7 @@ dojo.declare('compapp',[], {
                 var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
                     var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                     var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
-                        var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"200%", "width":"80%"}, alt:stuff.phrase},a1);
+                        var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"150%", "width":"100%"}, alt:stuff.phrase},a1);
                             dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
             });            
         },
