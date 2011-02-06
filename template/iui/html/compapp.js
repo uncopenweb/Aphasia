@@ -33,8 +33,6 @@ dojo.declare('compapp',[], {
             
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
-            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
-                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
                 dojo.connect(td,'onmouseup',dojo.hitch(this,'display'));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
@@ -51,6 +49,8 @@ dojo.declare('compapp',[], {
                         td.href = "javascript://";
                     }
                 });
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
+                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Thank you."},rightTable);
                 dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "Thank you."));
             
