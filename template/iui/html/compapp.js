@@ -22,10 +22,10 @@ dojo.declare('compapp',[], {
                 self.createBorderBar(self,tab,tr);
             });
        
-            var leftPhrases = ["Thank you.", "How about you?", "Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
+            var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'80%'},selected:"true"},dojo.body());
                 dojo.forEach(leftPhrases, function(aPhrase) {
-                    var td = dojo.create("table",{id:"sidetd1",style:{"height":"16%","width":"100%"},innerHTML:aPhrase},leftTable);
+                    var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
                 });
             
@@ -33,9 +33,11 @@ dojo.declare('compapp',[], {
             
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
-            var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Thank you."},rightTable);
+                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playsound', "Thank you."));
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
                 dojo.connect(td,'onmouseup',dojo.hitch(this,'display'));
-            var td = dojo.create("table",{id:"sidetd2",style:{"height":"50%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
                 dojo.connect(td,'onmouseup',function() {
                     if (self.currentTab != document.getElementById("form")) {
                         if (self.currentTab!=null) {
@@ -49,6 +51,8 @@ dojo.declare('compapp',[], {
                         td.href = "javascript://";
                     }
                 });
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
+                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"17%"}, height:"17%"},footer);
