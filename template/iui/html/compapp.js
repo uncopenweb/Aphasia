@@ -33,8 +33,8 @@ dojo.declare('compapp',[], {
             
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"80%","left":"87.5%"},selected:"true"},dojo.body());
-            var td1 = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Thank you."},rightTable);
-                dojo.connect(td1,'onmouseup',dojo.hitch(self, 'playsound', "Thank you"));
+            var td1 = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
+                dojo.connect(td1,'onmouseup',dojo.hitch(self, 'playsound', "How about you?"));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Display Text Button"},rightTable);
                 dojo.connect(td,'onmouseup',dojo.hitch(this,'display'));
             var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Keyboard Button"},rightTable);
@@ -51,8 +51,8 @@ dojo.declare('compapp',[], {
                         td.href = "javascript://";
                     }
                 });
-            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
-                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
+            var td = dojo.create("table",{id:"sidetd2",style:{"height":"25%","width":'100%'}, innerHTML:"Thank you."},rightTable);
+                dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "Thank you."));
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"17%"}, height:"17%"},footer);
