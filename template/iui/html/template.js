@@ -22,11 +22,11 @@ dojo.declare('template',[], {
                 self.createBorderBar(self,tab, tr);
             });
                     
-            var leftPhrases = ["Thank you.", "How about you?", "Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
+            var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"25px"}, innerHTML:aPhrase},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"49px"}, innerHTML:aPhrase},tr);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
             });
                     
