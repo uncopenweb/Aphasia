@@ -34,10 +34,10 @@ dojo.declare('template',[], {
             
             var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"51px","height":"215px","left":"265px","top":"70px"},selected:"true"},dojo.body());
             var tr = dojo.create("tr",null,rightTable);
-            var td = dojo.create("td",{id:"sidetd2",style:{"height":"52px"}, innerHTML:"How about you?"},tr);
+            var td = dojo.create("td",{id:"sidetd1",style:{"height":"52px"}, innerHTML:"How about you?"},tr);
                 dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
             var tr = dojo.create("tr",null,rightTable);
-            var td = dojo.create("td",{id:"sidetd2",style:{"height":"52px"}, innerHTML:"Thank you."},tr);
+            var td = dojo.create("td",{id:"sidetd1",style:{"height":"52px"}, innerHTML:"Thank you."},tr);
                 dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "Thank you."));
             var tr = dojo.create("tr",null,rightTable);
             var td = dojo.create("td",{id:"sidetd2",style:{"height":"52px"}, innerHTML:"Display Text Button"},tr);
