@@ -23,167 +23,170 @@
   <script type="text/javascript" src="/libs/uow.js"></script>
   <script type="text/javascript" src="compapp.js"></script>
   <script type = "text/javascript">
-  
-    var topTabs = [
-        {
-            "name": "#school",
-            "nameTag":"school",
-            "image": "school.jpg",
-            "audioImages": [
+        
+        var mainTabs = {
+            "topTabs" : [
                 {
-                    "pic":"math.jpg",
-                    "word":"math",
-                    "nameTag":"1",
-                    "phrase":"numbers are cool"
+                    "name": "#school",
+                    "nameTag":"school",
+                    "image": "school.jpg",
+                    "audioImages": [
+                        {
+                            "pic":"math.jpg",
+                            "word":"math",
+                            "nameTag":"1",
+                            "phrase":"numbers are cool"
+                        },
+                        {
+                            "pic":"socialStudies.gif",
+                            "word":"culture",
+                            "nameTag":"2",
+                            "phrase":"learning culture around the world"
+                        },
+                        {
+                            "pic":"english.jpg",
+                            "word":"english",
+                            "nameTag":"3",
+                            "phrase":"Americans speak english"
+                        },
+                        {
+                            "pic":"chemistry.jpg",
+                            "word":"chemistry",
+                            "nameTag":"4",
+                            "phrase":"foundation to pharmacy"
+                        },
+                        {
+                            "pic":"biology.jpg",
+                            "word":"biology",
+                            "nameTag":"5",
+                            "phrase":"studying the mechanism of life"
+                        },
+                        {
+                            "pic":"psychology.jpg",
+                            "word":"psychology",
+                            "nameTag":"6",
+                            "phrase":"studying the human mind"
+                        },
+                        {
+                            "pic":"art.gif",
+                            "word":"art",
+                            "nameTag":"7",
+                            "phrase":"i want to be an artist"
+                        },
+                        {
+                            "pic":"economics.gif",
+                            "word":"economics",
+                            "nameTag":"8",
+                            "phrase":"how does money work"
+                        },
+                        {
+                            "pic":"physics.jpg",
+                            "word":"physics",
+                            "nameTag":"9",
+                            "phrase":"newton discovered gravity"
+                        }
+                    ]
                 },
                 {
-                    "pic":"socialStudies.gif",
-                    "word":"culture",
-                    "nameTag":"2",
-                    "phrase":"learning culture around the world"
+                    "name": "#family",
+                    "nameTag":"family",
+                    "image": "family.jpg",
+                    "audioImages": [
+                        {
+                            "pic":"mother.jpg",
+                            "word":"mother",
+                            "nameTag":"10",
+                            "phrase":"mother gave birth to me"
+                        },
+                        {
+                            "pic":"father.jpg",
+                            "word":"father",
+                            "nameTag":"11",
+                            "phrase":"I took my father's last name"
+                        }
+                    ]
                 },
                 {
-                    "pic":"english.jpg",
-                    "word":"english",
-                    "nameTag":"3",
-                    "phrase":"Americans speak english"
-                },
-                {
-                    "pic":"chemistry.jpg",
-                    "word":"chemistry",
-                    "nameTag":"4",
-                    "phrase":"foundation to pharmacy"
-                },
-                {
-                    "pic":"biology.jpg",
-                    "word":"biology",
-                    "nameTag":"5",
-                    "phrase":"studying the mechanism of life"
-                },
-                {
-                    "pic":"psychology.jpg",
-                    "word":"psychology",
-                    "nameTag":"6",
-                    "phrase":"studying the human mind"
-                },
-                {
-                    "pic":"art.gif",
-                    "word":"art",
-                    "nameTag":"7",
-                    "phrase":"i want to be an artist"
-                },
-                {
-                    "pic":"economics.gif",
-                    "word":"economics",
-                    "nameTag":"8",
-                    "phrase":"how does money work"
-                },
-                {
-                    "pic":"physics.jpg",
-                    "word":"physics",
-                    "nameTag":"9",
-                    "phrase":"newton discovered gravity"
+                    "name": "#career",
+                    "nameTag":"career",
+                    "image": "career.jpg",
+                    "audioImages": [
+                        {
+                            "pic":"teacher.jpg",
+                            "word":"teacher",
+                            "nameTag":"12",
+                            "phrase":"I learn from the teacher"
+                        },
+                        {
+                            "pic":"janitor.gif",
+                            "word":"janitor",
+                            "nameTag":"13",
+                            "phrase":"janitor keeps place clean"
+                        }
+                    ]
                 }
-            ]
-        },
-        {
-            "name": "#family",
-            "nameTag":"family",
-            "image": "family.jpg",
-            "audioImages": [
+            ],
+            
+            "bottomTabs" : [
                 {
-                    "pic":"mother.jpg",
-                    "word":"mother",
-                    "nameTag":"10",
-                    "phrase":"mother gave birth to me"
+                    "name": "#animal",
+                    "nameTag":"animal",
+                    "image": "animals.jpg",
+                    "audioImages": [
+                        {
+                            "pic":"cat.jpg",
+                            "word":"cat",
+                            "nameTag":"14",
+                            "phrase":"cat catches mouse"
+                        },
+                        {
+                            "pic":"frog.jpg",
+                            "word":"frog",
+                            "nameTag":"15",
+                            "phrase":"frog goes rabbit rabbit"
+                        }
+                    ]
+                }, 
+                {
+                    "name": "#plant",
+                    "nameTag":"plant",
+                    "image": "plant.jpg",
+                    "audioImages": [
+                        {
+                            "pic":"rose.jpg",
+                            "word":"rose",
+                            "nameTag":"16",
+                            "phrase":"rose smells good"
+                        },
+                        {
+                            "pic":"pine.jpg",
+                            "word":"pine",
+                            "nameTag":"17",
+                            "phrase":"pine tree survives year-round"
+                        }
+                    ]
                 },
                 {
-                    "pic":"father.jpg",
-                    "word":"father",
-                    "nameTag":"11",
-                    "phrase":"I took my father's last name"
-                }
+                    "name": "#math",
+                    "nameTag":"math",
+                    "image": "number.gif",
+                    "audioImages": [
+                        {
+                            "pic":"algebra.jpg",
+                            "word":"algebra",
+                            "nameTag":"18",
+                            "phrase":"manipulating number in equations"
+                        },
+                        {
+                            "pic":"geometry.gif",
+                            "word":"geometry",
+                            "nameTag":"19",
+                            "phrase":"learning about properties of shapes"
+                        }
+                    ]
+                } 
             ]
-        },
-        {
-            "name": "#career",
-            "nameTag":"career",
-            "image": "career.jpg",
-            "audioImages": [
-                {
-                    "pic":"teacher.jpg",
-                    "word":"teacher",
-                    "nameTag":"12",
-                    "phrase":"I learn from the teacher"
-                },
-                {
-                    "pic":"janitor.gif",
-                    "word":"janitor",
-                    "nameTag":"13",
-                    "phrase":"janitor keeps place clean"
-                }
-            ]
-        }
-    ]
-    var bottomTabs = [
-        {
-            "name": "#animal",
-            "nameTag":"animal",
-            "image": "animals.jpg",
-            "audioImages": [
-                {
-                    "pic":"cat.jpg",
-                    "word":"cat",
-                    "nameTag":"14",
-                    "phrase":"cat catches mouse"
-                },
-                {
-                    "pic":"frog.jpg",
-                    "word":"frog",
-                    "nameTag":"15",
-                    "phrase":"frog goes rabbit rabbit"
-                }
-            ]
-        }, 
-        {
-            "name": "#plant",
-            "nameTag":"plant",
-            "image": "plant.jpg",
-            "audioImages": [
-                {
-                    "pic":"rose.jpg",
-                    "word":"rose",
-                    "nameTag":"16",
-                    "phrase":"rose smells good"
-                },
-                {
-                    "pic":"pine.jpg",
-                    "word":"pine",
-                    "nameTag":"17",
-                    "phrase":"pine tree survives year-round"
-                }
-            ]
-        },
-        {
-            "name": "#math",
-            "nameTag":"math",
-            "image": "number.gif",
-            "audioImages": [
-                {
-                    "pic":"algebra.jpg",
-                    "word":"algebra",
-                    "nameTag":"18",
-                    "phrase":"manipulating number in equations"
-                },
-                {
-                    "pic":"geometry.gif",
-                    "word":"geometry",
-                    "nameTag":"19",
-                    "phrase":"learning about properties of shapes"
-                }
-            ]
-        } 
-    ]
+     }
 </script>
 </head>
 <body>
