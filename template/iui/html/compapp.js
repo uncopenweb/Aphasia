@@ -18,7 +18,7 @@ dojo.declare('compapp',[], {
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
-            dojo.forEach(topTabs, function(tab) {
+            dojo.forEach(mainTabs.topTabs, function(tab) {
                 self.createBorderBar(self,tab,tr);
             });
        
@@ -57,7 +57,7 @@ dojo.declare('compapp',[], {
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
             var imgTable2 = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","border":"1px solid black","font-size": "75%","width":"99.9%","height":"17%"}, height:"17%"},footer);
             var tr = dojo.create("tr",null,imgTable2);
-                dojo.forEach(bottomTabs, function(tab) {
+                dojo.forEach(mainTabs.bottomTabs, function(tab) {
                     self.createBorderBar(self, tab, tr);
                 });
         },
@@ -90,10 +90,10 @@ dojo.declare('compapp',[], {
         createTabs: function() {
             var self = this;
             
-            dojo.forEach(topTabs, function(tab) {
+            dojo.forEach(mainTabs.topTabs, function(tab) {
                 self.createMoreTabs(self, tab);
             });
-            dojo.forEach(bottomTabs, function(tab) {
+            dojo.forEach(mainTabs.bottomTabs, function(tab) {
                 self.createMoreTabs(self, tab);
             });
             
