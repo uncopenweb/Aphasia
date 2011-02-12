@@ -119,7 +119,8 @@
     
     function start() {
         var mainArea = dijit.byId("mainArea");
-        alert("Hello");
+        var li = dojo.create("li",null,mainArea);
+            var ul = dojo.create("ul",{innerHTML:"hello world"},li);
     }    
     
     dojo.ready(start);
