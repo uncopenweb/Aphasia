@@ -121,7 +121,7 @@
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         dojo.forEach(ulList, function(item) {
-            var ul = dojo.create("ul",{innerHTML:item},mainArea);  
+            var ul = dojo.create("ul",{innerHTML:item, className:"tabs"},mainArea);  
         });
     }    
     
