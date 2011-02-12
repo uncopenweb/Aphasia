@@ -118,7 +118,7 @@
     
     
     function start() {
-        
+        var tabContainer = new dijit.layout.TabContainer({},dojo.body());
     }    
     
     dojo.ready(start);
