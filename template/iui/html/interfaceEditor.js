@@ -119,8 +119,11 @@
     
     function start() {
         var mainArea = dojo.byId("mainArea");
+        var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var li = dojo.create("li",null,mainArea);
-            var ul = dojo.create("ul",{innerHTML:"hello world"},li);
+        dojo.forEach(ulList, function(item) {
+            var ul = dojo.create("ul",{innerHTML:item},li);  
+        });
     }    
     
     dojo.ready(start);
