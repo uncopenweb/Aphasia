@@ -1,0 +1,17 @@
+<div class="AudioUpload">
+    <form id="upload_form" method="POST" enctype="multipart/form-data">
+        <label>Tags: <input type="text" name="tags"></label>
+        <br/>
+        <label>Description: <input type="text" name="description"></label>
+        <br/>
+        <label>Title: <input type="text" name="title"></label>
+        <br/>
+        <label>Credit URL: <input type="text" name="creditURL"></label>
+        <br/>
+        <br/>
+        <label>Choose File:</label><input type="file" name="file" id="file"></label><br/>
+    </form>
+    <br/>
+    <button dojoType="dijit.form.Button" type="button" dojoAttachPoint="at_confirm">Confirm and Continue</button>
+    <button dojoType="dijit.form.Button" type="button" dojoAttachPoint="at_cancel">Cancel</button>
+</div>
