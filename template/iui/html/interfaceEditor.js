@@ -119,7 +119,7 @@
     
     function start() {
         var mainArea = dijit.byId("mainArea");
-        alert(mainArea);
+        alert("Hello");
     }    
     
     dojo.ready(start);
