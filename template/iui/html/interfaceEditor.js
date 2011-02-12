@@ -118,13 +118,6 @@
     
     
     function start() {
-        var tabContainer = new dijit.layout.TabContainer({},"tabContainer");
-        var c1 = new dijit.layout.ContentPane({
-            title: "sample",
-            content: "dutch mom is evil"
-        });
-        tabContainer.addChild(c1);
-        tabContainer.startup();
     }    
     
     dojo.ready(start);
