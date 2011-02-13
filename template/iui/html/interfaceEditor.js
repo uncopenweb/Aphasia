@@ -124,7 +124,7 @@
         var forwardButton = [];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
-            var forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
+            forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
                 // dojo.connect(forwardButton,'onclick',function() {
                     // dojo.byId(i).style.display="none";
                     // if (i!=5) {
