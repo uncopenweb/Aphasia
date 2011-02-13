@@ -121,6 +121,7 @@
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",null,mainArea);
+        var forwardButton = [];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
             var forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
