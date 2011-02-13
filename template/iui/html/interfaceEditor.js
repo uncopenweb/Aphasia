@@ -127,6 +127,7 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}},mainArea);
         }
+        dojo.byId(0).style.display = "block";
     }    
     
     dojo.ready(start);
