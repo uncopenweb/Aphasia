@@ -132,8 +132,8 @@
             alert(string);
             dojo.connect(button,'onclick',function() {
                 dojo.byId(string).style.display="none";
+                i = i+1;
                 if (i!=5) {
-                    i++;
                     string = '\"'+i+'\"';
                     dojo.byId(string).style.display="block";
                 }
