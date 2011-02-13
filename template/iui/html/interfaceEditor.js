@@ -129,6 +129,7 @@
         i=0;
         dojo.forEach(forwardButton, function(button) {
             var string = '\"'+i+'\"';
+            alert(string);
             dojo.connect(button,'onclick',function() {
                 dojo.byId(string).style.display="none";
                 if (i!=5) {
