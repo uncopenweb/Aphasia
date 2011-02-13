@@ -124,6 +124,12 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
             var backButton = dojo.create("button",{innerHTML:"Back"},div);
+                dojo.connect(backButton,'onclick',function() {
+                    dojo.byId(i).style.display="none";
+                    if (i!=0) {
+                        dojo.byId(--i).style.display="block";
+                    }
+                });
         }
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
