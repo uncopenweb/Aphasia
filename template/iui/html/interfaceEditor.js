@@ -129,7 +129,7 @@
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         i=0;
-        jsProgress.update({maximum:5});
+        jsProgress.update({maximum:4});
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
