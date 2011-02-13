@@ -124,7 +124,8 @@
         dojo.forEach(ulList, function(item) {
             var ul = dojo.create("td",{innerHTML:item, className:"tabs"},tabs);  
         });
-        var contents = new dijit.layout.ContentPane();
+        var contents = new dijit.layout.ContentPane({content: "<p>Optionally set new content now</p>"},mainArea);
+);
     }    
     
     dojo.ready(start);
