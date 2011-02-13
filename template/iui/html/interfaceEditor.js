@@ -135,7 +135,7 @@
                 }
             });
         });
-        dojo.byId("0").style.display = "block";
+        forwardButton[0].parentNode.style.display = "block";
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{innerHTML:item, className:"tabs"},tabs);
         });
