@@ -125,6 +125,7 @@
             var ul = dojo.create("td",{innerHTML:item, className:"tabs"},tabs);  
         });
         var contents = new dijit.layout.ContentPane({content: "<p>Optionally set new content now</p>"});
+        mainArea.addChild(contents);
     }    
     
     dojo.ready(start);
