@@ -7,6 +7,17 @@ td {
     background: -webkit-gradient(linear, left top, left bottom, from(#fff380), to(#fff));
 }
 
+.td1 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    color: #357EC7;
+    background: -moz-linear-gradient(top,  #fff380,  #fff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff380), to(#fff));
+    font-size: 25%;
+    font-weight: bold;
+}
+
 .mainContent {
     border: 1px solid black;
     height: 92%;

@@ -150,9 +150,9 @@
         });
         forwardButton[0].parentNode.style.display = "block";
         dojo.forEach(ulList, function(item) {
-            var td = dojo.create("td",{id:item, innerHTML:item, style:{"font-size":"25%"}, className:"tabs"},tabs);
+            var td = dojo.create("td",{id:item, innerHTML:item, style:{"font-size":"25%"}},tabs);
         });
-        //dojo.byId(ulList[0]).style.font-weight = "bold";
+        dojo.byId(ulList[0]).className = "td1";
     }    
     
     dojo.ready(start);
