@@ -122,8 +122,10 @@
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",null,mainArea);
         var forwardButton = [];
+        var backwardButton = [];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
+            backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         i=0;
@@ -132,6 +134,14 @@
                 if (i!=4) {
                     button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
+                }
+            });
+        });
+        dojo.forEach(backwardButton, function(button) {
+            dojo.connect(button,'onclick',function() {
+                if (i!=0) {
+                    button.parentNode.style.display="none";
+                    forwardButton[--i].parentNode.style.display="block";
                 }
             });
         });
