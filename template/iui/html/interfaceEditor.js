@@ -125,14 +125,17 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
             forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
-                // dojo.connect(forwardButton,'onclick',function() {
-                    // dojo.byId(i).style.display="none";
-                    // if (i!=5) {
-                        // alert("hello");
-                        // dojo.byId(++i).style.display="block";
-                    // }
-                // });
         }
+        i=0;
+        dojo.forEach(forwardButton, function(button) {
+            dojo.connect(button,'onclick',function() {
+                dojo.byId(i).style.display="none";
+                if (i!=5) {
+                    dojo.byId(++i).style.display="block";
+                }
+            }
+            
+        });
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{innerHTML:item, className:"tabs"},tabs);
