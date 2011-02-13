@@ -130,7 +130,7 @@
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 button.parentNode.style.display="none";
-                if (i!=5) {
+                if (i!=4) {
                     forwardButton[++i].parentNode.style.display="block";
                 }
             });
