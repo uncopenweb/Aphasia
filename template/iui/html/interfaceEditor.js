@@ -125,7 +125,7 @@
             var ul = dojo.create("td",{innerHTML:item, className:"tabs"},tabs);  
         });
         for (var i=0; i<5; i++) {
-            var div = dojo.create("div",{id:i, className:"mainContent"},mainArea);
+            var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}},mainArea);
         }
     }    
     
