@@ -123,21 +123,17 @@
         var tabs = dojo.create("table",null,mainArea);
         var forwardButton = [];
         for (var i=0; i<5; i++) {
-            var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
-            forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
+            var div = dojo.create("div",{className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
+            forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         i=0;
         dojo.forEach(forwardButton, function(button) {
-            var string = '\"'+i+'\"';
-            alert(string);
             dojo.connect(button,'onclick',function() {
-                dojo.byId(string).style.display="none";
-                i = i+1;
+                forwardButton.parentNode.style.display="none";
                 if (i!=5) {
-                    string = '\"'+i+'\"';
-                    dojo.byId(string).style.display="block";
+                    forwardButton[++i].parentNode.style.display="block";
                 }
-            });     
+            });
         });
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
