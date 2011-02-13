@@ -129,11 +129,13 @@
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         i=0;
+        jsProgress.update({maximum:5});
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                     button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
+                    jsProgress.update({progress:"20"});
                 }
             });
         });
@@ -142,6 +144,7 @@
                 if (i!=0) {
                     button.parentNode.style.display="none";
                     forwardButton[--i].parentNode.style.display="block";
+                    jsProgress.update({progress:"-20"});
                 }
             });
         });
