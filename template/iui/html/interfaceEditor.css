@@ -7,6 +7,6 @@ td {
     background: -webkit-gradient(linear, left top, left bottom, from(#fff380), to(#fff));
 }
 
-mainContent {
+#mainContent {
     border: 1px solid black;
 }
