@@ -126,6 +126,7 @@
             var forwardButton = dojo.create("button",{innerHTML:"Back"},div);
                 dojo.connect(forwardButton,'onclick',function() {
                     dojo.byId("0").style.display="none";
+                    alert(i);
                     if (i!=5) {
                         alert("hello");
                         dojo.byId(++i).style.display="block";
