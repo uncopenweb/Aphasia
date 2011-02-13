@@ -129,8 +129,8 @@
         i=0;
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
-                button.parentNode.style.display="none";
                 if (i!=4) {
+                    button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
                 }
             });
