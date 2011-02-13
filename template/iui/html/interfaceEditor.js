@@ -128,10 +128,13 @@
         }
         i=0;
         dojo.forEach(forwardButton, function(button) {
+            var string = '\"'+i+'\"';
             dojo.connect(button,'onclick',function() {
-                dojo.byId(i).style.display="none";
+                dojo.byId(string).style.display="none";
                 if (i!=5) {
-                    dojo.byId(++i).style.display="block";
+                    i++;
+                    string = '\"'+i+'\"';
+                    dojo.byId(string).style.display="block";
                 }
             });     
         });
