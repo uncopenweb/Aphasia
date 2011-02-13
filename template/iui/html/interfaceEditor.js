@@ -127,6 +127,7 @@
                 dojo.connect(forwardButton,'onclick',function() {
                     dojo.byId("0").style.display="none";
                     if (i!=5) {
+                        alert("hello");
                         dojo.byId(++i).style.display="block";
                     }
                 });
