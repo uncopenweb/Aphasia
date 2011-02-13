@@ -123,6 +123,10 @@
         var tabs = dojo.create("table",null,mainArea);
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
+            var backButton = new dijit.form.Button({
+                label: "Back"
+                
+            },"i");
         }
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
