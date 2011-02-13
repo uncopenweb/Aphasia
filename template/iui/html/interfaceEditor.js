@@ -123,11 +123,11 @@
         var tabs = dojo.create("table",null,mainArea);
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
-            var backButton = dojo.create("button",{innerHTML:"Back"},div);
-                dojo.connect(backButton,'onclick',function() {
+            var forwardButton = dojo.create("button",{innerHTML:"Back"},div);
+                dojo.connect(forwardButton,'onclick',function() {
                     dojo.byId(i).style.display="none";
-                    if (i!=0) {
-                        dojo.byId(--i).style.display="block";
+                    if (i!=5) {
+                        dojo.byId(++i).style.display="block";
                     }
                 });
         }
