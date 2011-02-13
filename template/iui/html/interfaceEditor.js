@@ -152,6 +152,7 @@
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{id:item, innerHTML:item, className:"tabs"},tabs);
         });
+        alert(dojo.byId(ulList[0]));
         dojo.byId(ulList[0]).style.font-weight = "bold";
     }    
     
