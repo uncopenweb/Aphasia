@@ -133,8 +133,7 @@
                 if (i!=5) {
                     dojo.byId(++i).style.display="block";
                 }
-            }
-            
+            });     
         });
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
