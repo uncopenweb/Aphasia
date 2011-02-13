@@ -123,14 +123,14 @@
         var tabs = dojo.create("table",null,mainArea);
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:i, className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
-            var forwardButton = dojo.create("button",{innerHTML:"Back"},div);
-                dojo.connect(forwardButton,'onclick',function() {
-                    dojo.byId(i).style.display="none";
-                    if (i!=5) {
-                        alert("hello");
-                        dojo.byId(++i).style.display="block";
-                    }
-                });
+            var forwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
+                // dojo.connect(forwardButton,'onclick',function() {
+                    // dojo.byId(i).style.display="none";
+                    // if (i!=5) {
+                        // alert("hello");
+                        // dojo.byId(++i).style.display="block";
+                    // }
+                // });
         }
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
