@@ -126,7 +126,7 @@
             var backButton = new dijit.form.Button({
                 label: "Back"
                 
-            },i);
+            },"mainArea");
         }
         dojo.byId("0").style.display = "block";
         dojo.forEach(ulList, function(item) {
