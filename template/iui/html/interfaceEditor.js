@@ -135,7 +135,7 @@
                 if (i!=4) {
                     button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
-                    jsProgress.update({progress:"1"});
+                    jsProgress.update({progress:i});
                 }
             });
         });
@@ -144,7 +144,7 @@
                 if (i!=0) {
                     button.parentNode.style.display="none";
                     forwardButton[--i].parentNode.style.display="block";
-                    jsProgress.update({progress:"-1"});
+                    jsProgress.update({progress:-i});
                 }
             });
         });
