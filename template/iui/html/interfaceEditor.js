@@ -144,7 +144,7 @@
                 if (i!=0) {
                     button.parentNode.style.display="none";
                     forwardButton[--i].parentNode.style.display="block";
-                    jsProgress.update({progress:-i});
+                    jsProgress.update({progress:i});
                 }
             });
         });
