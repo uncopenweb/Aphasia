@@ -67,9 +67,7 @@ body >.menu{
     position: fixed;
 }
 
-#tTd {
-    border-right-style: 1px solid black;
-    border-collapse:collapse;
+.tTd {
     padding-top: 0px;
 }
 
