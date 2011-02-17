@@ -66,7 +66,7 @@ dojo.declare('compapp',[], {
             var td = dojo.create("td",{id:"tTd",align:"center",style:{"border-right-style":"1px solid black","width":"33.3%"}}, tr);
             var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"font-size":"x-large","align":"center"}},td);
             var a = dojo.create("a",{href:tab.name},td);
-            var image = dojo.create("img",{src:tab.image, width:"20%", height:"20%"}, a);
+            var image = dojo.create("img",{src:tab.image, width:"17%", height:"17%"}, a);
             dojo.connect(a, 'onmouseup', function() {
                 if (self.currentTab != tab) {
                     if (self.currentTab!=null) {
