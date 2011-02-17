@@ -64,7 +64,7 @@ dojo.declare('compapp',[], {
         
         createBorderBar: function(self, tab, tr) {
             var td = dojo.create("td",{id:"#tTd",align:"center",style:{"border-right-style":"1px solid black","width":"33.3%"}}, tr);
-            var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
+            var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"font-size":"large","align":"center"}},td);
             var a = dojo.create("a",{href:tab.name},td);
             var image = dojo.create("img",{src:tab.image, width:"15%"}, a);
             dojo.connect(a, 'onmouseup', function() {
