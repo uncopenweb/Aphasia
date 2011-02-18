@@ -187,6 +187,8 @@
             dojo.create("br",null,form);
         var c3 = dojo.create("input",{type:"radio", value:"d", name:"1p"},form);
             dojo.create("label",{innerHTML:"Delete an existing interface"},form);
+        
+        var button = dojo.create("button",null,form);
     }
     
     dojo.ready(start);
