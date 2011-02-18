@@ -55,7 +55,7 @@ dojo.declare('compapp',[], {
                 });
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
-            var imgTable2 = dojo.create("table",{id:"tTable",selected:"true",style:{"width":"100%"}},footer);
+            var imgTable2 = dojo.create("table",{id:"tTable",selected:"true",style:{"width":"100%","top":"85%"}},dojo.body());
             var tr = dojo.create("tr",null,imgTable2);
                 dojo.forEach(mainTabs.bottomTabs, function(tab) {
                     self.createBorderBar(self, tab, tr);
