@@ -116,6 +116,8 @@
         }  
     }
     
+    thisSchema = {};
+    
     
     function start() {
         var mainArea = dojo.byId("mainArea");
@@ -126,8 +128,9 @@
         });
         var forwardButton = [];
         var backwardButton = [];
+        var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
-            var div = dojo.create("div",{className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
+            var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
             backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
@@ -163,7 +166,11 @@
         });
         forwardButton[0].parentNode.style.display = "block";
         dojo.byId(ulList[0]).className = "td1";
-    }    
+    }
+
+    function step1 () {
+        
+    }
     
     dojo.ready(start);
     
