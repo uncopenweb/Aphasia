@@ -97,7 +97,7 @@ dojo.declare('compapp',[], {
                 self.createMoreTabs(self, tab);
             });
             
-            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"20%","left":"15%","width":"70%","height":"80%"}}, dojo.body());
+            var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"20%","left":"15%","width":"70%","height":"68%"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
             var word = dojo.create("textarea",{id:"word",cols:"35",rows:"17",style:{"height":"100%", "width":"100%"}},form);
             var speak = dojo.create("input",{id:"speak",type:"button",value:"speak",onclick:"javascript:;",style:{"vertical-align":"bottom"}},form);
@@ -107,7 +107,7 @@ dojo.declare('compapp',[], {
         },
         
         createMoreTabs: function(self, tab) {        
-            var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"20%","width":"54%","height":"80%"}},dojo.body());
+            var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"68%"}},dojo.body());
             dojo.forEach(tab.audioImages,function(stuff) {
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                 var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
@@ -131,7 +131,7 @@ dojo.declare('compapp',[], {
             }); 
 
             dojo.forEach(tab.audioImages,function(stuff) {
-                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
+                var div = dojo.create("div",{id:stuff.nameTag,className:"panel",style:{"top":"21%","left":"25%","width":"54%","height":"80%"}},dojo.body());              
                 var imgDiv1 = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"100%","height":"26%","float":"left"}},div);
                     var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                     var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
