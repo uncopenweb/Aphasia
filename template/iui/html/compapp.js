@@ -23,7 +23,7 @@ dojo.declare('compapp',[], {
             });
        
             var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'76%'},selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'68%'},selected:"true"},dojo.body());
                 dojo.forEach(leftPhrases, function(aPhrase) {
                     var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
@@ -32,7 +32,7 @@ dojo.declare('compapp',[], {
             
             
             
-            var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"76%","left":"87.5%"},selected:"true"},dojo.body());
+            var rightTable = dojo.create("table",{id:"sideTable",style:{"width":"12.5%","height":"68%","left":"87.5%"},selected:"true"},dojo.body());
             var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"How about you?"},rightTable);
                 dojo.connect(td,'onmouseup',dojo.hitch(self, 'playSound', "How about you?"));
             var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":'100%'}, innerHTML:"Thank you."},rightTable);
