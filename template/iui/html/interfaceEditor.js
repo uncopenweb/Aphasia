@@ -174,7 +174,7 @@
 
     function step1 (ids) {
         var div = dojo.byId(ids[0]);
-        var h4 = dojo.create("h2",{innerHTML:"What do you want to do?"}, div);
+        var h4 = dojo.create("h1",{innerHTML:"What do you want to do?"}, div);
     }
     
     dojo.ready(start);
