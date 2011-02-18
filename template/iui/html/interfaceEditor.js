@@ -130,7 +130,7 @@
         var backwardButton = [];
         var ids = this.ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
-            var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
+            dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
             backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
@@ -173,7 +173,8 @@
     }
 
     function step1 () {
-        
+        var div = dojo.byId(ids[0]);
+        var h4 = dojo.create("h4",{innerHTML:"What do you want to do?"}, div);
     }
     
     dojo.ready(start);
