@@ -130,7 +130,7 @@
         var backwardButton = [];
         var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
-            var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}, innerHTML:i},mainArea);
+            var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
             backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
