@@ -146,6 +146,7 @@
                     else {
                         console.log("I reach the last step");
                         forwardButton[4].disabled = "disabled";
+                        console.log(forwardButton[4]);
                     }
                     forwardButton[4].disabled = null;                   
                     dojo.byId(ulList[i]).className = null;
