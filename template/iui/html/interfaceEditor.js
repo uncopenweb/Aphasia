@@ -135,7 +135,7 @@
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         
-        forwardButton[1].disabled = "disabled";
+        forwardButton[3].disabled = "disabled";
         backwardButton[0].disabled = "disabled";
         
         i=0;
