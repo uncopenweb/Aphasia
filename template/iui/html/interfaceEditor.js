@@ -141,8 +141,10 @@
                 if (i!=4) {
                     if (i!=3) {
                         forwardButton[4].disabled = null;
+                        console.log("the index is: "+i);
                     }
                     else {
+                        console.log("I reach the last step");
                         forwardButton[4].disabled = "disabled";
                     }
                     forwardButton[4].disabled = null;                   
