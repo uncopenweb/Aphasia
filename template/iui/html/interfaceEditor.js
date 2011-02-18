@@ -137,7 +137,7 @@
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                     
-                    dojo.byId(ulList[i].className).className = null;
+                    dojo.byId(ulList[i]).className = null;
                 
                     button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
@@ -151,13 +151,13 @@
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
                     
-                    dojo.byId(ulList[i].className).className = null;
+                    dojo.byId(ulList[i]).className = null;
                 
                     button.parentNode.style.display="none";
                     forwardButton[--i].parentNode.style.display="block";
                     jsProgress.update({progress:i});
                     
-                    dojo.byId(ulList[i].className).className = null;
+                    dojo.byId(ulList[i]).className = "td1";
                 }
             });
         });
