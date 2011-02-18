@@ -181,11 +181,11 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var c2 = dojo.create("input",{type:"radio", value:"e", name:"1p"},form);
-            dojo.create("div",{innerHTML:"Edit an existing interface"},form);
+            dojo.create("label",{innerHTML:"Edit an existing interface"},form);
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var c3 = dojo.create("input",{type:"radio", value:"d", name:"1p"},form);
-            dojo.create("div",{innerHTML:"Delete an existing interface"},form);
+            dojo.create("label",{innerHTML:"Delete an existing interface"},form);
     }
     
     dojo.ready(start);
