@@ -177,7 +177,7 @@
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
         var form = dojo.create("form", null, div);
         var c1 = dojo.create("input",{type:"radio", value:"c", name:"1p"},form);
-            dojo.create("div",{innerHTML:"Create a new interface",style:{"float":"left"}},form);
+            dojo.create("label",{innerHTML:"Create a new interface"},form);
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var c2 = dojo.create("input",{type:"radio", value:"e", name:"1p"},form);
