@@ -17,7 +17,7 @@ dojo.declare('compapp',[], {
             var self = this;
             
             var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"width":"100%"}},toolbar);
-            var tr = dojo.create("tr",{id:"#tTr"},imgTable);
+            var tr = dojo.create("tr",null,imgTable);
             dojo.forEach(mainTabs.topTabs, function(tab) {
                 self.createBorderBar(self,tab,tr);
             });
@@ -55,7 +55,7 @@ dojo.declare('compapp',[], {
                 });
             
             var footer = dojo.create("div",{className:"menu",selected:"true"},dojo.body());    
-            var imgTable2 = dojo.create("table",{id:"tTable",selected:"true",style:{"border-collapse":"collapse","font-size": "75%","width":"100%"}},footer);
+            var imgTable2 = dojo.create("table",{id:"tTable",selected:"true",style:{"border-collapse":"collapse","width":"100%"}},footer);
             var tr = dojo.create("tr",null,imgTable2);
                 dojo.forEach(mainTabs.bottomTabs, function(tab) {
                     self.createBorderBar(self, tab, tr);
