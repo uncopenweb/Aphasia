@@ -139,7 +139,12 @@
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
-                
+                    if (i!=3) {
+                        forwardButton[0].disabled = null;
+                    }
+                    else {
+                        forwardButton[i].disabled = "disabled";
+                    }
                     forwardButton[4].disabled = null;                   
                     dojo.byId(ulList[i]).className = null;
                 
@@ -149,16 +154,17 @@
                     
                     dojo.byId(ulList[i]).className = "td1";
                 }
-                else {
-                    forwardButton[i].disabled = "disabled";
-                }
             });
         });
         dojo.forEach(backwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
-                    
-                    forwardButton[0].disabled = null;
+                    if (i!=1) {
+                        backwardButton[0].disabled = null;
+                    }
+                    else {
+                        backwardButton[0].disabled = "disabled";
+                    }
                     dojo.byId(ulList[i]).className = null;
                 
                     button.parentNode.style.display="none";
@@ -166,9 +172,6 @@
                     jsProgress.update({progress:i});
                     
                     dojo.byId(ulList[i]).className = "td1";
-                }
-                else {
-                    backwardButton[i].disabled = "disabled";
                 }
             });
         });
