@@ -133,18 +133,28 @@
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
+                    
+                    dojo.byId(ulList[i].className).className = null;
+                
                     button.parentNode.style.display="none";
                     forwardButton[++i].parentNode.style.display="block";
                     jsProgress.update({progress:i});
+                    
+                    dojo.byId(ulList[i]).className = "td1";
                 }
             });
         });
         dojo.forEach(backwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
+                    
+                    dojo.byId(ulList[i].className).className = null;
+                
                     button.parentNode.style.display="none";
                     forwardButton[--i].parentNode.style.display="block";
                     jsProgress.update({progress:i});
+                    
+                    dojo.byId(ulList[i].className).className = null;
                 }
             });
         });
