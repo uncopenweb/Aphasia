@@ -140,10 +140,10 @@
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                     if (i!=3) {
-                        forwardButton[0].disabled = null;
+                        forwardButton[4].disabled = null;
                     }
                     else {
-                        forwardButton[i].disabled = "disabled";
+                        forwardButton[4].disabled = "disabled";
                     }
                     forwardButton[4].disabled = null;                   
                     dojo.byId(ulList[i]).className = null;
