@@ -135,7 +135,7 @@
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         
-        forwardButton[3].disabled = "disabled";
+        forwardButton[4].disabled = "disabled";
         backwardButton[0].disabled = "disabled";
         
         i=0;
@@ -143,16 +143,7 @@
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
-                    if (i!=3) {
-                        forwardButton[4].disabled = null;
-                        console.log("the index is: "+i);
-                    }
-                    else {
-                        console.log("I reach the last step");
-                        forwardButton[4].disabled = "disabled";
-                        console.log(forwardButton[4]);
-                    }
-                    forwardButton[4].disabled = null;                   
+                                  
                     dojo.byId(ulList[i]).className = null;
                 
                     button.parentNode.style.display="none";
@@ -166,12 +157,7 @@
         dojo.forEach(backwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
-                    if (i!=1) {
-                        backwardButton[0].disabled = null;
-                    }
-                    else {
-                        backwardButton[0].disabled = "disabled";
-                    }
+                
                     dojo.byId(ulList[i]).className = null;
                 
                     button.parentNode.style.display="none";
