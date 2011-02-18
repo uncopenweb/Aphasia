@@ -74,6 +74,10 @@ body >.menu{
     border-left: 1px solid black;
 }
 
+#tTd {
+    padding-top:0px;
+}
+
 #sideTable {
     width: 55px;
     border: 1px solid #98bf21;
