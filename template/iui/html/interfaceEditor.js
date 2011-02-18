@@ -121,6 +121,9 @@
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",null,mainArea);
+        dojo.forEach(ulList, function(item) {
+            var td = dojo.create("td",{id:item, innerHTML:item, style:{"font-size":"25%"}},tabs);
+        });
         var forwardButton = [];
         var backwardButton = [];
         for (var i=0; i<5; i++) {
@@ -159,9 +162,6 @@
             });
         });
         forwardButton[0].parentNode.style.display = "block";
-        dojo.forEach(ulList, function(item) {
-            var td = dojo.create("td",{id:item, innerHTML:item, style:{"font-size":"25%"}},tabs);
-        });
         dojo.byId(ulList[0]).className = "td1";
     }    
     
