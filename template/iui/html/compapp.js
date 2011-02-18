@@ -16,7 +16,7 @@ dojo.declare('compapp',[], {
             
             var self = this;
             
-            var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse","font-size": "75%"}},toolbar);
+            var imgTable = dojo.create("table",{id:"#tTable",selected:"true",style:{"border-collapse":"collapse"}},toolbar);
             var tr = dojo.create("tr",{id:"#tTr",style:{"border-collapse":"collapse"}},imgTable);
             dojo.forEach(mainTabs.topTabs, function(tab) {
                 self.createBorderBar(self,tab,tr);
