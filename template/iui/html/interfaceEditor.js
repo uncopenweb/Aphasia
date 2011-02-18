@@ -176,9 +176,9 @@
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
         var form = dojo.create("form", null, div);
-        var c1 = dojo.create("input",{type:"radio",value:"Create a new inteface"},form);
-        var c2 = dojo.create("input",{type:"radio",value:"Edit an existing interface"},form);
-        var c3 = dojo.create("input",{type:"radio",value:"Delete an existing interface"},form);
+        var c1 = dojo.create("input",{type:"radio",innerHTML:"Create a new inteface", value:"c"},form);
+        var c2 = dojo.create("input",{type:"radio",innerHTML:"Edit an existing interface", value:"e"},form);
+        var c3 = dojo.create("input",{type:"radio",innerHTML:"Delete an existing interface", value:"d"},form);
     }
     
     dojo.ready(start);
