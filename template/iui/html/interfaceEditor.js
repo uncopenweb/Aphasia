@@ -134,6 +134,10 @@
             backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
+        
+        forwardButton[4].disabled = "";
+        backwardButton[0].disabled = "disabled";
+        
         i=0;
         jsProgress.update({maximum:4});
         dojo.forEach(forwardButton, function(button) {
