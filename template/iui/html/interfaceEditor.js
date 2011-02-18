@@ -173,7 +173,7 @@
     }
 
     function step1 () {
-        var div = dojo.byId(ids[0]);
+        var div = dojo.byId(this.ids[0]);
         var h4 = dojo.create("h4",{innerHTML:"What do you want to do?"}, div);
     }
     
