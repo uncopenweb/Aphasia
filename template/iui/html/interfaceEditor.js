@@ -174,10 +174,11 @@
 
     function step1 (ids) {
         var div = dojo.byId(ids[0]);
-        var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"}, div);
-        var c1 = dojo.create("input",{type:"radio",value:"Create a new inteface"},div);
-        var c2 = dojo.create("input",{type:"radio",value:"Edit an existing interface"},div);
-        var c3 = dojo.create("input",{type:"radio",value:"Delete an existing interface"},div);
+        var form = dojo.create("form", null, div);
+        var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},form);
+        var c1 = dojo.create("input",{type:"radio",value:"Create a new inteface"},form);
+        var c2 = dojo.create("input",{type:"radio",value:"Edit an existing interface"},form);
+        var c3 = dojo.create("input",{type:"radio",value:"Delete an existing interface"},form);
     }
     
     dojo.ready(start);
