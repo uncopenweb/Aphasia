@@ -181,11 +181,6 @@
             width:"200px"
         }
         ];
-        
-        var store = [{
-            Theme:"hello",
-            id: 123
-        }];
     
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
@@ -206,9 +201,8 @@
         
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
-            structure: layout,
-            store: store
-        },dojo.create("div",{style:{"height":"30px"}},gridDiv));
+            structure: layout
+        },dojo.create("div",{style:{"height":"30px","display":"none"}},gridDiv));
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
@@ -217,6 +211,7 @@
         
         dojo.connect(c2,'onclick',function() {
             gridDiv.style.display = "block";
+            grid.style.display = "block";
         });
         dojo.connect(c3,'onclick',function() {
             gridDiv.style.display = "block";
