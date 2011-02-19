@@ -204,13 +204,14 @@
             dojo.create("label",{innerHTML:"Delete an existing interface"},form);
             dojo.create("br",null,form);
             dojo.create("br",null,form);
-        var button = dojo.create("button",{innerHTML:"Next"},div);
         
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
             structure: layout
         },dojo.create("div",{style:{"height":"30px"}},gridDiv));
         grid.startup();
+        
+        var button = dojo.create("button",{innerHTML:"Next"},div);
         
         div.style.display = "block";
         return button;
