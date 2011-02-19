@@ -211,7 +211,7 @@
         
         dojo.connect(c2,'onclick',function() {
             gridDiv.style.display = "block";
-            grid.style.display = "block";
+            grid.domNode.style.display = "block";
         });
         dojo.connect(c3,'onclick',function() {
             gridDiv.style.display = "block";
