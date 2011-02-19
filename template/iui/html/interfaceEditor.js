@@ -202,6 +202,8 @@
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
             query: { Title: '*' },
+            clientSort: true, 
+            rowSelector: '20px',
             structure: layout
         },document.createElement("div"));
         dojo.place(grid.domNode,gridDiv);
