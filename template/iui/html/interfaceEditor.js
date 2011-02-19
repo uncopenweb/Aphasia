@@ -196,7 +196,10 @@
         var td1 = dojo.create("td",{className:"td2"},tr);
         var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
         var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
-        var tr = dojo.create("tr",null,table);
+            tr = dojo.create("tr",null,table);
+            td1 = dojo.create("input",{type:"radio",className:"radios"},tr);
+            td2 = dojo.create("td",{className:"td2",innerHTML:"Example Theme"},tr);
+            td2 = dojo.create("td",{className:"td2",innerHTML:"automatic generated id"},tr);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
