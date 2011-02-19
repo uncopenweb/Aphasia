@@ -191,6 +191,8 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var button = dojo.create("button",{innerHTML:"Next"},form);
+        
+        div.style.display = "block";
         return button;
     }
     
