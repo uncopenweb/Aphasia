@@ -275,7 +275,7 @@
         });
         
         div.style.display = "block";
-        theGrid.startup();
+        //theGrid.startup();
         return button;
     }
     
