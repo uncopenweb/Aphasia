@@ -213,7 +213,7 @@
         
         var Grid = dojo.create("div",{className:"grid",id:"theGrid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
 
-        var grid = new dojox.grid.DataGrid({
+        var theGrid = new dojox.grid.DataGrid({
             query: {
                 Title: '*'
             },
@@ -222,9 +222,9 @@
             rowSelector: '20px',
             structure: layout
         },
-        dojo.create('div'));   
+        dojo.create('div',{style:{}}));   
 
-        document.getElementById("theGrid").appendChild(grid.domNode);
+        document.getElementById("theGrid").appendChild(theGrid.domNode);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
