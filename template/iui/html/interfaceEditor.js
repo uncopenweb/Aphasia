@@ -172,12 +172,12 @@
     
         var layout = [{
             field:"Theme",
-            name:"Theme of Interface",
+            name:"Theme",
             width:"200px"
         },
         {
             field:"id",
-            name:"Unique ID",
+            name:"ID",
             width:"200px"
         }
         ];
@@ -201,11 +201,8 @@
         
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
-            query: { Title: '*' },
-            clientSort: true, 
-            rowSelector: '20px',
             structure: layout
-        },document.createElement("div"));
+        },gridDiv);
         dojo.place(grid.domNode,gridDiv);
         
         dojo.create("br",null,form);
