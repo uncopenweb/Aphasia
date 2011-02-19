@@ -171,7 +171,7 @@
     function step1 (ids) {
     
         var layout = [{
-            field:"Inteface Theme",
+            field:"Theme",
             name:"Theme of Interface",
             width:"200px"
         },
@@ -182,7 +182,10 @@
         }
         ];
         
-        var store = {};
+        var store = [{
+            Theme:"hello",
+            id: 123
+        }];
     
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
@@ -203,7 +206,8 @@
         
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
-            structure: layout
+            structure: layout,
+            store: store
         },dojo.create("div",{style:{"height":"30px"}},gridDiv));
         
         dojo.create("br",null,form);
