@@ -170,62 +170,6 @@
 
     function step1 (ids) {
     
-        var layout = [{
-            field: 'number',
-            name: 'number',
-            width: '80px'
-        },
-        {
-            field: 'name',
-            name: 'name',
-            width: '80px'
-        },
-        {
-            field: 'position',
-            name: 'position',
-            width: '80px'
-        },
-        {
-            field: 'victories',
-            name: 'victories',
-            width: '80px'
-        }
-        ];
-        
-	    var theGreatestTeamOfAllTime = {
-	        items: [ {
-	                  "number":"12",
-	                  "name":"Jim Kelly",
-	                  "position":"QB",
-	                  "victories":"0"
-	                  },
-	                 {
-	                  "number":"34",
-	                  "name":"Thurman Thomas",
-	                  "position":"RB",
-	                  "victories":"0"
-	                  },
-	                 {
-	                  "number":"89",
-	                  "name":"Steve Tasker",
-	                  "position":"WR",
-	                  "victories":"0"
-	                  },
-	            {
-	                "number":"78",
-	                "name":"Bruce Smith",
-	                "position":"DE",
-	                "victories":"0"
-	            }
-	        ],
-	        identifier: "number"
-	    };
-        
-       var dataStore = new dojo.data.ItemFileReadStore(
-	        { data:theGreatestTeamOfAllTime }
-	    );
-
-    
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
@@ -246,20 +190,12 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
-
-        var theGrid = new dojox.grid.DataGrid({
-            query: {
-                Title: '*'
-            },
-            store: dataStore,
-            clientSort: true,
-            rowSelector: '20px',
-            structure: layout
-        },
-        document.createElement("div"));   
-
-        dojo.byId("grid").appendChild(theGrid.domNode);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var table = dojo.create("table",null,Grid);
+        var tr = dojo.create("tr",null,table);
+        var td1 = dojo.create("td",{innerHTML:"Interface Theme"},tr);
+        var td2 = dojo.create("td",{innerHTML:"Id"},tr);
+        var tr = dojo.create("tr",null,table);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
@@ -275,7 +211,6 @@
         });
         
         div.style.display = "block";
-        //theGrid.startup();
         return button;
     }
     
