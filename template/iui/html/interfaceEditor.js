@@ -217,6 +217,11 @@
         dojo.create("br",null,form);
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
+        
+        dojo.connect(c2,'onclick',function() {
+            gridDiv.style.display = "block";
+        });
+        
         div.style.display = "block";
         return button;
     }
