@@ -222,7 +222,7 @@
             rowSelector: '20px',
             structure: layout
         },
-        document.createElement('div'));   
+        dojo.create('div'));   
 
         document.getElementById("theGrid").appendChild(grid.domNode);
         
