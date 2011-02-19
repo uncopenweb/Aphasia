@@ -134,7 +134,7 @@
             backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
-        step1(ids[0]);
+        step1(ids[0], forwardButton);
         forwardButton[4].disabled = "disabled";
         backwardButton[0].disabled = "disabled";
         
@@ -172,7 +172,7 @@
         dojo.byId(ulList[0]).className = "td1";
     }
 
-    function step1 (id) {
+    function step1 (id,forwardButton) {
         var div = dojo.byId(id);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
