@@ -207,7 +207,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
 
         var grid = new dojox.grid.DataGrid({
             query: {
