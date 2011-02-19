@@ -174,7 +174,7 @@
 
     function step1 (ids) {
     
-        var layout = {{
+        var layout = [{
             field:"Inteface Theme",
             name:"Theme of Interface",
             width:"200px"
@@ -184,7 +184,7 @@
             name:"Unique ID",
             width:"200px"
         }
-        };
+        ];
         
         var store = {};
     
