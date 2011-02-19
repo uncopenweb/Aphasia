@@ -131,12 +131,12 @@
         var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
-            backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
-            forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
+            //backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
+            //forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
-        step1(ids);
-        forwardButton[4].disabled = "disabled";
-        backwardButton[0].disabled = "disabled";
+        forwardButton[0] = step1(ids);
+        //forwardButton[4].disabled = "disabled";
+        //backwardButton[0].disabled = "disabled";
         
         i=0;
         jsProgress.update({maximum:4});
@@ -190,6 +190,7 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var button = dojo.create("button",{innerHTML:"Next"},form);
+        return button;
     }
     
     dojo.ready(start);
