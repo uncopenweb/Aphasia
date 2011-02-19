@@ -189,7 +189,7 @@
             dojo.create("label",{innerHTML:"Delete an existing interface"},form);
             dojo.create("br",null,form);
             dojo.create("br",null,form);
-        var button = dojo.create("button",{innerHTML:"Next"},form);
+        var button = dojo.create("button",{innerHTML:"Next"},div);
         
         div.style.display = "block";
         return button;
