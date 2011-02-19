@@ -224,7 +224,7 @@
         },
         document.createElement('div'));   
 
-        dojo.byId("theGrid").appendChild(grid.domNode);
+        document.getElementById("theGrid").appendChild(grid.domNode);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
