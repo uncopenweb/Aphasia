@@ -212,13 +212,13 @@
         
         
         dojo.connect(c2,'onclick',function() {
-            gridDiv.style.display = "block";
+            Grid.style.display = "block";
         });
         dojo.connect(c3,'onclick',function() {
-            gridDiv.style.display = "block";
+            Grid.style.display = "block";
         });
         dojo.connect(c1,'onclick',function() {
-            gridDiv.style.display = "none";
+            Grid.style.display = "none";
         });
         
         div.style.display = "block";
