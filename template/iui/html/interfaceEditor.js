@@ -222,7 +222,6 @@
         });
         
         div.style.display = "block";
-        grid.startup();
         return button;
     }
     
