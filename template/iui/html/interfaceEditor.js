@@ -171,21 +171,59 @@
     function step1 (ids) {
     
         var layout = [{
-            field: 'Presidency',
-            name: 'Presidency',
-            width: '200px'
+            field: 'number',
+            name: 'number',
+            width: '80px'
         },
         {
-            field: 'President',
-            name: 'President',
-            width: '200px'
-        }];
+            field: 'name',
+            name: 'name',
+            width: '80px'
+        },
+        {
+            field: 'position',
+            name: 'position',
+            width: '80px'
+        },
+        {
+            field: 'victories',
+            name: 'victories',
+            width: '80px'
+        }
+        ];
         
-        var store4 = new dojox.data.CsvStore({
-            url: 'sample.csv'
-        });
+	    var theGreatestTeamOfAllTime = {
+	        items: [ {
+	                  "number":"12",
+	                  "name":"Jim Kelly",
+	                  "position":"QB",
+	                  "victories":"0"
+	                  },
+	                 {
+	                  "number":"34",
+	                  "name":"Thurman Thomas",
+	                  "position":"RB",
+	                  "victories":"0"
+	                  },
+	                 {
+	                  "number":"89",
+	                  "name":"Steve Tasker",
+	                  "position":"WR",
+	                  "victories":"0"
+	                  },
+	            {
+	                "number":"78",
+	                "name":"Bruce Smith",
+	                "position":"DE",
+	                "victories":"0"
+	            }
+	        ],
+	        identifier: "number"
+	    };
         
-        console.log(store4);
+       var dataStore = new dojo.data.ItemFileReadStore(
+	        { data:theGreatestTeamOfAllTime }
+	    );
 
     
         var div = dojo.byId(ids[0]);
@@ -214,7 +252,7 @@
             query: {
                 Title: '*'
             },
-            store: store4,
+            store: dataStore,
             clientSort: true,
             rowSelector: '20px',
             structure: layout
@@ -241,5 +279,5 @@
         return button;
     }
     
-    dojo.addOnLoad(start);
+    dojo.ready(start);
     
