@@ -135,6 +135,7 @@
             //forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         forwardButton[0] = step1(ids);
+        console.log(forwardButton[0]);
         //forwardButton[4].disabled = "disabled";
         //backwardButton[0].disabled = "disabled";
         
