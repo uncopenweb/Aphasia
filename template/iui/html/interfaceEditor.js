@@ -207,7 +207,7 @@
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
             structure: layout
-        },gridDiv);
+        },dojo.create("div",null,gridDiv));
         grid.startup();
         
         div.style.display = "block";
