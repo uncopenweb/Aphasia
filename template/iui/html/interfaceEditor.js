@@ -241,5 +241,5 @@
         return button;
     }
     
-    dojo.ready(start);
+    dojo.addOnLoad(start);
     
