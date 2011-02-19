@@ -199,6 +199,9 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         
+        dojo.create("br",null,form);
+        dojo.create("br",null,form);
+        
         var Grid = dojo.create("div",{className:"grid",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var table = dojo.create("table",{id:"grid",dojoType:"dojox.grid.DataGrid"},Grid);
         var thead = dojo.create("thead",null,table);
@@ -206,8 +209,6 @@
         var th1 = dojo.create("th",{field:"theme",innerHTML:"Interface Theme"},tr);
         var th2 = dojo.create("th",{field:"id",innerHTML:"Id"},tr);
         
-        dojo.create("br",null,form);
-        dojo.create("br",null,form);
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
         
