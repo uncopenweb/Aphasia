@@ -177,12 +177,12 @@
         var layout = [{
             field:"Inteface Theme",
             name:"Theme of Interface",
-            width:"auto"
+            width:"68px"
         },
         {
             field:"id",
             name:"Unique ID",
-            width:"auto"
+            width:"68px"
         }
         ];
     
