@@ -126,22 +126,21 @@
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{id:item, innerHTML:item, style:{"font-size":"25%"}},tabs);
         });
-        var forwardButton = [];
-        var backwardButton = [];
+        this.forwardButton = [];
+        this.backwardButton = [];
         var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
             //backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
             //forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
-        forwardButton[0] = step1(ids);
-        console.log(forwardButton[0]);
+        this.forwardButton[0] = step1(ids);
         //forwardButton[4].disabled = "disabled";
         //backwardButton[0].disabled = "disabled";
         
         i=0;
         jsProgress.update({maximum:4});
-        dojo.forEach(forwardButton, function(button) {
+        dojo.forEach(this.forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                                   
@@ -155,7 +154,7 @@
                 }
             });
         });
-        dojo.forEach(backwardButton, function(button) {
+        dojo.forEach(this.backwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
                 
@@ -169,7 +168,7 @@
                 }
             });
         });
-        forwardButton[0].parentNode.style.display = "block";
+
         dojo.byId(ulList[0]).className = "td1";
     }
 
