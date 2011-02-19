@@ -202,7 +202,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var Grid = dojo.create("div",{className:"grid",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},dojo.body());
         var table = dojo.create("table",{id:"grid",dojoType:"dojox.grid.DataGrid"},Grid);
         var thead = dojo.create("thead",null,table);
         var tr = dojo.create("tr",null,thead);
