@@ -173,6 +173,19 @@
     }
 
     function step1 (ids) {
+    
+        var layout = [{
+            field:"Inteface Theme",
+            name:"Theme of Interface",
+            width:"auto"
+        },
+        {
+            field:"id",
+            name:"Unique ID",
+            width:"auto"
+        }
+        ];
+    
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
@@ -190,6 +203,11 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         var button = dojo.create("button",{innerHTML:"Next"},div);
+        
+        var gridDiv = dojo.create("div",{className:"grid",innerHTML:"Select the existing interface you want."},div);
+        var grid = new dojox.grid.DataGrid({
+            structure: layout
+        },gridDiv);
         
         div.style.display = "block";
         return button;
