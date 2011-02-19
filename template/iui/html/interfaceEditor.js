@@ -171,23 +171,18 @@
     function step1 (ids) {
     
         var layout = [{
-            field: 'Title',
+            field: 'Presidency',
             name: 'Title of Movie',
             width: '200px'
         },
         {
-            field: 'Year',
+            field: 'President',
             name: 'Year',
             width: '50px'
-        },
-        {
-            field: 'Producer',
-            name: 'Producer',
-            width: 'auto'
         }];
         
         var store4 = new dojox.data.CsvStore({
-            url: '../../_static/jsdojox/grid/tests/support/movies.csv'
+            url: 'sample.csv'
         });
 
     
