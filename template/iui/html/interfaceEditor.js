@@ -203,7 +203,6 @@
         var grid = new dojox.grid.DataGrid({
             structure: layout
         },gridDiv);
-        dojo.place(grid.domNode,gridDiv);
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
