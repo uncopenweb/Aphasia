@@ -211,7 +211,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var Grid = dojo.create("div",{className:"grid",id:"theGrid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
 
         var grid = new dojox.grid.DataGrid({
             query: {
@@ -224,7 +224,7 @@
         },
         document.createElement('div'));   
 
-        dojo.byId("grid").appendChild(grid.domNode);
+        dojo.byId("theGrid").appendChild(grid.domNode);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
