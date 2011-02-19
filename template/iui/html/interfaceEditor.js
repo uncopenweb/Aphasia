@@ -181,6 +181,11 @@
             width:"200px"
         }
         ];
+        
+        var store4 = new dojox.data.CsvStore({
+            url: '../../_static/jsdojox/grid/tests/support/movies.csv'
+        });
+
     
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
@@ -202,12 +207,20 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"claro",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
-        var table = dojo.create("table",{id:"grid",dojoType:"dojox.grid.DataGrid"},Grid);
-        var thead = dojo.create("thead",null,table);
-        var tr = dojo.create("tr",null,thead);
-        var th1 = dojo.create("th",{field:"theme",innerHTML:"Interface Theme"},tr);
-        var th2 = dojo.create("th",{field:"id",innerHTML:"Id"},tr);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
+
+        var grid = new dojox.grid.DataGrid({
+            query: {
+                Title: '*'
+            },
+            store: store4,
+            clientSort: true,
+            rowSelector: '20px',
+            structure: layout
+        },
+        document.createElement('div'));   
+
+        dojo.byId("grid").appendChild(grid.domNode);
         
         var button = dojo.create("button",{innerHTML:"Next"},div);
         
