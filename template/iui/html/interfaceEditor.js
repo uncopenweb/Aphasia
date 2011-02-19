@@ -200,10 +200,10 @@
             dojo.create("br",null,form);
         
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
-        var theGrid = dojo.create("div",{className:"grid",style:{"display":"block"}},gridDiv);
         var grid = new dojox.grid.DataGrid({
             structure: layout
-        },theGrid);
+        },document.createElement("div"));
+        dojo.place(grid.domNode,gridDiv);
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
