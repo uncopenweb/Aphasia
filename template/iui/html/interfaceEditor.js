@@ -204,6 +204,7 @@
         var grid = new dojox.grid.DataGrid({
             structure: layout
         },gridDiv);
+        dojo.place(gridDiv,Grid);
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
