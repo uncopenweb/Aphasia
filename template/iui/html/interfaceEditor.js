@@ -172,13 +172,13 @@
     
         var layout = [{
             field: 'Presidency',
-            name: 'Title of Movie',
+            name: 'Presidency',
             width: '200px'
         },
         {
             field: 'President',
-            name: 'Year',
-            width: '50px'
+            name: 'President',
+            width: '200px'
         }];
         
         var store4 = new dojox.data.CsvStore({
