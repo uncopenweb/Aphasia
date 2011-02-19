@@ -208,6 +208,7 @@
         var grid = new dojox.grid.DataGrid({
             structure: layout
         },gridDiv);
+        grid.startup();
         
         div.style.display = "block";
         return button;
