@@ -211,7 +211,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",id:"theGrid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"width":"400px","height":"200px","display":"none"},innerHTML:"Select the existing interface you want."},div);
 
         var theGrid = new dojox.grid.DataGrid({
             query: {
@@ -222,7 +222,7 @@
             rowSelector: '20px',
             structure: layout
         },
-        dojo.create('div',{style:{"display":"block"}}));   
+        document.createElement("div"));   
 
         dojo.byId("theGrid").appendChild(theGrid.domNode);
         
@@ -240,6 +240,7 @@
         });
         
         div.style.display = "block";
+        theGrid.startup();
         return button;
     }
     
