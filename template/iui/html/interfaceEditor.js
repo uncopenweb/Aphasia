@@ -184,6 +184,8 @@
         var store4 = new dojox.data.CsvStore({
             url: 'sample.csv'
         });
+        
+        console.log(store4);
 
     
         var div = dojo.byId(ids[0]);
