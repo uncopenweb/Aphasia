@@ -202,7 +202,7 @@
         var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
             structure: layout
-        },dojo.create("div",{style:{"height":"30px","display":"none"}},gridDiv));
+        },gridDiv);
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
@@ -211,7 +211,6 @@
         
         dojo.connect(c2,'onclick',function() {
             gridDiv.style.display = "block";
-            grid.domNode.style.display = "block";
         });
         dojo.connect(c3,'onclick',function() {
             gridDiv.style.display = "block";
