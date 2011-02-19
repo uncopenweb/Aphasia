@@ -131,12 +131,8 @@
         var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
-            //backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
-            //forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
         }
         this.forwardButton[0] = step1(ids);
-        //forwardButton[4].disabled = "disabled";
-        //backwardButton[0].disabled = "disabled";
         
         i=0;
         jsProgress.update({maximum:4});
@@ -209,7 +205,6 @@
         var grid = new dojox.grid.DataGrid({
             structure: layout
         },dojo.create("div",{style:{"height":"30px"}},gridDiv));
-        grid.startup();
         
         dojo.create("br",null,form);
         dojo.create("br",null,form);
@@ -219,8 +214,15 @@
         dojo.connect(c2,'onclick',function() {
             gridDiv.style.display = "block";
         });
+        dojo.connect(c3,'onclick',function() {
+            gridDiv.style.display = "block";
+        });
+        dojo.connect(c1,'onclick',function() {
+            gridDiv.style.display = "none";
+        });
         
         div.style.display = "block";
+        grid.startup();
         return button;
     }
     
