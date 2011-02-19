@@ -206,10 +206,10 @@
             dojo.create("br",null,form);
             dojo.create("br",null,form);
         
-        var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px"},innerHTML:"Select the existing interface you want."},div);
+        var gridDiv = dojo.create("div",{className:"grid",style:{"width":"400px","display":"none"},innerHTML:"Select the existing interface you want."},div);
         var grid = new dojox.grid.DataGrid({
             structure: layout
-        });
+        },dojo.create("div",{style:{"height":"30px"}},gridDiv));
         grid.startup();
         
         dojo.create("br",null,form);
