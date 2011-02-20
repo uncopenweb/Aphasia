@@ -251,8 +251,8 @@
     function step2(ids) {
         var div = dojo.byId(ids[1]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Tabs"},div);
-        forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
         backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
+        forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
     dojo.ready(start);
