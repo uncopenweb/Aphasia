@@ -164,8 +164,7 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
-        this.forwardButton[0] = step1(ids);
-        this.backwardButton[0] = "";
+        step1(ids);
         step2(ids);
         
         i=0;
@@ -234,7 +233,8 @@
             td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
-        var button = dojo.create("button",{innerHTML:"Next"},div);
+        this.forwardButton[0] = dojo.create("button",{innerHTML:"Next"},div);
+        this.backwardButton[0] = "";
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
@@ -246,7 +246,6 @@
             Grid.style.display = "none";
         });
         div.style.display = "block";
-        return button;
     }
     
     function step2(ids) {
