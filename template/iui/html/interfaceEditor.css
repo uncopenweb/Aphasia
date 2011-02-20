@@ -45,3 +45,8 @@
     color: #817679;
     background: #79BAEC;
 }
+
+.td3 {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
