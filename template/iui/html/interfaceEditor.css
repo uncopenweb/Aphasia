@@ -59,6 +59,8 @@
 
 .text {
     width: 200px;
+    position: absolute;
+    left: 400px;
 }
 
 .third {
