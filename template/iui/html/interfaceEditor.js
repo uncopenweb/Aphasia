@@ -169,6 +169,7 @@
         
         i=0;
         jsProgress.update({maximum:4});
+        console.log(this.forwardButton);
         dojo.forEach(this.forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
