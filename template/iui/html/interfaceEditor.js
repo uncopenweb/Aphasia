@@ -116,7 +116,7 @@
         // }  
     // }
     
-    thisSchema = {
+    this.Schema = {
         "topTabs": [
            {
                 "name": "",
@@ -148,6 +148,9 @@
            }
         ]
     };
+
+    this.forwardButton = [];
+    this.backwardButton = [];
     
     
     function start() {
@@ -157,8 +160,6 @@
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{id:item, innerHTML:item, className:"tabs", style:{"font-size":"25%"}},tabs);
         });
-        this.forwardButton = [];
-        this.backwardButton = [];
         var ids = ["0","1","2","3","4"];
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
