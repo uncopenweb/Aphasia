@@ -253,6 +253,8 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second",innerHTML:"Tab 1"},div);
+        var name1 = dojo.create("label",{innerHTML:"Name of Tab"},tab1);
+        var name1 = dojo.create("input",{className:"text"},tab1);
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
         
