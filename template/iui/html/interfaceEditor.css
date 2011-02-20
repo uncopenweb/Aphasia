@@ -50,3 +50,7 @@
     border: 1px solid black;
     border-collapse: collapse;
 }
+
+.second {
+    font-size: 15px;
+}

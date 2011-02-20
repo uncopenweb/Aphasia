@@ -154,7 +154,7 @@
     
     function start() {
         var mainArea = dojo.byId("mainArea");
-        var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Tabs", "Step 3 -- Select Contents for Your Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
+        var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Top Tabs", "Step 3 -- Customize Your Bottom Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",null,mainArea);
         dojo.forEach(ulList, function(item) {
             var td = dojo.create("td",{id:item, innerHTML:item, className:"tabs", style:{"font-size":"25%"}},tabs);
@@ -250,7 +250,15 @@
     
     function step2(ids) {
         var div = dojo.byId(ids[1]);
-        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Tabs"},div);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
+        
+        var tab1 = dojo.create("div",{className:"second",innerHTML:"Tab 1"},div);
+        
+        var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
+        
+        var tab3 = dojo.create("div",{className:"second",innerHTML:"Tab 3"},div);
+        
+        
         backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
         forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
     }
