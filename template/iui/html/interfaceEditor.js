@@ -233,6 +233,7 @@
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
         var button = dojo.create("button",{innerHTML:"Next"},div);
+        this.backwardButton[0] = "";
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
@@ -250,6 +251,8 @@
     function step2(ids) {
         var div = dojo.byId(ids[1]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Tabs"},div);
+        this.forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
+        this.backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
     }
     
     dojo.ready(start);
