@@ -254,7 +254,7 @@
         
         var tab1 = dojo.create("div",{className:"second",innerHTML:"Tab 1"},div);
         var name1 = dojo.create("div",{className:"third"},tab1);
-        var label1 = dojo.create("label",{innerHTML:"Name of Tab: "},name1);
+        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
         var br = dojo.create("br",null,name1);
         var name2 = dojo.create("div",{className:"third"},tab1);
