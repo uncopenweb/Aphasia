@@ -234,7 +234,7 @@
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
         forwardButton[0] = dojo.create("button",{innerHTML:"Next"},div);
-        backwardButton[0] = "";
+        backwardButton[0] = dojo.create("div",null,div);
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
