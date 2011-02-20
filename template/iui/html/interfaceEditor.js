@@ -164,6 +164,7 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         this.forwardButton[0] = step1(ids);
+        step2(ids);
         
         i=0;
         jsProgress.update({maximum:4});
