@@ -252,11 +252,11 @@
         var div = dojo.byId(ids[1]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
         
-        var tab1 = dojo.create("div",{className:"second",innerHTML:"Tab 1"},div);
+        var tab1 = dojo.create("div",{className:"second",innerHTML:"    Tab 1"},div);
         
-        var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
+        var tab2 = dojo.create("div",{className:"second",innerHTML:"    Tab 2"},div);
         
-        var tab3 = dojo.create("div",{className:"second",innerHTML:"Tab 3"},div);
+        var tab3 = dojo.create("div",{className:"second",innerHTML:"    Tab 3"},div);
         
         
         backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
