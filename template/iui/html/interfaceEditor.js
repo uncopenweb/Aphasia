@@ -115,42 +115,44 @@
             // }
         // }  
     // }
-    
-    this.Schema = {
-        "topTabs": [
-           {
-                "name": "",
-                "nameTag":"",
-                "image": "",
-                "audioImages": [
-                    {
-                        "pic":"",
-                        "word":"",
-                        "nameTag":"",
-                        "phrase":""
-                    }
-                ]
-            }
-        ],
-        "bottomTabs":[
-           {
-                "name": "",
-                "nameTag":"",
-                "image": "",
-                "audioImages": [
-                    {
-                        "pic":"",
-                        "word":"",
-                        "nameTag":"",
-                        "phrase":""
-                    }
-                ]
-           }
-        ]
-    };
+    function startUp() {
+        this.Schema = {
+            "topTabs": [
+               {
+                    "name": "",
+                    "nameTag":"",
+                    "image": "",
+                    "audioImages": [
+                        {
+                            "pic":"",
+                            "word":"",
+                            "nameTag":"",
+                            "phrase":""
+                        }
+                    ]
+                }
+            ],
+            "bottomTabs":[
+               {
+                    "name": "",
+                    "nameTag":"",
+                    "image": "",
+                    "audioImages": [
+                        {
+                            "pic":"",
+                            "word":"",
+                            "nameTag":"",
+                            "phrase":""
+                        }
+                    ]
+               }
+            ]
+        };
 
-    this.forwardButton = [];
-    this.backwardButton = [];
+        this.forwardButton = [];
+        this.backwardButton = [];
+        start();
+    }
     
     
     function start() {
@@ -256,5 +258,5 @@
         this.backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
     }
     
-    dojo.ready(start);
+    dojo.ready(startUp);
     
