@@ -149,8 +149,8 @@
             ]
         };
 
-        this.forwardButton = [];
-        this.backwardButton = [];
+        this.forwardButton = ["","","","",""];
+        this.backwardButton = ["","","","",""];
         start();
     }
     
