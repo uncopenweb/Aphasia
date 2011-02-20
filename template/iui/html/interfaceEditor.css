@@ -60,3 +60,9 @@
 .text {
     width: 100px;
 }
+
+.third {
+    font-size: 5px;
+    position: relative;
+    left: 2%;
+}
