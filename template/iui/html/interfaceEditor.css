@@ -36,14 +36,10 @@
     border: 1px solid black;
     border-collapse: collapse;
     width: 100%;
+    text-align: center;
 }
 
 .td2 {
     border: 1px solid black;
     border-collapse: collapse;
-}
-
-.radios {
-    background: -moz-linear-gradient(top, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebe9f9), color-stop(50%,#d8d0ef), color-stop(51%,#cec7ec), color-stop(100%,#c1bfea));
 }
