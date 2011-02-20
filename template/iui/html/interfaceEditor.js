@@ -115,44 +115,41 @@
             // }
         // }  
     // }
-    function startUp() {
-        this.Schema = {
-            "topTabs": [
-               {
-                    "name": "",
-                    "nameTag":"",
-                    "image": "",
-                    "audioImages": [
-                        {
-                            "pic":"",
-                            "word":"",
-                            "nameTag":"",
-                            "phrase":""
-                        }
-                    ]
-                }
-            ],
-            "bottomTabs":[
-               {
-                    "name": "",
-                    "nameTag":"",
-                    "image": "",
-                    "audioImages": [
-                        {
-                            "pic":"",
-                            "word":"",
-                            "nameTag":"",
-                            "phrase":""
-                        }
-                    ]
-               }
-            ]
-        };
+    thisSchema = {
+        "topTabs": [
+           {
+                "name": "",
+                "nameTag":"",
+                "image": "",
+                "audioImages": [
+                    {
+                        "pic":"",
+                        "word":"",
+                        "nameTag":"",
+                        "phrase":""
+                    }
+                ]
+            }
+        ],
+        "bottomTabs":[
+           {
+                "name": "",
+                "nameTag":"",
+                "image": "",
+                "audioImages": [
+                    {
+                        "pic":"",
+                        "word":"",
+                        "nameTag":"",
+                        "phrase":""
+                    }
+                ]
+           }
+        ]
+    };
 
-        this.forwardButton = ["","","","",""];
-        this.backwardButton = ["","","","",""];
-        start();
-    }
+    forwardButton = [];
+    backwardButton = [];
     
     
     function start() {
@@ -171,8 +168,8 @@
         
         i=0;
         jsProgress.update({maximum:4});
-        console.log(this.forwardButton);
-        dojo.forEach(this.forwardButton, function(button) {
+        console.log(forwardButton);
+        dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                                   
@@ -186,7 +183,7 @@
                 }
             });
         });
-        dojo.forEach(this.backwardButton, function(button) {
+        dojo.forEach(backwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=0) {
                 
@@ -236,8 +233,8 @@
             td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
-        this.forwardButton[0] = dojo.create("button",{innerHTML:"Next"},div);
-        this.backwardButton[0] = "";
+        forwardButton[0] = dojo.create("button",{innerHTML:"Next"},div);
+        backwardButton[0] = "";
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
@@ -254,9 +251,9 @@
     function step2(ids) {
         var div = dojo.byId(ids[1]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Tabs"},div);
-        this.forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
-        this.backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
+        forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
+        backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
     }
     
-    dojo.ready(startUp);
+    dojo.ready(start);
     
