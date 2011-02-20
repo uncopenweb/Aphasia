@@ -53,5 +53,6 @@
 
 .second {
     font-size: 15px;
+    position: relative;
     left: 10%;
 }
