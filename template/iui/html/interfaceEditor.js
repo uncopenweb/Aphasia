@@ -231,10 +231,8 @@
             td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
-        
         var button = dojo.create("button",{innerHTML:"Next"},div);
-        
-        
+
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
         });
@@ -244,9 +242,13 @@
         dojo.connect(c1,'onclick',function() {
             Grid.style.display = "none";
         });
-        
         div.style.display = "block";
         return button;
+    }
+    
+    function step2(ids) {
+        var div = dojo.byId(ids[1]);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Tabs"},div);
     }
     
     dojo.ready(start);
