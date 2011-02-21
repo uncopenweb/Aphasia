@@ -259,9 +259,8 @@
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{className:"text"},name1);
-        for (var i=0; i<9; i++) {
-            i++;
+        var text3 = dojo.create("select",null,name1);
+        for (var i=1; i<10; i++) {
             dojo.create("option",{id:"option"+i,innerHTML:i},text3);
         }
         
