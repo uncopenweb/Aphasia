@@ -264,7 +264,7 @@
         for (var i=1; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,dojo.byId("form1").options[dojo.byId("form1").selectedIndex].value));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3.options[dojo.byId("form1").selectedIndex].value));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
         
