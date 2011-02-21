@@ -264,7 +264,7 @@
         for (var i=1; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3.options[text3.selectedIndex].value));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
         
@@ -275,8 +275,8 @@
         forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
-    function dynamicForm(value) {
-        alert(value);
+    function dynamicForm(select) {
+        alert(select.selectedIndex);
     }
     
     dojo.ready(start);
