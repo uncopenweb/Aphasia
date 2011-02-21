@@ -256,9 +256,9 @@
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
-        //var name2 = dojo.create("div",{className:"third"},tab1);
-        var label2 = dojo.create("label",{innerHTML:"Tab Picture: "},name1);
-        var text2 = dojo.create("input",{type:"file",className:"text"},name1);
+        var name2 = dojo.create("div",{style:{"float":"left"}},tab1);
+        var label2 = dojo.create("label",{innerHTML:"Tab Picture: "},name2);
+        var text2 = dojo.create("input",{type:"file",className:"text"},name2);
         dojo.create("br",null,tab1);
         var name3 = dojo.create("div",{className:"third"},tab1);
         var label3 = dojo.create("label",{innerHTML:"# Images for Tab: "},name3);
