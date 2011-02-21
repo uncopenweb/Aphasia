@@ -59,7 +59,7 @@
 
 .text {
     width: 200px;
-    position: absolute;
+    /*position: absolute;*/
     left: 150px;
 }
 

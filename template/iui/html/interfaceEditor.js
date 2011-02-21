@@ -256,7 +256,7 @@
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
-        var name2 = dojo.create("div",{style:{"float":"left","left":"500px"}},tab1);
+        var name2 = dojo.create("div",{style:{"left":"1000px"}},tab1);
         var label2 = dojo.create("label",{innerHTML:"Tab Picture: "},name1);
         var text2 = dojo.create("input",{type:"file"},name1);
         dojo.create("br",null,tab1);
