@@ -275,8 +275,8 @@
         forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
-    function dynamicForm(select) {
-        alert(select.selectedIndex);
+    function dynamicForm(s) {
+        alert(s.options[s.selectedIndex].value);
     }
     
     dojo.ready(start);
