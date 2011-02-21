@@ -259,10 +259,12 @@
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",null,name1);
+        var form = dojo.create("form",null,name1);
+        var text3 = dojo.create("select",{"form1"},form);
         for (var i=1; i<10; i++) {
-            dojo.create("option",{id:"option"+i,innerHTML:i},text3);
+            dojo.create("option",{value:i,innerHTML:i},text3);
         }
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,dojo.byId("form1").options[dojo.byId("form1").selectedIndex].value));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
         
@@ -271,6 +273,10 @@
         
         backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
         forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
+    }
+    
+    function dynamicForm(value) {
+        alert(value);
     }
     
     dojo.ready(start);
