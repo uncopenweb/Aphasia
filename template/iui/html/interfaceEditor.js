@@ -312,7 +312,7 @@
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
             dojo.create("input",null,td);
-            var td = dojo.create("td",{style:{"border":"1px solid black","width":"50%"}},tr);
+            var td = dojo.create("td",{style:{"border":"1px solid black","width":"48%"}},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
             dojo.create("input",{style:{"width":"100%"}},td);
         }
