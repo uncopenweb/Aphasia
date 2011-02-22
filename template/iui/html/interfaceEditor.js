@@ -266,8 +266,31 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,1));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
+        var name1 = dojo.create("div",{className:"third"},tab1);
+        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
+        var text1 = dojo.create("input",{className:"text"},name1);
+        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
+        var text2 = dojo.create("input",{type:"file"},name1);
+        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
+        var text3 = dojo.create("select",{id:"form1"},name1);
+        for (var i=0; i<10; i++) {
+            dojo.create("option",{value:i,innerHTML:i},text3);
+        }
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,2));
         
         var tab3 = dojo.create("div",{className:"second",innerHTML:"Tab 3"},div);
+        var name1 = dojo.create("div",{className:"third"},tab1);
+        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
+        var text1 = dojo.create("input",{className:"text"},name1);
+        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
+        var text2 = dojo.create("input",{type:"file"},name1);
+        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
+        var text3 = dojo.create("select",{id:"form1"},name1);
+        for (var i=0; i<10; i++) {
+            dojo.create("option",{value:i,innerHTML:i},text3);
+        }
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,3));
+        
         
         
         backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
