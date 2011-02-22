@@ -275,13 +275,12 @@
     }
     
     function dynamicForm(s,tab,i) {
-        alert(s.options[s.selectedIndex].value);
         if (dojo.byId("tab"+i) !=null) {
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            dojo.create("label",{innerHTML:"Pic #"+j+": "},div);
+            dojo.create("label",{innerHTML:"Pic #"+j+1+": "},div);
             dojo.create("input",{type:"file"},div);
             dojo.create("label",{innerHTML:"Word for Pic: "},div);
             dojo.create("input",null,div);
