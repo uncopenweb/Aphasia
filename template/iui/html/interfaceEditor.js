@@ -252,7 +252,8 @@
         var div = dojo.byId(ids[1]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
         
-        var tab1 = dojo.create("div",{className:"second",style:{"font-weight":"bold"},innerHTML:"Tab 1"},div);
+        var tab1 = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
@@ -265,7 +266,8 @@
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,1));
         
-        var tab2 = dojo.create("div",{className:"second",style:{"font-weight":"bold"},innerHTML:"Tab 2"},div);
+        var tab2 = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
@@ -278,7 +280,8 @@
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,2));
         
-        var tab3 = dojo.create("div",{className:"second",style:{"font-weight":"bold"},innerHTML:"Tab 3"},div);
+        var tab3 = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
