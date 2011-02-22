@@ -76,5 +76,6 @@
 }
 
 .contentItem {
-    padding: 5px;
+    padding: 2px;
+    width: 33%;
 }

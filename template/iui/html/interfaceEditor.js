@@ -282,10 +282,10 @@
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var v = j+1;
-            var tr = dojo.create("tr",null,table);
+            var tr = dojo.create("tr",{style:{"width":"100%"}},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file",style:{"width":"10%"}},td);
+            dojo.create("input",{type:"file"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic: "},td);
             dojo.create("input",null,td);
