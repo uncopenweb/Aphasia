@@ -59,7 +59,7 @@
 }
 
 .text {
-    width: 175px;
+    width: 200px;
     /*position: absolute;*/
     left: 150px;
 }
@@ -68,7 +68,7 @@
     font-size: 12px;
     position: relative;
     left: 2%;
-    width: 400px;
+    width: 600px;
 }
 
 .contentTable {
