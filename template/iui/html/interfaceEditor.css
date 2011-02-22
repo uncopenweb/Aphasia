@@ -22,6 +22,7 @@
     border: 1px solid black;
     height: 92%;
     width: 100%;
+    overflow: auto;
 }
 
 .first {
