@@ -73,9 +73,11 @@
     font-size: 12px;
     left: 5%;
     position: relative;
+    border: 1px solid black;
 }
 
 .contentItem {
     padding: 2px;
     width: 25%;
+    border: 1px solid black;
 }
