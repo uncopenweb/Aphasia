@@ -278,14 +278,14 @@
         if (dojo.byId("tab"+i) !=null) {
             dojo.destroy("tab"+i);
         }
-        var div = dojo.create("div",{style:{"width":"150%"},id:"tab"+i},tab);
+        var div = dojo.create("div",{id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var v = j+1;
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file"},td);
+            dojo.create("input",{type:"file",style:{"width":"50%"}},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic: "},td);
             dojo.create("input",null,td);
