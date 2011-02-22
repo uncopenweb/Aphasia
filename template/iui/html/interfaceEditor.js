@@ -279,7 +279,7 @@
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
-        var table = dojo.create("table",null,div);
+        var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var v = j+1;
             var tr = dojo.create("tr",null,table);
