@@ -266,7 +266,7 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,1));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
-        var name1 = dojo.create("div",{className:"third"},tab1);
+        var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
@@ -276,10 +276,10 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,2));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,2));
         
         var tab3 = dojo.create("div",{className:"second",innerHTML:"Tab 3"},div);
-        var name1 = dojo.create("div",{className:"third"},tab1);
+        var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
@@ -289,7 +289,7 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,3));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,3));
         
         
         
