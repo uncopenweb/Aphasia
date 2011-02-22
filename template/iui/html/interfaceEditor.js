@@ -278,7 +278,7 @@
         if (dojo.byId("tab"+i) !=null) {
             dojo.destroy("tab"+i);
         }
-        var div = dojo.create("div",{id:"tab"+i},tab);
+        var div = dojo.create("div",{style:{"width":"150%"},id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var v = j+1;
