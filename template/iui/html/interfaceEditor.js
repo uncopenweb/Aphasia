@@ -285,7 +285,7 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file",style:{"width":"50%"}},td);
+            dojo.create("input",{type:"file",style:{"width":"10%"}},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic: "},td);
             dojo.create("input",null,td);
