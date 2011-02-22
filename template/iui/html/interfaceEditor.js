@@ -291,7 +291,7 @@
             dojo.create("input",null,td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
-            dojo.create("input",null,td);
+            dojo.create("input",{style:{"width":"50%"}},td);
         }
     }
     
