@@ -280,7 +280,8 @@
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            dojo.create("label",{innerHTML:"Pic #"+j+1+": "},div);
+            var v = j+1;
+            dojo.create("label",{innerHTML:"Pic #"+v+": "},div);
             dojo.create("input",{type:"file"},div);
             dojo.create("label",{innerHTML:"Word for Pic: "},div);
             dojo.create("input",null,div);
