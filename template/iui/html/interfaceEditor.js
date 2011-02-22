@@ -263,7 +263,7 @@
         for (var i=1; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,1));
         
         var tab2 = dojo.create("div",{className:"second",innerHTML:"Tab 2"},div);
         
@@ -274,8 +274,20 @@
         forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
-    function dynamicForm(s) {
+    function dynamicForm(s,tab,i) {
         alert(s.options[s.selectedIndex].value);
+        if (dojo.byId("tab"+i) !=null) {
+            dojo.destroy("tab"+i);
+        }
+        var div = dojo.create("div",{id:"tab"+i},tab);
+        for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            dojo.create("label",{innerHTML:"Pic #"+j+": "},div);
+            dojo.create("input",{type:"file"},div);
+            dojo.create("label",{innerHTML:"Word for Pic: "},div);
+            dojo.create("input",null,div);
+            dojo.create("label",{innerHTML:"Phrase: "},div);
+            dojo.create("input",null,div);
+        }
     }
     
     dojo.ready(start);
