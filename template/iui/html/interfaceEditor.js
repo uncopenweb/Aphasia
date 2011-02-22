@@ -279,14 +279,19 @@
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
+        var table = dojo.create("table",null,div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var v = j+1;
-            dojo.create("label",{innerHTML:"Pic #"+v+": "},div);
-            dojo.create("input",{type:"file"},div);
-            dojo.create("label",{innerHTML:"Word for Pic: "},div);
-            dojo.create("input",null,div);
-            dojo.create("label",{innerHTML:"Phrase: "},div);
-            dojo.create("input",null,div);
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",null,tr);
+            dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
+            dojo.create("input",{type:"file"},td);
+            var td = dojo.create("td",null,tr);
+            dojo.create("label",{innerHTML:"Word for Pic: "},td);
+            dojo.create("input",null,td);
+            var td = dojo.create("td",null,tr);
+            dojo.create("label",{innerHTML:"Phrase: "},td);
+            dojo.create("input",null,td);
         }
     }
     
