@@ -329,11 +329,11 @@
         
         var topTabs = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
-        var table = dojo.create("table",{className:"dataTable"},topTab);
+        var table = dojo.create("table",{className:"dataTable"},topTabs);
         
         var bottomTabs = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
-        var table = dojo.create("table",{className:"dataTable"},bottomTab);
+        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         
         
         backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
