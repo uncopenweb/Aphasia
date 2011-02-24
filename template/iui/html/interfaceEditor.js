@@ -327,6 +327,9 @@
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
+        var table = dojo.create("table",{className:"dataTable"},div);
+        
+        
         backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
         forwardButton[3] = dojo.create("button",{innerHTML:"Next"},div);
     }
