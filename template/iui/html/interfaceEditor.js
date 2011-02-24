@@ -173,12 +173,14 @@
         console.log(forwardButton);
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
-                if (i!=3) {
+                if (i!=4) {
                                   
                     dojo.byId(ulList[i]).className = "tabs";
                 
                     button.parentNode.style.display="none";
-                    forwardButton[++i].parentNode.style.display="block";
+                    if (i!=3) {
+                        forwardButton[++i].parentNode.style.display="block";
+                    }
                     jsProgress.update({progress:i});
                     
                     dojo.byId(ulList[i]).className = "td1";
