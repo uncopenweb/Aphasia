@@ -326,6 +326,9 @@
     function summaryPage(ids) {
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
+        
+        backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
+        forwardButton[3] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
     dojo.ready(start);
