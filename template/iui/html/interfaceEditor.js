@@ -249,8 +249,8 @@
         div.style.display = "block";
     }
     
-    function step(ids, i) {
-        var div = dojo.byId(ids[i]);
+    function step(ids, j) {
+        var div = dojo.byId(ids[j]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
@@ -265,7 +265,7 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,1));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,j));
         
         var tab2 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
@@ -279,7 +279,7 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,2));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,j+1));
         
         var tab3 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
@@ -293,12 +293,12 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,3));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
         
         
         
-        backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
-        forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
+        backwardButton[j] = dojo.create("button",{innerHTML:"Back"},div);
+        forwardButton[j] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
     function dynamicForm(s,tab,i) {
