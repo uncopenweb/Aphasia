@@ -327,7 +327,7 @@
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
-        var topTabs = dojo.create("div",{className:"second"},div);
+        var topTabs = dojo.create("div",{className:"second", innerHTML:"Top Tabs"},div);
         var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
         var table = dojo.create("table",{className:"dataTable"},topTabs);
         
