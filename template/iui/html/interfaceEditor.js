@@ -251,7 +251,7 @@
     
     function step(ids, j, word) {
         var div = dojo.byId(ids[j]);
-        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your"+word+"Tabs"},div);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
