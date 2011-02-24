@@ -164,8 +164,8 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         step1(ids);
-        step(ids,1,"Top");
-        step(ids,2,"Bottom");
+        tabStep(ids,1,"Top");
+        tabStep(ids,2,"Bottom");
         
         i=0;
         jsProgress.update({maximum:4});
@@ -249,7 +249,7 @@
         div.style.display = "block";
     }
     
-    function step(ids, j, word) {
+    function tabStep(ids, j, word) {
         var div = dojo.byId(ids[j]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
@@ -320,6 +320,11 @@
             dojo.create("label",{innerHTML:"Phrase: "},td);
             dojo.create("input",{style:{"width":"100%"}},td);
         }
+    }
+    
+    function summaryPage(ids) {
+        var div = dojo.byId(ids[3]);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
     }
     
     dojo.ready(start);
