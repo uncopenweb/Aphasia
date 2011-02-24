@@ -167,6 +167,7 @@
         tabStep(ids,1,"Top");
         tabStep(ids,2,"Bottom");
         summaryPage(ids);
+        donePage(ids);
         
         i=0;
         jsProgress.update({maximum:4});
