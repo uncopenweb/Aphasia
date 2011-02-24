@@ -327,7 +327,13 @@
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
-        var table = dojo.create("table",{className:"dataTable"},div);
+        var topTabs = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
+        var table = dojo.create("table",{className:"dataTable"},topTab);
+        
+        var bottomTabs = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
+        var table = dojo.create("table",{className:"dataTable"},bottomTab);
         
         
         backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
