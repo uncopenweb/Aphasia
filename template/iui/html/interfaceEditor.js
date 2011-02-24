@@ -164,7 +164,8 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         step1(ids);
-        step2(ids);
+        step(ids,1);
+        step(ids,2);
         
         i=0;
         jsProgress.update({maximum:4});
@@ -248,8 +249,8 @@
         div.style.display = "block";
     }
     
-    function step2(ids) {
-        var div = dojo.byId(ids[1]);
+    function step(ids, i) {
+        var div = dojo.byId(ids[i]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
