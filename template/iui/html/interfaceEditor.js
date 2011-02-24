@@ -164,8 +164,8 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         step1(ids);
-        step(ids,1);
-        step(ids,2);
+        step(ids,1,"Top");
+        step(ids,2,"Bottom");
         
         i=0;
         jsProgress.update({maximum:4});
@@ -249,9 +249,9 @@
         div.style.display = "block";
     }
     
-    function step(ids, j) {
+    function step(ids, j, word) {
         var div = dojo.byId(ids[j]);
-        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your Top Tabs"},div);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your"+word+"Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
