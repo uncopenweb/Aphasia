@@ -297,8 +297,8 @@
         
         
         
-        backwardButton[1] = dojo.create("button",{innerHTML:"Back"},div);
-        forwardButton[1] = dojo.create("button",{innerHTML:"Next"},div);
+        backwardButton[i] = dojo.create("button",{innerHTML:"Back"},div);
+        forwardButton[i] = dojo.create("button",{innerHTML:"Next"},div);
     }
     
     function dynamicForm(s,tab,i) {
