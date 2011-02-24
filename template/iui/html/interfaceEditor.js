@@ -178,9 +178,7 @@
                     dojo.byId(ulList[i]).className = "tabs";
                 
                     button.parentNode.style.display="none";
-                    if (i!=3) {
-                        forwardButton[++i].parentNode.style.display="block";
-                    }
+                    dojo.byId(++i).style.display="block";
                     jsProgress.update({progress:i});
                     
                     dojo.byId(ulList[i]).className = "td1";
