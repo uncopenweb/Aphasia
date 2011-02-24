@@ -173,7 +173,7 @@
         console.log(forwardButton);
         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
-                if (i!=4) {
+                if (i!=3) {
                                   
                     dojo.byId(ulList[i]).className = "tabs";
                 
@@ -235,7 +235,7 @@
             td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
-        forwardButton[0] = dojo.create("button",{innerHTML:"Next"},div);
+        forwardButton[0] = dojo.create("button",{innerHTML:"Start"},div);
         backwardButton[0] = dojo.create("div",null,div);
 
         dojo.connect(c2,'onclick',function() {
@@ -347,7 +347,13 @@
         
         
         backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
-        forwardButton[3] = dojo.create("button",{innerHTML:"Next"},div);
+        forwardButton[3] = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+    }
+    
+    function donePage(ids) {
+        var div = dojo.byId(ids[4]);
+        var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
+        
     }
     
     dojo.ready(start);
