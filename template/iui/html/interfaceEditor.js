@@ -225,11 +225,9 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        forwardButton = dojo.create("input",{type:"submit",innerHTML:"Start"},form);
+        forwardButton = dojo.create("input",{type:"button",innerHTML:"Start"},form);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
-                alert("first radio is checked");
                 if (c1.checked) {  
-                    alert("first radio is checked");
                     dojo.byId(ulList[0]).className = "tabs";
                 
                     button.parentNode.style.display="none";
