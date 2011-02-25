@@ -392,7 +392,6 @@
     function donePage(ids) {
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
-        dojo.create("br",null,div);
         var p = dojo.create("p",{innerHTML:"You are now done. You can now start the Aphasia web application with one of the interface below:"},div);
         var table = dojo.create("table",null,div);
         var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options: "},div);
