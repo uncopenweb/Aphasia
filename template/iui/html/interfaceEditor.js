@@ -164,10 +164,6 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         step1(ids,ulList);
-        tabStep(ids,1,"Top",ulList);
-        tabStep(ids,2,"Bottom",ulList);
-        summaryPage(ids,ulList);
-        donePage(ids);
         
         jsProgress.update({maximum:4});
         dojo.byId(ulList[0]).className = "td1";
