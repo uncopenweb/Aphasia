@@ -315,7 +315,7 @@
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {          
                 dojo.byId(ulList[j]).className = "tabs";
             
-                button.parentNode.style.display="none";
+                forwardButton.parentNode.style.display="none";
                 tab1.parentNode.style.display="block";
                 jsProgress.update({progress:--j});
                 
@@ -325,7 +325,7 @@
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 dojo.byId(ulList[j]).className = "tabs";
                 
-                button.parentNode.style.display="none";
+                forwardButton.parentNode.style.display="none";
                 tab1.parentNode.style.display="block";
                 jsProgress.update({progress:++j});
                 
