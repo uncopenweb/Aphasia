@@ -316,7 +316,7 @@
                 dojo.byId(ulList[j]).className = "tabs";
             
                 forwardButton.parentNode.style.display="none";
-                dojo.byId(--j).style.display="block";
+                dojo.byId(ids[--j]).style.display="block";
                 jsProgress.update({progress:j});
                 
                 dojo.byId(ulList[j]).className = "td1";                
@@ -326,7 +326,7 @@
                 dojo.byId(ulList[j]).className = "tabs";
                 
                 forwardButton.parentNode.style.display="none";
-                dojo.byId(++j).style.display="block";
+                dojo.byId(ids[++j]).style.display="block";
                 jsProgress.update({progress:j});
                 
                 dojo.byId(ulList[j]).className = "td1";
