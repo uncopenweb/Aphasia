@@ -163,7 +163,7 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
-        step1(ids);
+        step1(ids,ulList);
         tabStep(ids,1,"Top");
         tabStep(ids,2,"Bottom");
         summaryPage(ids);
@@ -203,7 +203,7 @@
         dojo.byId(ulList[0]).className = "td1";
     }
 
-    function step1 (ids) {
+    function step1 (ids,ulList) {
     
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
@@ -230,7 +230,7 @@
                 if (c1.checked) {  
                     dojo.byId(ulList[0]).className = "tabs";
                 
-                    button.parentNode.style.display="none";
+                    form.parentNode.style.display="none";
                     dojo.byId(ids[1]).style.display="block";
                     jsProgress.update({progress:1});
                     
