@@ -315,7 +315,7 @@
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {          
                 dojo.byId(ulList[j]).className = "tabs";
             
-                forwardButton.parentNode.style.display="none";
+                backwardButton.parentNode.style.display="none";
                 dojo.byId(ids[--j]).style.display="block";
                 jsProgress.update({progress:j});
                 
