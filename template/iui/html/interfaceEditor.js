@@ -235,8 +235,8 @@
             td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
-        forwardButton[0] = dojo.create("button",{innerHTML:"Start"},div);
-            dojo.connect(forwardButton[0],'onclick',function() {
+        forwardButton = dojo.create("button",{innerHTML:"Start"},div);
+            dojo.connect(forwardButton,'onclick',function() {
                 if (c1.checked == "checked") {  
                     alert("first radio is checked");
                     dojo.byId(ulList[0]).className = "tabs";
