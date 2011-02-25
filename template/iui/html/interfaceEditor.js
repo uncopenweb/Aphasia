@@ -331,7 +331,7 @@
                 
                 dojo.byId(ids[m]).style.display="none";
                 dojo.byId(ids[++m]).style.display="block";
-                jsProgress.update({progress:k});
+                jsProgress.update({progress:m});
                 
                 dojo.byId(ulList[m]).className = "td1";
             }));
