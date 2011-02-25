@@ -314,6 +314,7 @@
         backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 k=j;
+                alert("backward "+k);
                 dojo.byId(ulList[k]).className = "tabs";
             
                 dojo.byId(ids[k]).style.display="none";
@@ -326,6 +327,7 @@
         forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 k=j;
+                alert("forward "+k);
                 dojo.byId(ulList[k]).className = "tabs";
                 
                 dojo.byId(ids[k]).style.display="none";
