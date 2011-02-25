@@ -296,7 +296,7 @@
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 var m=j;
                 if (m==2) {
-                    dojo.destroy(dojo.byId(ids[3]));
+                    dojo.empty(dojo.byId(ids[3]));
                     summaryPage(ids,ulList);
                 
                     dojo.byId(ulList[m]).className = "tabs";
