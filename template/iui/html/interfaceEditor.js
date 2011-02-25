@@ -171,8 +171,7 @@
         
         i=0;
         jsProgress.update({maximum:4});
-        console.log(forwardButton);
-        dojo.forEach(forwardButton, function(button) {
+/*         dojo.forEach(forwardButton, function(button) {
             dojo.connect(button,'onclick',function() {
                 if (i!=4) {
                                   
@@ -199,7 +198,7 @@
                     dojo.byId(ulList[i]).className = "td1";
                 }
             });
-        });
+        }); */
 
         dojo.byId(ulList[0]).className = "td1";
     }
