@@ -209,7 +209,7 @@
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
         var form = dojo.create("form", null, div);
-        var c1 = dojo.create("input",{type:"radio", value:"c", name:"1p"},form);
+        var c1 = dojo.create("input",{type:"radio", value:"c", name:"1p", checked:"checked"},form);
             dojo.create("label",{innerHTML:"Create a new interface"},form);
             dojo.create("br",null,form);
             dojo.create("br",null,form);
