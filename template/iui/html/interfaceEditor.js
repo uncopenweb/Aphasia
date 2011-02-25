@@ -164,7 +164,7 @@
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
         step1(ids,ulList);
-        tabStep(ids,1,"Top");
+        tabStep(ids,1,"Top",ulList);
         tabStep(ids,2,"Bottom");
         summaryPage(ids);
         donePage(ids);
@@ -263,7 +263,7 @@
         div.style.display = "block";
     }
     
-    function tabStep(ids, j, word) {
+    function tabStep(ids, j, word, ulList) {
         var div = dojo.byId(ids[j]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
@@ -311,8 +311,26 @@
         
         
         
-        backwardButton[j] = dojo.create("button",{innerHTML:"Back"},div);
-        forwardButton[j] = dojo.create("button",{innerHTML:"Next"},div);
+        backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
+            dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {          
+                dojo.byId(ulList[j]).className = "tabs";
+            
+                button.parentNode.style.display="none";
+                tab1.parentNode.style.display="block";
+                jsProgress.update({progress:--j});
+                
+                dojo.byId(ulList[j]).className = "td1";                
+            }));
+        forwardButton = dojo.create("button",{innerHTML:"Next"},div);
+            dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+                dojo.byId(ulList[j]).className = "tabs";
+                
+                button.parentNode.style.display="none";
+                tab1.parentNode.style.display="block";
+                jsProgress.update({progress:++j});
+                
+                dojo.byId(ulList[j]).className = "td1";
+            }));
     }
     
     function dynamicForm(s,tab,i) {
