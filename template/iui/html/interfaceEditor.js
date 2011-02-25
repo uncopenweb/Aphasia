@@ -237,7 +237,8 @@
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
         forwardButton[0] = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton[0],'onclick',function() {
-                if (c1.checked == "checked") {           
+                if (c1.checked == "checked") {  
+                    alert("first radio is checked");
                     dojo.byId(ulList[0]).className = "tabs";
                 
                     button.parentNode.style.display="none";
