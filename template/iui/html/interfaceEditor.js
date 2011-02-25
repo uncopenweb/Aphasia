@@ -237,7 +237,7 @@
                     
                     dojo.byId(ulList[1]).className = "td1";
                 }
-        });
+        }));
         
         var Grid = dojo.create("div",{className:"grid",id:"grid",left:"20px",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
         var table = dojo.create("table",{className:"dataTable"},Grid);
