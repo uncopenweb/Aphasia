@@ -225,7 +225,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        forwardButton = dojo.create("input",{type:"submit",value:"Start"},form);
+        forwardButton = dojo.create("button",{innerHTML:"Start"},form);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
                     dojo.byId(ulList[0]).className = "tabs";
