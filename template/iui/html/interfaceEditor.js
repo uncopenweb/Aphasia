@@ -169,37 +169,7 @@
         summaryPage(ids,ulList);
         donePage(ids);
         
-        i=0;
         jsProgress.update({maximum:4});
-/*         dojo.forEach(forwardButton, function(button) {
-            dojo.connect(button,'onclick',function() {
-                if (i!=4) {
-                                  
-                    dojo.byId(ulList[i]).className = "tabs";
-                
-                    button.parentNode.style.display="none";
-                    dojo.byId(ids[++i]).style.display="block";
-                    jsProgress.update({progress:i});
-                    
-                    dojo.byId(ulList[i]).className = "td1";
-                }
-            });
-        });
-        dojo.forEach(backwardButton, function(button) {
-            dojo.connect(button,'onclick',function() {
-                if (i!=0) {
-                
-                    dojo.byId(ulList[i]).className = "tabs";
-                
-                    button.parentNode.style.display="none";
-                    forwardButton[--i].parentNode.style.display="block";
-                    jsProgress.update({progress:i});
-                    
-                    dojo.byId(ulList[i]).className = "td1";
-                }
-            });
-        }); */
-
         dojo.byId(ulList[0]).className = "td1";
     }
 
@@ -240,6 +210,10 @@
        forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
+                
+                    tabStep(ids,1,"Top",ulList);
+                    tabStep(ids,2,"Bottom",ulList);
+                
                     dojo.byId(ulList[0]).className = "tabs";
                 
                     div.style.display="none";
@@ -325,6 +299,8 @@
         forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 var m=j;
+                summaryPage(ids,ulList);
+                
                 dojo.byId(ulList[m]).className = "tabs";
                 
                 dojo.byId(ids[m]).style.display="none";
@@ -391,6 +367,8 @@
             }));
         forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+                donePage(ids);
+            
                 dojo.byId(ulList[3]).className = "tabs";
             
                 div.style.display="none";
