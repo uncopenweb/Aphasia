@@ -166,7 +166,7 @@
         step1(ids,ulList);
         tabStep(ids,1,"Top",ulList);
         tabStep(ids,2,"Bottom",ulList);
-        summaryPage(ids);
+        summaryPage(ids,ulList);
         donePage(ids);
         
         i=0;
@@ -242,7 +242,7 @@
                 if (c1.checked) {  
                     dojo.byId(ulList[0]).className = "tabs";
                 
-                    form.parentNode.style.display="none";
+                    div.style.display="none";
                     dojo.byId(ids[1]).style.display="block";
                     jsProgress.update({progress:1});
                     
@@ -356,7 +356,7 @@
         }
     }
     
-    function summaryPage(ids) {
+    function summaryPage(ids,ulList) {
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
@@ -379,8 +379,26 @@
         var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         
         
-        backwardButton[3] = dojo.create("button",{innerHTML:"Back"},div);
-        forwardButton[3] = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+        backwardButton = dojo.create("button",{innerHTML:"Back"},div);
+            dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {
+                dojo.byId(ulList[3]).className = "tabs";
+            
+                div.style.display="none";
+                dojo.byId(ids[2]).style.display="block";
+                jsProgress.update({progress:2});
+                
+                dojo.byId(ulList[2]).className = "td1";                
+            }));
+        forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+            dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+                dojo.byId(ulList[3]).className = "tabs";
+            
+                div.style.display="none";
+                dojo.byId(ids[4]).style.display="block";
+                jsProgress.update({progress:4});
+                
+                dojo.byId(ulList[4]).className = "td1";
+            }));
     }
     
     function donePage(ids) {
