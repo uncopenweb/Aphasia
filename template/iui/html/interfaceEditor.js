@@ -295,7 +295,10 @@
         var forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 var m=j;
-                summaryPage(ids,ulList);
+                if (m==2) {
+                    dojo.destroy(dojo.byId(ids[3]));
+                    summaryPage(ids,ulList);
+                }
                 
                 dojo.byId(ulList[m]).className = "tabs";
                 
