@@ -312,7 +312,8 @@
         
         var k=j;
         backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
-            dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {          
+            dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
+                k=j;
                 dojo.byId(ulList[k]).className = "tabs";
             
                 dojo.byId(ids[k]).style.display="none";
@@ -322,9 +323,9 @@
                 dojo.byId(ulList[k]).className = "td1";                
             }));
         
-        k=j;
         forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+                k=j;
                 dojo.byId(ulList[k]).className = "tabs";
                 
                 dojo.byId(ids[k]).style.display="none";
