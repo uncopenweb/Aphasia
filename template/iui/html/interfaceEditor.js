@@ -357,8 +357,9 @@
         dojo.create("br",null,div);
         var p = dojo.create("p",{innerHTML:"You are now done. You can now start the Aphasia web application with one of the interface below:"},div);
         var table = dojo.create("table",null,div);
-        var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options:"});
-        var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html",innerHTML:"Click here."},homeDiv);
+        var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options:"},div);
+        var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
+            a.appendChild(document.createTextNode('Click here.'));
     }
     
     dojo.ready(start);
