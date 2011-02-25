@@ -225,9 +225,10 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        forwardButton = dojo.create("button",{type:"submit",innerHTML:"Start"},form);
+        forwardButton = dojo.create("input",{type:"submit",innerHTML:"Start"},form);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
-                if (c1.checked == "checked") {  
+                alert("first radio is checked");
+                if (c1.checked) {  
                     alert("first radio is checked");
                     dojo.byId(ulList[0]).className = "tabs";
                 
