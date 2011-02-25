@@ -298,15 +298,24 @@
                 if (m==2) {
                     dojo.destroy(dojo.byId(ids[3]));
                     summaryPage(ids,ulList);
+                
+                    dojo.byId(ulList[m]).className = "tabs";
+                    
+                    dojo.byId(ids[m]).style.display="none";
+                    dojo.byId(ids[++m]).style.display="block";
+                    jsProgress.update({progress:m});
+                    
+                    dojo.byId(ulList[m]).className = "td1";
                 }
-                
-                dojo.byId(ulList[m]).className = "tabs";
-                
-                dojo.byId(ids[m]).style.display="none";
-                dojo.byId(ids[++m]).style.display="block";
-                jsProgress.update({progress:m});
-                
-                dojo.byId(ulList[m]).className = "td1";
+                else {
+                    dojo.byId(ulList[m]).className = "tabs";
+                    
+                    dojo.byId(ids[m]).style.display="none";
+                    dojo.byId(ids[++m]).style.display="block";
+                    jsProgress.update({progress:m});
+                    
+                    dojo.byId(ulList[m]).className = "td1";
+                }
             }));
     }
     
