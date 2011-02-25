@@ -208,7 +208,7 @@
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
-        var form = dojo.create("form", null, div);
+        var form = dojo.create("form", null , div);
         var c1 = dojo.create("input",{type:"radio", value:"c", name:"1p", checked:"checked"},form);
             dojo.create("label",{innerHTML:"Create a new interface"},form);
             dojo.create("br",null,form);
@@ -236,7 +236,17 @@
             td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
         forwardButton[0] = dojo.create("button",{innerHTML:"Start"},div);
-        backwardButton[0] = dojo.create("div",null,div);
+            dojo.connect(forwardButton[0],'onclick',function() {
+                if (c1.checked == "checked") {           
+                    dojo.byId(ulList[0]).className = "tabs";
+                
+                    button.parentNode.style.display="none";
+                    dojo.byId(ids[1]).style.display="block";
+                    jsProgress.update({progress:1});
+                    
+                    dojo.byId(ulList[1]).className = "td1";
+                }
+            });
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
