@@ -310,26 +310,28 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
         
         
-        
+        var k=j;
         backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {          
-                dojo.byId(ulList[j]).className = "tabs";
+                dojo.byId(ulList[k]).className = "tabs";
             
-                dojo.byId(ids[j]).style.display="none";
-                dojo.byId(ids[--j]).style.display="block";
-                jsProgress.update({progress:j});
+                dojo.byId(ids[k]).style.display="none";
+                dojo.byId(ids[--k]).style.display="block";
+                jsProgress.update({progress:k});
                 
-                dojo.byId(ulList[j]).className = "td1";                
+                dojo.byId(ulList[k]).className = "td1";                
             }));
+        
+        k=j;
         forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
-                dojo.byId(ulList[j]).className = "tabs";
+                dojo.byId(ulList[k]).className = "tabs";
                 
-                dojo.byId(ids[j]).style.display="none";
-                dojo.byId(ids[++j]).style.display="block";
-                jsProgress.update({progress:j});
+                dojo.byId(ids[k]).style.display="none";
+                dojo.byId(ids[++k]).style.display="block";
+                jsProgress.update({progress:k});
                 
-                dojo.byId(ulList[j]).className = "td1";
+                dojo.byId(ulList[k]).className = "td1";
             }));
     }
     
