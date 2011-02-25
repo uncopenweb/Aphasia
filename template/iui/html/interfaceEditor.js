@@ -225,7 +225,19 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        forwardButton = dojo.create("button",{innerHTML:"Start"},div);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",left:"20px",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var table = dojo.create("table",{className:"dataTable"},Grid);
+        var tr = dojo.create("tr",{className:"dataTable"},table);
+        var td1 = dojo.create("td",{className:"td3"},tr);
+        var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
+        var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
+            tr = dojo.create("tr",null,table);
+            td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
+            td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
+            td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
+            
+            
+       forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
                     dojo.byId(ulList[0]).className = "tabs";
@@ -237,17 +249,6 @@
                     dojo.byId(ulList[1]).className = "td1";
                 }
         }));
-        
-        var Grid = dojo.create("div",{className:"grid",id:"grid",left:"20px",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
-        var table = dojo.create("table",{className:"dataTable"},Grid);
-        var tr = dojo.create("tr",{className:"dataTable"},table);
-        var td1 = dojo.create("td",{className:"td3"},tr);
-        var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
-        var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
-            tr = dojo.create("tr",null,table);
-            td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
-            td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
-            td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
 
 
         dojo.connect(c2,'onclick',function() {
