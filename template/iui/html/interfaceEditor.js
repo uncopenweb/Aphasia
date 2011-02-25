@@ -206,7 +206,9 @@
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
-                
+                    
+                    dojo.empty(dojo.byId(ids[1]));
+                    dojo.empty(dojo.byId(ids[2]));
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);
                 
