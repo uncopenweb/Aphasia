@@ -307,7 +307,7 @@
                     
                     dojo.byId(ulList[m]).className = "td1";
                 }
-                else {
+                else if (m==1) {
                     dojo.byId(ulList[m]).className = "tabs";
                     
                     dojo.byId(ids[m]).style.display="none";
