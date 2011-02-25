@@ -165,7 +165,7 @@
         }
         step1(ids,ulList);
         tabStep(ids,1,"Top",ulList);
-        tabStep(ids,2,"Bottom");
+        tabStep(ids,2,"Bottom",ulList);
         summaryPage(ids);
         donePage(ids);
         
@@ -313,7 +313,6 @@
         backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 var k=j;
-                alert("backward "+k);
                 dojo.byId(ulList[k]).className = "tabs";
             
                 dojo.byId(ids[k]).style.display="none";
@@ -326,7 +325,6 @@
         forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 var m=j;
-                alert("forward "+m);
                 dojo.byId(ulList[m]).className = "tabs";
                 
                 dojo.byId(ids[m]).style.display="none";
