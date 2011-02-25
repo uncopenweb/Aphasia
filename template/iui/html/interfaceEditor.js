@@ -207,7 +207,7 @@
             td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
             
             
-       forwardButton = dojo.create("button",{innerHTML:"Start"},div);
+       var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
                 
@@ -284,7 +284,7 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
         
 
-        backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
+        var backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 var k=j;
                 dojo.byId(ulList[k]).className = "tabs";
@@ -296,7 +296,7 @@
                 dojo.byId(ulList[k]).className = "td1";                
             }));
         
-        forwardButton = dojo.create("button",{innerHTML:"Next"},div);
+        var forwardButton = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 var m=j;
                 summaryPage(ids,ulList);
@@ -355,7 +355,7 @@
         var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         
         
-        backwardButton = dojo.create("button",{innerHTML:"Back"},div);
+        var backwardButton = dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {
                 dojo.byId(ulList[3]).className = "tabs";
             
@@ -365,7 +365,7 @@
                 
                 dojo.byId(ulList[2]).className = "td1";                
             }));
-        forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+        var forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 donePage(ids);
             
