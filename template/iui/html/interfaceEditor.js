@@ -414,10 +414,6 @@
             theTop[0].nameTag=dojo.byId("text11").value;
             theTop[0].image=dojo.byId("text12").value;
             var image = new Image();
-
-            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[0].value);
-            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[1].value);
-            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[2].value);
             
             if (dojo.byId("form1").value!=0) {
                 for (var i=1; i<=dojo.byId("form1").value; i++) {
