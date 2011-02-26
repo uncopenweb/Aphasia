@@ -409,6 +409,8 @@
             theTop[0].nameTag=dojo.byId("text11").value;
             theTop[0].image=dojo.byId("text12").value;
             console.log(theTop[0].image);
+            var image = new Image();
+            
         }
         else if (j==2) {
         
