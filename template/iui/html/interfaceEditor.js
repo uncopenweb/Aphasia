@@ -417,8 +417,8 @@
             
             if (dojo.byId("form1").value!=0) {
                 for (var i=0; i<dojo.byId("form1").value; i++) {
-                    theTop[0].audioImages[0].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
-                    console.log(theTop[0].audioImages[0].pic);
+                    console.log(i);
+                    theTop[0].audioImages[i].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
                     theTop[0].audioImages[i].nameTag = uniqueId;          
                     theTop[0].audioImages[i].word = dojo.byId("tab"+j).getElementsByTagName("input")[1].value;
                     theTop[0].audioImages[i].phrase = dojo.byId("tab"+j).getElementsByTagName("input")[2].value;
