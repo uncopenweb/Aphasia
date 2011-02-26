@@ -406,7 +406,7 @@
         if (j==1) {
             alert(dojo.byId("text11").value);
         }
-        else (j==2) {
+        else if (j==2) {
         
         }
     }
