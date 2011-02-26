@@ -408,8 +408,13 @@
             theTop[0].name="#"+dojo.byId("text11").value;
             theTop[0].nameTag=dojo.byId("text11").value;
             theTop[0].image=dojo.byId("text12").value;
-            console.log(theTop[0].image);
             var image = new Image();
+            
+            
+            alert(dojo.byId("form1").value);
+            for (var i=0; i<dojo.byId("form1").value; i++) {
+                
+            }
             
         }
         else if (j==2) {
