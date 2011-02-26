@@ -147,6 +147,8 @@
            }
         ]
     };
+    
+    uniqueId = 1000;
 
     forwardButton = [];
     backwardButton = [];
@@ -237,6 +239,9 @@
     
     function tabStep(ids, j, word, ulList) {
         var div = dojo.byId(ids[j]);
+        if (j==2) {
+            j=4;
+        }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
@@ -409,11 +414,17 @@
             theTop[0].nameTag=dojo.byId("text11").value;
             theTop[0].image=dojo.byId("text12").value;
             var image = new Image();
+
+            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[0].value);
+            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[1].value);
+            console.log(dojo.byId("tab"+j).getElementsByTagName("input")[2].value);
             
-            
-            alert(dojo.byId("form1").value);
             for (var i=0; i<dojo.byId("form1").value; i++) {
-                
+                theTop[0].audioImages[i].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
+                theTop[0].audioImages[i].nameTag = uniqueId;          
+                theTop[0].audioImages[i].word = dojo.byId("tab"+j).getElementsByTagName("input")[1].value;
+                theTop[0].audioImages[i].phrase = dojo.byId("tab"+j).getElementsByTagName("input")[2].value;
+                uniqueId++;
             }
             
         }
