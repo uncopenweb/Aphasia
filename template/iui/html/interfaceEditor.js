@@ -243,9 +243,9 @@
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text11",className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text12",type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
         var text3 = dojo.create("select",{id:"form1"},name1);
         for (var i=0; i<10; i++) {
@@ -257,11 +257,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text21",className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text22",type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"},name1);
+        var text3 = dojo.create("select",{id:"form2"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -271,11 +271,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text31",className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text32",type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"},name1);
+        var text3 = dojo.create("select",{id:"form3"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -318,6 +318,9 @@
                     
                     dojo.byId(ulList[m]).className = "td1";
                 }
+                
+                captureValue(j);
+                
             }));
     }
     
@@ -397,6 +400,15 @@
         var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options: "},div);
         var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
             a.appendChild(document.createTextNode('Click here.'));
+    }
+    
+    function captureValue(j) {
+        if (j==1) {
+            alert(dojo.byId("text11").value);
+        }
+        else (j==2) {
+        
+        }
     }
     
     dojo.ready(start);
