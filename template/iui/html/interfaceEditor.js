@@ -416,7 +416,7 @@
             var image = new Image();
             
             if (dojo.byId("form1").value!=0) {
-                for (var i=1; i<=dojo.byId("form1").value; i++) {
+                for (var i=0; i<dojo.byId("form1").value; i++) {
                     theTop[0].audioImages[i].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
                     theTop[0].audioImages[i].nameTag = uniqueId;          
                     theTop[0].audioImages[i].word = dojo.byId("tab"+j).getElementsByTagName("input")[1].value;
