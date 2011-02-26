@@ -415,6 +415,8 @@
             theTop[0].image=dojo.byId("text12").value;
             var image = new Image();
             
+            console.log(JSON.stringify(theTop[0].audioImages));
+            
             if (dojo.byId("form1").value!=0) {
                 for (var i=0; i<dojo.byId("form1").value; i++) {
                     theTop[0].audioImages[i].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
