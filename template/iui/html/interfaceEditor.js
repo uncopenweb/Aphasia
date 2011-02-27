@@ -738,6 +738,8 @@
                 
                 dojo.byId(ulList[4]).className = "td1";
             }));
+            
+         alert(thisSchema);
     }
     
     function donePage(ids) {
