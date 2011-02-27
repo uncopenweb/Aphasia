@@ -38,6 +38,8 @@
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+    left: 3%;
+    position: relative;
 }
 
 .td2 {
@@ -70,12 +72,6 @@
     position: relative;
     left: 2%;
     width: 900px;
-}
-
-.fourth {
-    font-size: 12px;
-    position: relative;
-    left: 3%;
 }
 
 .contentTable {
