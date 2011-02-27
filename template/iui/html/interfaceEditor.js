@@ -700,11 +700,12 @@
         var topTabs = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
         var tab1 = dojo.create("div",{className:"third",innerHTML:"Tab 1"},topTabs);
-        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var table = dojo.create("table",{style:{"text-align":"center"}},topTabs);
         var tr = dojo.create("tr",null,table);
-        var td = dojo.create("td",{className:"dataTd", style:{"font-weight":"bold"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
-        var td = dojo.create("td",{className:"dataTd", style:{"font-weight":"bold"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
+        var td = dojo.create("td",{style:{"font-weight":"bold"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
+        var td = dojo.create("td",{style:{"font-weight":"bold"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
         var i=1;
+        var table = dojo.create("table",{className:"dataTable"},topTabs);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{className:"dataTd", innerHTML:" "},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Picture"},tr);
