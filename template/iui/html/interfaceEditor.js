@@ -780,9 +780,9 @@
             var theBottom = thisSchema.bottomTabs;
             var k=4;
             dojo.forEach(theBottom, function(aBottom) {
-                aBottom.name="#"+dojo.byId("text"+m+"1"+j).value;
-                aBottom.nameTag=dojo.byId("text"+m+"1"+j).value;
-                aBottom.image=dojo.byId("text"+m+"2"+j).value;
+                aBottom.name="#"+dojo.byId("text"+m+"14").value;
+                aBottom.nameTag=dojo.byId("text"+m+"14").value;
+                aBottom.image=dojo.byId("text"+m+"24").value;
                 var image = new Image();
                 
                 if (dojo.byId("form"+m+j).value!=0) {
