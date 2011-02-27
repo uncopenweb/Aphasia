@@ -773,7 +773,7 @@
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[0].image},tr);
         var i=1;
-        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
@@ -794,7 +794,7 @@
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[1].nameTag},tr);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[1].image},tr);
         var i=1;
-        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
@@ -815,7 +815,7 @@
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[2].image},tr);
         var i=1;
-        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
