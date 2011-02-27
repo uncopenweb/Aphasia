@@ -626,6 +626,9 @@
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
         
+        if (j==4) {
+            j=2;
+        }
 
         var backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
