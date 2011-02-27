@@ -72,6 +72,12 @@
     width: 900px;
 }
 
+.fourth {
+    font-size: 12px;
+    position: relative;
+    left: 3%;
+}
+
 .contentTable {
     font-size: 12px;
     left: 5%;
