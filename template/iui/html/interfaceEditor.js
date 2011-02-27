@@ -772,7 +772,7 @@
                 }
                 k++;
                 m++;
-            }            
+            });            
         }
         else if (j==2) {
             var theBottom = thisSchema.bottomTabs;
@@ -795,8 +795,7 @@
                 k++;
                 m++;
             }             
-        
-        }
+        });
     }
     
     dojo.ready(start);
