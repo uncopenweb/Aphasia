@@ -697,9 +697,9 @@
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
-        var topTabs = dojo.create("div",{style:{"margin":"2%"}, className:"second"},div);
+        var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
-        var tab1 = dojo.create("div",{className:"third",innerHTML:"Tab 1"},topTabs);
+        var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"Tab 1"},topTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
