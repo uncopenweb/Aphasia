@@ -751,24 +751,50 @@
     }
     
     function captureValue(j) {
+        var m=1;
         if (j==1) {
             var theTop = thisSchema.topTabs;
-            theTop[0].name="#"+dojo.byId("text11").value;
-            theTop[0].nameTag=dojo.byId("text11").value;
-            theTop[0].image=dojo.byId("text12").value;
-            var image = new Image();
-            
-            if (dojo.byId("form1").value!=0) {
-                for (var i=0; i<dojo.byId("form1").value; i++) {
-                    theTop[0].audioImages[i].pic = dojo.byId("tab"+j).getElementsByTagName("input")[0].value;
-                    theTop[0].audioImages[i].nameTag = uniqueId;          
-                    theTop[0].audioImages[i].word = dojo.byId("tab"+j).getElementsByTagName("input")[1].value;
-                    theTop[0].audioImages[i].phrase = dojo.byId("tab"+j).getElementsByTagName("input")[2].value;
-                    uniqueId++;
+            var k=1;
+            dojo.forEach(theTop, function(aTop) {
+                aTop.name="#"+dojo.byId("text"+m+"1").value;
+                aTop.nameTag=dojo.byId("text"+m+"1").value;
+                aTop.image=dojo.byId("text"+m+"2").value;
+                var image = new Image();
+                
+                if (dojo.byId("form"+m).value!=0) {
+                    for (var i=0; i<dojo.byId("form"+m).value; i++) {
+                        aTop.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
+                        aTop.audioImages[i].nameTag = uniqueId;          
+                        aTop.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
+                        aTop.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
+                        uniqueId++;
+                    }
                 }
-            }          
+                k++;
+                m++;
+            }            
         }
         else if (j==2) {
+            var theBottom = thisSchema.bottomTabs;
+            var k=4;
+            dojo.forEach(theBottom, function(aBottom) {
+                aBottom.name="#"+dojo.byId("text11").value;
+                aBottom.nameTag=dojo.byId("text11").value;
+                aBottom.image=dojo.byId("text12").value;
+                var image = new Image();
+                
+                if (dojo.byId("form"+m).value!=0) {
+                    for (var i=0; i<dojo.byId("form"+m).value; i++) {
+                        aBottom.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
+                        aBottom.audioImages[i].nameTag = uniqueId;          
+                        aBottom.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
+                        aBottom.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
+                        uniqueId++;
+                    }
+                }
+                k++;
+                m++;
+            }             
         
         }
     }
