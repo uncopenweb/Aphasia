@@ -758,9 +758,9 @@
             var theTop = thisSchema.topTabs;
             var k=1;
             dojo.forEach(theTop, function(aTop) {
-                aTop.name="#"+dojo.byId("text"+m+"1").value;
-                aTop.nameTag=dojo.byId("text"+m+"1").value;
-                aTop.image=dojo.byId("text"+m+"2").value;
+                aTop.name="#"+dojo.byId("text"+m+"1"+j).value;
+                aTop.nameTag=dojo.byId("text"+m+"1"+j).value;
+                aTop.image=dojo.byId("text"+m+"2"+j).value;
                 var image = new Image();
                 
                 if (dojo.byId("form"+m+j).value!=0) {
@@ -780,9 +780,9 @@
             var theBottom = thisSchema.bottomTabs;
             var k=4;
             dojo.forEach(theBottom, function(aBottom) {
-                aBottom.name="#"+dojo.byId("text"+m+"1").value;
-                aBottom.nameTag=dojo.byId("text"+m+"1").value;
-                aBottom.image=dojo.byId("text"+m+"2").value;
+                aBottom.name="#"+dojo.byId("text"+m+"1"+j).value;
+                aBottom.nameTag=dojo.byId("text"+m+"1"+j).value;
+                aBottom.image=dojo.byId("text"+m+"2"+j).value;
                 var image = new Image();
                 
                 if (dojo.byId("form"+m+j).value!=0) {
