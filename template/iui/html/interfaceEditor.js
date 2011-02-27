@@ -702,8 +702,8 @@
         var tab1 = dojo.create("div",{className:"third",innerHTML:"Tab 1"},topTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center"}},topTabs);
         var tr = dojo.create("tr",null,table);
-        var td = dojo.create("td",{style:{"font-weight":"bold"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
-        var td = dojo.create("td",{style:{"font-weight":"bold"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
+        var td = dojo.create("td",{innerHTML:"<b>Name</b>: "+thisSchema.topTabs[0].nameTag},tr);
+        var td = dojo.create("td",{innerHTML:"<b>Image</b>: "+thisSchema.topTabs[0].image},tr);
         var i=1;
         var table = dojo.create("table",{className:"dataTable"},topTabs);
         var tr = dojo.create("tr",null,table);
