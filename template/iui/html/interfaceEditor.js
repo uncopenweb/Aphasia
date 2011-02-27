@@ -785,8 +785,8 @@
                 aBottom.image=dojo.byId("text"+m+"24").value;
                 var image = new Image();
                 
-                if (dojo.byId("form"+m+j).value!=0) {
-                    for (var i=0; i<dojo.byId("form"+m+j).value; i++) {
+                if (dojo.byId("form"+m+"4").value!=0) {
+                    for (var i=0; i<dojo.byId("form"+m+"4").value; i++) {
                         aBottom.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
                         aBottom.audioImages[i].nameTag = uniqueId;          
                         aBottom.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
