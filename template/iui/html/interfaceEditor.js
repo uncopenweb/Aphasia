@@ -588,11 +588,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11",className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text11"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12",type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text12"+j,type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"},name1);
+        var text3 = dojo.create("select",{id:"form1"+j},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -602,11 +602,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text21",className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text21"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text22",type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text22"+j,type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form2"},name1);
+        var text3 = dojo.create("select",{id:"form2"+j},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -616,11 +616,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text31",className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text31"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text32",type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text32"+j,type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form3"},name1);
+        var text3 = dojo.create("select",{id:"form3"+j},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -739,7 +739,7 @@
                 dojo.byId(ulList[4]).className = "td1";
             }));
             
-         alert(JSON.stringify(thisSchema));
+         console.log(JSON.stringify(thisSchema));
     }
     
     function donePage(ids) {
@@ -763,8 +763,8 @@
                 aTop.image=dojo.byId("text"+m+"2").value;
                 var image = new Image();
                 
-                if (dojo.byId("form"+m).value!=0) {
-                    for (var i=0; i<dojo.byId("form"+m).value; i++) {
+                if (dojo.byId("form"+m+j).value!=0) {
+                    for (var i=0; i<dojo.byId("form"+m+j).value; i++) {
                         aTop.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
                         aTop.audioImages[i].nameTag = uniqueId;          
                         aTop.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
@@ -780,13 +780,13 @@
             var theBottom = thisSchema.bottomTabs;
             var k=4;
             dojo.forEach(theBottom, function(aBottom) {
-                aBottom.name="#"+dojo.byId("text11").value;
-                aBottom.nameTag=dojo.byId("text11").value;
-                aBottom.image=dojo.byId("text12").value;
+                aBottom.name="#"+dojo.byId("text"+m+"1").value;
+                aBottom.nameTag=dojo.byId("text"+m+"1").value;
+                aBottom.image=dojo.byId("text"+m+"2").value;
                 var image = new Image();
                 
-                if (dojo.byId("form"+m).value!=0) {
-                    for (var i=0; i<dojo.byId("form"+m).value; i++) {
+                if (dojo.byId("form"+m+j).value!=0) {
+                    for (var i=0; i<dojo.byId("form"+m+j).value; i++) {
                         aBottom.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
                         aBottom.audioImages[i].nameTag = uniqueId;          
                         aBottom.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
