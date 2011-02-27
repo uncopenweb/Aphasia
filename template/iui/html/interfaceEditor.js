@@ -719,19 +719,116 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
             i++;
         });
+        
+        
         var tab2 = dojo.create("div",{className:"third",innerHTML:"Tab 2"},topTabs);
+        var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Name</b>: "+thisSchema.topTabs[1].nameTag},tr);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Image</b>: "+thisSchema.topTabs[1].image},tr);
+        var i=1;
         var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
+        var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
+        var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
+        var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
+        dojo.forEach(thisSchema.topTabs[1].audioImages, function(info) {
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            i++;
+        });
+        
+        
         var tab3 = dojo.create("div",{className:"third",innerHTML:"Tab 3"},topTabs);
+        var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Name</b>: "+thisSchema.topTabs[2].nameTag},tr);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Image</b>: "+thisSchema.topTabs[2].image},tr);
+        var i=1;
         var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
+        var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
+        var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
+        var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
+        dojo.forEach(thisSchema.topTabs[2].audioImages, function(info) {
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            i++;
+        });
+        
         
         var bottomTabs = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
         var tab1 = dojo.create("div",{className:"third",innerHTML:"Tab 1"},bottomTabs);
-        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
+        var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Name</b>: "+thisSchema.bottomTabs[0].nameTag},tr);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Image</b>: "+thisSchema.bottomTabs[0].image},tr);
+        var i=1;
+        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
+        var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
+        var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
+        var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
+        dojo.forEach(thisSchema.bottomTabs[0].audioImages, function(info) {
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            i++;
+        });
+        
         var tab2 = dojo.create("div",{className:"third",innerHTML:"Tab 2"},bottomTabs);
-        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
+        var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Name</b>: "+thisSchema.bottomTabs[1].nameTag},tr);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Image</b>: "+thisSchema.bottomTabs[1].image},tr);
+        var i=1;
+        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
+        var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
+        var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
+        var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
+        dojo.forEach(thisSchema.bottomTabs[1].audioImages, function(info) {
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            i++;
+        });
+        
         var tab3 = dojo.create("div",{className:"third",innerHTML:"Tab 3"},bottomTabs);
-        var table = dojo.create("table",{className:"dataTable"},bottomTabs);
+        var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Name</b>: "+thisSchema.bottomTabs[2].nameTag},tr);
+        var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"<b>Image</b>: "+thisSchema.bottomTabs[2].image},tr);
+        var i=1;
+        var table = dojo.create("table",{className:"dataTable"},topTabs);
+        var tr = dojo.create("tr",null,table);
+        var td = dojo.create("td",{style:{"width":"5%"}, className:"dataTd", innerHTML:" "},tr);
+        var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
+        var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
+        var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
+        dojo.forEach(thisSchema.bottomTabs[2].audioImages, function(info) {
+            var tr = dojo.create("tr",null,table);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            i++;
+        });
         
         
         var backwardButton = dojo.create("button",{innerHTML:"Back"},div);
@@ -756,8 +853,6 @@
                 
                 dojo.byId(ulList[4]).className = "td1";
             }));
-            
-         console.log(JSON.stringify(thisSchema));
     }
     
     function donePage(ids) {
