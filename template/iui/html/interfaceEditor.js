@@ -721,7 +721,7 @@
         });
         
         
-        var tab2 = dojo.create("div",{className:"third",innerHTML:"Tab 2"},topTabs);
+        var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"Tab 2"},topTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[1].nameTag},tr);
@@ -743,7 +743,7 @@
         });
         
         
-        var tab3 = dojo.create("div",{className:"third",innerHTML:"Tab 3"},topTabs);
+        var tab3 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"Tab 3"},topTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[2].nameTag},tr);
@@ -765,9 +765,9 @@
         });
         
         
-        var bottomTabs = dojo.create("div",{className:"second"},div);
+        var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
-        var tab1 = dojo.create("div",{className:"third",innerHTML:"Tab 1"},bottomTabs);
+        var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"Tab 1"},bottomTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
@@ -788,7 +788,7 @@
             i++;
         });
         
-        var tab2 = dojo.create("div",{className:"third",innerHTML:"Tab 2"},bottomTabs);
+        var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"Tab 2"},bottomTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[1].nameTag},tr);
@@ -809,7 +809,7 @@
             i++;
         });
         
-        var tab3 = dojo.create("div",{className:"third",innerHTML:"Tab 3"},bottomTabs);
+        var tab3 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"Tab 3"},bottomTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
