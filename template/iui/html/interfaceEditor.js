@@ -598,8 +598,8 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(a, 'onclick', function() {
-                dojo.byId("text12"+j).value = "";
-                text3.disabled = "disabled";
+                text2.value = "";
+                catchRelease(text2, text3, "");
             });
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,""));
