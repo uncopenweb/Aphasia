@@ -930,7 +930,7 @@
     
     function clearForm(first, second,i) {
         first.value = "";
-        //dojo.byId("tab"+i).style.disabled = "disabled";
+        document.getElementById("tab"+i).style.display = "none";
         catchRelease(first, second, "");
     }
     
