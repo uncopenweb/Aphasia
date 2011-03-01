@@ -592,14 +592,15 @@
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
-            dojo.connect(a, 'onclick', function() {
-                dojo.byId("text12"+j).value = "";
-            });
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
         var text3 = dojo.create("select",{id:"form1"+j, disabled:"disabled"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
+            dojo.connect(a, 'onclick', function() {
+                dojo.byId("text12"+j).value = "";
+                text3.disabled = "disabled";
+            });
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,""));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
