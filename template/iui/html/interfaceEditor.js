@@ -597,10 +597,9 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            var self = this;
             dojo.connect(a, 'onclick', function() {
-                text2.value = "";
-                this.catchRelease(text2, text3, "");
+                dojo.byId("text12"+j).value = "";
+                catchRelease(text2, text3, "");
             });
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,""));
