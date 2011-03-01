@@ -588,7 +588,7 @@
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("textarea",{id:"text11"+j,className:"text", rows:"0.5"},name1);
+        var text1 = dojo.create("input",{id:"text11"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
