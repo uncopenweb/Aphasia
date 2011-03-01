@@ -591,7 +591,7 @@
         var text1 = dojo.create("input",{id:"text11"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled"},name1);
-        var a = dojo.create("a",{href:"javascript:;", innerHTML:"Clear"},name1);
+        var a = dojo.create("button",{innerHTML:"Clear"},name1);
             dojo.connect(a, 'onclick', function() {
                 dojo.byId("text12"+j).innerHTML = dojo.byId("text12"+j).innerHTML;
             });
