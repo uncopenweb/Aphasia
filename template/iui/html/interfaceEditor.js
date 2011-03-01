@@ -921,10 +921,8 @@
         if (first.value.length!=0 && first.value.trim() != "") {
             second.disabled = "";
             third.disabled = "";
-            if (document.getElementById("text12"+i)!=null || document.getElementById("text12"+i).disabled != "disabled") {
-                if (document.getElementById("tab"+i)!=null && document.getElementById("text11"+i).disabled != "disabled" && document.getElementById("text12"+i).disabled != "disabled") {
-                    document.getElementById("tab"+i).style.display = "";
-                }
+            if (document.getElementById("tab"+i)!=null && document.getElementById("text11"+i).disabled != "disabled" && document.getElementById("text12"+i).disabled != "disabled") {
+                document.getElementById("tab"+i).style.display = "";
             }
         }
         else {
