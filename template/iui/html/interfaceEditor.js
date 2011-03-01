@@ -928,6 +928,12 @@
             }
         }
         else {
+            if (document.getElementById("form1"+i)!=null) {
+                document.getElementById("form1"+i).disabled = "disabled";
+                if (document.getElementById("tab"+i)!=null) {
+                    document.getElementById("tab"+i).style.display = "none";
+                }
+            }
             second.disabled = "disabled";
             third.disabled = "disabled";
         }
