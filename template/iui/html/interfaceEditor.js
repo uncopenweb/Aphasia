@@ -933,7 +933,9 @@
     
     function clearForm(first, second,i) {
         first.value = "";
-        document.getElementById("tab"+i).style.display = "none";
+        if (document.getElementById("tab"+i).style.display = "none") {
+            document.getElementById("tab"+i).style.display = "none";
+        }
         catchRelease(first, second, "", i);
     }
     
