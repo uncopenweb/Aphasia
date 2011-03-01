@@ -600,7 +600,7 @@
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,""));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
-            dojo.connect(a, 'onclick', dojo.hitch(this, catchRelease, text2, text3, ""));
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3));
         
         var tab2 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
@@ -926,6 +926,11 @@
             second.disabled = "disabled";
             third.disabled = "disabled";
         }
+    }
+    
+    function clearForm(first, second) {
+        first.value = "";
+        catchRelease(first, second, "");
     }
     
     dojo.ready(start);
