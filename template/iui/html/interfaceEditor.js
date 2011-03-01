@@ -922,7 +922,9 @@
             second.disabled = "";
             third.disabled = "";
             if (document.getElementById("text12"+i)!=null || document.getElementById("text12"+i).disabled != "disabled") {
-                document.getElementById("tab"+i).style.display = "";
+                if (document.getElementById("tab"+i)!=null) {
+                    document.getElementById("tab"+i).style.display = "";
+                }
             }
         }
         else {
@@ -933,7 +935,7 @@
     
     function clearForm(first, second,i) {
         first.value = "";
-        if (document.getElementById("tab"+i).style.display = "none") {
+        if (document.getElementById("tab"+i)!=null) {
             document.getElementById("tab"+i).style.display = "none";
         }
         catchRelease(first, second, "", i);
