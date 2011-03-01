@@ -920,7 +920,7 @@
             second.disabled = "";
         }
         else {
-            second.disabled == "disabled";
+            second.disabled = "disabled";
         }
     }
     
