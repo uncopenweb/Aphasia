@@ -596,8 +596,8 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text1, 'onChange', dojo.hitch(this, 'catchRelease', text1, text2));
-            dojo.connect(text2, 'onChange', dojo.hitch(this, 'catchRelease', text2, text3));
+            dojo.connect(text1, 'onchange', dojo.hitch(this, 'catchRelease', text1, text2));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, 'catchRelease', text2, text3));
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab1,j));
         
         var tab2 = dojo.create("div",{className:"second"},div);
