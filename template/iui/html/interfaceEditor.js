@@ -597,8 +597,8 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,""));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, j));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
@@ -917,12 +917,13 @@
         }
     }
     
-    function catchRelease(first, second, third) {
+    function catchRelease(first, second, third, i) {
         if (first.value.length!=0 && first.value.trim() != "") {
             second.disabled = "";
             third.disabled = "";
         }
         else {
+            document.getElementById("tab"+i).style.display = "";
             second.disabled = "disabled";
             third.disabled = "disabled";
         }
@@ -931,7 +932,7 @@
     function clearForm(first, second,i) {
         first.value = "";
         document.getElementById("tab"+i).style.display = "none";
-        catchRelease(first, second, "");
+        catchRelease(first, second, "", i);
     }
     
     dojo.ready(start);
