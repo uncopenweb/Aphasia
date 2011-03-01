@@ -916,7 +916,7 @@
     }
     
     function catchRelease(first, second) {
-        if (first.value.length!=0 || first.value == null) {
+        if (first.value.length!=0 || first.value != null) {
             second.disabled = "";
         }
         else {
