@@ -688,14 +688,14 @@
     
     function dynamicForm(s,tab,i) {
         var array = [];
+        var second = [];
         var k=0;
-        var item1 = "";
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
             array = dojo.byId("tab"+i).getElementsByTagName("input");
             for (j=0; j<array.length; j++) {
-                array[j] = array[j].value;
+                second[j] = array[j].value;
             }
             dojo.destroy("tab"+i);
         }
@@ -703,10 +703,8 @@
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<array.length) {
-                item1 = array[k];
-                console.log(item1);
-                item2 = array[++k];
-                item3 = array[++k];
+                item2 = second[++k];
+                item3 = second[++k];
             }
             var v = j+1;
             var tr = dojo.create("tr",{className:"contentRow"},table);
