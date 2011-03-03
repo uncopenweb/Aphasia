@@ -712,7 +712,7 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file",value:item1},td);
+            dojo.create("input",{type:"file",value:""},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
             dojo.create("input",{value:item2},td);
