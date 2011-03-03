@@ -704,9 +704,9 @@
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
-                item1 = second[k];
-                item2 = second[++k];
-                item3 = second[++k];
+                item1 = second[k++];
+                item2 = second[k++];
+                item3 = second[k];
                 console.log(k);
             }
             var v = j+1;
