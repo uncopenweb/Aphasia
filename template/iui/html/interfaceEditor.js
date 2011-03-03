@@ -687,7 +687,7 @@
     }
     
     function dynamicForm(s,tab,i) {
-        var array;
+        var array = [];
         var k=0;
         var item1 = "";
         var item2 = "";
