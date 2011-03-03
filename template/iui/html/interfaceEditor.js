@@ -928,7 +928,7 @@
     }
     
     function catchRelease(first, second, third, i) {
-        alert(i);
+        alert(document.getElementById("tab"+i));
         if (first.value.length!=0 && first.value.trim() != "") {
             second.disabled = "";
             third.disabled = "";
