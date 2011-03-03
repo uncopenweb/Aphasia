@@ -707,7 +707,11 @@
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
-                console.log(k);
+            }
+            else {
+                item1 = "";
+                item2 = "";
+                item3 = "";
             }
             var v = j+1;
             var tr = dojo.create("tr",{className:"contentRow"},table);
