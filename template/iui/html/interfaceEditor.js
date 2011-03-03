@@ -705,6 +705,7 @@
             if(k<second.length) {
                 item2 = second[++k];
                 item3 = second[++k];
+                console.log(k);
             }
             var v = j+1;
             var tr = dojo.create("tr",{className:"contentRow"},table);
