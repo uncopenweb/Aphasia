@@ -690,6 +690,7 @@
         var array = [];
         var second = [];
         var k=0;
+        var item1 = "";
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
@@ -703,6 +704,7 @@
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
+                item1 = second[k];
                 item2 = second[++k];
                 item3 = second[++k];
                 console.log(k);
