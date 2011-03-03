@@ -617,8 +617,8 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,j+1));
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, j+1));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", j+1));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
         
         k = j+2;
@@ -636,8 +636,8 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, j+2));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", j+2));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
         
         if (j==4) {
