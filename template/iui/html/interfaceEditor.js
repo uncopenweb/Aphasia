@@ -695,7 +695,7 @@
         if (dojo.byId("tab"+i) !=null) {
             array = dojo.byId("tab"+i).getElementsByTagName("input");
             for (j=0; j<array.length; j++) {
-                console.log(array[j].value);
+                array[j] = array[j].value;
             }
             dojo.destroy("tab"+i);
         }
@@ -704,6 +704,7 @@
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<array.length) {
                 item1 = array[k];
+                console.log(item1);
                 item2 = array[++k];
                 item3 = array[++k];
             }
