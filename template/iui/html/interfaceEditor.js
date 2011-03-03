@@ -687,23 +687,37 @@
     }
     
     function dynamicForm(s,tab,i) {
+        var array;
+        var k=0;
+        var item1 = "";
+        var item2 = "";
+        var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
+            array = dojo.byId("tab"+i).getElementsByTagName("input");
+            for (j=0; j<array.length; j++) {
+                array[j] = array[j].value;
+            }
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            if(k<array.length) {
+                item1 = array[k];
+                item2 = array[++k];
+                item3 = array[++k];
+            }
             var v = j+1;
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file"},td);
+            dojo.create("input",{type:"file",value:item1},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
-            dojo.create("input",null,td);
+            dojo.create("input",{value:item2},td);
             var td = dojo.create("td",{style:{"border":"1px solid black","width":"30%"}},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
-            dojo.create("input",{style:{"width":"100%"}},td);
+            dojo.create("input",{style:{"width":"100%"},value:item3},td);
         }
     }
     
