@@ -706,7 +706,7 @@
             if(k<second.length) {
                 item1 = second[k++];
                 item2 = second[k++];
-                item3 = second[k];
+                item3 = second[k++];
                 console.log(k);
             }
             var v = j+1;
