@@ -907,7 +907,7 @@
             dojo.forEach(theBottom, function(aBottom) {
                 aBottom.name="#"+dojo.byId("text11"+k).value;
                 aBottom.nameTag=dojo.byId("text11"+k).value;
-                aBottom.image=dojo.byId("text21"+k).value;
+                aBottom.image=dojo.byId("text11"+k).value;
                 var image = new Image();
                 
                 if (dojo.byId("form1"+k).value!=0) {
