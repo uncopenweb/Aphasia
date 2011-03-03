@@ -702,7 +702,7 @@
         var div = dojo.create("div",{id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            if(k<array.length) {
+            if(k<second.length) {
                 item2 = second[++k];
                 item3 = second[++k];
             }
