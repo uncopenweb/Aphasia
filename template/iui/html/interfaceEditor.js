@@ -606,11 +606,12 @@
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text21"+j,className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text21"+j+1,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text22"+j,type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text22"+j+1,type:"file", disabled:"disabled"},name1);
+        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form2"+j},name1);
+        var text3 = dojo.create("select",{id:"form2"+j+1, disabled:"disabled"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -623,11 +624,11 @@
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text31"+j,className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text31"+j+2,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text32"+j,type:"file"},name1);
+        var text2 = dojo.create("input",{id:"text32"+j+2,type:"file"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form3"+j},name1);
+        var text3 = dojo.create("select",{id:"form3"+j+2},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
