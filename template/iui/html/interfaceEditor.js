@@ -598,10 +598,10 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"+j, disabled:"disabled"},name1);
+        var text3 = dojo.create("select",{id:"form1"+j, disabled:"disabled",className:"disabled"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -617,10 +617,10 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled"},name1);
+        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -636,10 +636,10 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text"},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled"},name1);
+        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},name1);
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
@@ -752,8 +752,11 @@
             dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
             if (j!=0) {
                 document.getElementById("contentItem"+i+j+"1").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"1").className = "disabled";
                 document.getElementById("contentItem"+i+j+"2").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"2").className = "disabled";
                 document.getElementById("contentItem"+i+j+"3").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"3").className = "disabled";
             }
         }
     }
@@ -978,7 +981,9 @@
     function catchRelease(first, second, third, i) {
         if (first.value.length!=0 && first.value.trim() != "") {
             second.disabled = "";
+            second.className = "";
             third.disabled = "";
+            third.className = "";
             if (document.getElementById("tab"+i)!=null && document.getElementById("text11"+i).value.trim() != "" && document.getElementById("text12"+i).disabled != "disabled" && document.getElementById("text12"+i).value.trim() != "") {
                 document.getElementById("tab"+i).style.display = "";
             }
@@ -986,12 +991,15 @@
         else {
             if (document.getElementById("form1"+i)!=null) {
                 document.getElementById("form1"+i).disabled = "disabled";
+                document.getElementById("form1"+i).className = "disabled";
                 if (document.getElementById("tab"+i)!=null) {
                     document.getElementById("tab"+i).style.display = "none";
                 }
             }
             second.disabled = "disabled";
+            second.className = "disabled";
             third.disabled = "disabled";
+            third.className = "disabled";
         }
     }
     
