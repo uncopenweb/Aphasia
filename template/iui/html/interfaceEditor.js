@@ -500,6 +500,7 @@
     array5 = [];
     array6 = [];
     arrays = [array1, array2, array3, array4, array5, array6];
+    forms = [[],[],[],[],[],[]];
     
     
     function start() {
@@ -705,6 +706,7 @@
     
     function dynamicForm(s,tab,i) {
         var second = [];
+        var theForm = forms[i];
         var k=0;
         var item1 = "";
         var item2 = "";
@@ -743,13 +745,13 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
+            var one = theForm[j][1] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
-            dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
+            var two = theForm[j][2] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
             var td = dojo.create("td",{style:{"border":"1px solid black","width":"30%"}},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
-            dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
+            var three = theForm[j][3] = dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
             if (j!=0) {
                 dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"1").className = "disabled";
@@ -758,6 +760,8 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
+            dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, j));
+            dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, j));
         }
     }
     
@@ -1011,6 +1015,15 @@
             document.getElementById("tab"+i).style.display = "none";
         }
         catchRelease(first, second, "", i);
+    }
+    
+    function release2(one, two, j) {
+        if (one.disabled == "disabled" && two.disabled == "disabled") {
+        
+        }
+        else {
+        
+        }
     }
     
     dojo.ready(start);
