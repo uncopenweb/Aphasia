@@ -711,7 +711,7 @@
             }
             else {
                 for (j=0; j<theArray.length; j++) {
-                    second[j] = theArray[j].value;
+                    second[j] = theArray[j];
                 }
             }
             console.log(theArray);
