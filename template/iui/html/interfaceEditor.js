@@ -655,13 +655,22 @@
         var backwardButton =  dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 var k=j;
+                if (k==1) {
+                    array1=[];
+                    array2=[];
+                    array3=[];
+                    array4=[];
+                    array5=[];
+                    array6=[];
+                    arrays=[array1, array2, array3, array4, array5, array6];
+                }
                 dojo.byId(ulList[k]).className = "tabs";
             
                 dojo.byId(ids[k]).style.display="none";
                 dojo.byId(ids[--k]).style.display="block";
                 jsProgress.update({progress:k});
                 
-                dojo.byId(ulList[k]).className = "td1";                
+                dojo.byId(ulList[k]).className = "td1";
             }));
         
         var forwardButton = dojo.create("button",{innerHTML:"Next"},div);
