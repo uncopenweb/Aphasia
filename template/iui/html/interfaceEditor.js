@@ -751,9 +751,9 @@
             dojo.create("label",{innerHTML:"Phrase: "},td);
             dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
             if (j!=0) {
-                dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
-                dojo.byId("contentItem"+i+j+"2").disabled = "disabled";
-                dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"1").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"2").disabled = "disabled";
+                document.getElementById("contentItem"+i+j+"3").disabled = "disabled";
             }
         }
     }
