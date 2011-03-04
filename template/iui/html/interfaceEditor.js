@@ -492,6 +492,7 @@
 
     forwardButton = [];
     backwardButton = [];
+    array = [];
     
     
     function start() {
@@ -687,16 +688,15 @@
     }
     
     function dynamicForm(s,tab,i) {
-        var array = [];
         var second = [];
         var k=0;
         var item1 = "";
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
-            array = dojo.byId("tab"+i).getElementsByTagName("input");
+            second = dojo.byId("tab"+i).getElementsByTagName("input");
             for (j=0; j<array.length; j++) {
-                second[j] = array[j].value;
+                second[j] = second[j].value;
             }
             dojo.destroy("tab"+i);
         }
