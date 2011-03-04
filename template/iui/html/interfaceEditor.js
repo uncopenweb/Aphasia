@@ -493,6 +493,13 @@
     forwardButton = [];
     backwardButton = [];
     array = [];
+    array1 = [];
+    array2 = [];
+    array3 = [];
+    array4 = [];
+    array5 = [];
+    array6 = [];
+    arrays = [array1, array2, array3, array4, array5, array6];
     
     
     function start() {
@@ -694,9 +701,17 @@
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
-            second = dojo.byId("tab"+i).getElementsByTagName("input");
-            for (j=0; j<second.length; j++) {
-                second[j] = second[j].value;
+            array = dojo.byId("tab"+i).getElementsByTagName("input");
+            var theArray = arrays[i];
+            if (theArray.length < array.length) {
+                for (j=0; j<array.length; j++) {
+                    second[j] = array[j].value;
+                }
+            }
+            else {
+                for (j=0; j<theArray.length; j++) {
+                    second[j] = theArray[j].value;
+                }
             }
             dojo.destroy("tab"+i);
         }
