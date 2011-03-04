@@ -714,6 +714,7 @@
                     second[j] = theArray[j].value;
                 }
             }
+            console.log(theArray);
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
