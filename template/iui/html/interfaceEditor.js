@@ -743,13 +743,18 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            dojo.create("input",{type:"file",value:""},td);
+            dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
-            dojo.create("input",{value:item2},td);
+            dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
             var td = dojo.create("td",{style:{"border":"1px solid black","width":"30%"}},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
-            dojo.create("input",{style:{"width":"100%"},value:item3},td);
+            dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
+            if (j!=0) {
+                dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
+                dojo.byId("contentItem"+i+j+"2").disabled = "disabled";
+                dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
+            }
         }
     }
     
