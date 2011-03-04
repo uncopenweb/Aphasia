@@ -706,6 +706,7 @@
             if (theArray.length < array.length) {
                 for (j=0; j<array.length; j++) {
                     second[j] = array[j].value;
+                    theArray[j] = array[j].value;
                 }
             }
             else {
