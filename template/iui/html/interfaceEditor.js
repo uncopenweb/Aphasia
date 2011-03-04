@@ -999,7 +999,9 @@
             second.disabled = "disabled";
             second.className = "disabled";
             third.disabled = "disabled";
-            third.className = "disabled";
+            if (third.innerHTML != "Clear") {
+                third.className = "disabled";
+            }
         }
     }
     
