@@ -762,6 +762,7 @@
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
         }
+        console.log(theForm);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var one = theForm[j][0];
             var two = theForm[j][1];
