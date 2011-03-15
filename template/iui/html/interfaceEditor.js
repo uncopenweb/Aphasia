@@ -764,6 +764,7 @@
         }
         console.log(theForm);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            console.log(theForm[j+1][0]);
             var one = theForm[j][0];
             var two = theForm[j][1];
             var three = theForm[j][2];
@@ -1026,7 +1027,6 @@
     }
     
     function release2(one, two, three, j, form) {
-        console.log(j+1);
         if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
             j++;
             form[j][0].disabled = "";
