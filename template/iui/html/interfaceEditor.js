@@ -707,7 +707,6 @@
     function dynamicForm(s,tab,i) {
         var second = [];
         var theForm = forms[i];
-        console.log(theForm);
         var k=0;
         var item1 = "";
         var item2 = "";
@@ -746,13 +745,13 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            var one = theForm[j][1] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
+            var one = theForm[j][0] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
-            var two = theForm[j][2] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
+            var two = theForm[j][1] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
             var td = dojo.create("td",{style:{"border":"1px solid black","width":"30%"}},tr);
             dojo.create("label",{innerHTML:"Phrase: "},td);
-            var three = theForm[j][3] = dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
+            var three = theForm[j][2] = dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
             if (j!=0) {
                 dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"1").className = "disabled";
