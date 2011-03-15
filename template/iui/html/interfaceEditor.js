@@ -1035,13 +1035,12 @@
         }
         else {
             while (j<form.length) {
-                j = j+1;
                 form[j][0].disabled = "disabled";
                 form[j][0].className = "disabled";
                 form[j][1].disabled = "disabled";
                 form[j][1].className = "disabled";
                 form[j][2].disabled = "disabled";
-                form[j][2].className = "disabled";
+                form[j++][2].className = "disabled";
             }        
         }
     }
