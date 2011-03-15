@@ -1025,7 +1025,7 @@
     }
     
     function release2(one, two, three, j, form) {
-        if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
+        if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
             form[j][0].disabled = "";
             form[j][0].className = "";
             form[j][1].disabled = "";
