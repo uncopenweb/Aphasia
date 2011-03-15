@@ -1021,10 +1021,10 @@
     }
     
     function release2(one, two, three, j, form) {
+        alert(j);
         if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
             while (j<form.length) {
                 j++;
-                console.log(j);
                 form[j][0].disabled = "";
                 form[j][1].disabled = "";
                 form[j][2].disabled = "";
