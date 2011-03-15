@@ -714,7 +714,8 @@
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
             array = dojo.byId("tab"+i).getElementsByTagName("input");
-            var theArray = arrays[i];
+            var theArray = arrays[--i];
+            i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
                     second[j] = array[j].value;
