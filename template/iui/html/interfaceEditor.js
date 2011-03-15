@@ -761,7 +761,6 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
-            console.log(theForm[j][0].disabled);
             dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
             dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
@@ -1021,6 +1020,7 @@
     }
     
     function release2(one, two, three, j, form) {
+        console.log(form);
         if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
             j++;
             form[j][0].disabled = "";
