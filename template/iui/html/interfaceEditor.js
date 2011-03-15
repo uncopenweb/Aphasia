@@ -1035,6 +1035,7 @@
         }
         else {
             while (j<form.length) {
+                j++;
                 form[j][0].disabled = "disabled";
                 form[j][0].className = "disabled";
                 form[j][1].disabled = "disabled";
