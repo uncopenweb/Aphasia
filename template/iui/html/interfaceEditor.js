@@ -1024,15 +1024,21 @@
         if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
             j++;
             form[j][0].disabled = "";
+            form[j][0].className = "";
             form[j][1].disabled = "";
-            form[j][2].disabled = "";
+            form[j][1].className = "";
+            form[j][2].disabled = "";            
+            form[j][2].className = "";            
         }
         else {
             while (j<form.length) {
                 j++;
                 form[j][0].disabled = "disabled";
+                form[j][0].className = "disabled";
                 form[j][1].disabled = "disabled";
+                form[j][1].className = "disabled";
                 form[j][2].disabled = "disabled";
+                form[j][2].className = "disabled";
             }        
         }
     }
