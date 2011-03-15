@@ -1021,14 +1021,11 @@
     }
     
     function release2(one, two, three, j, form) {
-        j = parseInt(j);
         if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
-            while (j<form.length) {
-                j++;
-                form[j][0].disabled = "";
-                form[j][1].disabled = "";
-                form[j][2].disabled = "";
-            }
+            j++;
+            form[j][0].disabled = "";
+            form[j][1].disabled = "";
+            form[j][2].disabled = "";
         }
         else {
             while (j<form.length) {
