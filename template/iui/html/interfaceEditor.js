@@ -761,9 +761,14 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
+        }
+        for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            var one = theForm[j][0];
+            var two = theForm[j][1];
+            var three = theForm[j][2];
             dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
-            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
+            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));        
         }
     }
     
