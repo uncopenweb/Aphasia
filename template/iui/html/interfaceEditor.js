@@ -1040,7 +1040,8 @@
                 form[j][1].disabled = "disabled";
                 form[j][1].className = "disabled";
                 form[j][2].disabled = "disabled";
-                form[j++][2].className = "disabled";
+                form[j][2].className = "disabled";
+                j++;
             }        
         }
     }
