@@ -762,8 +762,9 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
-            dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, j));
-            dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, j));
+            dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
+            dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
+            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
         }
     }
     
@@ -1019,12 +1020,22 @@
         catchRelease(first, second, "", i);
     }
     
-    function release2(one, two, j) {
-        if (one.disabled == "disabled" && two.disabled == "disabled") {
-        
+    function release2(one, two, three, j, form) {
+        if (one.disabled == "disabled" && two.disabled == "disabled" && three.disabled == "disabled") {
+            while (j<form.length) {
+                j++;
+                form[j][0].disabled = "";
+                form[j][1].disabled = "";
+                form[j][2].disabled = "";
+            }
         }
         else {
-        
+            while (j<form.length) {
+                j++;
+                form[j][0].disabled = "disabled";
+                form[j][1].disabled = "disabled";
+                form[j][2].disabled = "disabled";
+            }        
         }
     }
     
