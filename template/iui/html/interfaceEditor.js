@@ -727,7 +727,6 @@
                     second[j] = theArray[j];
                 }
             }
-            console.log(theArray);
             dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
@@ -762,6 +761,7 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
+            console.log(theForm[j][0]);
             dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
             dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j, theForm));
