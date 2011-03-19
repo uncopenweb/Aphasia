@@ -797,6 +797,9 @@
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
         dojo.forEach(forms[0], function(info) {
+            if (info[0].disabled == "disabled") {
+                break;
+            }
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
             var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
