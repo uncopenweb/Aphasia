@@ -1032,8 +1032,6 @@
     }
     
     function release2(one, two, three, a, j, form) {
-        console.log(j);
-        console.log(form);
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
             form[j][0].disabled = "";
             form[j][0].className = "";
