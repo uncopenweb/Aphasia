@@ -1037,8 +1037,10 @@
             form[j][1].disabled = "";
             form[j][1].className = "";
             form[j][2].disabled = "";            
-            form[j][2].className = "";   
-            a.disabled = "";
+            form[j][2].className = "";
+            if (a!=null) {
+                a.disabled = "";
+            }
         }
         else {
             while (j<form.length) {
@@ -1048,7 +1050,9 @@
                 form[j][1].className = "disabled";
                 form[j][2].disabled = "disabled";
                 form[j][2].className = "disabled";
-                a.disabled = "disabled";
+                if (a!=null) {
+                    a.disabled = "disabled";
+                }
                 j++;
             }        
         }
