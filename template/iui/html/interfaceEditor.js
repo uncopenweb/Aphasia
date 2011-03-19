@@ -1049,7 +1049,7 @@
     }
     function clearForm2 (first, second, third, i, aForm) {
         first.value = "";
-        release2("", second, third, i, aForm);
+        release2(first, second, third, i, aForm);
     }
     
     dojo.ready(start);
