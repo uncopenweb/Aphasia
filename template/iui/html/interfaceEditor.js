@@ -1026,11 +1026,6 @@
         catchRelease(first, second, "", i);
     }
     
-    function clearForm2 (first, second, third, i, aForm) {
-        first.value = "";
-        catchRelease2("", second, third, i, aForm);
-    }
-    
     function release2(one, two, three, j, form) {
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
             form[j][0].disabled = "";
@@ -1051,6 +1046,10 @@
                 j++;
             }        
         }
+    }
+    function clearForm2 (first, second, third, i, aForm) {
+        first.value = "";
+        release2("", second, third, i, aForm);
     }
     
     dojo.ready(start);
