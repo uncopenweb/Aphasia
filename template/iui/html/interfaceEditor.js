@@ -1031,7 +1031,7 @@
         catchRelease(first, second, "", i);
     }
     
-    function release2(one, two, three, a, j, form) {
+    function release2(one, two, three, j, a, form) {
         console.log(j);
         console.log(form);
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
