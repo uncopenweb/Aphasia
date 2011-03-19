@@ -773,6 +773,7 @@
     }
     
     function summaryPage(ids,ulList) {
+        alert(forms);
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
@@ -793,9 +794,9 @@
         dojo.forEach(forms[0], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0]}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1]},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2]},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
