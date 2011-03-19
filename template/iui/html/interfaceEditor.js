@@ -798,7 +798,7 @@
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
         dojo.forEach(forms[0], function(info) {
             if (info[0].disabled == "disabled") {
-                return;
+                return false;
             }
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
