@@ -1031,7 +1031,7 @@
         catchRelease(first, second, "", i);
     }
     
-    function release2(one, two, three, j, a, form) {
+    function release2(one, two, three, a, j, form) {
         console.log(j);
         console.log(form);
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
@@ -1058,9 +1058,9 @@
             }        
         }
     }
-    function clearForm2 (first, second, third, i, a, aForm) {
+    function clearForm2 (first, second, third, a, i, aForm) {
         first.value = "";
-        release2(first, second, third, i, a, aForm);
+        release2(first, second, third, a, i, aForm);
     }
     
     dojo.ready(start);
