@@ -790,12 +790,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.topTabs[0].audioImages, function(info) {
+        dojo.forEach(forms[0], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0]}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1]},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2]},tr);
             i++;
         });
         
