@@ -766,14 +766,13 @@
             var one = theForm[j][0];
             var two = theForm[j][1];
             var three = theForm[j][2];
-            dojo.connect(one, 'onkeyup', dojo.hitch(this, release2, one, two, three, j+1, theForm));
+            dojo.connect(one, 'onChange', dojo.hitch(this, release2, one, two, three, j+1, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, j+1, theForm));
             dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, j+1, theForm));        
         }
     }
     
     function summaryPage(ids,ulList) {
-        alert(forms);
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
@@ -813,12 +812,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.topTabs[1].audioImages, function(info) {
+        dojo.forEach(forms[1], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
@@ -835,12 +834,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.topTabs[2].audioImages, function(info) {
+        dojo.forEach(forms[2], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
@@ -859,12 +858,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.bottomTabs[0].audioImages, function(info) {
+        dojo.forEach(forms[3], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
@@ -880,12 +879,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.bottomTabs[1].audioImages, function(info) {
+        dojo.forEach(forms[4], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
@@ -901,12 +900,12 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(thisSchema.bottomTabs[2].audioImages, function(info) {
+        dojo.forEach(forms[5], function(info) {
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{className:"dataTd", innerHTML:i},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.pic}, tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.word},tr);
-            var td = dojo.create("td",{className:"dataTd", innerHTML:info.phrase},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
+            var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
         });
         
