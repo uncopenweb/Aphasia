@@ -1031,6 +1031,7 @@
     }
     
     function release2(one, two, three, j, a, form) {
+        console.log(j);
         console.log(form);
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
             form[j][0].disabled = "";
