@@ -747,7 +747,7 @@
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
             var one = theForm[j][0] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
-            var a = dojo.create("button",{innerHTML:"Clear"},td);
+            var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
             var two = theForm[j][1] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
@@ -764,11 +764,15 @@
                 a.disabled = "disabled";
                 a.className = "disabled";
             }
-            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , a,  j+1 , theForm));
-            dojo.connect(one, 'onchange', dojo.hitch(this, release2, one, two, three, a,  j+1, theForm));
-            dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, a, j+1, theForm));
-            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, a, j+1, theForm));  
         }
+        
+        for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , dojo.byId("button"+j+""+i),  j+1 , theForm));
+            dojo.connect(one, 'onchange', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i),  j+1, theForm));
+            dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i), j+1, theForm));
+            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i), j+1, theForm));  
+        }
+        
     }
     
     function summaryPage(ids,ulList) {
