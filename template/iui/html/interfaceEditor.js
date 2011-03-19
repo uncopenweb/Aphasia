@@ -1055,7 +1055,7 @@
     }
     function clearForm2 (first, second, third, a, i, aForm) {
         first.value = "";
-        
+        alert("hello");
         release2(first, second, third, i, a, aForm);
     }
     
