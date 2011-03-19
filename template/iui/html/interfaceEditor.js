@@ -762,7 +762,6 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
                 a.disabled = "disabled";
-                a.className = "disabled";
             }
         }
         
