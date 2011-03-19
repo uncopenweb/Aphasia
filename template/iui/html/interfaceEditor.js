@@ -765,14 +765,9 @@
                 a.className = "disabled";
             }
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , a,  j+1 , theForm));
-        }
-        for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            var one = theForm[j][0];
-            var two = theForm[j][1];
-            var three = theForm[j][2];
             dojo.connect(one, 'onchange', dojo.hitch(this, release2, one, two, three, a,  j+1, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, a, j+1, theForm));
-            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, a, j+1, theForm));        
+            dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, a, j+1, theForm));  
         }
     }
     
@@ -1053,7 +1048,7 @@
             }        
         }
     }
-    function clearForm2 (first, second, third, a,  i, aForm) {
+    function clearForm2 (first, second, third, a, i, aForm) {
         first.value = "";
         
         release2(first, second, third, i, a, aForm);
