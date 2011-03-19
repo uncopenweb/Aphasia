@@ -761,8 +761,10 @@
                 dojo.byId("contentItem"+i+j+"2").className = "disabled";
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
+                a.disabled = "disabled";
+                a.className = "disabled";
             }
-            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , j+1 , theForm));
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , a,  j+1 , theForm));
         }
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var one = theForm[j][0];
@@ -1026,14 +1028,16 @@
         catchRelease(first, second, "", i);
     }
     
-    function release2(one, two, three, j, form) {
+    function release2(one, two, three, j, a, form) {
         if (one.value.trim()!="" && two.value.trim()!="" && three.value.trim()!="") {
             form[j][0].disabled = "";
             form[j][0].className = "";
             form[j][1].disabled = "";
             form[j][1].className = "";
             form[j][2].disabled = "";            
-            form[j][2].className = "";            
+            form[j][2].className = "";   
+            a.disabled = "";
+            a.className = "";
         }
         else {
             while (j<form.length) {
@@ -1043,13 +1047,16 @@
                 form[j][1].className = "disabled";
                 form[j][2].disabled = "disabled";
                 form[j][2].className = "disabled";
+                a.disabled = "disabled";
+                a.className = "disabled";
                 j++;
             }        
         }
     }
-    function clearForm2 (first, second, third, i, aForm) {
+    function clearForm2 (first, second, third, a,  i, aForm) {
         first.value = "";
-        release2(first, second, third, i, aForm);
+        
+        release2(first, second, third, i, a, aForm);
     }
     
     dojo.ready(start);
