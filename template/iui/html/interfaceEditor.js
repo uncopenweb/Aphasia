@@ -747,6 +747,7 @@
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
             var one = theForm[j][0] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
+            var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
             var two = theForm[j][1] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
@@ -761,6 +762,7 @@
                 dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
             }
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , j+1 , theForm));
         }
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             var one = theForm[j][0];
@@ -1016,12 +1018,17 @@
         }
     }
     
-    function clearForm(first, second,i) {
+    function clearForm (first, second, i) {
         first.value = "";
         if (document.getElementById("tab"+i)!=null) {
             document.getElementById("tab"+i).style.display = "none";
         }
         catchRelease(first, second, "", i);
+    }
+    
+    function clearForm2 (first, second, third, i, aForm) {
+        first.value = "";
+        catchRelease2("", second, third, i, aForm);
     }
     
     function release2(one, two, three, j, form) {
