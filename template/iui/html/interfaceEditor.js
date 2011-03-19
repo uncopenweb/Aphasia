@@ -846,7 +846,7 @@
         
         var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"<b>second</b>"},div);
         var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
-        var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"Tab 1"},bottomTabs);
+        var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
         var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
         var tr = dojo.create("tr",null,table);
         var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
