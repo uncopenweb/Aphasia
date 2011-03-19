@@ -767,7 +767,7 @@
         }
         
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm2, one, two ,three , dojo.byId("button"+j+""+i),  j+1 , theForm));
+            dojo.connect(dojo.byId("button"+j+""+i), 'onclick', dojo.hitch(this, clearForm2, one, two ,three , dojo.byId("button"+j+""+i),  j+1 , theForm));
             dojo.connect(one, 'onchange', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i),  j+1, theForm));
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i), j+1, theForm));
             dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+j+""+i), j+1, theForm));  
