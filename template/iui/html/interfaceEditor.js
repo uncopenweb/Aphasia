@@ -747,7 +747,7 @@
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
             var one = theForm[j][0] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
-            var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},td);
+            var a = dojo.create("button",{innerHTML:"Clear"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
             var two = theForm[j][1] = dojo.create("input",{value:item2, id: "contentItem"+i+j+"2"},td);
