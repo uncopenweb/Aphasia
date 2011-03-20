@@ -868,7 +868,7 @@
         }
         
         var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 || dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0 || dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0) {
+        if (dojo.byId("form14").options[dojo.byId("form11").selectedIndex].value>0 || dojo.byId("form12").options[dojo.byId("form15").selectedIndex].value>0 || dojo.byId("form16").options[dojo.byId("form13").selectedIndex].value>0) {
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
         }
         if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0) {
