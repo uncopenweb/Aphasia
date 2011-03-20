@@ -798,6 +798,7 @@
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
         for(j=0; j<forms[0].length; j++) {
             var info = forms[0][j];
+            console.log(info);
             if (info[0].disabled == "disabled") {
                 break;
             }
