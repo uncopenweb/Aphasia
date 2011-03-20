@@ -798,7 +798,7 @@
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
         for(j=0; j<forms[0].length; j++) {
             var info = forms[0][j];
-            if (j!=forms[0].length-1 && (forms[0][j+1][0].disabled == "disabled" || forms[0][j+1][0].value.trim() == "")) {
+            if (forms[0][j][0].disabled == "disabled" || forms[0][j][0].value.trim() == "") {
                 break;
             }
             var tr = dojo.create("tr",null,table);
