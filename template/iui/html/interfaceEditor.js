@@ -786,7 +786,7 @@
         if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 || dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0 || dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0) {
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
         }
-        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0) {
+        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && forms[0][0][0].value.trim() != "") {
             var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
             var tr = dojo.create("tr",null,table);
