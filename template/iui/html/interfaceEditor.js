@@ -796,7 +796,7 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        dojo.forEach(forms[0], function(info) {
+        for(j=0; j<forms[0].length, j++) {
             if (info[0].disabled == "disabled") {
                 break;
             }
@@ -806,7 +806,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
             var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
             i++;
-        });
+        };
         
         
         var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},topTabs);
