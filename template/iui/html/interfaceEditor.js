@@ -796,7 +796,7 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        for(j=0; j<forms[0].length, j++) {
+        for(j=0; j<forms[0].length; j++) {
             var info = forms[0][j];
             if (info[0].disabled == "disabled") {
                 break;
@@ -822,7 +822,7 @@
         var td = dojo.create("td",{style:{"width":"20%"},className:"dataTd", innerHTML:"Picture"},tr);
         var td = dojo.create("td",{style:{"width":"15%"},className:"dataTd", innerHTML:"Word"},tr);
         var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
-        for(j=0; j<forms[1].length,j++) {
+        for(j=0; j<forms[1].length; j++) {
             var info = forms[1][j];
             if (info[0].disabled == "disabled") {
                 break;
