@@ -813,7 +813,7 @@
             }
         }
         
-        if (dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0) {
+        if (dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0 && forms[1][0][0].value.trim() != "") {
             var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
             var tr = dojo.create("tr",null,table);
@@ -840,7 +840,7 @@
             }
         }
         
-        if (dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0) {
+        if (dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0 && forms[2][0][0].value.trim() != "") {
             var tab3 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 3</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
@@ -871,7 +871,7 @@
         if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0 || dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value>0 || dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value>0) {
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
         }
-        if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0) {
+        if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0 && forms[3][0][0].value.trim() != "") {
             var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
             var tr = dojo.create("tr",null,table);
@@ -898,7 +898,7 @@
             }
         }
         
-        if (dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value>0) {
+        if (dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value>0 && forms[4][0][0].value.trim() != "") {
             var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
             var tr = dojo.create("tr",null,table);
@@ -925,7 +925,7 @@
             }
         }
         
-        if (dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value>0) {
+        if (dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value>0 && forms[5][0][0].value.trim() != "") {
             var tab3 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 3</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
