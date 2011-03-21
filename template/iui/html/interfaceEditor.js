@@ -836,6 +836,10 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                // thisSchema.topTabs[1].audioImages[j].pic = info[0].value;
+                // thisSchema.topTabs[1].audioImages[j].word = info[1].value;
+                // thisSchema.topTabs[1].audioImages[j].word = ;
+                // thisSchema.topTabs[1].audioImages[j].phrase = info[2].value;
                 i++;
             }
         }
@@ -978,6 +982,7 @@
        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value==0 && dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value==0 && dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value==0 && dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value==0 && dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value==0 && dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value==0) {
             forwardButton.disabled = "disabled";
        }
+       JSON.stringify(thisSchema);
     }
     
     function donePage(ids) {
