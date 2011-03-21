@@ -982,7 +982,7 @@
        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value==0 && dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value==0 && dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value==0 && dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value==0 && dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value==0 && dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value==0) {
             forwardButton.disabled = "disabled";
        }
-       JSON.stringify(thisSchema);
+       console.log(JSON.stringify(thisSchema));
     }
     
     function donePage(ids) {
