@@ -780,7 +780,6 @@
     }
     
     function summaryPage(ids,ulList) {
-        alert(dojo.byId("text116").value);
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
@@ -968,8 +967,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[2].image},tr);
-            thisSchema.bottomTabs[2].nameTag = dojo.byId("text115").value;
-            thisSchema.bottomTabs[2].image = dojo.byId("text125").value;
+            thisSchema.bottomTabs[2].nameTag = dojo.byId("text116").value;
+            thisSchema.bottomTabs[2].image = dojo.byId("text126").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab3);
             var tr = dojo.create("tr",null,table);
