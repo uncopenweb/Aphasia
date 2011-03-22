@@ -780,6 +780,7 @@
     }
     
     function summaryPage(ids,ulList) {
+        alert(dojo.byId("text116").value);
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
