@@ -793,6 +793,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
+            thisSchema.topTabs[0].nameTag = dojo.byId("text111").value;
+            thisSchema.topTabs[0].image = dojo.byId("text121").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab1);
             var tr = dojo.create("tr",null,table);
@@ -825,6 +827,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[1].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[1].image},tr);
+            thisSchema.topTabs[1].nameTag = dojo.byId("text112").value;
+            thisSchema.topTabs[1].image = dojo.byId("text122").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab2);
             var tr = dojo.create("tr",null,table);
@@ -857,6 +861,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[2].image},tr);
+            thisSchema.topTabs[0].nameTag = dojo.byId("text113").value;
+            thisSchema.topTabs[0].image = dojo.byId("text123").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab3);
             var tr = dojo.create("tr",null,table);
@@ -893,6 +899,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[0].image},tr);
+            thisSchema.bottomTabs[0].nameTag = dojo.byId("text114").value;
+            thisSchema.bottomTabs[0].image = dojo.byId("text124").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab1);
             var tr = dojo.create("tr",null,table);
@@ -925,6 +933,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[1].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[1].image},tr);
+            thisSchema.bottomTabs[1].nameTag = dojo.byId("text115").value;
+            thisSchema.bottomTabs[1].image = dojo.byId("text125").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab2);
             var tr = dojo.create("tr",null,table);
@@ -957,6 +967,8 @@
             var tr = dojo.create("tr",null,table);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[2].image},tr);
+            thisSchema.bottomTabs[2].nameTag = dojo.byId("text115").value;
+            thisSchema.bottomTabs[2].image = dojo.byId("text125").value;
             var i=1;
             var table = dojo.create("table",{className:"dataTable"},tab3);
             var tr = dojo.create("tr",null,table);
@@ -1023,7 +1035,6 @@
     }
     
     function captureValue(j) {
-        alert(j);
         if (j==1) {
             var theTop = thisSchema.topTabs;
             var k=1;
