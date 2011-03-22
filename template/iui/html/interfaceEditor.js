@@ -899,6 +899,7 @@
             var tr = dojo.create("tr",null,table);
             thisSchema.bottomTabs[0].nameTag = dojo.byId("text114").value;
             thisSchema.bottomTabs[0].image = dojo.byId("text124").value;
+            thisSchema.bottomTabs[0].name = "#"+dojo.byId("text114").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[0].image},tr);
             var i=1;
@@ -933,6 +934,7 @@
             var tr = dojo.create("tr",null,table);
             thisSchema.bottomTabs[1].nameTag = dojo.byId("text115").value;
             thisSchema.bottomTabs[1].image = dojo.byId("text125").value;
+            thisSchema.bottomTabs[1].name = "#"+dojo.byId("text115").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[1].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[1].image},tr);
             var i=1;
@@ -967,6 +969,7 @@
             var tr = dojo.create("tr",null,table);
             thisSchema.bottomTabs[2].nameTag = dojo.byId("text116").value;
             thisSchema.bottomTabs[2].image = dojo.byId("text126").value;
+            thisSchema.bottomTabs[2].name = "#"+dojo.byId("text116").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[2].image},tr);
             var i=1;
@@ -1062,7 +1065,7 @@
             dojo.forEach(theBottom, function(aBottom) {
                 aBottom.name="#"+dojo.byId("text11"+k).value;
                 aBottom.nameTag=dojo.byId("text11"+k).value;
-                aBottom.image=dojo.byId("text11"+k).value;
+                aBottom.image=dojo.byId("text12"+k).value;
                 var image = new Image();
                 
                 if (dojo.byId("form1"+k).value!=0) {
