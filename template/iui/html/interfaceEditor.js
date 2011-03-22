@@ -810,7 +810,7 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                thisSchema.topTabs[0]audioImages[j].pic = info[0].value;
+                thisSchema.topTabs[0].audioImages[j].pic = info[0].value;
                 thisSchema.topTabs[0].audioImages[j].word = info[1].value;
                 thisSchema.topTabs[0].audioImages[j].nameTag = uniqueId2;
                 thisSchema.topTabs[0].audioImages[j].phrase = info[2].value;
