@@ -650,6 +650,7 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
         
+        alert(j);
         if (j==4) {
             j=2;
         }
