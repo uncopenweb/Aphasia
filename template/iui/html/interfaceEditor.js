@@ -489,6 +489,7 @@
     };
     
     uniqueId = 1000;
+    uniqueId2 = 1000;
 
     forwardButton = [];
     backwardButton = [];
@@ -809,6 +810,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                thisSchema.topTabs[0]audioImages[j].pic = info[0].value;
+                thisSchema.topTabs[0].audioImages[j].word = info[1].value;
+                thisSchema.topTabs[0].audioImages[j].word = uniqueId2;
+                thisSchema.topTabs[0].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
@@ -836,10 +842,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                // thisSchema.topTabs[1].audioImages[j].pic = info[0].value;
-                // thisSchema.topTabs[1].audioImages[j].word = info[1].value;
-                // thisSchema.topTabs[1].audioImages[j].word = ;
-                // thisSchema.topTabs[1].audioImages[j].phrase = info[2].value;
+                thisSchema.topTabs[1].audioImages[j].pic = info[0].value;
+                thisSchema.topTabs[1].audioImages[j].word = info[1].value;
+                thisSchema.topTabs[1].audioImages[j].word = uniqueId2;
+                thisSchema.topTabs[1].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
@@ -867,6 +874,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                thisSchema.topTabs[2].audioImages[j].pic = info[0].value;
+                thisSchema.topTabs[2].audioImages[j].word = info[1].value;
+                thisSchema.topTabs[2].audioImages[j].word = uniqueId2;
+                thisSchema.topTabs[2].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
@@ -898,6 +910,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                thisSchema.bottomTabs[0].audioImages[j].pic = info[0].value;
+                thisSchema.bottomTabs[0].audioImages[j].word = info[1].value;
+                thisSchema.bottomTabs[0].audioImages[j].word = uniqueId2;
+                thisSchema.bottomTabs[0].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
@@ -925,6 +942,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                thisSchema.bottomTabs[1].audioImages[j].pic = info[0].value;
+                thisSchema.bottomTabs[1].audioImages[j].word = info[1].value;
+                thisSchema.bottomTabs[1].audioImages[j].word = uniqueId2;
+                thisSchema.bottomTabs[1].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
@@ -952,6 +974,11 @@
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                 var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
+                thisSchema.bottomTabs[2].audioImages[j].pic = info[0].value;
+                thisSchema.bottomTabs[2].audioImages[j].word = info[1].value;
+                thisSchema.bottomTabs[2].audioImages[j].word = uniqueId2;
+                thisSchema.bottomTabs[2].audioImages[j].phrase = info[2].value;
+                uniqueId2++;
                 i++;
             }
         }
