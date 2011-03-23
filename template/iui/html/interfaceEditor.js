@@ -1028,6 +1028,7 @@
     }
     
     function donePage(ids) {
+        alert(JSON.stringify(thisSchema));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         var p = dojo.create("p",{innerHTML:"You are now done. You can now start the Aphasia web application with one of the interface below:"},div);
