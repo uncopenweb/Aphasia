@@ -1043,7 +1043,9 @@
             var theTop = thisSchema.topTabs;
             var k=1;
             dojo.forEach(theTop, function(aTop) {
-                aTop.name="#"+dojo.byId("text11"+k).value;
+                if (dojo.byId("text11"+k).value.trim() != "") {
+                    aTop.name="#"+dojo.byId("text11"+k).value;
+                }
                 aTop.nameTag=dojo.byId("text11"+k).value;
                 aTop.image=dojo.byId("text12"+k).value;
                 var image = new Image();
@@ -1064,7 +1066,9 @@
             var theBottom = thisSchema.bottomTabs;
             var k=4;
             dojo.forEach(theBottom, function(aBottom) {
-                aBottom.name="#"+dojo.byId("text11"+k).value;
+                if (dojo.byId("text11"+k).value.trim() != "") {
+                    aBottom.name="#"+dojo.byId("text11"+k).value;
+                }
                 aBottom.nameTag=dojo.byId("text11"+k).value;
                 aBottom.image=dojo.byId("text12"+k).value;
                 var image = new Image();
