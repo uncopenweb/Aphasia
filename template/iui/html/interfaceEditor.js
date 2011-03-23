@@ -784,7 +784,7 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
         var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 || dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0 || dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0) {
+        if (forms[0][0][0].value.trim() != "" || forms[0][0][0].value != null || forms[1][0][0].value.trim() != "" || forms[1][0][0].value != null || forms[2][0][0].value.trim() != "" || forms[2][0][0].value != null) {
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
         }
         if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && forms[0][0][0].value.trim() != "") {
