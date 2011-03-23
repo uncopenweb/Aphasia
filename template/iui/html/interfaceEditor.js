@@ -780,12 +780,14 @@
     }
     
     function summaryPage(ids,ulList) {
+        var isNothing = false;
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
         var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
         if (forms[0][0][0].value != null && forms[0][0][0].value.trim() != "" && forms[1][0][0].value != null && forms[1][0][0].value.trim() != ""&& forms[2][0][0].value != null && forms[2][0][0].value.trim() != "") {
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
+            isNothing = true;
         }
         if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && forms[0][0][0].value.trim() != "") {
             var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
@@ -890,8 +892,9 @@
         }
         
         var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0 || dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value>0 || dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value>0) {
+        if (forms[0][0][0].value != null && forms[0][0][0].value.trim() != "" && forms[1][0][0].value != null && forms[1][0][0].value.trim() != ""&& forms[2][0][0].value != null && forms[2][0][0].value.trim() != "") {
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
+            isNothing = true;
         }
         if (dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value>0 && forms[3][0][0].value.trim() != "") {
             var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
@@ -1021,7 +1024,7 @@
                 dojo.byId(ulList[4]).className = "td1";
             }));
             
-       if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value==0 && dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value==0 && dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value==0 && dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value==0 && dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value==0 && dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value==0) {
+       if (isNothing) {
             forwardButton.disabled = "disabled";
        }
        console.log(JSON.stringify(thisSchema));
