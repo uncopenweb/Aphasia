@@ -1040,11 +1040,12 @@
             }
         });
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
-            dojo.forEach(aBottom.audioImages, function(item) {
-                if (item.pic.value == null || item.pic.value.trim() == "") {
-                    delete item;
+            for (var i=0; i<aBottom.audioImages.length; i++) {
+                if (aBottom.audioImages[i].pic.trim() == "") {
+                    aBottom.audioImages.splice(i,aBottom.audioImages.length-i-1);
+                    break;
                 }
-            });
+            }
         });
         donePage(ids);
     }
@@ -1095,15 +1096,15 @@
                 aBottom.image=dojo.byId("text12"+k).value;
                 var image = new Image();
                 
-                if (dojo.byId("form1"+k).value!=0) {
-                    for (var i=0; i<dojo.byId("form1"+k).value; i++) {
-                        aBottom.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
-                        aBottom.audioImages[i].nameTag = uniqueId;          
-                        aBottom.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
-                        aBottom.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
-                        uniqueId++;
-                    }
-                }
+                // if (dojo.byId("form1"+k).value!=0) {
+                    // for (var i=0; i<dojo.byId("form1"+k).value; i++) {
+                        // aBottom.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
+                        // aBottom.audioImages[i].nameTag = uniqueId;          
+                        // aBottom.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
+                        // aBottom.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
+                        // uniqueId++;
+                    // }
+                // }
                 k++;
             });            
         }
