@@ -806,6 +806,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value; j++) {
                 var info = forms[0][j];
+                alert(info[0].value);
                 if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
@@ -1027,7 +1028,6 @@
        if (isNothing) {
             forwardButton.disabled = "disabled";
        }
-       alert(JSON.stringify(forms));
     }
     
     function rearrange(ids) {
