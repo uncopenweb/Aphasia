@@ -1031,11 +1031,12 @@
     
     function rearrange(ids) {
         dojo.forEach(thisSchema.topTabs, function(aTop) {
+            var i=0;
             dojo.forEach(aTop.audioImages, function(item) {
                 if (item.pic.value == null || item.pic.value.trim() == "") {
-                    alert("hey there");
-                    delete item;
+                   aTop.audioImages.splice(i,aTop.audioImages.length-i);
                 }
+                i++;
             });
         });
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
