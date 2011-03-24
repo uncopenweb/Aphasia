@@ -1013,7 +1013,7 @@
             }));
         var forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
-                donePage(ids);
+                rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
             
@@ -1027,7 +1027,24 @@
        if (isNothing) {
             forwardButton.disabled = "disabled";
        }
-       console.log(JSON.stringify(thisSchema));
+    }
+    
+    function rearrange(ids) {
+        dojo.forEach(thisSchema.topTabs, function(aTop) {
+            dojo.forEach(aTop.audioImages, function(item) {
+                if (item.pic == null || item.pic.value.trim() == "") {
+                    delete item;
+                }
+            });
+        });
+        dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
+            dojo.forEach(aBottom.audioImages, function(item) {
+                if (item.pic == null || item.pic.value.trim() == "") {
+                    delete item;
+                }
+            });
+        });
+        donePage(ids);
     }
     
     function donePage(ids) {
