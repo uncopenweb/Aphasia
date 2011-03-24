@@ -1027,7 +1027,7 @@
        if (isNothing) {
             forwardButton.disabled = "disabled";
        }
-       alert(forms);
+       alert(JSON.stringify(forms));
     }
     
     function rearrange(ids) {
