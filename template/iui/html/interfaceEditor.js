@@ -1034,9 +1034,11 @@
             var i=0;
             dojo.forEach(aTop.audioImages, function(item) {
                 if (item.pic.value == null || item.pic.value.trim() == "") {
-                   aTop.audioImages.splice(i,aTop.audioImages.length-i);
+                   aTop.audioImages.splice(i,1);
                 }
-                i++;
+                else {
+                    i++;
+                }
             });
         });
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
