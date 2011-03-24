@@ -1031,9 +1031,8 @@
     
     function rearrange(ids) {
         dojo.forEach(thisSchema.topTabs, function(aTop) {
-            alert(aTop.audioImages[0].pic.value);
             for (var i=0; i<aTop.audioImages.length; i++) {
-                if (aTop.audioImages[i].pic.value.trim() == "") {
+                if (aTop.audioImages[i].pic.trim() == "") {
                     aTop.audioImages.splice(i,aTop.audioImages.length-i);
                     break;
                 }
