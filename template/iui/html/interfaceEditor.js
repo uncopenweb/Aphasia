@@ -806,7 +806,6 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value; j++) {
                 var info = forms[0][j];
-                alert(info[0].value);
                 if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
@@ -1073,15 +1072,15 @@
                 aTop.image=dojo.byId("text12"+k).value;
                 var image = new Image();
                 
-                if (dojo.byId("form1"+j).value!=0) {
-                    for (var i=0; i<dojo.byId("form1"+k).value; i++) {
-                        aTop.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
-                        aTop.audioImages[i].nameTag = uniqueId;          
-                        aTop.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
-                        aTop.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
-                        uniqueId++;
-                    }
-                }
+                // if (dojo.byId("form1"+j).value!=0) {
+                    // for (var i=0; i<dojo.byId("form1"+k).value; i++) {
+                        // aTop.audioImages[i].pic = dojo.byId("tab"+k).getElementsByTagName("input")[0].value;
+                        // aTop.audioImages[i].nameTag = uniqueId;          
+                        // aTop.audioImages[i].word = dojo.byId("tab"+k).getElementsByTagName("input")[1].value;
+                        // aTop.audioImages[i].phrase = dojo.byId("tab"+k).getElementsByTagName("input")[2].value;
+                        // uniqueId++;
+                    // }
+                // }
                 k++;
             });            
         }
