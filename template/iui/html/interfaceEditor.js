@@ -522,8 +522,6 @@
     }
 
     function step1 (ids,ulList) {
-        var test = [];
-        alert(test.length);
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
