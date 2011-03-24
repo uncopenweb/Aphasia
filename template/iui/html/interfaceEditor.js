@@ -785,15 +785,10 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
         var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        alert(forms[0][0][0].value==null);
-        alert(forms[0][0][0].value.trim()=="");
-        alert(forms[1][0][0].value==null);
-        alert(forms[2][0][0].value==null);
         if ((forms[0][0][0].value != null && forms[0][0][0].value.trim() != "") || (forms[1][0][0].value != null && forms[1][0][0].value.trim() != "") || (forms[2][0][0].value != null && forms[2][0][0].value.trim() != "")) {
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
             isNothing = false;
         }
-        alert(isNothing);
         if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && forms[0][0][0].value.trim() != "") {
             var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
@@ -895,9 +890,9 @@
                 i++;
             }
         }
-        alert(isNothing);
+        
         var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if (forms[3][0][0].value != null && forms[3][0][0].value.trim() != "" && forms[4][0][0].value != null && forms[4][0][0].value.trim() != ""&& forms[5][0][0].value != null && forms[5][0][0].value.trim() != "") {
+        if ((forms[3][0][0].value != null && forms[3][0][0].value.trim() != "") || (forms[4][0][0].value != null && forms[4][0][0].value.trim() != "") || (forms[5][0][0].value != null && forms[5][0][0].value.trim() != "")) {
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
         }
@@ -1029,7 +1024,6 @@
                 dojo.byId(ulList[4]).className = "td1";
             }));
        
-       alert(isNothing);
        if (isNothing) {
             forwardButton.disabled = "disabled";
        }
