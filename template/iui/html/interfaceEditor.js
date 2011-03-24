@@ -1030,6 +1030,7 @@
     }
     
     function rearrange(ids) {
+        alert(JSON.stringify(thisSchema.topTabs));
         dojo.forEach(thisSchema.topTabs, function(aTop) {
             for (var i=0; i<aTop.audioImages.length; i++) {
                 if (aTop.audioImages[i].pic.trim() == "") {
