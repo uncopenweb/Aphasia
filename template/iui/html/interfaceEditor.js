@@ -1032,7 +1032,7 @@
     function rearrange(ids) {
         dojo.forEach(thisSchema.topTabs, function(aTop) {
             for (var i=0; i<aTop.audioImages.length; i++) {
-                if (aTop.audioImages[i].pic.value == null || aTop.audioImages[i].pic.value.trim() == "") {
+                if (aTop.audioImages[i].pic.value.trim() == "") {
                     aTop.audioImages.splice(i,aTop.audioImages.length-i);
                     break;
                 }
