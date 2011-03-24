@@ -1032,14 +1032,14 @@
     function rearrange(ids) {
         dojo.forEach(thisSchema.topTabs, function(aTop) {
             dojo.forEach(aTop.audioImages, function(item) {
-                if (item.pic == null || item.pic.value.trim() == "") {
+                if (item.pic == undefined || item.pic.value.trim() == "") {
                     delete item;
                 }
             });
         });
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
             dojo.forEach(aBottom.audioImages, function(item) {
-                if (item.pic == null || item.pic.value.trim() == "") {
+                if (item.pic == undefined || item.pic.value.trim() == "") {
                     delete item;
                 }
             });
