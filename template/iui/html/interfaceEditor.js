@@ -785,9 +785,14 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
         var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
+        alert(forms[0][0][0].value==null);
+        alert(forms[0][0][0].value.trim()=="");
+        alert(forms[1][0][0].value==null);
+        alert(forms[1][0][0].value.trim()=="");
+        alert(forms[2][0][0].value==null);
+        alert(forms[2][0][0].value.trim()=="");
         if (forms[0][0][0].value != null && forms[0][0][0].value.trim() != "" && forms[1][0][0].value != null && forms[1][0][0].value.trim() != ""&& forms[2][0][0].value != null && forms[2][0][0].value.trim() != "") {
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
-            alert("writing bold");
             isNothing = false;
         }
         alert(isNothing);
