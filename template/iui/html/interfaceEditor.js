@@ -1031,15 +1031,12 @@
     
     function rearrange(ids) {
         dojo.forEach(thisSchema.topTabs, function(aTop) {
-            var i=0;
-            dojo.forEach(aTop.audioImages, function(item) {
-                if (item.pic.value == null || item.pic.value.trim() == "") {
-                   aTop.audioImages.splice(i,1);
+            for (var i=0; i<aTop.audioImages.length; i++) {
+                if (aTop.audioImages[i].pic.value == null || aTop.audioImages[i].pic.value.trim() == "") {
+                    aTop.audioImages.splice(i,aTop.audioImages.length-i+1);
+                    break;
                 }
-                else {
-                    i++;
-                }
-            });
+            }
         });
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
             dojo.forEach(aBottom.audioImages, function(item) {
