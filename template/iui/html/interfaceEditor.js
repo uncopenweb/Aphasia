@@ -892,7 +892,7 @@
         }
         
         var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if (forms[0][0][0].value != null && forms[0][0][0].value.trim() != "" && forms[1][0][0].value != null && forms[1][0][0].value.trim() != ""&& forms[2][0][0].value != null && forms[2][0][0].value.trim() != "") {
+        if (forms[3][0][0].value != null && forms[3][0][0].value.trim() != "" && forms[4][0][0].value != null && forms[4][0][0].value.trim() != ""&& forms[5][0][0].value != null && forms[5][0][0].value.trim() != "") {
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
         }
