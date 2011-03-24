@@ -1033,6 +1033,7 @@
         dojo.forEach(thisSchema.topTabs, function(aTop) {
             dojo.forEach(aTop.audioImages, function(item) {
                 if (item.pic.value == null || item.pic.value.trim() == "") {
+                    alert("hey there");
                     delete item;
                 }
             });
