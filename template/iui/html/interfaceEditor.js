@@ -1023,7 +1023,8 @@
                 
                 dojo.byId(ulList[4]).className = "td1";
             }));
-            
+       
+       alert(isNothing);
        if (isNothing) {
             forwardButton.disabled = "disabled";
        }
