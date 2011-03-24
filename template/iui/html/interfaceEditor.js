@@ -1030,11 +1030,10 @@
     }
     
     function rearrange(ids) {
-        alert(JSON.stringify(thisSchema.topTabs));
         dojo.forEach(thisSchema.topTabs, function(aTop) {
             for (var i=0; i<aTop.audioImages.length; i++) {
                 if (aTop.audioImages[i].pic.trim() == "") {
-                    aTop.audioImages.splice(i,aTop.audioImages.length-i-1);
+                    aTop.audioImages.splice(i,aTop.audioImages.length-i+1);
                     break;
                 }
             }
@@ -1042,7 +1041,7 @@
         dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
             for (var i=0; i<aBottom.audioImages.length; i++) {
                 if (aBottom.audioImages[i].pic.trim() == "") {
-                    aBottom.audioImages.splice(i,aBottom.audioImages.length-i-1);
+                    aBottom.audioImages.splice(i,aBottom.audioImages.length-i+1);
                     break;
                 }
             }
