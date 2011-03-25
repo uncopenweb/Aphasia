@@ -113,9 +113,9 @@ dojo.declare('compapp',[], {
         createMoreTabs: function(self, tab) {        
             var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"76%"}},dojo.body());
             dojo.forEach(tab.audioImages,function(stuff) {
+                alert(stuff == null);
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                 var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-                alert(JSON.stringify(stuff));
                 
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
