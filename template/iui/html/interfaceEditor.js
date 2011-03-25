@@ -805,7 +805,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value; j++) {
                 var info = forms[0][j];
-                if (info[0].class == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
