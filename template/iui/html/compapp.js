@@ -90,12 +90,16 @@ dojo.declare('compapp',[], {
         createTabs: function() {
             var self = this;
             
-            dojo.forEach(mainTabs.topTabs, function(tab) {
-                self.createMoreTabs(self, tab);
-            });
-            dojo.forEach(mainTabs.bottomTabs, function(tab) {
-                self.createMoreTabs(self, tab);
-            });
+            if (mainTabs.topTabs != null) {
+                dojo.forEach(mainTabs.topTabs, function(tab) {
+                    self.createMoreTabs(self, tab);
+                });
+            }
+            if (mainTabs.bottomTabs != null) {
+                dojo.forEach(mainTabs.bottomTabs, function(tab) {
+                    self.createMoreTabs(self, tab);
+                });
+            }
             
             var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"20%","left":"15%","width":"70%","height":"68%"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
