@@ -839,7 +839,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value; j++) {
                 var info = forms[1][j];
-                if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
@@ -873,7 +873,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value; j++) {
                 var info = forms[2][j];
-                if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
@@ -913,7 +913,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form14").options[dojo.byId("form14").selectedIndex].value; j++) {
                 var info = forms[3][j];
-                if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
@@ -948,7 +948,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for (j=0; j<dojo.byId("form15").options[dojo.byId("form15").selectedIndex].value; j++) {
                 var info = forms[4][j];
-                if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
@@ -983,7 +983,7 @@
             var td = dojo.create("td",{className:"dataTd", innerHTML:"Phrase"},tr);
             for(j=0; j<dojo.byId("form16").options[dojo.byId("form16").selectedIndex].value; j++) {
                 var info = forms[5][j];
-                if (info[0].disabled == "disabled" || info[0].value == null || info[0].value.trim() == "") {
+                if (info[0].className == "disabled" || info[0].value == null || info[0].value.trim() == "") {
                     break;
                 }
                 var tr = dojo.create("tr",null,table);
