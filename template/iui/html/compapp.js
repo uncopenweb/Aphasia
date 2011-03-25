@@ -65,26 +65,28 @@ dojo.declare('compapp',[], {
         createBorderBar: function(self, tab, tr) {
             var td = dojo.create("td",{align:"center",style:{"font-size":"x-large","width":"33.3%"}}, tr);
             var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
-            var a = dojo.create("a",{href:tab.name},td);
-            var image = dojo.create("img",{src:tab.image, width:"73px", height:"73px"}, a);
-            dojo.connect(a, 'onmouseup', function() {
-                if (self.currentTab != tab) {
-                    if (self.currentTab!=null) {
-                        if (self.currentTab.nameTag!=null) {
-                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+            if (tab.audioImages.length != 0) {
+                var a = dojo.create("a",{href:tab.name},td);
+                var image = dojo.create("img",{src:tab.image, width:"73px", height:"73px"}, a);
+                dojo.connect(a, 'onmouseup', function() {
+                    if (self.currentTab != tab) {
+                        if (self.currentTab!=null) {
+                            if (self.currentTab.nameTag!=null) {
+                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                            }
+                            else {
+                                document.getElementById("form").setAttribute("selected","false");
+                            }
                         }
-                        else {
-                            document.getElementById("form").setAttribute("selected","false");
-                        }
+                        self.currentTab = tab;
+                        a.href = tab.name;
+                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                     }
-                    self.currentTab = tab;
-                    a.href = tab.name;
-                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                }
-                else {
-                    a.href = "javascript://";
-                }
-            });
+                    else {
+                        a.href = "javascript://";
+                    }
+                });
+            }
         },
         
         createTabs: function() {
@@ -115,7 +117,7 @@ dojo.declare('compapp',[], {
             dojo.forEach(tab.audioImages,function(stuff) {
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                 var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-                if (stuff.length != 0) {
+       
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',function() {
@@ -133,7 +135,6 @@ dojo.declare('compapp',[], {
                                 document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                             }
                         });
-               }
             }); 
 
             dojo.forEach(tab.audioImages,function(stuff) {
