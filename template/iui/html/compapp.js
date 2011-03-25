@@ -65,27 +65,29 @@ dojo.declare('compapp',[], {
         createBorderBar: function(self, tab, tr) {
             var td = dojo.create("td",{align:"center",style:{"font-size":"x-large","width":"33.3%"}}, tr);
             var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
-            if (tab.audioImages.length != 0) {
+            if (tab.image.trim()!="") {
                 var a = dojo.create("a",{href:tab.name},td);
                 var image = dojo.create("img",{src:tab.image, width:"73px", height:"73px"}, a);
-                dojo.connect(a, 'onmouseup', function() {
-                    if (self.currentTab != tab) {
-                        if (self.currentTab!=null) {
-                            if (self.currentTab.nameTag!=null) {
-                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                if(tab.audioImages.length !=0) {
+                    dojo.connect(a, 'onmouseup', function() {
+                        if (self.currentTab != tab) {
+                            if (self.currentTab!=null) {
+                                if (self.currentTab.nameTag!=null) {
+                                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                                }
+                                else {
+                                    document.getElementById("form").setAttribute("selected","false");
+                                }
                             }
-                            else {
-                                document.getElementById("form").setAttribute("selected","false");
-                            }
+                            self.currentTab = tab;
+                            a.href = tab.name;
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                         }
-                        self.currentTab = tab;
-                        a.href = tab.name;
-                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                    }
-                    else {
-                        a.href = "javascript://";
-                    }
-                });
+                        else {
+                            a.href = "javascript://";
+                        }
+                    });
+                }
             }
         },
         
@@ -116,25 +118,24 @@ dojo.declare('compapp',[], {
             var div = dojo.create("div",{id:tab.nameTag,className:"panel",style:{"top":"17%","left":"25%","width":"54%","height":"76%"}},dojo.body());
             dojo.forEach(tab.audioImages,function(stuff) {
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
-                var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-       
-                    var a = dojo.create("a",{href:"javascript:;"},imgDiv);
-                    var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
-                        dojo.connect(a,'onmouseup',function() {
-                            if (self.currentTab != stuff) {
-                                if (self.currentTab!=null) {
-                                    if (self.currentTab.nameTag!=null) {
-                                        document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
-                                    }
-                                    else {
-                                        document.getElementById("form").setAttribute("selected","false");
-                                    }
+                    var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
+                var a = dojo.create("a",{href:"javascript:;"},imgDiv);
+                var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
+                    dojo.connect(a,'onmouseup',function() {
+                        if (self.currentTab != stuff) {
+                            if (self.currentTab!=null) {
+                                if (self.currentTab.nameTag!=null) {
+                                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                                 }
-                                self.currentTab = stuff;
-                                a.href = "#"+stuff.nameTag;
-                                document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
+                                else {
+                                    document.getElementById("form").setAttribute("selected","false");
+                                }
                             }
-                        });
+                            self.currentTab = stuff;
+                            a.href = "#"+stuff.nameTag;
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
+                        }
+                    });
             }); 
 
             dojo.forEach(tab.audioImages,function(stuff) {
@@ -143,7 +144,7 @@ dojo.declare('compapp',[], {
                     var caption = dojo.create("div",{id:"Cap", style:{"display":"block"}, innerHTML:stuff.phrase, selected:"true"},imgDiv1);
                     var a1 = dojo.create("a",{href:"javascript:;"},imgDiv1);
                         var img = dojo.create("img",{src:stuff.pic, id:"mainImg",style:{"height":"200%", "width":"50%"}, alt:stuff.phrase},a1);
-                            dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));    
+                            dojo.connect(a1,'onmouseup',dojo.hitch(self,'playSound',stuff.phrase));  
             });            
         },
         
