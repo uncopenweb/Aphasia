@@ -115,8 +115,8 @@ dojo.declare('compapp',[], {
             dojo.forEach(tab.audioImages,function(stuff) {
                 var imgDiv = dojo.create("div",{align:"center",style:{"caption-side":"top","width":"33%","height":"26%","float":"left"}},div);
                 var caption = dojo.create("div",{id:"mainCap", style:{"font-size": "150%", "display":"block"}, innerHTML:stuff.word, selected:"true"},imgDiv);
-                alert(JSON.stringify(tab.audioImages));
-                if () {
+                alert(JSON.stringify(stuff));
+                
                     var a = dojo.create("a",{href:"javascript:;"},imgDiv);
                     var img = dojo.create("img",{src:stuff.pic, id:"mainImg",height:"80%", width:"80%", alt:stuff.word},a);
                         dojo.connect(a,'onmouseup',function() {
@@ -134,7 +134,7 @@ dojo.declare('compapp',[], {
                                 document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                             }
                         });
-               }
+               
             }); 
 
             dojo.forEach(tab.audioImages,function(stuff) {
