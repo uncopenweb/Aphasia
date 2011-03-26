@@ -606,8 +606,8 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, j));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", j));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
@@ -626,8 +626,8 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,j+1));
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, k));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", k));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
         
         k = j+2;
@@ -645,8 +645,8 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
-            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, k));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", k));
+            dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"","", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
         
         if (j==4) {
@@ -1122,12 +1122,14 @@
         }
     }
     
-    function catchRelease(first, second, third, i) {
+    function catchRelease(first, second, third, fourth, i) {
         if (first.value.length!=0 && first.value.trim() != "") {
             second.disabled = "";
             second.className = "";
             third.disabled = "";
             third.className = "";
+            fourth.disabled = "";
+            fourth.className = "";
             if (document.getElementById("tab"+i)!=null && document.getElementById("text11"+i).value.trim() != "" && document.getElementById("text12"+i).disabled != "disabled" && document.getElementById("text12"+i).value.trim() != "") {
                 document.getElementById("tab"+i).style.display = "";
             }
@@ -1146,6 +1148,8 @@
             if (third.innerHTML != "Clear") {
                 third.className = "disabled";
             }
+            fourth.disabled = "disabled";
+            fourth.className = "disabled";
         }
     }
     
@@ -1154,7 +1158,7 @@
         if (document.getElementById("tab"+i)!=null) {
             document.getElementById("tab"+i).style.display = "none";
         }
-        catchRelease(first, second, "", i);
+        catchRelease(first, second, "","", i);
     }
     
     function release2(one, two, three, a, j, form) {
