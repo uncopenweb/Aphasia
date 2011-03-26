@@ -784,7 +784,7 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
         
-        if (dojo.byId("text111").value.trim() == "" || dojo.byId("text112").value.trim() == "" || dojo.byId("text113").value.trim() == "") {
+        if (dojo.byId("text111").value.trim() != "" || dojo.byId("text112").value.trim() != "" || dojo.byId("text113").value.trim() != "") {
             var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
             isNothing = false;
@@ -898,7 +898,7 @@
         }
         
         
-        if (dojo.byId("text114").value.trim() == "" || dojo.byId("text115").value.trim() == "" || dojo.byId("text116").value.trim() == "") {
+        if (dojo.byId("text114").value.trim() != "" || dojo.byId("text115").value.trim() != "" || dojo.byId("text116").value.trim() != "") {
             var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
