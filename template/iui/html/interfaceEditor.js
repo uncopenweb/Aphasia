@@ -1201,8 +1201,10 @@
             second.className = "";
             third.disabled = "";
             third.className = "";
-            fourth.disabled = "";
-            fourth.className = "";
+            if (second.value.trim() != "") {
+                fourth.disabled = "";
+                fourth.className = "";
+            }
             if (document.getElementById("tab"+i)!=null && document.getElementById("text11"+i).value.trim() != "" && document.getElementById("text12"+i).disabled != "disabled" && document.getElementById("text12"+i).value.trim() != "") {
                 document.getElementById("tab"+i).style.display = "";
             }
