@@ -1131,6 +1131,16 @@
             }
         }
         
+        if (dojo.every(thisSchema.topTabs, function(item) {
+            return item.nameTag.trim() == "";
+        })) {
+            delete thisSchema.topTabs;
+        }
+        if (dojo.every(thisSchema.bottomTabs, function(item) {
+            return item.nameTag.trim() == "";
+        })) {
+            delete thisSchema.bottomTabs;
+        }        
         
         donePage(ids);
     }
