@@ -783,8 +783,9 @@
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         
-        var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
+        
         if (dojo.byId("text111").value.trim() == "" || dojo.byId("text112").value.trim() == "" || dojo.byId("text113").value.trim() == "") {
+            var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
             isNothing = false;
         }
@@ -896,8 +897,9 @@
             }
         }
         
-        var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
-        if ((forms[3][0][0].value != null && forms[3][0][0].value.trim() != "" && dojo.byId("tab4").style.display != "none") || (forms[4][0][0].value != null && forms[4][0][0].value.trim() != "" && dojo.byId("tab5").style.display != "none") || (forms[5][0][0].value != null && forms[5][0][0].value.trim() != "" && dojo.byId("tab6").style.display != "none")) {
+        
+        if (dojo.byId("text114").value.trim() == "" || dojo.byId("text115").value.trim() == "" || dojo.byId("text116").value.trim() == "") {
+            var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
         }
