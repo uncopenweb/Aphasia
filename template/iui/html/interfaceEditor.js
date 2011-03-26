@@ -699,7 +699,7 @@
                     dojo.byId(ulList[m]).className = "td1";
                 }
                 
-                captureValue(j);
+                //captureValue(j);
                 
             }));
     }
@@ -793,10 +793,11 @@
                 var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
                 var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
                 var tr = dojo.create("tr",null,table);
-                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
-                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
                 thisSchema.topTabs[0].nameTag = dojo.byId("text111").value;
                 thisSchema.topTabs[0].image = dojo.byId("text121").value;
+                thisSchema.topTabs[0].name = "#"+dojo.byId("text111").value;
+                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
+                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
                 var i=1;
                 if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && dojo.byId("form11").className != "disabled" && forms[0][0][0].value.trim() != "") {
                     var table = dojo.create("table",{className:"dataTable"},tab1);
@@ -833,10 +834,12 @@
                 var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},topTabs);
                 var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
                 var tr = dojo.create("tr",null,table);
-                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[1].nameTag},tr);
-                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[1].image},tr);
                 thisSchema.topTabs[1].nameTag = dojo.byId("text112").value;
                 thisSchema.topTabs[1].image = dojo.byId("text122").value;
+                thisSchema.topTabs[1].name = "#"+dojo.byId("text112").value;
+                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[1].nameTag},tr);
+                var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[1].image},tr);
+                
                 var i=1;
                 if (dojo.byId("form12").options[dojo.byId("form12").selectedIndex].value>0 && dojo.byId("form12").className != "disabled" && forms[1][0][0].value.trim() != "") {
                     var table = dojo.create("table",{className:"dataTable"},tab2);
@@ -873,10 +876,11 @@
             var tab3 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 3</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
+            thisSchema.topTabs[2].nameTag = dojo.byId("text113").value;
+            thisSchema.topTabs[2].image = dojo.byId("text123").value;
+            thisSchema.topTabs[2].name = "#"+dojo.byId("text113").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[2].image},tr);
-            thisSchema.topTabs[0].nameTag = dojo.byId("text113").value;
-            thisSchema.topTabs[0].image = dojo.byId("text123").value;
             var i=1;
             if (dojo.byId("form13").options[dojo.byId("form13").selectedIndex].value>0 && dojo.byId("form13").className != "disabled" && forms[2][0][0].value.trim() != "") {
                 var table = dojo.create("table",{className:"dataTable"},tab3);
@@ -1097,17 +1101,17 @@
             a.appendChild(document.createTextNode('Click here.'));
     }
     
-    function captureValue(j) {
-        if (j==1) {
-            var theTop = thisSchema.topTabs;
-            var k=1;
-            dojo.forEach(theTop, function(aTop) {
-                if (dojo.byId("text11"+k).value.trim() != "") {
-                    aTop.name="#"+dojo.byId("text11"+k).value;
-                }
-                aTop.nameTag=dojo.byId("text11"+k).value;
-                aTop.image=dojo.byId("text12"+k).value;
-                var image = new Image();
+    // function captureValue(j) {
+        // if (j==1) {
+            // var theTop = thisSchema.topTabs;
+            // var k=1;
+            // dojo.forEach(theTop, function(aTop) {
+                // if (dojo.byId("text11"+k).value.trim() != "") {
+                    // aTop.name="#"+dojo.byId("text11"+k).value;
+                // }
+                // aTop.nameTag=dojo.byId("text11"+k).value;
+                // aTop.image=dojo.byId("text12"+k).value;
+                // var image = new Image();
                 
                 // if (dojo.byId("form1"+j).value!=0) {
                     // for (var i=0; i<dojo.byId("form1"+k).value; i++) {
@@ -1118,19 +1122,19 @@
                         // uniqueId++;
                     // }
                 // }
-                k++;
-            });            
-        }
-        else if (j==2) {
-            var theBottom = thisSchema.bottomTabs;
-            var k=4;
-            dojo.forEach(theBottom, function(aBottom) {
-                if (dojo.byId("text11"+k).value.trim() != "") {
-                    aBottom.name="#"+dojo.byId("text11"+k).value;
-                }
-                aBottom.nameTag=dojo.byId("text11"+k).value;
-                aBottom.image=dojo.byId("text12"+k).value;
-                var image = new Image();
+                // k++;
+            // });            
+        // }
+        // else if (j==2) {
+            // var theBottom = thisSchema.bottomTabs;
+            // var k=4;
+            // dojo.forEach(theBottom, function(aBottom) {
+                // if (dojo.byId("text11"+k).value.trim() != "") {
+                    // aBottom.name="#"+dojo.byId("text11"+k).value;
+                // }
+                // aBottom.nameTag=dojo.byId("text11"+k).value;
+                // aBottom.image=dojo.byId("text12"+k).value;
+                // var image = new Image();
                 
                 // if (dojo.byId("form1"+k).value!=0) {
                     // for (var i=0; i<dojo.byId("form1"+k).value; i++) {
@@ -1141,10 +1145,10 @@
                         // uniqueId++;
                     // }
                 // }
-                k++;
-            });            
-        }
-    }
+                // k++;
+            // });            
+        // }
+    // }
     
     function catchRelease(first, second, third, fourth, i) {
         if (first.value.length!=0 && first.value.trim() != "") {
