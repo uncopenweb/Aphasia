@@ -1097,12 +1097,13 @@
         for (var i=1; i<7; i++) {
             for (var j=0; j<dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value; j++) {
                 if (i<4) {
-                    if (thisSchema.topTabs[i].audioImages[j].pic.trim() == "") {
-                        thisSchema.topTabs[i].audioImages(j,thisSchema.topTabs[i].audioImages.length-j+1);
+                    var k = i-1;
+                    if (thisSchema.topTabs[k].audioImages[j].pic.trim() == "") {
+                        thisSchema.topTabs[k].audioImages(j,thisSchema.topTabs[k].audioImages.length-j+1);
                         break;
                     }
                     else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
-                        thisSchema.topTabs[i].audioImages(j,thisSchema.topTabs[i].audioImages.length-j+1);
+                        thisSchema.topTabs[k].audioImages(j,thisSchema.topTabs[k].audioImages.length-j+1);
                     }
                 }
                 else {
