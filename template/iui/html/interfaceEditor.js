@@ -1077,22 +1077,48 @@
     }
     
     function rearrange(ids) {
-        dojo.forEach(thisSchema.topTabs, function(aTop) {
-            for (var i=0; i<aTop.audioImages.length; i++) {
-                if (aTop.audioImages[i].pic.trim() == "") {
-                    aTop.audioImages.splice(i,aTop.audioImages.length-i+1);
-                    break;
+        // dojo.forEach(thisSchema.topTabs, function(aTop) {
+            // for (var i=0; i<aTop.audioImages.length; i++) {
+                // if (aTop.audioImages[i].pic.trim() == "") {
+                    // aTop.audioImages.splice(i,aTop.audioImages.length-i+1);
+                    // break;
+                // }
+            // }
+        // });
+        // dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
+            // for (var i=0; i<aBottom.audioImages.length; i++) {
+                // if (aBottom.audioImages[i].pic.trim() == "") {
+                    // aBottom.audioImages.splice(i,aBottom.audioImages.length-i+1);
+                    // break;
+                // }
+            // }
+        // });
+        
+        for (var i=1; i<7; i++) {
+            for (var j=0; j<dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value; j++) {
+                if (i<4) {
+                    if (thisSchema.topTabs[i].audioImages[j].pic.trim() == "") {
+                        thisSchema.topTabs[i].audioImages(j,thisSchema.topTabs[i].audioImages.length-j+1);
+                        break;
+                    }
+                    else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
+                        thisSchema.topTabs[i].audioImages(j,thisSchema.topTabs[i].audioImages.length-j+1);
+                    }
+                }
+                else {
+                    var k = i-4;
+                    if (thisSchema.bottomTabs[k].audioImages[j].pic.trim() == "") {
+                        thisSchema.bottomTabs[k].audioImages(j,thisSchema.bottomTabs[i].audioImages.length-j+1);
+                        break;
+                    }
+                    else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
+                        thisSchema.bottomTabs[k].audioImages(j,thisSchema.bottomTabs[k].audioImages.length-j+1);
+                    }                
                 }
             }
-        });
-        dojo.forEach(thisSchema.bottomTabs, function(aBottom) {
-            for (var i=0; i<aBottom.audioImages.length; i++) {
-                if (aBottom.audioImages[i].pic.trim() == "") {
-                    aBottom.audioImages.splice(i,aBottom.audioImages.length-i+1);
-                    break;
-                }
-            }
-        });
+        }
+        
+        
         donePage(ids);
     }
     
