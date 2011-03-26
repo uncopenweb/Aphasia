@@ -824,6 +824,10 @@
                     }
                 }
         }
+        else {
+            thisSchema.topTabs[0].nameTag = "";
+            thisSchema.topTabs[0].image = "";
+        } 
         
             if (dojo.byId("text112").value.trim() != "" || (dojo.byId("text122").value.trim() != "" && dojo.byId("text122").className != "disabled")) {
                 var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},topTabs);
@@ -860,6 +864,10 @@
                     }
                 }
         }
+        else {
+            thisSchema.topTabs[1].nameTag = "";
+            thisSchema.topTabs[1].image = "";
+        } 
         
             if (dojo.byId("text113").value.trim() != "" || (dojo.byId("text123").value.trim() != "" && dojo.byId("text123").className != "disabled")) {
             var tab3 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 3</b>"},topTabs);
@@ -896,6 +904,10 @@
                 }
             }
         }
+        else {
+            thisSchema.topTabs[2].nameTag = "";
+            thisSchema.topTabs[2].image = "";
+        } 
         
         
         if (dojo.byId("text114").value.trim() != "" || dojo.byId("text115").value.trim() != "" || dojo.byId("text116").value.trim() != "") {
@@ -939,6 +951,10 @@
                 }
             }
         }
+        else {
+            thisSchema.bottomTabs[0].nameTag = "";
+            thisSchema.bottomTabs[0].image = "";
+        } 
         
             if (dojo.byId("text115").value.trim() != "" || (dojo.byId("text125").value.trim() != "" && dojo.byId("text125").className != "disabled")) {
             var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},bottomTabs);
@@ -976,6 +992,10 @@
                 }
             }
         }
+        else {
+            thisSchema.bottomTabs[1].nameTag = "";
+            thisSchema.bottomTabs[1].image = "";
+        } 
         
             if (dojo.byId("text116").value.trim() != "" || (dojo.byId("text126").value.trim() != "" && dojo.byId("text126").className != "disabled")) {
             var tab3 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 3</b>"},bottomTabs);
@@ -1013,6 +1033,10 @@
                 }
             }
         }
+        else {
+            thisSchema.bottomTabs[2].nameTag = "";
+            thisSchema.bottomTabs[2].image = "";
+        } 
         
         var backwardButton = dojo.create("button",{innerHTML:"Back"},div);
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {
