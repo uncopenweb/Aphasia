@@ -69,37 +69,45 @@ dojo.declare('template',[], {
         createBorderBar: function(self, tab, tr) {
             var td = dojo.create("td",{align:"center",style:{"width":"33.3%","border":"1px solid black"}}, tr);
             var caption = dojo.create("div",{innerHTML:tab.nameTag, selected:"true", style:{"align":"center"}},td);
-            var a = dojo.create("a",{href:tab.name},td);
-            var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
-            dojo.connect(a, 'onmouseup', function() {
-                if (self.currentTab != tab) {
-                    if (self.currentTab!=null) {
-                        if (self.currentTab.nameTag!=null) {
-                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+            if (tab.image.trim()!="") {
+                var a = dojo.create("a",{href:tab.name},td);
+                var image = dojo.create("img",{src:tab.image, height:"45px", width:"50px"}, a);
+                if(tab.audioImages.length !=0) {
+                    dojo.connect(a, 'onmouseup', function() {
+                        if (self.currentTab != tab) {
+                            if (self.currentTab!=null) {
+                                if (self.currentTab.nameTag!=null) {
+                                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
+                                }
+                                else {
+                                    document.getElementById("form").setAttribute("selected","false");
+                                }
+                            }
+                            self.currentTab = tab;
+                            a.href = tab.name;
+                            document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
                         }
                         else {
-                            document.getElementById("form").setAttribute("selected","false");
+                            a.href = "javascript://";
                         }
-                    }
-                    self.currentTab = tab;
-                    a.href = tab.name;
-                    document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
+                    });
                 }
-                else {
-                    a.href = "javascript://";
-                }
-            });
+            }
         },
         
         createTabs: function() {
             var self = this;
             
-            dojo.forEach(mainTabs.topTabs, function(tab) {
-                self.createMoreTabs(self,tab);
-            });
-            dojo.forEach(mainTabs.bottomTabs, function(tab) {
-                self.createMoreTabs(self,tab);
-            });            
+            if (mainTabs.topTabs != null) {
+                dojo.forEach(mainTabs.topTabs, function(tab) {
+                    self.createMoreTabs(self,tab);
+                });
+            }
+            if (mainTabs.bottomTabs != null) {
+                dojo.forEach(mainTabs.bottomTabs, function(tab) {
+                    self.createMoreTabs(self,tab);
+                });
+            }            
             
             var formDiv = dojo.create("div",{id:"form",className:"panel",style:{"top":"75px","left":"60px","width":"204px","height":"216px"}}, dojo.body());
             var form = dojo.create("form",null,formDiv);
