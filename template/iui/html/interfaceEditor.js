@@ -827,6 +827,7 @@
         }
         else {
             thisSchema.topTabs[0].nameTag = "";
+            thisSchema.topTabs[0].name = "";
             thisSchema.topTabs[0].image = "";
         } 
         
@@ -869,6 +870,7 @@
         }
         else {
             thisSchema.topTabs[1].nameTag = "";
+            thisSchema.topTabs[1].name = "";
             thisSchema.topTabs[1].image = "";
         } 
         
@@ -910,6 +912,7 @@
         }
         else {
             thisSchema.topTabs[2].nameTag = "";
+            thisSchema.topTabs[2].name = "";
             thisSchema.topTabs[2].image = "";
         } 
         
@@ -957,6 +960,7 @@
         }
         else {
             thisSchema.bottomTabs[0].nameTag = "";
+            thisSchema.bottomTabs[0].name = "";
             thisSchema.bottomTabs[0].image = "";
         } 
         
@@ -998,6 +1002,7 @@
         }
         else {
             thisSchema.bottomTabs[1].nameTag = "";
+            thisSchema.bottomTabs[1].name = "";
             thisSchema.bottomTabs[1].image = "";
         } 
         
@@ -1039,6 +1044,7 @@
         }
         else {
             thisSchema.bottomTabs[2].nameTag = "";
+            thisSchema.bottomTabs[2].name = "";
             thisSchema.bottomTabs[2].image = "";
         } 
         
