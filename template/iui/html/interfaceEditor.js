@@ -1099,7 +1099,7 @@
                 if (i<4) {
                     var k = i-1;
                     if (thisSchema.topTabs[k].audioImages[j].pic.trim() == "") {
-                        thisSchema.topTabs[k].audioImages.splice(j,thisSchema.topTabs[k].audioImages.length-j+1);
+                        thisSchema.topTabs[k].audioImages.splice(j+1,thisSchema.topTabs[k].audioImages.length-j);
                         break;
                     }
                     else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
@@ -1109,7 +1109,7 @@
                 else {
                     var k = i-4;
                     if (thisSchema.bottomTabs[k].audioImages[j].pic.trim() == "") {
-                        thisSchema.bottomTabs[k].audioImages.splice(j,thisSchema.bottomTabs[i].audioImages.length-j+1);
+                        thisSchema.bottomTabs[k].audioImages.splice(j+1,thisSchema.bottomTabs[i].audioImages.length-j);
                         break;
                     }
                     else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
