@@ -115,6 +115,9 @@
             // }
         // }  
     // }
+    
+    dojo.require('dojo.io.iframe');
+    
     thisSchema = {
         "topTabs": [
            {
