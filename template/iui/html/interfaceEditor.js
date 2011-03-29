@@ -1149,7 +1149,7 @@
                 mode: 'crud' });
             db.addCallback(function(data) {
                 db.upload({
-                    form: thisSchema;
+                    form: thisSchema,
                     load: function(data, ioArgs) {
                         console.log("loaded: ",data);
                         donePage(ids);
