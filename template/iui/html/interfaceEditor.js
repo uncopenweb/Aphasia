@@ -1148,7 +1148,7 @@
                 collection: 'AphasiaJson',
                 mode: 'crud' });
             db.addCallback(function(data) {
-                db.upload({
+                data.upload({
                     form: thisSchema,
                     load: function(data, ioArgs) {
                         console.log("loaded: ",data);
