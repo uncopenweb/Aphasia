@@ -1140,9 +1140,29 @@
             return item.nameTag.trim() == "";
         })) {
             delete thisSchema.bottomTabs;
-        }        
-        
-        donePage(ids);
+        }
+
+        if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
+            var db = uow.getDatabase({
+                database: 'Aphasia',
+                collection: 'AphasiaJson',
+                mode: 'crud' });
+            db.addCallback(function(data) {
+                db.upload({
+                    form: thisSchema;
+                    load: function(data, ioArgs) {
+                        console.log("loaded: ",data);
+                        donePage(ids);
+                    },
+                    error: function(msg, ioArgs) {
+                        console.log("error: ",msg);
+                    }
+                });
+            });
+            db.addErrback(function(msg) {
+                console.log("error occured: couldn't upload schema");
+            });
+        }
     }
     
     function donePage(ids) {
