@@ -1178,6 +1178,7 @@
                 db.then(function(data) {
                     data.newItem(thisSchema);
                     data.save();
+                    donePage(ids);
                 });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
