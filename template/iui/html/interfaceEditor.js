@@ -508,20 +508,6 @@
     
     
     function start() {
-        var db = uow.getDatabase({
-            database: 'Aphasia',
-            collection: 'AphasiaJson',
-            mode: 'crud' });
-        db.then(function(data) {
-            data.fetch({
-                query:{'_id':'4d93c68d229fe84f4e0001ab'},
-                onItem: function(item) {
-                    if (item.topTabs != null) {
-                        console.log(item.topTabs[0].audioImages);
-                    }
-                }
-            });
-        });
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Top Tabs", "Step 3 -- Customize Your Bottom Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",{style:{"border-collapse":"collapse"}},mainArea);
@@ -565,10 +551,20 @@
         var td1 = dojo.create("td",{className:"td3"},tr);
         var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
         var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
-            tr = dojo.create("tr",null,table);
-            td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
-            td2 = dojo.create("td",{className:"td3",innerHTML:"Example Theme"},tr);
-            td2 = dojo.create("td",{className:"td3",innerHTML:"automatic generated id"},tr);
+        var db = uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' });
+        db.then(function(data) {
+            data.fetch({
+                onItem: function(item) {
+                    tr = dojo.create("tr",null,table);
+                    td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
+                    td2 = dojo.create("td",{className:"td3",innerHTML:item.topTabs[0].nameTag},tr);
+                    td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
+                }
+            });
+        });
             
             
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
