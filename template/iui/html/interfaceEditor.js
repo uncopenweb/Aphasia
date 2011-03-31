@@ -1150,18 +1150,22 @@
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
                 mode: 'crud' });
-            db.addCallback(function(data) {
-                data.upload({
-                    form: thisSchema,
-                    load: function(data, ioArgs) {
-                        console.log("loaded: ",data);
-                        donePage(ids);
-                    },
-                    error: function(msg, ioArgs) {
-                        console.log("error: ",msg);
-                    }
+            // db.addCallback(function(data) {
+                // data.upload({
+                    // form: thisSchema,
+                    // load: function(data, ioArgs) {
+                        // console.log("loaded: ",data);
+                        // donePage(ids);
+                    // },
+                    // error: function(msg, ioArgs) {
+                        // console.log("error: ",msg);
+                    // }
+                // });
+            // });
+                db.then(function(data) {
+                    db.newItem(thisSchema);
+                    db.save();
                 });
-            });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
             });
