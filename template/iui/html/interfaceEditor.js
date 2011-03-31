@@ -515,7 +515,7 @@
         db.then(function(data) {
             data.fetch({
                 onItem: function(item) {
-                    alert(item);
+                    console.log(item);
                 }
             });
         });
