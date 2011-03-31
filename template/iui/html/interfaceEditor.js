@@ -561,7 +561,13 @@
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
                     td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
-                    td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
+                    if (item.themeName == undefined) {
+                        td2 = dojo.create("td",{className:"td3",innerHTML:""},tr);                   
+                    }
+                    else {
+                        td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
+                    }
+
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
                 }
             });
