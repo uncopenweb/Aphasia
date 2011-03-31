@@ -559,7 +559,7 @@
         dojo.create("br",null,form);
         dojo.create("br",null,form);
         
-        var Grid = dojo.create("div",{className:"grid",id:"grid",left:"20px",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
+        var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
         var table = dojo.create("table",{className:"dataTable"},Grid);
         var tr = dojo.create("tr",{className:"dataTable"},table);
         var td1 = dojo.create("td",{className:"td3"},tr);
