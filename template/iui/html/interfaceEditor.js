@@ -516,7 +516,7 @@
             data.fetch({
                 onItem: function(item) {
                     if (item.topTabs != null) {
-                        console.log(item.topTabs);
+                        console.log(item);
                     }
                 }
             });
