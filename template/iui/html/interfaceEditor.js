@@ -568,11 +568,11 @@
         });
         
         var Grid2  = dojo.create("div",null,div);
-        var table = dojo.create("table",null,Grid2);
-        var tr = dojo.create("table",null,table);
-        var td1 = dojo.create("td",null,tr);
-        var label = dojo.create("label",{innerHTML:"Theme name for interface"},td1);
-        var text = dojo.create("input",null,td1);
+        var table1 = dojo.create("table",null,Grid2);
+        var tr1 = dojo.create("table",null,table1);
+        var td = dojo.create("td",null,tr1);
+        var label = dojo.create("label",{innerHTML:"Theme name for interface"},td);
+        var text = dojo.create("input",null,td);
             
             
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
