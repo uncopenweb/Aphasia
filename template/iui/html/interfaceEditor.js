@@ -561,7 +561,7 @@
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
                     td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
-                    td2 = dojo.create("td",{className:"td3",innerHTML:item.topTabs[0].nameTag},tr);
+                    td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
                 }
             });
@@ -572,7 +572,7 @@
         var tr1 = dojo.create("table",null,table1);
         var td = dojo.create("td",null,tr1);
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
-        var text = dojo.create("input",null,td);
+        var text = dojo.create("input",{id:"themeName"},td);
             
             
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
@@ -806,6 +806,7 @@
         var isNothing = true;
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
+        var h3 = dojo.create("div",{className:"second",innerHTML:"Theme Name for Interface: "+thisSchema.themeName},div);
         
         
         if (dojo.byId("text111").value.trim() != "" || dojo.byId("text112").value.trim() != "" || dojo.byId("text113").value.trim() != "") {
@@ -1117,6 +1118,8 @@
                 // }
             // }
         // });
+        
+        thisSchema.themeName = dojo.byId("themeName").value;
         
         for (var i=1; i<7; i++) {
             if (dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value>0) {
