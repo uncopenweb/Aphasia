@@ -515,7 +515,9 @@
         db.then(function(data) {
             data.fetch({
                 onItem: function(item) {
-                    console.log(item);
+                    if (item.topTabs != null) {
+                        console.log(item.topTabs);
+                    }
                 }
             });
         });
