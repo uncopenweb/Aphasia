@@ -568,7 +568,7 @@
         });
         
         var Grid2  = dojo.create("div",null,div);
-        var table = dojo.create("table",{className:"dataTable"},Grid2);
+        var table = dojo.create("table",null,Grid2);
         var tr = dojo.create("table",null,table);
         var td1 = dojo.create("td",null,tr);
         var label = dojo.create("label",{innerHTML:"Theme name for interface"},td1);
