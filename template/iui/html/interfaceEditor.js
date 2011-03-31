@@ -571,7 +571,7 @@
         var table1 = dojo.create("table",null,Grid2);
         var tr1 = dojo.create("table",null,table1);
         var td = dojo.create("td",null,tr1);
-        var label = dojo.create("label",{innerHTML:"Theme name for interface"},td);
+        var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",null,td);
             
             
