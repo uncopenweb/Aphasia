@@ -514,6 +514,7 @@
             mode: 'crud' });
         db.then(function(data) {
             data.fetch({
+                query:{'id':'4d93c68d229fe84f4e0001ab'},
                 onItem: function(item) {
                     if (item.topTabs != null) {
                         console.log(item);
