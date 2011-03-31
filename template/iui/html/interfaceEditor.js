@@ -803,6 +803,7 @@
     }
     
     function summaryPage(ids,ulList) {
+        thisSchema.themeName = dojo.byId("themeName").value;
         var isNothing = true;
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
@@ -1119,7 +1120,6 @@
             // }
         // });
         
-        thisSchema.themeName = dojo.byId("themeName").value;
         
         for (var i=1; i<7; i++) {
             if (dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value>0) {
