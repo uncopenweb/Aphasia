@@ -560,9 +560,9 @@
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
-                    td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
+                    td1 = dojo.create("input",{type:"radio",name:"2p",className:"td3"},tr);
                     if (item.themeName == undefined) {
-                        td2 = dojo.create("td",{className:"td3",innerHTML:"N/A"},tr);                   
+                        td2 = dojo.create("td",{className:"td3", value:item._id, innerHTML:"N/A"},tr);                   
                     }
                     else {
                         td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
@@ -597,6 +597,28 @@
                     jsProgress.update({progress:1});
                     
                     dojo.byId(ulList[1]).className = "td1";
+                }
+                else if (c2.checked) {
+                    db.then(function(data) {
+                        data.fetch({
+                            query: {"_id":};
+                            onItem: function(item) {
+                                tr = dojo.create("tr",null,table);
+                                td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
+                                if (item.themeName == undefined) {
+                                    td2 = dojo.create("td",{className:"td3", value:item._id, innerHTML:"N/A"},tr);                   
+                                }
+                                else {
+                                    td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
+                                }
+
+                                td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
+                            }
+                        });
+        });
+                }
+                else if (c3.checked) {
+                
                 }
         }));
 
