@@ -572,7 +572,7 @@
         var tr = dojo.create("table",null,table);
         var td1 = dojo.create("td",null,tr);
         var label = dojo.create("label",{innerHTML:"Theme name for interface"},td1);
-        var text = dojo.create("input",null,td2);
+        var text = dojo.create("input",null,td1);
             
             
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
