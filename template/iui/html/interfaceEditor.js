@@ -517,7 +517,7 @@
                 query:{'_id':'4d93c68d229fe84f4e0001ab'},
                 onItem: function(item) {
                     if (item.topTabs != null) {
-                        console.log(item);
+                        console.log(item.topTabs[0]);
                     }
                 }
             });
