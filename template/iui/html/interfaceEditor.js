@@ -1163,8 +1163,8 @@
                 // });
             // });
                 db.then(function(data) {
-                    db.newItem(thisSchema);
-                    db.save();
+                    data.newItem(thisSchema);
+                    data.save();
                 });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
