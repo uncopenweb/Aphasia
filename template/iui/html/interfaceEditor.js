@@ -119,6 +119,7 @@
     dojo.require('dojo.io.iframe');
     
     thisSchema = {
+        "themeName":"",
         "topTabs": [
            {
                 "name": "",
@@ -565,6 +566,13 @@
                 }
             });
         });
+        
+        var Grid2  = dojo.create("div",null,div);
+        var table = dojo.create("table",{className:"dataTable"},Grid2);
+        var tr = dojo.create("table",null,table);
+        var td1 = dojo.create("td",null,tr);
+        var label = dojo.create("label",{innerHTML:"Theme name for interface"},td1);
+        var text = dojo.create("input",null,td2);
             
             
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
@@ -589,12 +597,15 @@
 
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
+            Grid2.style.display = "none";
         });
         dojo.connect(c3,'onclick',function() {
             Grid.style.display = "block";
+            Grid2.style.display = "none"
         });
         dojo.connect(c1,'onclick',function() {
             Grid.style.display = "none";
+            Grid2.style.display = "block";
         });
         div.style.display = "block";
     }
