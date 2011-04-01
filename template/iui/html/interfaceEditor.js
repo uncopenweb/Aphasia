@@ -755,7 +755,7 @@
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+k,className:"text",innerHTMl:theTab[2].nameTag},name1);
+        var text1 = dojo.create("input",{id:"text11"+k,className:"text",innerHTML:theTab[2].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
