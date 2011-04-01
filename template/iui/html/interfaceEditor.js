@@ -613,8 +613,7 @@
                 else if (c2.checked) {
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
-                    tabStep(ids,1,"Top",ulList);
-                    tabStep(ids,2,"Bottom",ulList);
+                    loadData(document.forms['getData'].elements['2p'], ulList);
 
                     dojo.byId(ulList[0]).className = "tabs";
                 
@@ -645,7 +644,7 @@
         div.style.display = "block";
     }
     
-    function loadData(radioObj) {
+    function loadData(radioObj,ulList) {
         var id;
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
@@ -696,13 +695,16 @@
                             j++;                        
                         });
                     }
+                },
+                onComplete: function(items) {
+                    tabStep(ids,1,"Top",ulList);
+                    tabStep(ids,2,"Bottom",ulList);               
                 }
             });
         });
     }
     
     function tabStep(ids, j, word, ulList) {
-        loadData(document.forms['getData'].elements['2p']);
         var div = dojo.byId(ids[j]);
         var theTab = thisSchema.topTabs;
         if (j==2) {
