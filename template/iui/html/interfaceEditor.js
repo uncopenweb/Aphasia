@@ -598,7 +598,6 @@
                     uniqueId2 = backUpId2;
                     arrays = backUpArrays;
                     forms = backUpForms;
-                    alert(JSON.stringify(backUpSchema));
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
                     tabStep(ids,1,"Top",ulList);
