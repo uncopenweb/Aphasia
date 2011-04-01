@@ -593,11 +593,14 @@
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
-                    thisSchema = backUpSchema;
-                    uniqueId = backUpId1;
-                    uniqueId2 = backUpId2;
-                    arrays = backUpArrays;
-                    forms = backUpForms;
+                    thisSchema = JSON.stringify(backUpSchema);
+                    thisSchema = JSON.parse(thisSchema);
+                    uniqueId = 1000;
+                    uniqueId2 = 1000;
+                    arrays = JSON.stringify(backUpArrays);
+                    arrays = JSON.parse(arrays);
+                    forms = JSON.stringify(backUpForms);
+                    forms = JSON.parse(forms);
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
                     tabStep(ids,1,"Top",ulList);
