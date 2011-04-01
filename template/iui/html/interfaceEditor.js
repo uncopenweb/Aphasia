@@ -495,9 +495,9 @@
     backUpSchema = thisSchema;
     
     uniqueId = 1000;
-    backUpid1 = uniqueId;
+    backUpId1 = uniqueId;
     uniqueId2 = 1000;
-    backUpid2 = uniqueId2;
+    backUpId2 = uniqueId2;
 
     forwardButton = [];
     backwardButton = [];
