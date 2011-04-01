@@ -654,6 +654,7 @@
                 break;
             }
         }
+        alert(id);
         var db = uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
