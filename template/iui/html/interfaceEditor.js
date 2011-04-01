@@ -613,7 +613,6 @@
                 else if (c2.checked) {
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
-                    loadData(document.forms['getData'].elements['2p']);
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);
 
@@ -703,13 +702,13 @@
     }
     
     function tabStep(ids, j, word, ulList) {
+        loadData(document.forms['getData'].elements['2p']);
         var div = dojo.byId(ids[j]);
         var theTab = thisSchema.topTabs;
         if (j==2) {
             j=4;
             theTab = thisSchema.bottomTabs;
         }
-        alert(JSON.stringify(thisSchema));
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
