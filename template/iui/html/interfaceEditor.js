@@ -532,11 +532,6 @@
     }
 
     function step1 (ids,ulList) {
-        thisSchema = backUpSchema;
-        uniqueId = backUpId1;
-        uniqueId2 = backUpId2;
-        arrays = backUpArrays;
-        forms = backUpForms;
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
@@ -777,13 +772,11 @@
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 var k=j;
                 if (k==1) {
-                    array1=[];
-                    array2=[];
-                    array3=[];
-                    array4=[];
-                    array5=[];
-                    array6=[];
-                    arrays=[array1, array2, array3, array4, array5, array6];
+                    thisSchema = backUpSchema;
+                    uniqueId = backUpId1;
+                    uniqueId2 = backUpId2;
+                    arrays = backUpArrays;
+                    forms = backUpForms;
                 }
                 dojo.byId(ulList[k]).className = "tabs";
             
