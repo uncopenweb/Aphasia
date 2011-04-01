@@ -665,6 +665,7 @@
             data.fetch({
                 query: {'_id':'4d93ca37229fe84f430001b3'},
                 onItem: function(item) {
+                    console.log(item);
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
                             thisSchema.topTabs[i].nameTag = aTab.nameTab;
