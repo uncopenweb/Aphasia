@@ -667,8 +667,8 @@
                 onItem: function(item) {
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
-                            thisSchema.topTabs[i].nameTag = aTab.nameTab;
-                            thisSchema.topTabs[i].name = "#"+aTab.nameTab;
+                            thisSchema.topTabs[i].nameTag = aTab.nameTag;
+                            thisSchema.topTabs[i].name = "#"+aTab.nameTag;
                             thisSchema.topTabs[i].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
