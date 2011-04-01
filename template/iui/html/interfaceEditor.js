@@ -613,7 +613,7 @@
                 else if (c2.checked) {
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
-                    loadData(document.forms['getData'].elements['2p'], ulList);
+                    loadData(document.forms['getData'].elements['2p'], ids, ulList);
 
                     dojo.byId(ulList[0]).className = "tabs";
                 
@@ -644,7 +644,7 @@
         div.style.display = "block";
     }
     
-    function loadData(radioObj,ulList) {
+    function loadData(radioObj,ids,ulList) {
         var id;
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
