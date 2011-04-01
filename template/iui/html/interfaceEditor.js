@@ -591,6 +591,11 @@
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
+                    thisSchema = backUpSchema;
+                    uniqueId = backUpId1;
+                    uniqueId2 = backUpId2;
+                    arrays = backUpArrays;
+                    forms = backUpForms;
                     
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
@@ -772,11 +777,13 @@
             dojo.connect(backwardButton,'onclick',dojo.hitch(this,function() {    
                 var k=j;
                 if (k==1) {
-                    thisSchema = backUpSchema;
-                    uniqueId = backUpId1;
-                    uniqueId2 = backUpId2;
-                    arrays = backUpArrays;
-                    forms = backUpForms;
+                    array1=[];
+                    array2=[];
+                    array3=[];
+                    array4=[];
+                    array5=[];
+                    array6=[];
+                    arrays=[array1, array2, array3, array4, array5, array6];
                 }
                 dojo.byId(ulList[k]).className = "tabs";
             
