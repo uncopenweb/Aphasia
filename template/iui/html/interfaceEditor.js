@@ -662,9 +662,8 @@
         var i=0;
         var j=0;
         db.then(function(data) {
-            console.log(data);
             data.fetch({
-                query: {"_id":"4d93ca37229fe84f430001b3"},
+                query: {"_id":4d93ca37229fe84f430001b3},
                 onItem: function(item) {
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
