@@ -492,20 +492,26 @@
         ]
     };
     
+    backUpSchema = thisSchema;
+    
     uniqueId = 1000;
+    backUpid1 = uniqueId;
     uniqueId2 = 1000;
+    backUpid2 = uniqueId2;
 
     forwardButton = [];
     backwardButton = [];
-    array = [];
-    array1 = [];
-    array2 = [];
-    array3 = [];
-    array4 = [];
-    array5 = [];
-    array6 = [];
-    arrays = [array1, array2, array3, array4, array5, array6];
+    // array = [];
+    // array1 = [];
+    // array2 = [];
+    // array3 = [];
+    // array4 = [];
+    // array5 = [];
+    // array6 = [];
+    arrays = [[],[], [], [], [], []];
+    backUpArrays = arrays;
     forms = [[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]],[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]],[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]],[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]],[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]],[["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]]];
+    backUpForms = forms;
     
     
     function start() {
@@ -526,6 +532,11 @@
     }
 
     function step1 (ids,ulList) {
+        thisSchema = backUpSchema;
+        uniqueId = backUpId1;
+        uniqueId2 = backUpId2;
+        arrays = backUpArrays;
+        forms = backUpForms;
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
@@ -547,7 +558,8 @@
         dojo.create("br",null,form);
         
         var Grid = dojo.create("div",{className:"grid",id:"grid",style:{"display":"none"},innerHTML:"Select the existing interface you want."},div);
-        var table = dojo.create("table",{className:"dataTable"},Grid);
+        var form = dojo.create("form",{name:"getData"},Grid);
+        var table = dojo.create("table",{className:"dataTable"},form);
         var tr = dojo.create("tr",{className:"dataTable"},table);
         var td1 = dojo.create("td",{className:"td3"},tr);
         var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
@@ -599,23 +611,17 @@
                     dojo.byId(ulList[1]).className = "td1";
                 }
                 else if (c2.checked) {
-                    db.then(function(data) {
-                        data.fetch({
-                            query: {"_id":""},
-                            onItem: function(item) {
-                                tr = dojo.create("tr",null,table);
-                                td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
-                                if (item.themeName == undefined) {
-                                    td2 = dojo.create("td",{className:"td3", value:item._id, innerHTML:"N/A"},tr);                   
-                                }
-                                else {
-                                    td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
-                                }
+                    loadData(document.forms['getData'].elements['2p']);
+                    tabStep(ids,1,"Top",ulList);
+                    tabStep(ids,2,"Bottom",ulList);
 
-                                td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
-                            }
-                        });
-        });
+                    dojo.byId(ulList[0]).className = "tabs";
+                
+                    div.style.display="none";
+                    dojo.byId(ids[1]).style.display="block";
+                    jsProgress.update({progress:1});
+                    
+                    dojo.byId(ulList[1]).className = "td1";
                 }
                 else if (c3.checked) {
                 
@@ -636,6 +642,61 @@
             Grid2.style.display = "block";
         });
         div.style.display = "block";
+    }
+    
+    function loadData(radioObj) {
+        var id;
+        for (var i=0; i<radioObj.length; i++) {
+            if (radioObj[i].checked) {
+                id = radioObj[i].value;
+            }
+        }
+        var db = uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' 
+        });
+        var i=0;
+        var j=0;
+        db.then(function(data) {
+            data.fetch({
+                query: {"_id":id},
+                onItem: function(item) {
+                    if (item.topTabs!=null) {
+                        dojo.forEach(item.topTabs, function(aTab) {
+                            thisSchema.topTabs[i].nameTag = aTab.nameTab;
+                            thisSchema.topTabs[i].name = "#"+aTab.nameTab;
+                            thisSchema.topTabs[i].image = aTab.image;
+                            if (aTab.audioImages!=null) {
+                                dojo.forEach(aTab.audioImages,function(aPiece) {
+                                    thisSchema.topTabs[i].audioImages.pic = aPiece.pic;
+                                    thisSchema.topTabs[i].audioImages.word = aPiece.word;
+                                    thisSchema.topTabs[i].audioImages.image = aPiece.image;
+                                    thisSchema.topTabs[i].audioImages.phrase = aPiece.phrase;
+                                });
+                            }
+                            i++;
+                        });
+                    }
+                    if (item.bottomTabs!=null) {
+                        dojo.forEach(item.bottomTabs, function(aTab) {
+                            thisSchema.bottomTabs[j].nameTag = aTab.nameTab;
+                            thisSchema.bottomTabs[j].name = "#"+aTab.nameTab;
+                            thisSchema.bottomTabs[j].image = aTab.image;
+                            if (aTab.audioImages!=null) {
+                                dojo.forEach(aTab.audioImages,function(aPiece) {
+                                    thisSchema.bottomTabs[j].audioImages.pic = aPiece.pic;
+                                    thisSchema.bottomTabs[j].audioImages.word = aPiece.word;
+                                    thisSchema.bottomTabs[j].audioImages.image = aPiece.image;
+                                    thisSchema.bottomTabs[j].audioImages.phrase = aPiece.phrase;
+                                });
+                            }
+                            j++;                        
+                        });
+                    }
+                }
+            });
+        });
     }
     
     function tabStep(ids, j, word, ulList) {
