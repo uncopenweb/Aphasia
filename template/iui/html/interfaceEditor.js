@@ -667,6 +667,7 @@
                 onItem: function(item) {
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
+                            console.log(aTab);
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
                             thisSchema.topTabs[i].name = "#"+aTab.nameTag;
                             thisSchema.topTabs[i].image = aTab.image;
