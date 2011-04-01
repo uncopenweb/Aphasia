@@ -664,7 +664,7 @@
         var j=0;
         db.then(function(data) {
             data.fetch({
-                query: {"_id":id},
+                query: {"_id":""+id+""},
                 onItem: function(item) {
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
