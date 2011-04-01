@@ -701,8 +701,10 @@
     
     function tabStep(ids, j, word, ulList) {
         var div = dojo.byId(ids[j]);
+        var theTab = thisSchema.topTabs;
         if (j==2) {
             j=4;
+            theTab = thisSchema.bottomTabs;
         }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
@@ -710,7 +712,7 @@
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+j,className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
@@ -729,7 +731,7 @@
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+k,className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[1].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
@@ -748,7 +750,7 @@
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+k,className:"text"},name1);
+        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[2].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
         var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
         var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
