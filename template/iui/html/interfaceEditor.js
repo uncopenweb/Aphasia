@@ -709,7 +709,7 @@
             j=4;
             theTab = thisSchema.bottomTabs;
         }
-        console.log(theTab[0]);
+        alert(JSON.stringify(theTab[0]));
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
