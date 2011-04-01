@@ -647,10 +647,12 @@
     }
     
     function loadData(radioObj) {
+        console.log(radioObj);
         var id;
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
+                break;
             }
         }
         var db = uow.getDatabase({
