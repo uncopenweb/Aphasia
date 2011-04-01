@@ -601,7 +601,7 @@
                 else if (c2.checked) {
                     db.then(function(data) {
                         data.fetch({
-                            query: {"_id":""};
+                            query: {"_id":""},
                             onItem: function(item) {
                                 tr = dojo.create("tr",null,table);
                                 td1 = dojo.create("input",{type:"radio",className:"td3"},tr);
