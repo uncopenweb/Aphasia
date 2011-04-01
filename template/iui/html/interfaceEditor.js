@@ -492,7 +492,8 @@
         ]
     };
     
-    backUpSchema = thisSchema;
+    backUpSchema = JSON.stringify(thisSchema);
+    backUpSchema = JSON.parse(backUpSchema);
     
     uniqueId = 1000;
     backUpId1 = uniqueId;
