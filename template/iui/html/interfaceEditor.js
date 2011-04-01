@@ -683,8 +683,8 @@
                     }
                     if (item.bottomTabs!=null) {
                         dojo.forEach(item.bottomTabs, function(aTab) {
-                            thisSchema.bottomTabs[j].nameTag = aTab.nameTab;
-                            thisSchema.bottomTabs[j].name = "#"+aTab.nameTab;
+                            thisSchema.bottomTabs[j].nameTag = aTab.nameTag;
+                            thisSchema.bottomTabs[j].name = "#"+aTab.nameTag;
                             thisSchema.bottomTabs[j].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
