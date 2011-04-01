@@ -572,9 +572,9 @@
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
-                    td1 = dojo.create("input",{type:"radio",name:"2p",className:"td3"},tr);
+                    td1 = dojo.create("input",{type:"radio",name:"2p", value:item._id, className:"td3"},tr);
                     if (item.themeName == undefined) {
-                        td2 = dojo.create("td",{className:"td3", value:item._id, innerHTML:"N/A"},tr);                   
+                        td2 = dojo.create("td",{className:"td3", innerHTML:"N/A"},tr);                   
                     }
                     else {
                         td2 = dojo.create("td",{className:"td3",innerHTML:item.themeName},tr);
@@ -647,7 +647,6 @@
     }
     
     function loadData(radioObj) {
-        console.log(radioObj);
         var id;
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
