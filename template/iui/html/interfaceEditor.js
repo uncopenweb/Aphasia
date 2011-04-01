@@ -667,7 +667,6 @@
                 onItem: function(item) {
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
-                            console.log(aTab);
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
                             thisSchema.topTabs[i].name = "#"+aTab.nameTag;
                             thisSchema.topTabs[i].image = aTab.image;
@@ -701,7 +700,6 @@
                 }
             });
         });
-        console.log(thisSchema);
     }
     
     function tabStep(ids, j, word, ulList) {
@@ -711,6 +709,7 @@
             j=4;
             theTab = thisSchema.bottomTabs;
         }
+        console.log(theTab);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
         var tab1 = dojo.create("div",{className:"second"},div);
