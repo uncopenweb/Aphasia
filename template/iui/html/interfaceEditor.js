@@ -665,7 +665,6 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
-                    console.log(item);
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
                             thisSchema.topTabs[i].nameTag = aTab.nameTab;
@@ -701,6 +700,7 @@
                 }
             });
         });
+        console.log(thisSchema);
     }
     
     function tabStep(ids, j, word, ulList) {
