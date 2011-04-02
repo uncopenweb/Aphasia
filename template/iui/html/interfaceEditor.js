@@ -642,16 +642,7 @@
                     dojo.byId(ulList[1]).className = "td1";
                 }
                 else if (c3.checked) {
-                    dojo.empty(dojo.byId(ids[1]));
-                    dojo.empty(dojo.byId(ids[2]));
-                    dojo.byId(ulList[0]).className = "tabs";
-                    div.style.display="none";
-                    dojo.byId(ids[4]).style.display="block";
-                    
-                    confirmDelete(document.forms['getData'].elements['2p'],ids);
-                    
-                    jsProgress.update({progress:4});
-                    dojo.byId(ulList[4]).className = "td1";
+                    confirmDelete(document.forms['getData'].elements['2p'],ids,div,ulList);
                 }
         }));
 
@@ -684,7 +675,7 @@
         div.style.display = "block";
     }
     
-    function confirmDelete(radioObj,ids) {
+    function confirmDelete(radioObj,ids,div,ulList) {
         var id;
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
@@ -697,6 +688,14 @@
         }
         var answer = confirm("Are you sure you want to delete this item: "+ id);
         if (answer) {
+            dojo.empty(dojo.byId(ids[1]));
+            dojo.empty(dojo.byId(ids[2]));
+            dojo.byId(ulList[0]).className = "tabs";
+            div.style.display="none";
+            dojo.byId(ids[4]).style.display="block";
+            
+            jsProgress.update({progress:4});
+            dojo.byId(ulList[4]).className = "td1";
             var db = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
