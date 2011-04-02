@@ -517,15 +517,7 @@
     backUpForms = JSON.parse(backUpForms);
     
     
-    function start() {
-        uow.getDatabase({
-        database: 'Aphasia',
-        collection: 'AphasiaJson',
-        mode: 'crud' }).then(function (data) {
-            example = data._index;
-            alert("");
-        });
-        
+    function start() {        
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Top Tabs", "Step 3 -- Customize Your Bottom Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",{style:{"border-collapse":"collapse"}},mainArea);
@@ -536,7 +528,14 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
-        step1(ids,ulList);
+        uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' }).then(function (data) {
+                example = data._index;
+                step1(ids,ulList);
+        });
+        //step1(ids,ulList);
         
         jsProgress.update({maximum:4});
         dojo.byId(ulList[0]).className = "td1";
