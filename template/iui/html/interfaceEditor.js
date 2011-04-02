@@ -676,6 +676,7 @@
             db.then(function(data) {
                 data.deleteOne({
                     query:{'_id':id},
+                    save: false,
                     onComplete: donePage(ids,true)
                 });
             });
