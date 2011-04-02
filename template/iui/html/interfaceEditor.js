@@ -519,9 +519,8 @@
     uow.getDatabase({
         database: 'Aphasia',
         collection: 'AphasiaJson',
-        mode: 'crud' }).then({function (data) {
+        mode: 'crud' }).then(function (data) {
             var example = data._index;
-        }        
         });
     
     
