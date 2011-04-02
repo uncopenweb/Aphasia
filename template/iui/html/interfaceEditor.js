@@ -606,12 +606,6 @@
    
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
-                if (example.length!=0) {
-                    this.disabled = true;
-                }
-                else {
-                    this.disabled = false;
-                }
                 if (c1.checked) {  
                     thisSchema = JSON.stringify(backUpSchema);
                     thisSchema = JSON.parse(thisSchema);
@@ -665,10 +659,22 @@
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
             Grid2.style.display = "none";
+            if (example.length!=0) {
+                forwardButton.disabled = true;
+            }
+            else {
+                forwardButton.disabled = false;
+            }
         });
         dojo.connect(c3,'onclick',function() {
             Grid.style.display = "block";
-            Grid2.style.display = "none"
+            Grid2.style.display = "none";
+            if (example.length!=0) {
+                forwardButton.disabled = true;
+            }
+            else {
+                forwardButton.disabled = false;
+            }
         });
         dojo.connect(c1,'onclick',function() {
             Grid.style.display = "none";
