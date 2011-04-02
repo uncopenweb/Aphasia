@@ -532,7 +532,7 @@
             database: 'Aphasia',
             collection: 'AphasiaJson',
             mode: 'crud' }).then(function (data) {
-                example = data._index;
+                example = data;
                 step1(ids,ulList);
         });
         //step1(ids,ulList);
@@ -596,7 +596,7 @@
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
    
-       alert(JSON.stringify(example)=="{}");
+       alert(JSON.stringify(example));
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
@@ -1358,7 +1358,6 @@
     }
     
     function donePage(ids,deleteItem) {
-        //alert(JSON.stringify(thisSchema));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
@@ -1366,8 +1365,14 @@
         }
         var table = dojo.create("table",null,div);
         var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options: "},div);
-        var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
-            a.appendChild(document.createTextNode('Click here.'));
+        uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' }).then(function (data) {
+                example = data._index;
+                var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
+                    a.appendChild(document.createTextNode('Click here.'));
+        });
     }
     
     // function captureValue(j) {
