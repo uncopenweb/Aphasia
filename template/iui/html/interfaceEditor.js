@@ -782,7 +782,6 @@
     }
     
     function tabStep(ids, j, word, ulList) {
-        alert(j);
         var div = dojo.byId(ids[j]);
         var theTab = thisSchema.topTabs;
         if (j==2) {
@@ -809,11 +808,11 @@
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         if (j=1) {
-            var temp = j-1;
+            var temp = 0;
             dojo.byId("form1"+j).value = topNumbers[temp];
         }
         else {
-            var temp = j-2;
+            var temp = 0;
             dojo.byId("form1"+j).value = bottomNumbers[temp];
         }
         
