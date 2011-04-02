@@ -543,8 +543,11 @@
                 data.fetch(
                     onItem:function(item) {
                         example.push(item);
-                });
-                step1(ids,ulList);
+                    },
+                    onComplete: function() {
+                        step1(ids,ulList);
+                    }
+                );
         });
         //step1(ids,ulList);
         
