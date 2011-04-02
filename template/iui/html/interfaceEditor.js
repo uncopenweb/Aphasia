@@ -637,6 +637,7 @@
                     dojo.byId("form1"+4).value = bottomNumbers[0];
                     dojo.byId("form1"+5).value = bottomNumbers[1];
                     dojo.byId("form1"+6).value = bottomNumbers[2];
+                    alert(topNumbers[0]);
                 }
                 else if (c2.checked) {
                     dojo.empty(dojo.byId(ids[1]));
