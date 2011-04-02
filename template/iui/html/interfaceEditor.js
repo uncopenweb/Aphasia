@@ -660,10 +660,10 @@
             Grid.style.display = "block";
             Grid2.style.display = "none";
             if (example.length!=0) {
-                forwardButton.disabled = "disabled";
+                forwardButton.style.display = "";
             }
             else {
-                forwardButton.disabled = false;
+                forwardButton.style.display = "none";
             }
         });
         dojo.connect(c3,'onclick',function() {
