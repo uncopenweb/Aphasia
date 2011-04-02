@@ -607,10 +607,10 @@
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (example.length!=0) {
-                    forwardButton.disabled = true;
+                    this.disabled = true;
                 }
                 else {
-                    forwardButton.disabled = false;
+                    this.disabled = false;
                 }
                 if (c1.checked) {  
                     thisSchema = JSON.stringify(backUpSchema);
