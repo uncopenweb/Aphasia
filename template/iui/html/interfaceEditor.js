@@ -679,6 +679,7 @@
                     save: false,
                     onComplete: donePage(ids,true)
                 });
+                data.save();
             });
         }
     }
