@@ -660,6 +660,7 @@
     
     function confirmDelete(radioObj,ids) {
         var id;
+        console.log(radioObj.value);
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
@@ -667,7 +668,7 @@
                 break;
             }
         }
-        if (radioObj.length == "undefined") {
+        if (radioObj.length!=null) {
             id = radioObj.value;
         }
         var answer = confirm("Are you sure you want to delete this item: "+ id);
