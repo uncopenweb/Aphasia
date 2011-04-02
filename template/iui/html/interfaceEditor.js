@@ -808,12 +808,10 @@
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         if (j=1) {
-            var temp = 0;
-            dojo.byId("form1"+j).value = topNumbers[temp];
+            dojo.byId("form1"+j).value = topNumbers[0];
         }
         else {
-            var temp = 0;
-            dojo.byId("form1"+j).value = bottomNumbers[temp];
+            dojo.byId("form1"+j).value = bottomNumbers[0];
         }
         
         
@@ -836,12 +834,10 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
         if (j=1) {
-            var temp = k-1;
-            dojo.byId("form1"+k).value = topNumbers[temp];
+            dojo.byId("form1"+k).value = topNumbers[1];
         }
         else {
-            var temp = k-4;
-            dojo.byId("form1"+k).value = bottomNumbers[temp];
+            dojo.byId("form1"+k).value = bottomNumbers[1];
         }
         
         k = j+2;
@@ -863,12 +859,11 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"","", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
         if (j=1) {
-            var temp = k-1;
-            dojo.byId("form1"+k).value = topNumbers[temp];
+            dojo.byId("form1"+k).value = topNumbers[2];
         }
         else {
             var temp = k-4;
-            dojo.byId("form1"+k).value = bottomNumbers[temp];
+            dojo.byId("form1"+k).value = bottomNumbers[2];
         }
         
         if (j==4) {
@@ -899,7 +894,6 @@
         var forwardButton1 = dojo.create("button",{innerHTML:"Next"},div);
             dojo.connect(forwardButton1,'onclick',dojo.hitch(this,function() {
                 var m=j;
-                alert(j);
                 if (m==2) {
                     dojo.empty(dojo.byId(ids[3]));
                     summaryPage(ids,ulList);
