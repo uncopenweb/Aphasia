@@ -659,9 +659,8 @@
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
             Grid2.style.display = "none";
-            alert("");
             if (example.length!=0) {
-                forwardButton.disabled = true;
+                forwardButton.disabled = "disabled";
             }
             else {
                 forwardButton.disabled = false;
@@ -671,7 +670,7 @@
             Grid.style.display = "block";
             Grid2.style.display = "none";
             if (example.length!=0) {
-                forwardButton.disabled = true;
+                forwardButton.disabled = "disabled";
             }
             else {
                 forwardButton.disabled = false;
