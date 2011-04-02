@@ -567,8 +567,8 @@
             collection: 'AphasiaJson',
             mode: 'crud' });
         db.then(function(data) {
+            console.log(data);
             data.fetch({
-                console.log(data);
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
                     td1 = dojo.create("input",{type:"radio",name:"2p", value:item._id, className:"td3"},tr);
