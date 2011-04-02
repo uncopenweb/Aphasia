@@ -1287,7 +1287,11 @@
                 // });
             // });
                 db.then(function(data) {
-                    data.newItem(thisSchema);
+                    data.putOne({
+                        query:{'themeName':thisSchema.themeName},
+                        data: thisSchema,
+                        save: true
+                    });
                     data.save();
                     donePage(ids);
                 });
