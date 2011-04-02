@@ -717,6 +717,8 @@
     
     function loadData(radioObj,ids,ulList) {
         var id;
+        topNumbers=[0,0,0];
+        bottomNumbers=[0,0,0];   
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
