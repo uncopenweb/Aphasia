@@ -1373,14 +1373,15 @@
         }
         var table = dojo.create("table",null,div);
         var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options: "},div);
-        uow.getDatabase({
+        example = [];
+        var db=uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
-            mode: 'crud' }).then(function (data) {
-                example = data._index;
+            mode: 'crud' });
+         db.then(function (data) {
                 var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
                     a.appendChild(document.createTextNode('Click here.'));
-        });
+         });
     }
     
     // function captureValue(j) {
