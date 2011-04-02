@@ -643,14 +643,7 @@
                     jsProgress.update({progress:1});
                     
                     dojo.byId(ulList[1]).className = "td1";
-                    
-                    dojo.byId("form1"+1).value = topNumbers[0];
-                    dojo.byId("form1"+2).value = topNumbers[1];
-                    dojo.byId("form1"+3).value = topNumbers[2];
-                    dojo.byId("form1"+4).value = bottomNumbers[0];
-                    dojo.byId("form1"+5).value = bottomNumbers[1];
-                    dojo.byId("form1"+6).value = bottomNumbers[2];
-                    alert(topNumbers[0]);
+                   
                 }
                 else if (c3.checked) {
                     confirmDelete(document.forms['getData'].elements['2p'],ids,div,ulList);
@@ -667,6 +660,13 @@
             else {
                 forwardButton.style.display = "none";
             }
+            dojo.byId("form1"+1).value = topNumbers[0];
+            dojo.byId("form1"+2).value = topNumbers[1];
+            dojo.byId("form1"+3).value = topNumbers[2];
+            dojo.byId("form1"+4).value = bottomNumbers[0];
+            dojo.byId("form1"+5).value = bottomNumbers[1];
+            dojo.byId("form1"+6).value = bottomNumbers[2];
+            alert(topNumbers[0]);
         });
         dojo.connect(c3,'onclick',function() {
             Grid.style.display = "block";
