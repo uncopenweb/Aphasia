@@ -537,7 +537,7 @@
                 data.fetch({
                     onItem: function(item) {
                         example.push(item);
-                    }
+                    },
                     onComplete: function() {
                         step1(ids,ulList);
                     }
