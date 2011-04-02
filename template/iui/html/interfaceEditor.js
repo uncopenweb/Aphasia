@@ -776,7 +776,14 @@
                 },
                 onComplete: function(items) {
                     tabStep(ids,1,"Top",ulList);
-                    tabStep(ids,2,"Bottom",ulList);               
+                    tabStep(ids,2,"Bottom",ulList);    
+                    dojo.byId("form1"+1).value = topNumbers[0];
+                    dojo.byId("form1"+2).value = topNumbers[1];
+                    dojo.byId("form1"+3).value = topNumbers[2];
+                    dojo.byId("form1"+4).value = bottomNumbers[0];
+                    dojo.byId("form1"+5).value = bottomNumbers[1];
+                    dojo.byId("form1"+6).value = bottomNumbers[2];
+                    alert(topNumbers[0]);                    
                 }
             });
         });
@@ -808,12 +815,6 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
-/*         if (j=1) {
-            dojo.byId("form1"+j).value = topNumbers[0];
-        }
-        else {
-            dojo.byId("form1"+j).value = bottomNumbers[0];
-        } */
         
         
         var k=j+1;
@@ -834,12 +835,7 @@
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
-/*         if (j=1) {
-            dojo.byId("form1"+k).value = topNumbers[1];
-        }
-        else {
-            dojo.byId("form1"+k).value = bottomNumbers[1];
-        } */
+
         
         k = j+2;
         var tab3 = dojo.create("div",{className:"second"},div);
@@ -859,13 +855,7 @@
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"","", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
-/*         if (j=1) {
-            dojo.byId("form1"+k).value = topNumbers[2];
-        }
-        else {
-            var temp = k-4;
-            dojo.byId("form1"+k).value = bottomNumbers[2];
-        } */
+
         
         if (j==4) {
             j=2;
@@ -907,13 +897,6 @@
                     
                     dojo.byId(ulList[m]).className = "td1";
                     
-                    dojo.byId("form1"+1).value = topNumbers[0];
-                    dojo.byId("form1"+2).value = topNumbers[1];
-                    dojo.byId("form1"+3).value = topNumbers[2];
-                    dojo.byId("form1"+4).value = bottomNumbers[0];
-                    dojo.byId("form1"+5).value = bottomNumbers[1];
-                    dojo.byId("form1"+6).value = bottomNumbers[2];
-                    alert(topNumbers[0]);
                 }
                 else if (m==1) {
                     dojo.byId(ulList[m]).className = "tabs";
