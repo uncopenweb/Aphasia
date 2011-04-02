@@ -900,6 +900,7 @@
             dojo.connect(forwardButton1,'onclick',dojo.hitch(this,function() {
                 var m=j;
                 if (m==2) {
+                    alert("");
                     dojo.empty(dojo.byId(ids[3]));
                     summaryPage(ids,ulList);
                 
