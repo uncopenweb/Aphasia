@@ -582,7 +582,8 @@
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
                 },
                 onComplete: function() {
-                    var example = data._index;                    
+                    var example = data._index;    
+                    alert("");
                 }
             });
         });
