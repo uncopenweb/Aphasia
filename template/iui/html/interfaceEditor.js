@@ -674,6 +674,7 @@
                 mode: 'crud' 
             });
             db.then(function(data) {
+                console.log(data);
                 data.deleteOne({
                     query:{'_id':id},
                     save: true,
@@ -699,6 +700,7 @@
         var i=0;
         var j=0;
         db.then(function(data) {
+            console.log(data);
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
