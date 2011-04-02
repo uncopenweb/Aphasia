@@ -535,18 +535,18 @@
                 example = data._index;
                 step1(ids,ulList);
         });
+        example = [];
         uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
             mode: 'crud' }).then(function (data) {
-                example = [];
                 data.fetch(
-                    onItem:function(item) {
+                    onItem: function(item) {
                         example.push(item);
-                    },
-                    onComplete: function() {
-                        step1(ids,ulList);
                     }
+                    // onComplete: function() {
+                        // step1(ids,ulList);
+                    // }
                 );
         });
         //step1(ids,ulList);
