@@ -604,9 +604,14 @@
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
    
-       alert(example.length);
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+                if (example.length!=0) {
+                    forwardButton.disabled = true;
+                }
+                else {
+                    forwardButton.disabled = false;
+                }
                 if (c1.checked) {  
                     thisSchema = JSON.stringify(backUpSchema);
                     thisSchema = JSON.parse(thisSchema);
