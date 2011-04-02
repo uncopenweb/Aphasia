@@ -532,7 +532,7 @@
             database: 'Aphasia',
             collection: 'AphasiaJson',
             mode: 'crud' }).then(function (data) {
-                example = data;
+                example = data._index;
                 step1(ids,ulList);
         });
         //step1(ids,ulList);
