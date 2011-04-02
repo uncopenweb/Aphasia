@@ -729,6 +729,8 @@
         });
         var i=0;
         var j=0;
+        topNumbers=[0,0,0];
+        bottomNumbers=[0,0,0];
         db.then(function(data) {
             data.fetch({
                 query: {'_id':id},
@@ -746,6 +748,7 @@
                                     thisSchema.topTabs[i].audioImages.word = aPiece.word;
                                     thisSchema.topTabs[i].audioImages.image = aPiece.image;
                                     thisSchema.topTabs[i].audioImages.phrase = aPiece.phrase;
+                                    topNumbers[i]++;
                                 });
                             }
                             i++;
@@ -762,6 +765,7 @@
                                     thisSchema.bottomTabs[j].audioImages.word = aPiece.word;
                                     thisSchema.bottomTabs[j].audioImages.image = aPiece.image;
                                     thisSchema.bottomTabs[j].audioImages.phrase = aPiece.phrase;
+                                    bottomNumbers[i]++;
                                 });
                             }
                             j++;                        
@@ -802,6 +806,15 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
+        if (j=1) {
+            var temp = j-1;
+            dojo.byId("form1"+j).value = topNumbers[temp];
+        }
+        else {
+            var temp = j-2;
+            dojo.byId("form1"+j).value = bottomNumbers[temp];
+        }
+        
         
         var k=j+1;
         var tab2 = dojo.create("div",{className:"second"},div);
@@ -821,6 +834,14 @@
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
+        if (j=1) {
+            var temp = k-1;
+            dojo.byId("form1"+k).value = topNumbers[temp];
+        }
+        else {
+            var temp = k-4;
+            dojo.byId("form1"+k).value = bottomNumbers[temp];
+        }
         
         k = j+2;
         var tab3 = dojo.create("div",{className:"second"},div);
@@ -840,6 +861,14 @@
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"","", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
+        if (j=1) {
+            var temp = k-1;
+            dojo.byId("form1"+k).value = topNumbers[temp];
+        }
+        else {
+            var temp = k-4;
+            dojo.byId("form1"+k).value = bottomNumbers[temp];
+        }
         
         if (j==4) {
             j=2;
