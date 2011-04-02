@@ -1292,11 +1292,16 @@
                 // });
             // });
                 db.then(function(data) {
-                    data.putOne({
-                        query:{'_id':thisSchema.id},
-                        data: thisSchema,
-                        save: true
-                    });
+                    if (thisSchema.id.trim() != "") {
+                        data.putOne({
+                            query:{'_id':thisSchema.id},
+                            data: thisSchema,
+                            save: true
+                        });
+                    }
+                    else {
+                        data.newItem(thisSchema);
+                    }
                     data.save();
                     donePage(ids);
                 });
