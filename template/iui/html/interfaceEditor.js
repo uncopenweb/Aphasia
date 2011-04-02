@@ -523,6 +523,7 @@
         collection: 'AphasiaJson',
         mode: 'crud' }).then(function (data) {
             example = data._index;
+            alert("");
         });
         
         var mainArea = dojo.byId("mainArea");
