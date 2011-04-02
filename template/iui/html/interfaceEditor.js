@@ -631,13 +631,14 @@
                 else if (c3.checked) {
                     dojo.empty(dojo.byId(ids[1]));
                     dojo.empty(dojo.byId(ids[2]));
-                    dojo.byId(ulList[4]).className = "tabs";
+                    dojo.byId(ulList[0]).className = "tabs";
                     div.style.display="none";
                     dojo.byId(ids[4]).style.display="block";
                     
                     confirmDelete(document.forms['getData'].elements['2p'],ids);
                     
                     jsProgress.update({progress:4});
+                    dojo.byId(ulList[4]).className = "td1";
                 }
         }));
 
@@ -676,7 +677,7 @@
                 data.deleteOne({
                     query:{'_id':id},
                     save: true,
-                    onComplete: donePage(ids)
+                    onComplete: donePage(ids,true)
                 });
             });
         }
@@ -1344,11 +1345,13 @@
         }
     }
     
-    function donePage(ids) {
-        alert(JSON.stringify(thisSchema));
+    function donePage(ids,deleteItem) {
+        //alert(JSON.stringify(thisSchema));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
-        var p = dojo.create("p",{innerHTML:"You are now done. You can now start the Aphasia web application with one of the interface below:"},div);
+        if (!deleteItem) {
+            var p = dojo.create("p",{innerHTML:"You are now done. You can now start the Aphasia web application with one of the interface below:"},div);
+        }
         var table = dojo.create("table",null,div);
         var homeDiv = dojo.create("div",{innerHTML:"Or, you can go back to the home page for more options: "},div);
         var a = dojo.create("a",{href:"http://gbserver2.cs.unc.edu/playpen/Aphasia/template/iui/html/interfaceEditor.html"},homeDiv);
