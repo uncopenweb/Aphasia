@@ -660,6 +660,7 @@
     
     function confirmDelete(radioObj,ids) {
         var id;
+        alert(radioObj);
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
