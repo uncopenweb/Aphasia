@@ -562,12 +562,12 @@
         var td1 = dojo.create("td",{className:"td3"},tr);
         var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
         var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
+        var example;
         var db = uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
             mode: 'crud' });
         db.then(function(data) {
-            var example;
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
