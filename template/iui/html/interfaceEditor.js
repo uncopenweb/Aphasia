@@ -807,12 +807,12 @@
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
-/*         if (j=1) {
+         if (j=1) {
             dojo.byId("form1"+j).value = topNumbers[0];
         }
         else {
             dojo.byId("form1"+j).value = bottomNumbers[0];
-        } */
+        } 
         
         
         var k=j+1;
