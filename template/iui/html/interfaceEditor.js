@@ -567,7 +567,7 @@
             collection: 'AphasiaJson',
             mode: 'crud' });
         db.then(function(data) {
-            console.log(data);
+            var example = data._index;
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
@@ -583,7 +583,7 @@
                 }
             });
         });
-        
+        alert(JSON.stringify(example));
         var Grid2  = dojo.create("div",null,div);
         var table1 = dojo.create("table",null,Grid2);
         var tr1 = dojo.create("table",null,table1);
