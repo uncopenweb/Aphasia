@@ -580,10 +580,12 @@
                     }
 
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
+                },
+                onComplete: function() {
+                    alert(JSON.stringify(example));
                 }
             });
         });
-        alert(JSON.stringify(example));
         var Grid2  = dojo.create("div",null,div);
         var table1 = dojo.create("table",null,Grid2);
         var tr1 = dojo.create("table",null,table1);
