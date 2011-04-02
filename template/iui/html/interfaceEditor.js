@@ -896,8 +896,8 @@
                 dojo.byId(ulList[k]).className = "td1";
             }));
         
-        var forwardButton = dojo.create("button",{innerHTML:"Next"},div);
-            dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+        var forwardButton1 = dojo.create("button",{innerHTML:"Next"},div);
+            dojo.connect(forwardButton1,'onclick',dojo.hitch(this,function() {
                 var m=j;
                 if (m==2) {
                     dojo.empty(dojo.byId(ids[3]));
@@ -1284,8 +1284,8 @@
                 
                 dojo.byId(ulList[2]).className = "td1";                
             }));
-        var forwardButton = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
-            dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
+        var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+            dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
