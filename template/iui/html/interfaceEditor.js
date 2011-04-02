@@ -596,7 +596,7 @@
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
    
-       alert(JSON.stringify(example));
+       console.log(JSON.stringify(example));
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
