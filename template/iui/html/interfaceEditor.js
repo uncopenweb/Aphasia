@@ -120,6 +120,7 @@
     
     thisSchema = {
         "themeName":"",
+        "id":"",
         "topTabs": [
            {
                 "name": "",
@@ -667,6 +668,8 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
+                    thisSchema.themeName = item.themeName;
+                    thisSchema.id = item._id;
                     if (item.topTabs!=null) {
                         dojo.forEach(item.topTabs, function(aTab) {
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
@@ -903,7 +906,9 @@
     }
     
     function summaryPage(ids,ulList) {
-        thisSchema.themeName = dojo.byId("themeName").value;
+        if (thisSchema.themeName.trim() == "") {
+            thisSchema.themeName = dojo.byId("themeName").value;
+        }
         var isNothing = true;
         var div = dojo.byId(ids[3]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
@@ -1288,7 +1293,7 @@
             // });
                 db.then(function(data) {
                     data.putOne({
-                        query:{'themeName':thisSchema.themeName},
+                        query:{'_id':thisSchema.id},
                         data: thisSchema,
                         save: true
                     });
