@@ -629,7 +629,15 @@
                     dojo.byId(ulList[1]).className = "td1";
                 }
                 else if (c3.checked) {
-                
+                    dojo.empty(dojo.byId(ids[1]));
+                    dojo.empty(dojo.byId(ids[2]));
+                    dojo.byId(ulList[4]).className = "tabs";
+                    div.style.display="none";
+                    dojo.byId(ids[4]).style.display="block";
+                    
+                    confirmDelete(document.forms['getData'].elements['2p'],ids);
+                    
+                    jsProgress.update({progress:4});
                 }
         }));
 
@@ -647,6 +655,31 @@
             Grid2.style.display = "block";
         });
         div.style.display = "block";
+    }
+    
+    function confirmDelete(radioObj,ids) {
+        var id;
+        for (var i=0; i<radioObj.length; i++) {
+            if (radioObj[i].checked) {
+                id = radioObj[i].value;
+                break;
+            }
+        }
+        var answer = confirm("Are you sure you want to delete this item: "+ id);
+        if (answer) {
+            var db = uow.getDatabase({
+                database: 'Aphasia',
+                collection: 'AphasiaJson',
+                mode: 'crud' 
+            });
+            db.then(function(data) {
+                data.deleteOne({
+                    query:{'_id':id},
+                    save: true;
+                    onComplete: donePage(ids);
+                });
+            });
+        }
     }
     
     function loadData(radioObj,ids,ulList) {
