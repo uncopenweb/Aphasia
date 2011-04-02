@@ -567,7 +567,6 @@
             collection: 'AphasiaJson',
             mode: 'crud' });
         db.then(function(data) {
-            var example = data._index;
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
@@ -582,7 +581,7 @@
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
                 },
                 onComplete: function() {
-                    alert(example=={});
+                    var example = data._index;                    
                 }
             });
         });
@@ -593,7 +592,7 @@
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
             
-            
+       alert(JSON.stringify(example)=="{}");     
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
