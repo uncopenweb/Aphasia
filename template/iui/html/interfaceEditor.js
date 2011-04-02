@@ -516,6 +516,9 @@
     backUpForms = JSON.stringify(forms);
     backUpForms = JSON.parse(backUpForms);
     
+    topNumbers=[0,0,0];
+    bottomNumbers=[0,0,0];
+    
     
     function start() {        
         var mainArea = dojo.byId("mainArea");
@@ -729,8 +732,6 @@
         });
         var i=0;
         var j=0;
-        topNumbers=[0,0,0];
-        bottomNumbers=[0,0,0];
         db.then(function(data) {
             data.fetch({
                 query: {'_id':id},
