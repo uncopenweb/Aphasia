@@ -522,7 +522,7 @@
         database: 'Aphasia',
         collection: 'AphasiaJson',
         mode: 'crud' }).then(function (data) {
-            var example = data._index;
+            example = data._index;
         });
         
         var mainArea = dojo.byId("mainArea");
