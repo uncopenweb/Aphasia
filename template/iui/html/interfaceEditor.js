@@ -528,18 +528,12 @@
         for (var i=0; i<5; i++) {
             var div = dojo.create("div",{id:ids[i],className:"mainContent", style:{"display":"none"}},mainArea);
         }
-        uow.getDatabase({
-            database: 'Aphasia',
-            collection: 'AphasiaJson',
-            mode: 'crud' }).then(function (data) {
-                example = data._index;
-                step1(ids,ulList);
-        });
         example = [];
-        uow.getDatabase({
+        var db=uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
-            mode: 'crud' }).then(function (data) {
+            mode: 'crud' })
+         db.then(function (data) {
                 data.fetch(
                     onItem: function(item) {
                         example.push(item);
@@ -548,7 +542,7 @@
                         // step1(ids,ulList);
                     // }
                 );
-        });
+         });
         //step1(ids,ulList);
         
         jsProgress.update({maximum:4});
