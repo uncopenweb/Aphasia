@@ -659,6 +659,7 @@
         dojo.connect(c2,'onclick',function() {
             Grid.style.display = "block";
             Grid2.style.display = "none";
+            alert("");
             if (example.length!=0) {
                 forwardButton.disabled = true;
             }
