@@ -535,6 +535,17 @@
                 example = data._index;
                 step1(ids,ulList);
         });
+        uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' }).then(function (data) {
+                example = [];
+                data.fetch(
+                    onItem:function(item) {
+                        example.push(item);
+                });
+                step1(ids,ulList);
+        });
         //step1(ids,ulList);
         
         jsProgress.update({maximum:4});
@@ -596,7 +607,7 @@
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
    
-       console.log(example.item);
+       console.log(example);
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
