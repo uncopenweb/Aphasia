@@ -516,6 +516,14 @@
     backUpForms = JSON.stringify(forms);
     backUpForms = JSON.parse(backUpForms);
     
+    uow.getDatabase({
+        database: 'Aphasia',
+        collection: 'AphasiaJson',
+        mode: 'crud' }).then({function (data) {
+            var example = data._index;
+        }        
+        });
+    
     
     function start() {
         var mainArea = dojo.byId("mainArea");
@@ -562,7 +570,6 @@
         var td1 = dojo.create("td",{className:"td3"},tr);
         var td2 = dojo.create("td",{className:"td2",innerHTML:"Interface Theme"},tr);
         var td3 = dojo.create("td",{className:"td2",innerHTML:"Id"},tr);
-        var example;
         var db = uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
@@ -580,10 +587,6 @@
                     }
 
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
-                },
-                onComplete: function() {
-                    var example = data._index;    
-                    alert("");
                 }
             });
         });
@@ -593,8 +596,8 @@
         var td = dojo.create("td",null,tr1);
         var label = dojo.create("label",{innerHTML:"Theme name for interface: "},td);
         var text = dojo.create("input",{id:"themeName"},td);
-            
-       alert(JSON.stringify(example)=="{}");     
+   
+       alert(JSON.stringify(example));
        var forwardButton = dojo.create("button",{innerHTML:"Start"},div);
             dojo.connect(forwardButton,'onclick',dojo.hitch(this,function() {
                 if (c1.checked) {  
