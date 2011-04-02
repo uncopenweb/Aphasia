@@ -663,7 +663,6 @@
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
-                alert(id);
                 break;
             }
         }
@@ -678,7 +677,6 @@
                 mode: 'crud' 
             });
             db.then(function(data) {
-                console.log(data);
                 data.deleteOne({
                     query:{'_id':id},
                     save: true,
@@ -693,9 +691,11 @@
         for (var i=0; i<radioObj.length; i++) {
             if (radioObj[i].checked) {
                 id = radioObj[i].value;
-                alert(id);
                 break;
             }
+        }
+        if (radioObj.length==null) {
+            id = radioObj.value;
         }
         var db = uow.getDatabase({
             database: 'Aphasia',
@@ -705,7 +705,6 @@
         var i=0;
         var j=0;
         db.then(function(data) {
-            console.log(data);
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
