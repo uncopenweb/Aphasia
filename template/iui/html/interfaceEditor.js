@@ -532,7 +532,7 @@
         var db=uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
-            mode: 'crud' })
+            mode: 'crud' });
          db.then(function (data) {
                 data.fetch(
                     onItem: function(item) {
