@@ -567,6 +567,7 @@
             collection: 'AphasiaJson',
             mode: 'crud' });
         db.then(function(data) {
+            var example;
             data.fetch({
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
