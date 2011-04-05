@@ -28,7 +28,7 @@ dojo.declare('template',[], {
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"40px"}},tr);
                 var div = dojo.create("a",{href:"javascript:;"},td);
                 var img = dojo.create("img",{src:leftPics[index++],width:"45px",height:"40px"},div);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
