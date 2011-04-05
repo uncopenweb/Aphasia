@@ -29,7 +29,8 @@ dojo.declare('template',[], {
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}},tr);
-                var img = dojo.create("image",{src:leftPics[index++],selected:"true",className:"panel"},td);
+                var div = dojo.create("div",{className:"panel",selected:"true"},td);
+                var img = dojo.create("image",{src:leftPics[index++],selected:"true",className:"panel"},div);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
             });
                     
