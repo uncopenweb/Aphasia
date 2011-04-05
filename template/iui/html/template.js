@@ -25,13 +25,12 @@ dojo.declare('template',[], {
             var index = 0;
             var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
             var leftPics = ["stop.png","question.png","repeat.png","help.jpg"];
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px',"z-index":"-1"}},dojo.body());
-            var image = dojo.create("image",{src:leftPics[0],width:"45px",height:"50px",selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}},tr);
                 var div = dojo.create("a",{href:"javascript:;"},td);
-                var img = dojo.create("image",{src:leftPics[index++],width:"45px",height:"50px"},div);
+                var img = dojo.create("img",{src:leftPics[index++],width:"45px",height:"50px"},div);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
             });
                     
