@@ -29,7 +29,7 @@ dojo.declare('template',[], {
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
                 var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}},tr);
-                var div = dojo.create("div",{className:"panel",selected:"true"},td);
+                var div = dojo.create("div",null,td);
                 var img = dojo.create("image",{src:leftPics[index++],width:"45px",height:"50px"},div);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
             });
