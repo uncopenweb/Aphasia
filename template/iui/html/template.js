@@ -25,10 +25,10 @@ dojo.declare('template',[], {
             var index = 0;
             var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
             var leftPics = ["stop.png","question.png","repeat.png","help.jpg"];
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'}},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true",className:"panel"},dojo.body());
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
-                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"},selected:"true",className:"panel"},tr);
+                var td = dojo.create("td",{id:"sidetd1",style:{"height":"50px"}},tr);
                 var div = dojo.create("div",null,td);
                 var img = dojo.create("image",{src:leftPics[index++],width:"45px",height:"50px"},div);
                     dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
