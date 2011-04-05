@@ -24,7 +24,7 @@ dojo.declare('template',[], {
                    
             var index = 0;
             var leftPhrases = ["Please give me a moment to respond.","I don't understand.","Can you repeat that, please?","I need help"];
-            var leftPics = ["stop.png","question.png","repeat.png","help.jpg"];
+            var leftPics = ["stop.png","question.png","repeat.png","help.png"];
             var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'54px',"top":'70px',"height":'196px'},selected:"true"},dojo.body());
             dojo.forEach(leftPhrases, function(aPhrase) {
                 var tr = dojo.create("tr",null,leftTable);
