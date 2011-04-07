@@ -741,6 +741,7 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
+                    console.log(item);
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
                     if (item.topTabs!=null) {
