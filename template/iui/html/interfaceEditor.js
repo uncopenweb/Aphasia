@@ -934,7 +934,7 @@
             else {
                 if (i<=3) {
                     m = i-1;
-                    alert(m);
+                    alert(JSON.stringify(thisSchema.topTabs[m]));
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
                         console.log(aim.pic);
