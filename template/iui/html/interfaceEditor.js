@@ -519,6 +519,8 @@
     topNumbers=[0,0,0];
     bottomNumbers=[0,0,0];
     
+    isPreload = [];
+    
     
     function start() {        
         var mainArea = dojo.byId("mainArea");
@@ -777,6 +779,7 @@
                     }
                 },
                 onComplete: function(items) {
+                    isPreload = [true,true,true,true,true,true];
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);    
                     dojo.byId("form1"+1).value = topNumbers[0];
@@ -915,6 +918,7 @@
     }
     
     function dynamicForm(s,tab,i) {
+        var array = [];
         var second = [];
         var theForm = forms[--i];
         i++;
@@ -923,7 +927,28 @@
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
-            array = dojo.byId("tab"+i).getElementsByTagName("input");
+            if (!isPreload[i-1]) {
+                array = dojo.byId("tab"+i).getElementsByTagName("input");
+            }
+            else {
+                if (i<=3) {
+                    m = i-1;
+                    dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
+                        array.push(aim.pic);
+                        array.push(aim.word);
+                        array.push(aim.phrase);
+                    });
+                }
+                else {
+                    m = i-4;
+                    dojo.forEach(thisSchema.bottomTabs[m].audioImages,function(aim) {
+                        array.push(aim.pic);
+                        array.push(aim.word);
+                        array.push(aim.phrase);
+                    });                    
+                }
+                isPreload[i-1] = false;
+            }
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
