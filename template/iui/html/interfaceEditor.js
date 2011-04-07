@@ -936,8 +936,11 @@
                     m = i-1;
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
+                        console.log(aim.pic);
                         array.push(aim.word);
+                        console.log(aim.word);
                         array.push(aim.phrase);
+                        console.log(aim.phrase);
                     });
                 }
                 else {
