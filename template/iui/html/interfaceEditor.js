@@ -975,6 +975,53 @@
             }
             dojo.destroy("tab"+i);
         }
+        else {
+            if (!isPreload[i-1]) {
+                array = dojo.byId("tab"+i).getElementsByTagName("input");
+            }
+            else {
+                if (i<=3) {
+                    m = i-1;
+                    alert(JSON.stringify(thisSchema.topTabs[m]));
+                    dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
+                        array.push(aim.pic);
+                        console.log(aim.pic);
+                        array.push(aim.word);
+                        console.log(aim.word);
+                        array.push(aim.phrase);
+                        console.log(aim.phrase);
+                    });
+                }
+                else {
+                    m = i-4;
+                    dojo.forEach(thisSchema.bottomTabs[m].audioImages,function(aim) {
+                        array.push(aim.pic);
+                        array.push(aim.word);
+                        array.push(aim.phrase);
+                    });                    
+                }
+                isPreload[i-1] = false;
+            }
+            var theArray = arrays[--i];
+            i++;
+            if (theArray.length <= array.length) {
+                for (j=0; j<array.length; j++) {
+                    if (array[j].value!=null) {
+                        second[j] = array[j].value;
+                        theArray[j] = array[j].value;
+                    }
+                    else {
+                        second[j] = array[j];
+                        theArray[j] = array[j];                    
+                    }
+                }
+            }
+            else {
+                for (j=0; j<theArray.length; j++) {
+                    second[j] = theArray[j];
+                }
+            }            
+        }
         var div = dojo.create("div",{id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
