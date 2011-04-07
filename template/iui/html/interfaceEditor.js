@@ -954,8 +954,14 @@
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
-                    second[j] = array[j].value;
-                    theArray[j] = array[j].value;
+                    if (array[j].value!=null) {
+                        second[j] = array[j].value;
+                        theArray[j] = array[j].value;
+                    }
+                    else {
+                        second[j] = array[j];
+                        theArray[j] = array[j];                    
+                    }
                 }
             }
             else {
