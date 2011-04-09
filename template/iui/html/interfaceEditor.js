@@ -761,7 +761,7 @@
                             }
                             i++;
                         });
-                        console.log(thisSchema.topTabs[0]);
+                        console.log(thisSchema);
                     }
                     if (item.bottomTabs!=null) {
                         dojo.forEach(item.bottomTabs, function(aTab) {
