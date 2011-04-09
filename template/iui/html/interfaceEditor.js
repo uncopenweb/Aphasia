@@ -1453,10 +1453,11 @@
                     if (thisSchema.id.trim() != "") {
                         data.deleteOne({
                              query:{'_id':thisSchema.id},
-                             save:true
+                             save:true,
+                             onComplete: data.newItem(thisSchema)
                         });
                     }
-                    data.newItem(thisSchema);
+                    //data.newItem(thisSchema);
                     data.save();
                     donePage(ids);
                 });
