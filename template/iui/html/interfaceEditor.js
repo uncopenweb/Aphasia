@@ -930,7 +930,6 @@
     }
     
     function dynamicForm(s,tab,i) {
-        alert(JSON.stringify(thisSchema));
         var array = [];
         var second = [];
         var theForm = forms[--i];
@@ -947,6 +946,7 @@
             else {
                 if (i<=3) {
                     m = i-1;
+                    alert(thisSchema.topTabs[m].audioImages.length);
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
                         console.log(aim.pic);
