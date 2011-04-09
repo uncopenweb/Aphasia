@@ -980,7 +980,6 @@
                     second[j] = theArray[j];
                 }
             }
-            dojo.destroy("tab"+i);
         }
         else {
             var theArray = arrays[--i];
@@ -1002,6 +1001,9 @@
                     second[j] = theArray[j];
                 }
             }            
+        }
+        if (dojo.byId("tab"+i)!=null) {
+            dojo.destroy("tab"+i);
         }
         var div = dojo.create("div",{id:"tab"+i},tab);
         var table = dojo.create("table",{className:"contentTable"},div);
