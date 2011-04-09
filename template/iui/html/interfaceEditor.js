@@ -1457,6 +1457,9 @@
                              onComplete: finish(data,ids)
                         });
                     }
+                    else {
+                        finish(data,ids);
+                    }
                 });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
