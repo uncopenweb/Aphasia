@@ -1347,8 +1347,7 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
-                //rearrange(ids);
-                donePage(ids);
+                rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
             
@@ -1383,7 +1382,7 @@
         // });
         
         
-        for (var i=1; i<7; i++) {
+        /*for (var i=1; i<7; i++) {
             if (dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value>0) {
                 for (var j=0; j<dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value; j++) {
                     if (i<4) {
@@ -1437,7 +1436,7 @@
         })) {
             delete thisSchema.bottomTabs;
             delete thisItem.bottomTabs;
-        }
+        }*/
 
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
             var db = uow.getDatabase({
