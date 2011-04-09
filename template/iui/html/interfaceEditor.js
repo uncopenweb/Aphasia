@@ -1450,12 +1450,13 @@
                 console.log(thisItem);
 
                 db.then(function(data) {
-                    if (thisSchema.id.trim() != "") {
-                        data.updateOne({
-                            //query:{'_id':thisItem.id},
-                            data: thisItem,
-                            save: true
-                        });
+                    // if (thisSchema.id.trim() != "") {
+                        // data.updateOne({
+                            // query:{'_id':thisItem.id},
+                            // data: thisItem,
+                            // save: true
+                        // });
+                        data.save(thisSchema);
                     }
                     else {
                         data.newItem(thisSchema);
