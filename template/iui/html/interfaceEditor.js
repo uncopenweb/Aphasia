@@ -795,7 +795,6 @@
     }
     
     function tabStep(ids, j, word, ulList) {
-        alert(JSON.stringify(thisSchema.topTabs[0]));
         var div = dojo.byId(ids[j]);
         var theTab = thisSchema.topTabs;
         if (j==2) {
@@ -920,7 +919,6 @@
     }
     
     function dynamicForm(s,tab,i) {
-        alert(JSON.stringify(thisSchema.topTabs[0]));
         var array = [];
         var second = [];
         var theForm = forms[--i];
