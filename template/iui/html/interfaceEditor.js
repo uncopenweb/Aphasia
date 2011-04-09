@@ -745,6 +745,7 @@
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
                     if (item.topTabs!=null) {
+                        alert(item.topTabs.length);
                         dojo.forEach(item.topTabs, function(aTab) {
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
                             thisSchema.topTabs[i].name = "#"+aTab.nameTag;
