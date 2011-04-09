@@ -760,6 +760,7 @@
                             }
                             i++;
                         });
+                        console.log(thisSchema.topTabs[0]);
                     }
                     if (item.bottomTabs!=null) {
                         dojo.forEach(item.bottomTabs, function(aTab) {
