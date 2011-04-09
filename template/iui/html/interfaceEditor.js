@@ -986,9 +986,8 @@
         }
         else {
             m=i-1;
-            alert(i);
             if (!isPreload[m]) {
-                array = dojo.byId("tab"+i).getElementsByTagName("input");
+                array = dojo.byId("tab"+m).getElementsByTagName("input");
             }
             else {
                 if (i<=3) {
