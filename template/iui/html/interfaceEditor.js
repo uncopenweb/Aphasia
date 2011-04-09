@@ -767,7 +767,6 @@
                             }
                             i++;
                         });
-                        console.log(thisSchema);
                     }
                     k=0;
                     if (item.bottomTabs!=null) {
@@ -1448,6 +1447,7 @@
                 // });
             // });
                 console.log(thisItem);
+                console.log(thisSchema);
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
                         data.updateOne({
