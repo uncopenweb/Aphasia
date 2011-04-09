@@ -747,7 +747,6 @@
                 query: {'_id':id},
                 onItem: function(item) {
                     console.log(item);
-                    console.log(thisSchema);
                     thisItem = item;
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
@@ -1449,12 +1448,12 @@
                 // });
             // });
                 console.log(thisItem);
-                console.log(thisSchema);
+
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
                         data.updateOne({
                             query:{'_id':thisItem.id},
-                            data: thisSchema,
+                            data: thisItem,
                             save: true
                         });
                     }
