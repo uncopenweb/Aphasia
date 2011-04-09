@@ -1451,8 +1451,7 @@
 
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
-                        data.deleteItem(thisItem);
-                        data.newItem(thisSchema);
+                        
                     }                    
                     else {
                         data.newItem(thisSchema);
