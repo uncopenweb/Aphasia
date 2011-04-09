@@ -746,6 +746,8 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
+                    console.log(item);
+                    console.log(thisSchema);
                     thisItem = item;
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
