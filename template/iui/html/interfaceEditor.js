@@ -930,7 +930,8 @@
         var item2 = "";
         var item3 = "";
         if (dojo.byId("tab"+i) !=null) {
-            if (!isPreload[i-1]) {
+            m=i-1;
+            if (!isPreload[m]) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
             else {
@@ -978,7 +979,8 @@
             dojo.destroy("tab"+i);
         }
         else {
-            if (!isPreload[i-1]) {
+            m=i-1;
+            if (!isPreload[m]) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
             else {
