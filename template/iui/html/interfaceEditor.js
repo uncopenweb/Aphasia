@@ -1469,8 +1469,8 @@
             // });
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
-                        data.update({
-                            query:{'_id':thisSchema.id},
+                        data.updateOne({
+                            //query:{'_id':thisSchema.id},
                             data: thisSchema,
                             save: true
                         });
