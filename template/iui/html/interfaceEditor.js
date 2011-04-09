@@ -1455,7 +1455,9 @@
                              query:{'_id':thisSchema.id},
                              save:true,
                              onComplete: function() {
-                                finish(data,ids);
+                                data.newItem(thisSchema);
+                                data.save();
+                                donePage(ids);
                              }
                         });
                     }
