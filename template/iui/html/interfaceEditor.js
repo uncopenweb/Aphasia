@@ -919,6 +919,7 @@
     }
     
     function dynamicForm(s,tab,i) {
+        alert(JSON.stringify(thisSchema.topTabs[m]));
         var array = [];
         var second = [];
         var theForm = forms[--i];
