@@ -1451,16 +1451,12 @@
 
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
-                        // data.updateOne({
-                            // query:{'_id':thisItem.id},
-                            // data: thisItem,
-                            // save: true
-                        // });
-                        data.save(thisSchema);
+                        data.deleteOne({
+                             query:{'_id':thisSchema.id},
+                             save:true
+                        });
                     }
-                    else {
-                        data.newItem(thisSchema);
-                    }
+                    data.newItem(thisSchema);
                     data.save();
                     donePage(ids);
                 });
