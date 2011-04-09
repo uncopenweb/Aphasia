@@ -1480,6 +1480,7 @@
     }
     
     function donePage(ids,deleteItem) {
+        alert(JSON.stringify(thisSchema));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
