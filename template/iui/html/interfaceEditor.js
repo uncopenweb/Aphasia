@@ -737,6 +737,7 @@
         });
         var i=0;
         var j=0;
+        var k=0;
         db.then(function(data) {
             data.fetch({
                 query: {'_id':id},
@@ -747,34 +748,39 @@
                     if (item.topTabs!=null) {
                         alert(item.topTabs.length);
                         dojo.forEach(item.topTabs, function(aTab) {
+                            k=0;
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
                             thisSchema.topTabs[i].name = "#"+aTab.nameTag;
                             thisSchema.topTabs[i].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
-                                    thisSchema.topTabs[i].audioImages.pic = aPiece.pic;
-                                    thisSchema.topTabs[i].audioImages.word = aPiece.word;
-                                    thisSchema.topTabs[i].audioImages.image = aPiece.image;
-                                    thisSchema.topTabs[i].audioImages.phrase = aPiece.phrase;
+                                    thisSchema.topTabs[i].audioImages[k].pic = aPiece.pic;
+                                    thisSchema.topTabs[i].audioImages[k].word = aPiece.word;
+                                    thisSchema.topTabs[i].audioImages[k].image = aPiece.image;
+                                    thisSchema.topTabs[i].audioImages[k].phrase = aPiece.phrase;
                                     topNumbers[i]++;
+                                    k++;
                                 });
                             }
                             i++;
                         });
                         console.log(thisSchema);
                     }
+                    k=0;
                     if (item.bottomTabs!=null) {
                         dojo.forEach(item.bottomTabs, function(aTab) {
+                            k=0;
                             thisSchema.bottomTabs[j].nameTag = aTab.nameTag;
                             thisSchema.bottomTabs[j].name = "#"+aTab.nameTag;
                             thisSchema.bottomTabs[j].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
-                                    thisSchema.bottomTabs[j].audioImages.pic = aPiece.pic;
-                                    thisSchema.bottomTabs[j].audioImages.word = aPiece.word;
-                                    thisSchema.bottomTabs[j].audioImages.image = aPiece.image;
-                                    thisSchema.bottomTabs[j].audioImages.phrase = aPiece.phrase;
-                                    bottomNumbers[i]++;
+                                    thisSchema.bottomTabs[j].audioImages[k].pic = aPiece.pic;
+                                    thisSchema.bottomTabs[j].audioImages[k].word = aPiece.word;
+                                    thisSchema.bottomTabs[j].audioImages[k].image = aPiece.image;
+                                    thisSchema.bottomTabs[j].audioImages[k].phrase = aPiece.phrase;
+                                    bottomNumbers[j]++;
+                                    k++;
                                 });
                             }
                             j++;                        
@@ -989,11 +995,11 @@
                     alert(JSON.stringify(thisSchema.topTabs[m]));
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
-                        console.log(aim.pic);
+                        //console.log(aim.pic);
                         array.push(aim.word);
-                        console.log(aim.word);
+                        //console.log(aim.word);
                         array.push(aim.phrase);
-                        console.log(aim.phrase);
+                        //console.log(aim.phrase);
                     });
                 }
                 else {
