@@ -1452,7 +1452,7 @@
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
                         data.updateOne({
-                            query:{'_id':thisItem.id},
+                            //query:{'_id':thisItem.id},
                             data: thisItem,
                             save: true
                         });
