@@ -1469,7 +1469,7 @@
             // });
                 db.then(function(data) {
                     if (thisSchema.id.trim() != "") {
-                        data.putOne({
+                        data.put({
                             query:{'_id':thisSchema.id},
                             data: thisSchema,
                             save: true
