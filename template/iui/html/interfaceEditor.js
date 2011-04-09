@@ -1454,7 +1454,9 @@
                         data.deleteOne({
                              query:{'_id':thisSchema.id},
                              save:true,
-                             onComplete: finish(data,ids)
+                             onComplete: function() {
+                                finish(data,ids);
+                             }
                         });
                     }
                     else {
