@@ -1454,17 +1454,20 @@
                         data.deleteOne({
                              query:{'_id':thisSchema.id},
                              save:true,
-                             onComplete: data.newItem(thisSchema)
+                             onComplete: finish(data,ids)
                         });
                     }
-                    //data.newItem(thisSchema);
-                    data.save();
-                    donePage(ids);
                 });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
             });
         }
+    }
+    
+    function finish(data,ids) {
+        data.newItem(thisSchema);
+        data.save();
+        donePage(ids);
     }
     
     function donePage(ids,deleteItem) {
