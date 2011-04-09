@@ -521,6 +521,8 @@
     
     isPreload = [];
     
+    thisItem = {};
+    
     
     function start() {        
         var mainArea = dojo.byId("mainArea");
@@ -742,7 +744,7 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
-                    console.log(item);
+                    thisItem = item;
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
                     if (item.topTabs!=null) {
@@ -1100,9 +1102,9 @@
                 var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
                 var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
                 var tr = dojo.create("tr",null,table);
-                thisSchema.topTabs[0].nameTag = dojo.byId("text111").value;
-                thisSchema.topTabs[0].image = dojo.byId("text121").value;
-                thisSchema.topTabs[0].name = "#"+dojo.byId("text111").value;
+                thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].nameTag = dojo.byId("text111").value;
+                thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].image = dojo.byId("text121").value;
+                thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].name = "#"+dojo.byId("text111").value;
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
                 var i=1;
@@ -1123,28 +1125,28 @@
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                        thisSchema.topTabs[0].audioImages[j].pic = info[0].value;
-                        thisSchema.topTabs[0].audioImages[j].word = info[1].value;
-                        thisSchema.topTabs[0].audioImages[j].nameTag = uniqueId2;
-                        thisSchema.topTabs[0].audioImages[j].phrase = info[2].value;
+                        thisItem.topTabs[0].audioImages[j].pic = thisSchema.topTabs[0].audioImages[j].pic = info[0].value;
+                        thisItem.topTabs[0].audioImages[j].word = thisSchema.topTabs[0].audioImages[j].word = info[1].value;
+                        thisItem.topTabs[0].audioImages[j].nameTag = thisSchema.topTabs[0].audioImages[j].nameTag = uniqueId2;
+                        thisItem.topTabs[0].audioImages[j].phrase = thisSchema.topTabs[0].audioImages[j].phrase = info[2].value;
                         uniqueId2++;
                         i++;
                     }
                 }
         }
         else {
-            thisSchema.topTabs[0].nameTag = "";
-            thisSchema.topTabs[0].name = "";
-            thisSchema.topTabs[0].image = "";
+            thisItem.topTabs[0].nameTag =thisSchema.topTabs[0].nameTag = "";
+            thisItem.topTabs[0].name =thisSchema.topTabs[0].name = "";
+            thisItem.topTabs[0].image =thisSchema.topTabs[0].image = "";
         } 
         
             if (dojo.byId("text112").value.trim() != "" || (dojo.byId("text122").value.trim() != "" && dojo.byId("text122").className != "disabled")) {
                 var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},topTabs);
                 var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
                 var tr = dojo.create("tr",null,table);
-                thisSchema.topTabs[1].nameTag = dojo.byId("text112").value;
-                thisSchema.topTabs[1].image = dojo.byId("text122").value;
-                thisSchema.topTabs[1].name = "#"+dojo.byId("text112").value;
+                thisItem.topTabs[1].nameTag = thisSchema.topTabs[1].nameTag = dojo.byId("text112").value;
+                thisItem.topTabs[1].image = thisSchema.topTabs[1].image = dojo.byId("text122").value;
+                thisItem.topTabs[1].name = thisSchema.topTabs[1].name = "#"+dojo.byId("text112").value;
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[1].nameTag},tr);
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[1].image},tr);
                 
@@ -1166,28 +1168,28 @@
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                         var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                        thisSchema.topTabs[1].audioImages[j].pic = info[0].value;
-                        thisSchema.topTabs[1].audioImages[j].word = info[1].value;
-                        thisSchema.topTabs[1].audioImages[j].nameTag = uniqueId2;
-                        thisSchema.topTabs[1].audioImages[j].phrase = info[2].value;
+                        thisItem.topTabs[1].audioImages[j].pic = thisSchema.topTabs[1].audioImages[j].pic = info[0].value;
+                        thisItem.topTabs[1].audioImages[j].word = thisSchema.topTabs[1].audioImages[j].word = info[1].value;
+                        thisItem.topTabs[1].audioImages[j].nameTag = thisSchema.topTabs[1].audioImages[j].nameTag = uniqueId2;
+                        thisItem.topTabs[1].audioImages[j].phrase = thisSchema.topTabs[1].audioImages[j].phrase = info[2].value;
                         uniqueId2++;
                         i++;
                     }
                 }
         }
         else {
-            thisSchema.topTabs[1].nameTag = "";
-            thisSchema.topTabs[1].name = "";
-            thisSchema.topTabs[1].image = "";
+            thisItem.topTabs[1].nameTag =thisSchema.topTabs[1].nameTag = "";
+            thisItem.topTabs[1].name =thisSchema.topTabs[1].name = "";
+            thisItem.topTabs[1].image =thisSchema.topTabs[1].image = "";
         } 
         
             if (dojo.byId("text113").value.trim() != "" || (dojo.byId("text123").value.trim() != "" && dojo.byId("text123").className != "disabled")) {
             var tab3 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 3</b>"},topTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
-            thisSchema.topTabs[2].nameTag = dojo.byId("text113").value;
-            thisSchema.topTabs[2].image = dojo.byId("text123").value;
-            thisSchema.topTabs[2].name = "#"+dojo.byId("text113").value;
+            thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].nameTag = dojo.byId("text113").value;
+            thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].image = dojo.byId("text123").value;
+            thisItem.topTabs[2].name = thisSchema.topTabs[2].name = "#"+dojo.byId("text113").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[2].image},tr);
             var i=1;
@@ -1208,19 +1210,19 @@
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                    thisSchema.topTabs[2].audioImages[j].pic = info[0].value;
-                    thisSchema.topTabs[2].audioImages[j].word = info[1].value;
-                    thisSchema.topTabs[2].audioImages[j].nameTag = uniqueId2;
-                    thisSchema.topTabs[2].audioImages[j].phrase = info[2].value;
+                    thisItem.topTabs[2].audioImages[j].pic = thisSchema.topTabs[2].audioImages[j].pic = info[0].value;
+                    thisItem.topTabs[2].audioImages[j].word = thisSchema.topTabs[2].audioImages[j].word = info[1].value;
+                    thisItem.topTabs[2].audioImages[j].nameTag = thisSchema.topTabs[2].audioImages[j].nameTag = uniqueId2;
+                    thisItem.topTabs[2].audioImages[j].phrase = thisSchema.topTabs[2].audioImages[j].phrase = info[2].value;
                     uniqueId2++;
                     i++;
                 }
             }
         }
         else {
-            thisSchema.topTabs[2].nameTag = "";
-            thisSchema.topTabs[2].name = "";
-            thisSchema.topTabs[2].image = "";
+            thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].nameTag = "";
+            thisItem.topTabs[2].name =thisSchema.topTabs[2].name = "";
+            thisItem.topTabs[2].image =thisSchema.topTabs[2].image = "";
         } 
         
         
@@ -1233,9 +1235,9 @@
             var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
             var tr = dojo.create("tr",null,table);
-            thisSchema.bottomTabs[0].nameTag = dojo.byId("text114").value;
-            thisSchema.bottomTabs[0].image = dojo.byId("text124").value;
-            thisSchema.bottomTabs[0].name = "#"+dojo.byId("text114").value;
+            thisItem.bottomTabs[0].nameTag = thisSchema.bottomTabs[0].nameTag = dojo.byId("text114").value;
+            thisItem.bottomTabs[0].image = thisSchema.bottomTabs[0].image = dojo.byId("text124").value;
+            thisItem.bottomTabs[0].name = thisSchema.bottomTabs[0].name = "#"+dojo.byId("text114").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[0].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[0].image},tr);
             var i=1;        
@@ -1256,28 +1258,28 @@
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                    thisSchema.bottomTabs[0].audioImages[j].pic = info[0].value;
-                    thisSchema.bottomTabs[0].audioImages[j].word = info[1].value;
-                    thisSchema.bottomTabs[0].audioImages[j].nameTag = uniqueId2;
-                    thisSchema.bottomTabs[0].audioImages[j].phrase = info[2].value;
+                    thisItem.bottomTabs[0].audioImages[j].pic = thisSchema.bottomTabs[0].audioImages[j].pic = info[0].value;
+                    thisItem.bottomTabs[0].audioImages[j].word = thisSchema.bottomTabs[0].audioImages[j].word = info[1].value;
+                    thisItem.bottomTabs[0].audioImages[j].nameTag = thisSchema.bottomTabs[0].audioImages[j].nameTag = uniqueId2;
+                    thisItem.bottomTabs[0].audioImages[j].phrase = thisSchema.bottomTabs[0].audioImages[j].phrase = info[2].value;
                     uniqueId2++;
                     i++;
                 }
             }
         }
         else {
-            thisSchema.bottomTabs[0].nameTag = "";
-            thisSchema.bottomTabs[0].name = "";
-            thisSchema.bottomTabs[0].image = "";
+            thisItem.bottomTabs[0].nameTag = thisSchema.bottomTabs[0].nameTag = "";
+            thisItem.bottomTabs[0].name = thisSchema.bottomTabs[0].name = "";
+            thisItem.bottomTabs[0].image = thisSchema.bottomTabs[0].image = "";
         } 
         
             if (dojo.byId("text115").value.trim() != "" || (dojo.byId("text125").value.trim() != "" && dojo.byId("text125").className != "disabled")) {
             var tab2 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 2</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab2);
             var tr = dojo.create("tr",null,table);
-            thisSchema.bottomTabs[1].nameTag = dojo.byId("text115").value;
-            thisSchema.bottomTabs[1].image = dojo.byId("text125").value;
-            thisSchema.bottomTabs[1].name = "#"+dojo.byId("text115").value;
+            thisItem.bottomTabs[1].nameTag = thisSchema.bottomTabs[1].nameTag = dojo.byId("text115").value;
+            thisItem.bottomTabs[1].image = thisSchema.bottomTabs[1].image = dojo.byId("text125").value;
+            thisItem.bottomTabs[1].name = thisSchema.bottomTabs[1].name = "#"+dojo.byId("text115").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[1].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[1].image},tr);
             var i=1;
@@ -1298,28 +1300,28 @@
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                    thisSchema.bottomTabs[1].audioImages[j].pic = info[0].value;
-                    thisSchema.bottomTabs[1].audioImages[j].word = info[1].value;
-                    thisSchema.bottomTabs[1].audioImages[j].nameTag = uniqueId2;
-                    thisSchema.bottomTabs[1].audioImages[j].phrase = info[2].value;
+                    thisItem.bottomTabs[1].audioImages[j].pic = thisSchema.bottomTabs[1].audioImages[j].pic = info[0].value;
+                    thisItem.bottomTabs[1].audioImages[j].word = thisSchema.bottomTabs[1].audioImages[j].word = info[1].value;
+                    thisItem.bottomTabs[1].audioImages[j].nameTag = thisSchema.bottomTabs[1].audioImages[j].nameTag = uniqueId2;
+                    thisItem.bottomTabs[1].audioImages[j].phrase = thisSchema.bottomTabs[1].audioImages[j].phrase = info[2].value;
                     uniqueId2++;
                     i++;
                 }
             }
         }
         else {
-            thisSchema.bottomTabs[1].nameTag = "";
-            thisSchema.bottomTabs[1].name = "";
-            thisSchema.bottomTabs[1].image = "";
+            thisItem.bottomTabs[1].nameTag = thisSchema.bottomTabs[1].nameTag = "";
+            thisItem.bottomTabs[1].name= thisSchema.bottomTabs[1].name = "";
+            thisItem.bottomTabs[1].image = thisSchema.bottomTabs[1].image = "";
         } 
         
             if (dojo.byId("text116").value.trim() != "" || (dojo.byId("text126").value.trim() != "" && dojo.byId("text126").className != "disabled")) {
             var tab3 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 3</b>"},bottomTabs);
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
-            thisSchema.bottomTabs[2].nameTag = dojo.byId("text116").value;
-            thisSchema.bottomTabs[2].image = dojo.byId("text126").value;
-            thisSchema.bottomTabs[2].name = "#"+dojo.byId("text116").value;
+            thisItem.bottomTabs[2].nameTag = thisSchema.bottomTabs[2].nameTag = dojo.byId("text116").value;
+            thisItem.bottomTabs[2].image = thisSchema.bottomTabs[2].image = dojo.byId("text126").value;
+            thisItem.bottomTabs[2].name = thisSchema.bottomTabs[2].name = "#"+dojo.byId("text116").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.bottomTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.bottomTabs[2].image},tr);
             var i=1;
@@ -1340,19 +1342,19 @@
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[0].value}, tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[1].value},tr);
                     var td = dojo.create("td",{className:"dataTd", innerHTML:info[2].value},tr);
-                    thisSchema.bottomTabs[2].audioImages[j].pic = info[0].value;
-                    thisSchema.bottomTabs[2].audioImages[j].word = info[1].value;
-                    thisSchema.bottomTabs[2].audioImages[j].nameTag = uniqueId2;
-                    thisSchema.bottomTabs[2].audioImages[j].phrase = info[2].value;
+                    thisItem.bottomTabs[2].audioImages[j].pic = thisSchema.bottomTabs[2].audioImages[j].pic = info[0].value;
+                    thisItem.bottomTabs[2].audioImages[j].word = thisSchema.bottomTabs[2].audioImages[j].word = info[1].value;
+                    thisItem.bottomTabs[2].audioImages[j].nameTag = thisSchema.bottomTabs[2].audioImages[j].nameTag = uniqueId2;
+                    thisItem.bottomTabs[2].audioImages[j].phrase = thisSchema.bottomTabs[2].audioImages[j].phrase = info[2].value;
                     uniqueId2++;
                     i++;
                 }
             }
         }
         else {
-            thisSchema.bottomTabs[2].nameTag = "";
-            thisSchema.bottomTabs[2].name = "";
-            thisSchema.bottomTabs[2].image = "";
+            thisItem.bottomTabs[2].nameTag = thisSchema.bottomTabs[2].nameTag = "";
+            thisItem.bottomTabs[2].name = thisSchema.bottomTabs[2].name = "";
+            thisItem.bottomTabs[2].image = thisSchema.bottomTabs[2].image = "";
         } 
         
         var backwardButton = dojo.create("button",{innerHTML:"Back"},div);
@@ -1409,20 +1411,24 @@
                         var k = i-1;
                         if (thisSchema.topTabs[k].audioImages[j].pic.trim() == "") {
                             thisSchema.topTabs[k].audioImages.splice(j,thisSchema.topTabs[k].audioImages.length-j+1);
+                            thisItem.topTabs[k].audioImages.splice(j,thisItem.topTabs[k].audioImages.length-j+1);
                             break;
                         }
                         else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
                             thisSchema.topTabs[k].audioImages.splice(j+1,thisSchema.topTabs[k].audioImages.length-j);
+                            thisItem.topTabs[k].audioImages.splice(j+1,thisItem.topTabs[k].audioImages.length-j);
                         }
                     }
                     else {
                         var k = i-4;
                         if (thisSchema.bottomTabs[k].audioImages[j].pic.trim() == "") {
                             thisSchema.bottomTabs[k].audioImages.splice(j,thisSchema.bottomTabs[i].audioImages.length-j+1);
+                            thisItem.bottomTabs[k].audioImages.splice(j,thisItem.bottomTabs[k].audioImages.length-j+1);
                             break;
                         }
                         else if (j==dojo.byId("form1"+i).options[dojo.byId("form1"+i).selectedIndex].value-1) {
                             thisSchema.bottomTabs[k].audioImages.splice(j+1,thisSchema.bottomTabs[k].audioImages.length-j);
+                            thisItem.bottomTabs[k].audioImages.splice(j+1,thisItem.bottomTabs[k].audioImages.length-j);
                         }                
                     }
                 }
@@ -1431,10 +1437,12 @@
                 if (i<4) {
                     var k = i-1;
                     thisSchema.topTabs[k].audioImages.splice(0,thisSchema.topTabs[k].audioImages.length);
+                    thisItem.topTabs[k].audioImages.splice(0,thisItem.topTabs[k].audioImages.length);
                 }
                 else {
                     var k = i-4;
                     thisSchema.bottomTabs[k].audioImages.splice(0,thisSchema.bottomTabs[k].audioImages.length);
+                    thisItem.bottomTabs[k].audioImages.splice(0,thisItem.bottomTabs[k].audioImages.length);
                 }
             }
         }
@@ -1443,11 +1451,13 @@
             return item.nameTag.trim() == "";
         })) {
             delete thisSchema.topTabs;
+            delete thisItem.topTabs;
         }
         if (dojo.every(thisSchema.bottomTabs, function(item) {
             return item.nameTag.trim() == "";
         })) {
             delete thisSchema.bottomTabs;
+            delete thisItem.bottomTabs;
         }
 
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
@@ -1471,7 +1481,7 @@
                     if (thisSchema.id.trim() != "") {
                         data.updateOne({
                             //query:{'_id':thisSchema.id},
-                            data: thisSchema,
+                            data: thisItem,
                             save: true
                         });
                     }
