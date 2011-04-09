@@ -795,6 +795,7 @@
     }
     
     function tabStep(ids, j, word, ulList) {
+        alert(JSON.stringify(thisSchema.topTabs[0]));
         var div = dojo.byId(ids[j]);
         var theTab = thisSchema.topTabs;
         if (j==2) {
