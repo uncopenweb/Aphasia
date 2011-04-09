@@ -1450,31 +1450,20 @@
                 console.log(thisItem);
 
                 db.then(function(data) {
-                    if (thisSchema.id.trim() != "") {
-                        data.deleteOne({
-                             query:{'_id':thisSchema.id},
-                             save:true,
-                             onComplete: function() {
-                                data.newItem(thisSchema);
-                                data.save();
-                                donePage(ids);
-                             }
-                        });
-                    }
+                    if (thisSchema.id.trim()!="") {
+                        data.deleteItem(thisItem);
+                        data.newItem(thisSchema);
+                    }                    
                     else {
-                        finish(data,ids);
+                        data.newItem(thisSchema);
                     }
+                    data.save();
+                    donePage(ids);
                 });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
             });
         }
-    }
-    
-    function finish(data,ids) {
-        data.newItem(thisSchema);
-        data.save();
-        donePage(ids);
     }
     
     function donePage(ids,deleteItem) {
