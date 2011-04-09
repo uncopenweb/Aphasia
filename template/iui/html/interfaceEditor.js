@@ -748,7 +748,6 @@
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
                     if (item.topTabs!=null) {
-                        alert(item.topTabs.length);
                         dojo.forEach(item.topTabs, function(aTab) {
                             k=0;
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
@@ -945,7 +944,6 @@
             else {
                 if (i<=3) {
                     m = i-1;
-                    alert(JSON.stringify(thisSchema.topTabs[m]));
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
                         console.log(aim.pic);
@@ -994,7 +992,6 @@
             else {
                 if (i<=3) {
                     m = i-1;
-                    alert(JSON.stringify(thisSchema.topTabs[m]));
                     dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                         array.push(aim.pic);
                         //console.log(aim.pic);
@@ -1498,7 +1495,6 @@
     }
     
     function donePage(ids,deleteItem) {
-        alert(JSON.stringify(thisSchema));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
