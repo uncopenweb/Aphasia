@@ -940,7 +940,6 @@
         var item3 = "";
         m=i-1;
         if (isPreload[m]) {
-            array = dojo.byId("tab"+i).getElementsByTagName("input");
             if (i<=3) {
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
