@@ -938,34 +938,30 @@
         var item1 = "";
         var item2 = "";
         var item3 = "";
-        if (dojo.byId("tab"+i) !=null) {
-            m=i-1;
-            if (!isPreload[m]) {
-                array = dojo.byId("tab"+i).getElementsByTagName("input");
+        m=i-1;
+        if (isPreload[m]) {
+            array = dojo.byId("tab"+i).getElementsByTagName("input");
+            if (i<=3) {
+                m = i-1;
+                dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
+                    array.push(aim.pic);
+                    console.log(aim.pic);
+                    array.push(aim.word);
+                    console.log(aim.word);
+                    array.push(aim.phrase);
+                    console.log(aim.phrase);
+                });
             }
             else {
-                if (i<=3) {
-                    m = i-1;
-                    alert(thisSchema.topTabs[m].audioImages.length);
-                    dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
-                        array.push(aim.pic);
-                        console.log(aim.pic);
-                        array.push(aim.word);
-                        console.log(aim.word);
-                        array.push(aim.phrase);
-                        console.log(aim.phrase);
-                    });
-                }
-                else {
-                    m = i-4;
-                    dojo.forEach(thisSchema.bottomTabs[m].audioImages,function(aim) {
-                        array.push(aim.pic);
-                        array.push(aim.word);
-                        array.push(aim.phrase);
-                    });                    
-                }
-                isPreload[i-1] = false;
+                m = i-4;
+                dojo.forEach(thisSchema.bottomTabs[m].audioImages,function(aim) {
+                    array.push(aim.pic);
+                    array.push(aim.word);
+                    array.push(aim.phrase);
+                });                    
             }
+            isPreload[i-1] = false;
+                
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
@@ -988,11 +984,6 @@
             dojo.destroy("tab"+i);
         }
         else {
-            m=i-1;
-            if (isPreload[m]) {
-                isPreload[m] = false;
-            }
-
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
