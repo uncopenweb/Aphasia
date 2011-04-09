@@ -1430,7 +1430,6 @@
             delete thisSchema.bottomTabs;
             delete thisItem.bottomTabs;
         }*/
-        alert(JSON.stringify(thisItem));
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
             var db = uow.getDatabase({
                 database: 'Aphasia',
