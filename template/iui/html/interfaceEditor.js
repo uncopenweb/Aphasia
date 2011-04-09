@@ -616,6 +616,8 @@
                 if (c1.checked) {  
                     thisSchema = JSON.stringify(backUpSchema);
                     thisSchema = JSON.parse(thisSchema);
+                    thisItem = JSON.stringify(thisSchema);
+                    thisItem = JSON.parse(thisItem);
                     uniqueId = 1000;
                     uniqueId2 = 1000;
                     arrays = JSON.stringify(backUpArrays);
