@@ -970,7 +970,6 @@
     }
     
     function dynamicForm(s,tab,i) {
-        var array = [];
         var second = [];
         var theForm = forms[--i];
         i++;
@@ -978,7 +977,7 @@
         var item1 = "";
         var item2 = "";
         var item3 = "";
-   
+        console.log(dojo.byId("tab"+i));
         m=i-1;
         if (isPreload[m]) {
             isPreload[m] = false;
