@@ -1059,7 +1059,7 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         var h3 = dojo.create("div",{className:"second",innerHTML:"Theme Name for Interface: "+thisSchema.themeName},div);
         
-        alert(dojo.byId("text111").value);
+        alert(dojo.byId("text111").value=="");
         alert(dojo.byId("text112").value);
         alert(dojo.byId("text113").value);
         alert(dojo.byId("text114").value);
