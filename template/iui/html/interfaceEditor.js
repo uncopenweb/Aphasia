@@ -978,11 +978,7 @@
         var item1 = "";
         var item2 = "";
         var item3 = "";
-        
-        if (dojo.byId("tab"+i) != null) {
-            array = dojo.byId("tab"+i).getElementsByTagName("input");
-        }
-        console.log(array);
+   
         m=i-1;
         if (isPreload[m]) {
             isPreload[m] = false;
@@ -1025,6 +1021,10 @@
         }
         else {
             var theArray = arrays[--i];
+            if (dojo.byId("tab"+i) != null) {
+                array = dojo.byId("tab"+i).getElementsByTagName("input");
+                console.log(array);
+            }
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
