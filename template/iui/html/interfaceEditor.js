@@ -1021,7 +1021,6 @@
         }
         else {
             var theArray = arrays[--i];
-            alert(dojo.byId("tab"+i));
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
                 console.log(array);
