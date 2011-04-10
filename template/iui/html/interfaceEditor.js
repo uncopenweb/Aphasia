@@ -1020,6 +1020,9 @@
             }
         }
         else {
+            if (dojo.byId("tab"+i) != null) {
+                array = dojo.byId("tab"+i).getElementsByTagName("input");
+            }
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
