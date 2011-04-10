@@ -980,7 +980,7 @@
         var item2 = "";
         var item3 = "";
         m=i-1;
-        alert(array);
+        console.log(array);
         if (isPreload[m]) {
             isPreload[m] = false;
             if (i<=3) {
