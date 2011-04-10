@@ -843,16 +843,13 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
-            a.disabled = "";
         }
-        // if (text3.value!="0") {
-            // dynamicForm(text3,tab1,j);
-        // }
+
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", j));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
@@ -877,15 +874,13 @@
             text3.className = "";
             a.disabled = "";
         }
-        // if (text3.value!="0") {
-            // dynamicForm(text3,tab2,j+1);
-        // }
+
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,j+1));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"", "", k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
 
         
@@ -909,15 +904,13 @@
             text3.className = "";
             a.disabled = "";
         }
-        // if (text3.value!="0") {
-            // dynamicForm(text3,tab3,j+2);
-        // }
+
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
-            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,"","", k));
+            dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
 
         
