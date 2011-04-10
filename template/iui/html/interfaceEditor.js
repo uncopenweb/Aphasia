@@ -1022,7 +1022,6 @@
         else {
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
-                console.log(array);
             }
             var theArray = arrays[--i];
             i++;
@@ -1030,6 +1029,7 @@
                 for (j=0; j<array.length; j++) {
                     if (array[j].value!=null) {
                         second[j] = array[j].value;
+                        alert(second[j]);
                         theArray[j] = array[j].value;
                     }
                     else {
