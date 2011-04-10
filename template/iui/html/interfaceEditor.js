@@ -1448,12 +1448,14 @@
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
                         console.log(thisItem);
-                        data.updateOne({
-                            query:{'_id':thisSchema.id},
-                            data:{'topTabs':thisItem.topTabs,
-                                  'bottomTabs':thisItem.bottomTabs},
-                            save:true
-                        });
+                        // data.updateOne({
+                            // query:{'_id':thisSchema.id},
+                            // data:{'topTabs':thisItem.topTabs,
+                                  // 'bottomTabs':thisItem.bottomTabs},
+                            // save:true
+                        // });
+                        data.setValues(thisItem,'topTabs',thisItem.topTabs);
+                        data.setValues(thisItem,'bottomTabs',thisItem.bottomTabs);
                     }                    
                     else {
                         data.newItem(thisSchema);
