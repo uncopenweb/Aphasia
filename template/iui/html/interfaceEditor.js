@@ -1451,7 +1451,12 @@
 
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
-                        
+                        data.updateOne({
+                            query:{'_id':thisSchema.id},
+                            data:{'topTabs':thisItem.topTabs,
+                                  'bottomTabs':thisItem.bottomTabs},
+                            save:true
+                        });
                     }                    
                     else {
                         data.newItem(thisSchema);
