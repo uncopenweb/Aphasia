@@ -1337,6 +1337,7 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
+                console.log(thisItem);
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
