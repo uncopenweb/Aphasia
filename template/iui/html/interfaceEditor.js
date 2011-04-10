@@ -997,7 +997,7 @@
                     array.push(aim.phrase);
                 });                    
             }
-            isPreload[i-1] = false;
+            isPreload[m] = false;
                 
             var theArray = arrays[--i];
             i++;
