@@ -1447,7 +1447,7 @@
                     // }
                 // });
             // });
-                console.log(JSON.stringify(thisItem.topTabs));
+                console.log(thisItem.topTabs);
 
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
