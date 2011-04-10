@@ -1070,8 +1070,8 @@
                 var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab1);
                 var tr = dojo.create("tr",null,table);
                 thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].nameTag = dojo.byId("text111").value;
-                thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].image = dojo.byId("text121").value;
-                thisItem.topTabs[0].nameTag = thisSchema.topTabs[0].name = "#"+dojo.byId("text111").value;
+                thisItem.topTabs[0].image = thisSchema.topTabs[0].image = dojo.byId("text121").value;
+                thisItem.topTabs[0].name = thisSchema.topTabs[0].name = "#"+dojo.byId("text111").value;
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
                 var i=1;
@@ -1100,6 +1100,7 @@
                         i++;
                     }
                 }
+                console.log(thisItem);
         }
         else {
             thisItem.topTabs[0].nameTag =thisSchema.topTabs[0].nameTag = "";
@@ -1155,7 +1156,7 @@
             var table = dojo.create("table",{style:{"position":"relative", "left":"3%", "font-weight":"bold", "text-align":"center", "width":"50%"}},tab3);
             var tr = dojo.create("tr",null,table);
             thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].nameTag = dojo.byId("text113").value;
-            thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].image = dojo.byId("text123").value;
+            thisItem.topTabs[2].image = thisSchema.topTabs[2].image = dojo.byId("text123").value;
             thisItem.topTabs[2].name = thisSchema.topTabs[2].name = "#"+dojo.byId("text113").value;
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[2].nameTag},tr);
             var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[2].image},tr);
@@ -1335,7 +1336,6 @@
                 dojo.byId(ulList[2]).className = "td1";                
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
-            console.log(thisItem);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
                 rearrange(ids);
             
@@ -1444,7 +1444,6 @@
                     // }
                 // });
             // });
-                console.log(thisItem);
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
                         data.updateOne({
