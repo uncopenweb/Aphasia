@@ -838,7 +838,7 @@
             text3.className = "";
             a.disabled = "";
         }
-        // alert(text3.value);
+        alert(text3.value);
         // if (text3.value!="0") {
             // dynamicForm(text3,tab1,j);
         // }
