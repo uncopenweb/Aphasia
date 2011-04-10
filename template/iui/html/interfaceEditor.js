@@ -1452,8 +1452,8 @@
                     if (thisSchema.id.trim()!="") {
                         data.updateOne({
                             query:{'_id':thisSchema.id},
-                            data:{'topTabs':thisItem.topTabs,
-                                  'bottomTabs':thisItem.bottomTabs},
+                            data:{'topTabs':thisSchema.topTabs,
+                                  'bottomTabs':thisSchema.bottomTabs},
                             save:true
                         });
                     }                    
@@ -1470,7 +1470,7 @@
     }
     
     function donePage(ids,deleteItem) {
-        console.log(thisItem);
+        console.log(thisSchema);
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
