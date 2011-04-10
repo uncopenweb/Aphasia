@@ -837,6 +837,7 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
+            a.disabled = "";
         }
         if (text3.value!=0) {
             dynamicForm(text3,tab1,j);
@@ -868,6 +869,7 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
+            a.disabled = "";
         }
         if (text3.value!=0) {
             dynamicForm(text3,tab2,j+1);
@@ -899,6 +901,7 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
+            a.disabled = "";
         }
         if (text3.value!=0) {
             dynamicForm(text3,tab3,j+2);
