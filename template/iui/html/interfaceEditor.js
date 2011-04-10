@@ -864,7 +864,7 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
         }
-        if (parseInt(text3.value)!=0) {
+        if (text3.value!=0) {
             dynamicForm(text3,tab2,j+1);
         }
         for (var i=0; i<10; i++) {
@@ -893,7 +893,7 @@
         if (text2.value.trim()!="") {
             text3.disabled = "";
         }
-        if (parseInt(text3.value)!=0) {
+        if (text3.value!=0) {
             dynamicForm(text3,tab3,j+2);
         }
         for (var i=0; i<10; i++) {
