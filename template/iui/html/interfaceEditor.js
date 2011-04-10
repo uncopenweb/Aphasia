@@ -979,9 +979,10 @@
         var item1 = "";
         var item2 = "";
         var item3 = "";
+        
         m=i-1;
-        console.log(array);
         if (isPreload[m]) {
+            alert("this is preloaded");
             isPreload[m] = false;
             if (i<=3) {
                 m = i-1;
@@ -1021,6 +1022,7 @@
             }
         }
         else {
+            alert("this is not preloaded");
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
