@@ -979,6 +979,10 @@
         var item2 = "";
         var item3 = "";
         
+        if (dojo.byId("tab"+i) != null) {
+            array = dojo.byId("tab"+i).getElementsByTagName("input");
+        }
+        
         m=i-1;
         if (isPreload[m]) {
             isPreload[m] = false;
@@ -1020,9 +1024,6 @@
             }
         }
         else {
-            if (dojo.byId("tab"+i) != null) {
-                array = dojo.byId("tab"+i).getElementsByTagName("input");
-            }
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
