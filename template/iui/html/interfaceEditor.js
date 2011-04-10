@@ -620,9 +620,7 @@
                     thisItem = JSON.parse(thisItem);
                     uniqueId = 1000;
                     uniqueId2 = 1000;
-                    arrays = JSON.stringify(backUpArrays);
-                    arrays = JSON.parse(arrays);
-                    console.log(arrays);
+                    arrays=[[],[],[],[],[],[]];
                     forms = JSON.stringify(backUpForms);
                     forms = JSON.parse(forms);
                     dojo.empty(dojo.byId(ids[1]));
