@@ -982,7 +982,6 @@
         
         m=i-1;
         if (isPreload[m]) {
-            alert("this is preloaded");
             isPreload[m] = false;
             if (i<=3) {
                 m = i-1;
@@ -1022,7 +1021,7 @@
             }
         }
         else {
-            alert("this is not preloaded");
+            console.log(array);
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
