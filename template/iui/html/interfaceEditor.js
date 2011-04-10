@@ -746,7 +746,6 @@
             data.fetch({
                 query: {'_id':id},
                 onItem: function(item) {
-                    console.log(item);
                     thisItem = item;
                     thisSchema.themeName = item.themeName;
                     thisSchema.id = item._id;
@@ -944,11 +943,8 @@
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                     array.push(aim.pic);
-                    console.log(aim.pic);
                     array.push(aim.word);
-                    console.log(aim.word);
                     array.push(aim.phrase);
-                    console.log(aim.phrase);
                 });
             }
             else {
@@ -1340,7 +1336,6 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
-                console.log(thisItem);
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
@@ -1448,13 +1443,13 @@
                     // }
                 // });
             // });
-
+                console.log(thisItem);
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
                         data.updateOne({
                             query:{'_id':thisSchema.id},
-                            data:{'topTabs':thisSchema.topTabs,
-                                  'bottomTabs':thisSchema.bottomTabs},
+                            data:{'topTabs':thisItem.topTabs,
+                                  'bottomTabs':thisItem.bottomTabs},
                             save:true
                         });
                     }                    
@@ -1471,7 +1466,6 @@
     }
     
     function donePage(ids,deleteItem) {
-        console.log(thisSchema);
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
