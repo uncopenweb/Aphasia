@@ -622,6 +622,7 @@
                     uniqueId2 = 1000;
                     arrays = JSON.stringify(backUpArrays);
                     arrays = JSON.parse(arrays);
+                    console.log(arrays);
                     forms = JSON.stringify(backUpForms);
                     forms = JSON.parse(forms);
                     dojo.empty(dojo.byId(ids[1]));
@@ -1022,7 +1023,6 @@
         }
         else {
             var theArray = arrays[--i];
-            console.log(theArray);
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
