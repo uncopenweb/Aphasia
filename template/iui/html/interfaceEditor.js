@@ -523,6 +523,8 @@
     
     thisItem = {};
     
+    array = [];
+    
     
     function start() {        
         var mainArea = dojo.byId("mainArea");
