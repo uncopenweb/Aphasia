@@ -1059,16 +1059,12 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         var h3 = dojo.create("div",{className:"second",innerHTML:"Theme Name for Interface: "+thisSchema.themeName},div);
         
-        alert(dojo.byId("text111").value=="");
-        alert(dojo.byId("text112").value);
-        alert(dojo.byId("text113").value);
-        alert(dojo.byId("text114").value);
-        alert(dojo.byId("text115").value);
-        alert(dojo.byId("text116").value);
+
         if (dojo.byId("text111").value.trim() != "" || dojo.byId("text112").value.trim() != "" || dojo.byId("text113").value.trim() != "") {
             var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
             isNothing = false;
+            alert("isNothing is false");
         }
             if (dojo.byId("text111").value.trim() != "" || (dojo.byId("text121").value.trim() != "" && dojo.byId("text121").className != "disabled")) {
                 var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
@@ -1202,6 +1198,7 @@
             var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
+            alert("isNothing is false");
         }
             if (dojo.byId("text114").value.trim() != "" || (dojo.byId("text124").value.trim() != "" && dojo.byId("text124").className != "disabled")) {
             var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
