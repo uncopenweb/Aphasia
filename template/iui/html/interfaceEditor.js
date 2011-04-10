@@ -1447,6 +1447,7 @@
             // });
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
+                        console.log(thisItem);
                         data.updateOne({
                             query:{'_id':thisSchema.id},
                             data:{'topTabs':thisItem.topTabs,
