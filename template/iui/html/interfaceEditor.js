@@ -1022,9 +1022,9 @@
         else {
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
-                alert(array[1].value);
             }
             var theArray = arrays[--i];
+            console.log(theArray);
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
