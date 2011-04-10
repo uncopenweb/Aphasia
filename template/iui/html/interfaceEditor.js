@@ -1335,6 +1335,7 @@
                 dojo.byId(ulList[2]).className = "td1";                
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
+            console.log(thisItem);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
                 rearrange(ids);
             
