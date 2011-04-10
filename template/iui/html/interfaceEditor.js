@@ -1021,8 +1021,8 @@
             }
         }
         else {
-            console.log(array);
             var theArray = arrays[--i];
+            console.log(theArray);
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
