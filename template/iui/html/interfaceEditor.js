@@ -981,6 +981,7 @@
         var item3 = "";
         m=i-1;
         if (isPreload[m]) {
+            isPreload[m] = false;
             if (i<=3) {
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
@@ -997,7 +998,6 @@
                     array.push(aim.phrase);
                 });                    
             }
-            isPreload[m] = false;
                 
             var theArray = arrays[--i];
             i++;
