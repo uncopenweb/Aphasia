@@ -758,7 +758,7 @@
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
                                     if(aPiece.pic=="") {
-                                        break;
+                                        return;
                                     }
                                     thisSchema.topTabs[i].audioImages[k].pic = aPiece.pic;
                                     thisSchema.topTabs[i].audioImages[k].word = aPiece.word;
