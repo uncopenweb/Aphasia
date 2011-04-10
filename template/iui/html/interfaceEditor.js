@@ -1059,7 +1059,12 @@
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         var h3 = dojo.create("div",{className:"second",innerHTML:"Theme Name for Interface: "+thisSchema.themeName},div);
         
-        
+        alert(dojo.byId("text111").value);
+        alert(dojo.byId("text112").value);
+        alert(dojo.byId("text113").value);
+        alert(dojo.byId("text114").value);
+        alert(dojo.byId("text115").value);
+        alert(dojo.byId("text116").value);
         if (dojo.byId("text111").value.trim() != "" || dojo.byId("text112").value.trim() != "" || dojo.byId("text113").value.trim() != "") {
             var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
@@ -1100,7 +1105,6 @@
                         i++;
                     }
                 }
-                console.log(thisItem);
         }
         else {
             thisItem.topTabs[0].nameTag =thisSchema.topTabs[0].nameTag = "";
@@ -1337,7 +1341,6 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
-                console.log(thisItem);
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
@@ -1447,7 +1450,6 @@
             // });
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
-                        console.log(thisItem);
                         // data.updateOne({
                             // query:{'_id':thisSchema.id},
                             // data:{'topTabs':thisItem.topTabs,
@@ -1470,7 +1472,6 @@
     }
     
     function donePage(ids,deleteItem) {
-        console.log(thisItem);
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
