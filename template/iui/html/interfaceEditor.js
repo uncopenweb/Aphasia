@@ -1470,7 +1470,7 @@
     }
     
     function donePage(ids,deleteItem) {
-        console.log(JSON.stringify(thisItem.topTabs));
+        console.log(thisItem.topTabs);
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
