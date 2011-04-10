@@ -1064,7 +1064,6 @@
             var topTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Top Tabs"},topTabs);
             isNothing = false;
-            alert("isNothing is false");
         }
             if (dojo.byId("text111").value.trim() != "" || (dojo.byId("text121").value.trim() != "" && dojo.byId("text121").className != "disabled")) {
                 var tab1 = dojo.create("div",{style:{"margin":"1%"}, className:"third",innerHTML:"<b>Tab 1</b>"},topTabs);
@@ -1198,7 +1197,6 @@
             var bottomTabs = dojo.create("div",{style:{"margin":"1%"}, className:"second"},div);
             var bold = dojo.create("b",{innerHTML:"Bottom Tabs"},bottomTabs);
             isNothing = false;
-            alert("isNothing is false");
         }
             if (dojo.byId("text114").value.trim() != "" || (dojo.byId("text124").value.trim() != "" && dojo.byId("text124").className != "disabled")) {
             var tab1 = dojo.create("div",{style:{"margin":"1%"},className:"third",innerHTML:"<b>Tab 1</b>"},bottomTabs);
@@ -1350,7 +1348,7 @@
             }));
        
        if (isNothing) {
-            forwardButton.disabled = "disabled";
+            forwardButton2.disabled = "disabled";
        }
     }
     
