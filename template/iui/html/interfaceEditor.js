@@ -1447,7 +1447,6 @@
                     // }
                 // });
             // });
-                console.log(thisItem.topTabs);
 
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
@@ -1471,6 +1470,7 @@
     }
     
     function donePage(ids,deleteItem) {
+        console.log(JSON.stringify(thisItem.topTabs));
         var div = dojo.byId(ids[4]);
         var h4 = dojo.create("div",{className:"first",innerHTML:"Summary"},div);
         if (!deleteItem) {
