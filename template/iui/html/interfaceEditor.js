@@ -839,7 +839,7 @@
             text3.className = "";
             a.disabled = "";
         }
-        if (text3.value!=0) {
+        if (text3.value!="0") {
             dynamicForm(text3,tab1,j);
         }
         for (var i=0; i<10; i++) {
@@ -871,7 +871,7 @@
             text3.className = "";
             a.disabled = "";
         }
-        if (text3.value!=0) {
+        if (text3.value!="0") {
             dynamicForm(text3,tab2,j+1);
         }
         for (var i=0; i<10; i++) {
@@ -903,7 +903,7 @@
             text3.className = "";
             a.disabled = "";
         }
-        if (text3.value!=0) {
+        if (text3.value!="0") {
             dynamicForm(text3,tab3,j+2);
         }
         for (var i=0; i<10; i++) {
