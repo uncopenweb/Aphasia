@@ -986,6 +986,9 @@
             if (i<=3) {
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
+                    if (aim.pic == "") {
+                        return;
+                    }
                     array.push(aim.pic);
                     array.push(aim.word);
                     array.push(aim.phrase);
@@ -994,6 +997,9 @@
             else {
                 m = i-4;
                 dojo.forEach(thisSchema.bottomTabs[m].audioImages,function(aim) {
+                    if (aim.pic == "") {
+                        return;
+                    }
                     array.push(aim.pic);
                     array.push(aim.word);
                     array.push(aim.phrase);
