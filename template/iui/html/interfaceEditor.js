@@ -974,6 +974,7 @@
     function dynamicForm(s,tab,i) {
         var second = [];
         var theForm = forms[--i];
+        array = [];
         i++;
         var k=0;
         var item1 = "";
