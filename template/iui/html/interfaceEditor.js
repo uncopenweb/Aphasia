@@ -1159,7 +1159,7 @@
             thisItem.topTabs[0].nameTag =thisSchema.topTabs[0].nameTag = "";
             thisItem.topTabs[0].name =thisSchema.topTabs[0].name = "";
             thisItem.topTabs[0].image =thisSchema.topTabs[0].image = "";
-            
+            alert(thisItem.topTabs[0].audioImages.length);
             for (j=0; j<thisItem.topTabs[0].audioImages.length; j++) {
                     thisItem.topTabs[0].audioImages[j].pic = thisSchema.topTabs[0].audioImages[j].pic = "";
                     thisItem.topTabs[0].audioImages[j].word = thisSchema.topTabs[0].audioImages[j].word = "";
