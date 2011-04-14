@@ -1128,7 +1128,7 @@
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Name: "+thisSchema.topTabs[0].nameTag},tr);
                 var td = dojo.create("td",{style:{"width":"50%"}, innerHTML:"Image: "+thisSchema.topTabs[0].image},tr);
                 var i=1;
-                alert(forms[0][0][0].value.trim());
+                alert(forms[0][0][0].value.trim()!="");
                 if (dojo.byId("form11").options[dojo.byId("form11").selectedIndex].value>0 && dojo.byId("form11").className != "disabled" && forms[0][0][0].value.trim() != "") {
                     var table = dojo.create("table",{className:"dataTable"},tab1);
                     var tr = dojo.create("tr",null,table);
