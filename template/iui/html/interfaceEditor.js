@@ -1154,18 +1154,19 @@
                         i++;
                     }
                 }
+                else {
+                     for (j=0; j<thisItem.topTabs[0].audioImages.length; j++) {
+                            thisItem.topTabs[0].audioImages[j].pic = thisSchema.topTabs[0].audioImages[j].pic = "";
+                            thisItem.topTabs[0].audioImages[j].word = thisSchema.topTabs[0].audioImages[j].word = "";
+                            thisItem.topTabs[0].audioImages[j].nameTag = thisSchema.topTabs[0].audioImages[j].nameTag = "";
+                            thisItem.topTabs[0].audioImages[j].phrase = thisSchema.topTabs[0].audioImages[j].phrase = "";                
+                    }               
+                }
         }
         else {
             thisItem.topTabs[0].nameTag =thisSchema.topTabs[0].nameTag = "";
             thisItem.topTabs[0].name =thisSchema.topTabs[0].name = "";
             thisItem.topTabs[0].image =thisSchema.topTabs[0].image = "";
-            alert(thisItem.topTabs[0].audioImages.length);
-            for (j=0; j<thisItem.topTabs[0].audioImages.length; j++) {
-                    thisItem.topTabs[0].audioImages[j].pic = thisSchema.topTabs[0].audioImages[j].pic = "";
-                    thisItem.topTabs[0].audioImages[j].word = thisSchema.topTabs[0].audioImages[j].word = "";
-                    thisItem.topTabs[0].audioImages[j].nameTag = thisSchema.topTabs[0].audioImages[j].nameTag = "";
-                    thisItem.topTabs[0].audioImages[j].phrase = thisSchema.topTabs[0].audioImages[j].phrase = "";                
-            }
         } 
         
             if (dojo.byId("text112").value.trim() != "" || (dojo.byId("text122").value.trim() != "" && dojo.byId("text122").className != "disabled")) {
@@ -1204,18 +1205,19 @@
                         i++;
                     }
                 }
+                else {
+                    for (j=0; j<thisItem.topTabs[1].audioImages.length; j++) {
+                        thisItem.topTabs[1].audioImages[j].pic = thisSchema.topTabs[1].audioImages[j].pic = "";
+                        thisItem.topTabs[1].audioImages[j].word = thisSchema.topTabs[1].audioImages[j].word = "";
+                        thisItem.topTabs[1].audioImages[j].nameTag = thisSchema.topTabs[1].audioImages[j].nameTag = "";
+                        thisItem.topTabs[1].audioImages[j].phrase = thisSchema.topTabs[1].audioImages[j].phrase = "";                
+                    }
+                }
         }
         else {
             thisItem.topTabs[1].nameTag =thisSchema.topTabs[1].nameTag = "";
             thisItem.topTabs[1].name =thisSchema.topTabs[1].name = "";
             thisItem.topTabs[1].image =thisSchema.topTabs[1].image = "";
-            
-            for (j=0; j<thisItem.topTabs[1].audioImages.length; j++) {
-                    thisItem.topTabs[1].audioImages[j].pic = thisSchema.topTabs[1].audioImages[j].pic = "";
-                    thisItem.topTabs[1].audioImages[j].word = thisSchema.topTabs[1].audioImages[j].word = "";
-                    thisItem.topTabs[1].audioImages[j].nameTag = thisSchema.topTabs[1].audioImages[j].nameTag = "";
-                    thisItem.topTabs[1].audioImages[j].phrase = thisSchema.topTabs[1].audioImages[j].phrase = "";                
-            }
         } 
         
             if (dojo.byId("text113").value.trim() != "" || (dojo.byId("text123").value.trim() != "" && dojo.byId("text123").className != "disabled")) {
@@ -1253,18 +1255,19 @@
                     i++;
                 }
             }
+            else {
+                for (j=0; j<thisItem.topTabs[2].audioImages.length; j++) {
+                        thisItem.topTabs[2].audioImages[j].pic = thisSchema.topTabs[2].audioImages[j].pic = "";
+                        thisItem.topTabs[2].audioImages[j].word = thisSchema.topTabs[2].audioImages[j].word = "";
+                        thisItem.topTabs[2].audioImages[j].nameTag = thisSchema.topTabs[2].audioImages[j].nameTag = "";
+                        thisItem.topTabs[2].audioImages[j].phrase = thisSchema.topTabs[2].audioImages[j].phrase = "";                
+                }            
+            }
         }
         else {
             thisItem.topTabs[2].nameTag = thisSchema.topTabs[2].nameTag = "";
             thisItem.topTabs[2].name =thisSchema.topTabs[2].name = "";
-            thisItem.topTabs[2].image =thisSchema.topTabs[2].image = "";
-            
-            for (j=0; j<thisItem.topTabs[2].audioImages.length; j++) {
-                    thisItem.topTabs[2].audioImages[j].pic = thisSchema.topTabs[2].audioImages[j].pic = "";
-                    thisItem.topTabs[2].audioImages[j].word = thisSchema.topTabs[2].audioImages[j].word = "";
-                    thisItem.topTabs[2].audioImages[j].nameTag = thisSchema.topTabs[2].audioImages[j].nameTag = "";
-                    thisItem.topTabs[2].audioImages[j].phrase = thisSchema.topTabs[2].audioImages[j].phrase = "";                
-            }
+            thisItem.topTabs[2].image =thisSchema.topTabs[2].image = "";    
         } 
         
         
@@ -1308,18 +1311,19 @@
                     i++;
                 }
             }
+            else  {
+                for (j=0; j<thisItem.bottomTabs[0].audioImages.length; j++) {
+                    thisItem.bottomTabs[0].audioImages[j].pic = thisSchema.bottomTabs[0].audioImages[j].pic = "";
+                    thisItem.bottomTabs[0].audioImages[j].word = thisSchema.bottomTabs[0].audioImages[j].word = "";
+                    thisItem.bottomTabs[0].audioImages[j].nameTag = thisSchema.bottomTabs[0].audioImages[j].nameTag = "";
+                    thisItem.bottomTabs[0].audioImages[j].phrase = thisSchema.bottomTabs[0].audioImages[j].phrase = "";                
+                }            
+            }
         }
         else {
             thisItem.bottomTabs[0].nameTag = thisSchema.bottomTabs[0].nameTag = "";
             thisItem.bottomTabs[0].name = thisSchema.bottomTabs[0].name = "";
             thisItem.bottomTabs[0].image = thisSchema.bottomTabs[0].image = "";
-            
-            for (j=0; j<thisItem.bottomTabs[0].audioImages.length; j++) {
-                thisItem.bottomTabs[0].audioImages[j].pic = thisSchema.bottomTabs[0].audioImages[j].pic = "";
-                thisItem.bottomTabs[0].audioImages[j].word = thisSchema.bottomTabs[0].audioImages[j].word = "";
-                thisItem.bottomTabs[0].audioImages[j].nameTag = thisSchema.bottomTabs[0].audioImages[j].nameTag = "";
-                thisItem.bottomTabs[0].audioImages[j].phrase = thisSchema.bottomTabs[0].audioImages[j].phrase = "";                
-            }
         } 
         
             if (dojo.byId("text115").value.trim() != "" || (dojo.byId("text125").value.trim() != "" && dojo.byId("text125").className != "disabled")) {
@@ -1357,18 +1361,19 @@
                     i++;
                 }
             }
+            else {
+                for (j=0; j<thisItem.bottomTabs[1].audioImages.length; j++) {
+                    thisItem.bottomTabs[1].audioImages[j].pic = thisSchema.bottomTabs[1].audioImages[j].pic = "";
+                    thisItem.bottomTabs[1].audioImages[j].word = thisSchema.bottomTabs[1].audioImages[j].word = "";
+                    thisItem.bottomTabs[1].audioImages[j].nameTag = thisSchema.bottomTabs[1].audioImages[j].nameTag = "";
+                    thisItem.bottomTabs[1].audioImages[j].phrase = thisSchema.bottomTabs[1].audioImages[j].phrase = "";                
+                }
+            }
         }
         else {
             thisItem.bottomTabs[1].nameTag = thisSchema.bottomTabs[1].nameTag = "";
             thisItem.bottomTabs[1].name= thisSchema.bottomTabs[1].name = "";
-            thisItem.bottomTabs[1].image = thisSchema.bottomTabs[1].image = "";
-            
-            for (j=0; j<thisItem.bottomTabs[1].audioImages.length; j++) {
-                thisItem.bottomTabs[1].audioImages[j].pic = thisSchema.bottomTabs[1].audioImages[j].pic = "";
-                thisItem.bottomTabs[1].audioImages[j].word = thisSchema.bottomTabs[1].audioImages[j].word = "";
-                thisItem.bottomTabs[1].audioImages[j].nameTag = thisSchema.bottomTabs[1].audioImages[j].nameTag = "";
-                thisItem.bottomTabs[1].audioImages[j].phrase = thisSchema.bottomTabs[1].audioImages[j].phrase = "";                
-            }
+            thisItem.bottomTabs[1].image = thisSchema.bottomTabs[1].image = "";     
         } 
         
             if (dojo.byId("text116").value.trim() != "" || (dojo.byId("text126").value.trim() != "" && dojo.byId("text126").className != "disabled")) {
@@ -1406,18 +1411,19 @@
                     i++;
                 }
             }
+            else {
+                for (j=0; j<thisItem.bottomTabs[2].audioImages.length; j++) {
+                    thisItem.bottomTabs[2].audioImages[j].pic = thisSchema.bottomTabs[2].audioImages[j].pic = "";
+                    thisItem.bottomTabs[2].audioImages[j].word = thisSchema.bottomTabs[2].audioImages[j].word = "";
+                    thisItem.bottomTabs[2].audioImages[j].nameTag = thisSchema.bottomTabs[2].audioImages[j].nameTag = "";
+                    thisItem.bottomTabs[2].audioImages[j].phrase = thisSchema.bottomTabs[2].audioImages[j].phrase = "";                
+                }
+            }
         }
         else {
             thisItem.bottomTabs[2].nameTag = thisSchema.bottomTabs[2].nameTag = "";
             thisItem.bottomTabs[2].name = thisSchema.bottomTabs[2].name = "";
-            thisItem.bottomTabs[2].image = thisSchema.bottomTabs[2].image = "";
-            
-            for (j=0; j<thisItem.bottomTabs[2].audioImages.length; j++) {
-                thisItem.bottomTabs[2].audioImages[j].pic = thisSchema.bottomTabs[2].audioImages[j].pic = "";
-                thisItem.bottomTabs[2].audioImages[j].word = thisSchema.bottomTabs[2].audioImages[j].word = "";
-                thisItem.bottomTabs[2].audioImages[j].nameTag = thisSchema.bottomTabs[2].audioImages[j].nameTag = "";
-                thisItem.bottomTabs[2].audioImages[j].phrase = thisSchema.bottomTabs[2].audioImages[j].phrase = "";                
-            }
+            thisItem.bottomTabs[2].image = thisSchema.bottomTabs[2].image = "";    
         } 
         
         var backwardButton = dojo.create("button",{innerHTML:"Back"},div);
