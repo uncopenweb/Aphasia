@@ -559,6 +559,8 @@
     }
 
     function step1 (ids,ulList) {
+        var k=0;
+    
         var div = dojo.byId(ids[0]);
         var h4 = dojo.create("div",{className:"first", innerHTML:"What do you want to do?"},div);
             dojo.create("br",null,div);
@@ -595,6 +597,9 @@
                 onItem: function(item) {
                     tr = dojo.create("tr",null,table);
                     td1 = dojo.create("input",{type:"radio",name:"2p", value:item._id, className:"td3"},tr);
+                    if (k==0) {
+                        td1.checked = true;
+                    }
                     if (item.themeName == undefined) {
                         td2 = dojo.create("td",{className:"td3", innerHTML:"N/A"},tr);                   
                     }
@@ -603,6 +608,7 @@
                     }
 
                     td2 = dojo.create("td",{className:"td3",innerHTML:item._id},tr);
+                   k++;
                 }
             });
         });
@@ -735,89 +741,87 @@
         if (radioObj.length==null) {
             id = radioObj.value;
         }
-        if (id) {
-            var db = uow.getDatabase({
-                database: 'Aphasia',
-                collection: 'AphasiaJson',
-                mode: 'crud' 
-            });
-            var i=0;
-            var j=0;
-            var k=0;
-            db.then(function(data) {
-                data.fetch({
-                    query: {'_id':id},
-                    onItem: function(item) {
-                        thisItem = item;
-                        thisSchema.themeName = item.themeName;
-                        thisSchema.id = item._id;
-                        if (item.topTabs!=null) {
-                            dojo.forEach(item.topTabs, function(aTab) {
-                                k=0;
-                                thisSchema.topTabs[i].nameTag = aTab.nameTag;
-                                thisSchema.topTabs[i].name = "#"+aTab.nameTag;
-                                thisSchema.topTabs[i].image = aTab.image;
-                                if (aTab.audioImages!=null) {
-                                    dojo.forEach(aTab.audioImages,function(aPiece) {
-                                        if(aPiece.pic=="") {
-                                            return;
-                                        }
-                                        thisSchema.topTabs[i].audioImages[k].pic = aPiece.pic;
-                                        thisSchema.topTabs[i].audioImages[k].word = aPiece.word;
-                                        thisSchema.topTabs[i].audioImages[k].image = aPiece.image;
-                                        thisSchema.topTabs[i].audioImages[k].phrase = aPiece.phrase;
-                                        topNumbers[i]++;
-                                        k++;
-                                    });
-                                }
-                                i++;
-                            });
-                        }
-                        k=0;
-                        if (item.bottomTabs!=null) {
-                            dojo.forEach(item.bottomTabs, function(aTab) {
-                                k=0;
-                                thisSchema.bottomTabs[j].nameTag = aTab.nameTag;
-                                thisSchema.bottomTabs[j].name = "#"+aTab.nameTag;
-                                thisSchema.bottomTabs[j].image = aTab.image;
-                                if (aTab.audioImages!=null) {
-                                    dojo.forEach(aTab.audioImages,function(aPiece) {
-                                        if (aPiece.pic=="") {
-                                            return;
-                                        }
-                                        thisSchema.bottomTabs[j].audioImages[k].pic = aPiece.pic;
-                                        thisSchema.bottomTabs[j].audioImages[k].word = aPiece.word;
-                                        thisSchema.bottomTabs[j].audioImages[k].image = aPiece.image;
-                                        thisSchema.bottomTabs[j].audioImages[k].phrase = aPiece.phrase;
-                                        bottomNumbers[j]++;
-                                        k++;
-                                    });
-                                }
-                                j++;                        
-                            });
-                        }
-                    },
-                    onComplete: function(items) {
-                        isPreload = [true,true,true,true,true,true];
-                        tabStep(ids,1,"Top",ulList);
-                        tabStep(ids,2,"Bottom",ulList);  
-                        dojo.byId("form1"+1).value = topNumbers[0];
-                        dojo.byId("form1"+2).value = topNumbers[1];
-                        dojo.byId("form1"+3).value = topNumbers[2];
-                        dojo.byId("form1"+4).value = bottomNumbers[0];
-                        dojo.byId("form1"+5).value = bottomNumbers[1];
-                        dojo.byId("form1"+6).value = bottomNumbers[2];  
-                        for (var i=1; i<7; i++) {
-                            if (dojo.byId("form1"+i).value!=0) {
-                                dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode.parentNode,i);
-                                dojo.byId("form1"+i).disabled = "";
-                                dojo.byId("form1"+i).className = "";
+        var db = uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' 
+        });
+        var i=0;
+        var j=0;
+        var k=0;
+        db.then(function(data) {
+            data.fetch({
+                query: {'_id':id},
+                onItem: function(item) {
+                    thisItem = item;
+                    thisSchema.themeName = item.themeName;
+                    thisSchema.id = item._id;
+                    if (item.topTabs!=null) {
+                        dojo.forEach(item.topTabs, function(aTab) {
+                            k=0;
+                            thisSchema.topTabs[i].nameTag = aTab.nameTag;
+                            thisSchema.topTabs[i].name = "#"+aTab.nameTag;
+                            thisSchema.topTabs[i].image = aTab.image;
+                            if (aTab.audioImages!=null) {
+                                dojo.forEach(aTab.audioImages,function(aPiece) {
+                                    if(aPiece.pic=="") {
+                                        return;
+                                    }
+                                    thisSchema.topTabs[i].audioImages[k].pic = aPiece.pic;
+                                    thisSchema.topTabs[i].audioImages[k].word = aPiece.word;
+                                    thisSchema.topTabs[i].audioImages[k].image = aPiece.image;
+                                    thisSchema.topTabs[i].audioImages[k].phrase = aPiece.phrase;
+                                    topNumbers[i]++;
+                                    k++;
+                                });
                             }
+                            i++;
+                        });
+                    }
+                    k=0;
+                    if (item.bottomTabs!=null) {
+                        dojo.forEach(item.bottomTabs, function(aTab) {
+                            k=0;
+                            thisSchema.bottomTabs[j].nameTag = aTab.nameTag;
+                            thisSchema.bottomTabs[j].name = "#"+aTab.nameTag;
+                            thisSchema.bottomTabs[j].image = aTab.image;
+                            if (aTab.audioImages!=null) {
+                                dojo.forEach(aTab.audioImages,function(aPiece) {
+                                    if (aPiece.pic=="") {
+                                        return;
+                                    }
+                                    thisSchema.bottomTabs[j].audioImages[k].pic = aPiece.pic;
+                                    thisSchema.bottomTabs[j].audioImages[k].word = aPiece.word;
+                                    thisSchema.bottomTabs[j].audioImages[k].image = aPiece.image;
+                                    thisSchema.bottomTabs[j].audioImages[k].phrase = aPiece.phrase;
+                                    bottomNumbers[j]++;
+                                    k++;
+                                });
+                            }
+                            j++;                        
+                        });
+                    }
+                },
+                onComplete: function(items) {
+                    isPreload = [true,true,true,true,true,true];
+                    tabStep(ids,1,"Top",ulList);
+                    tabStep(ids,2,"Bottom",ulList);  
+                    dojo.byId("form1"+1).value = topNumbers[0];
+                    dojo.byId("form1"+2).value = topNumbers[1];
+                    dojo.byId("form1"+3).value = topNumbers[2];
+                    dojo.byId("form1"+4).value = bottomNumbers[0];
+                    dojo.byId("form1"+5).value = bottomNumbers[1];
+                    dojo.byId("form1"+6).value = bottomNumbers[2];  
+                    for (var i=1; i<7; i++) {
+                        if (dojo.byId("form1"+i).value!=0) {
+                            dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode.parentNode,i);
+                            dojo.byId("form1"+i).disabled = "";
+                            dojo.byId("form1"+i).className = "";
                         }
                     }
-                });
+                }
             });
-        }
+        });
     }
     
     function tabStep(ids, j, word, ulList) {
