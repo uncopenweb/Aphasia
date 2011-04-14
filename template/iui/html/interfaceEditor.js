@@ -735,7 +735,7 @@
         if (radioObj.length==null) {
             id = radioObj.value;
         }
-        if (id!="") {
+        if (id) {
             var db = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
