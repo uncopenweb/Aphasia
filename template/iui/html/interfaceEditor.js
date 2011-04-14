@@ -732,9 +732,9 @@
                 break;
             }
         }
-        if (radioObj.length==null) {
+        /*if (radioObj.length==null) {
             id = radioObj.value;
-        }
+        }*/
         var db = uow.getDatabase({
             database: 'Aphasia',
             collection: 'AphasiaJson',
