@@ -694,9 +694,9 @@
                 break;
             }
         }
-        if (radioObj.length==null) {
+        /*if (radioObj.length==null) {
             id = radioObj.value;
-        }
+        }*/
         var answer = confirm("Are you sure you want to delete this item: "+ id);
         if (answer) {
             dojo.empty(dojo.byId(ids[1]));
