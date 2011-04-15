@@ -1537,6 +1537,30 @@
             delete thisItem.bottomTabs;
         }*/
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
+        
+            var form = dojo.byId("form1");
+            var def = uow.getDatabase({
+                database: 'Media',
+                collection: 'Image',
+                mode: 'c' });
+            def.addCallback(function(db) {
+                db.upload({
+                    form: form,
+                    load: function(data, ioArgs) {
+                        console.log('load', data);
+                        //dojo.byId('messages').innerHTML = dojo.toJson(data);
+                        console.log("Upload has been confirmed!");
+                        uploadComplete();
+                    },
+                    error: function(msg, ioArgs) {
+                        console.log('error', msg);
+                        //dojo.byId('messages').innerHTML = msg;
+                    }
+                });
+            });
+        
+        
+        
             var db = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
@@ -1553,18 +1577,6 @@
                     // }
                 // });
             // });
-            
-                db.addCallback(function(data) {
-                    data.update({
-                        form: dojo.byId("form1"),
-                        load: function(data, ioArgs) {
-                            console.log('load', data);
-                        },
-                        error: function(msg, ioArgs) {
-                            console.log('error', msg);
-                        }
-                    });
-                });
             
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
