@@ -838,7 +838,7 @@
         
         var tab1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
-        var name1 = dojo.create("div",{className:"third"},tab1);
+        var name1 = dojo.create("form",{id:"form"+j, enctype:"multipart/form-data", className:"third"},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
@@ -1567,6 +1567,15 @@
                     else {
                         data.newItem(thisSchema);
                     }
+                    db.upload({
+                        form: dojo.byId("form1"),
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });
                     data.save();
                     donePage(ids);
                 });
