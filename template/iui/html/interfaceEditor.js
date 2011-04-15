@@ -1548,13 +1548,9 @@
                     form: form,
                     load: function(data, ioArgs) {
                         console.log('load', data);
-                        //dojo.byId('messages').innerHTML = dojo.toJson(data);
-                        console.log("Upload has been confirmed!");
-                        uploadComplete();
                     },
                     error: function(msg, ioArgs) {
                         console.log('error', msg);
-                        //dojo.byId('messages').innerHTML = msg;
                     }
                 });
             });
