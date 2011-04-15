@@ -1553,6 +1553,19 @@
                     // }
                 // });
             // });
+            
+                db.addCallback(function(data) {
+                    data.update({
+                        form: dojo.byId("form1"),
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });
+                });
+            
                 db.then(function(data) {
                     if (thisSchema.id.trim()!="") {
                         // data.updateOne({
@@ -1567,15 +1580,6 @@
                     else {
                         data.newItem(thisSchema);
                     }
-                    data.update({
-                        form: dojo.byId("form1"),
-                        load: function(data, ioArgs) {
-                            console.log('load', data);
-                        },
-                        error: function(msg, ioArgs) {
-                            console.log('error', msg);
-                        }
-                    });
                     data.save();
                     donePage(ids);
                 });
