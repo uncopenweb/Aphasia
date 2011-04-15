@@ -1567,7 +1567,7 @@
                     else {
                         data.newItem(thisSchema);
                     }
-                    db.upload({
+                    data.update({
                         form: dojo.byId("form1"),
                         load: function(data, ioArgs) {
                             console.log('load', data);
