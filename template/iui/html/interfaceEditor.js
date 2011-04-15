@@ -1540,9 +1540,9 @@
         
             var form = dojo.byId("form1");
             var def = uow.getDatabase({
-                database: 'Media',
-                collection: 'Image',
-                mode: 'c' });
+                database: 'Aphasia',
+                collection: 'AphasiaJson',
+                mode: 'crud' });
             def.addCallback(function(db) {
                 db.upload({
                     form: form,
