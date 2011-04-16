@@ -30,7 +30,7 @@
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Images',
-            mode: 'c' });
+            mode: 'crud' });
         def.addCallback(function(db) {
             db.upload({
                 form: dojo.byId("upload_form"),
