@@ -16,7 +16,8 @@
 <script type="text/javascript" src="/libs/uow/trace.js"></script>
 <script type="text/javascript" src="/libs/uow.js"></script>
 <script type = "text/javascript">
-    function form() {
+    dojo.require("dijit.form.Button");
+    /*function form() {
         var form = dojo.create("form",{method:"POST", enctype:"multipart/form-data"},dojo.body());
         var label1 = dojo.create("label",{innerHTML:"Text: "},form);
         var text = dojo.create("input",null,form);
@@ -24,7 +25,7 @@
         var file = dojo.create("input",{type:"file"},form);
         var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
         dojo.connect(button,'onclick',dojo.hitch(this,submit,form));
-    }
+    }*/
     function submit(aForm) {
         var def = uow.getDatabase({
             database: 'Media',
@@ -47,5 +48,33 @@
 </script>
 </head>
 <body>
+<div class="ImageUpload">
+    <form id="upload_form" method="POST" enctype="multipart/form-data">
+        
+        <table>
+        <label>Tags: <input type="text" name="tags"></label>
+        </tr>
+        <tr>
+            <td><label>Description: </label></td>
+            <td><input type="text" name="description"></input></td>
+        </tr>
+        <tr>
+            <td><label>Title: </label></td>
+            <td><input type="text" name="title"></input></td>
+        </tr>
+        <tr>
+            <td><label>Credit URL: </label></td>
+            <td><input type="text" name="creditURL"></input></td>
+        </tr>
+        <tr>
+            <td><label>Choose File:</label><td>
+            <td><input type="file" name="file" id="file"></input><td/>
+        </tr>
+        </table>
+    </form>
+    <br/>
+    <button dojoType="dijit.form.Button" type="button" dojoAttachPoint="at_confirm">Confirm and Continue</button>
+    <button dojoType="dijit.form.Button" type="button" dojoAttachPoint="at_cancel">Cancel</button>
+</div>
 </body>
 </html>
