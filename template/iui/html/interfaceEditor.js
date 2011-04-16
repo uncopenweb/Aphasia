@@ -848,8 +848,8 @@
             text2.disabled = "";
             text2.className = "";
         }
-        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
-        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
+        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},form1);
+        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},form1);
         var text3 = dojo.create("select",{id:"form1"+j, disabled:"disabled",className:"disabled"},name1);
         if (text2.value.trim()!="") {
             text3.disabled = "";
