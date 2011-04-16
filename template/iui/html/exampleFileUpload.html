@@ -23,6 +23,24 @@
         var label2 = dojo.create("label",{innerHTML:"Picture"},form);
         var file = dojo.create("input",{type:"file"},form);
         var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
+        dojo.connect(button,'onclick',dojo.hitch(this,submit,form));
+    }
+    function submit(aForm) {
+        var def = uow.getDatabase({
+            database: 'Aphasia',
+            collection: 'AphasiaJson',
+            mode: 'crud' });
+        def.addCallback(function(db) {
+            db.upload({
+                form: aForm,
+                load: function(data, ioArgs) {
+                    console.log('load', data);
+                },
+                error: function(msg, ioArgs) {
+                    console.log('error', msg);
+                }
+            });
+        });
     }
     
     dojo.addOnLoad(form);
