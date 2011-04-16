@@ -1,0 +1,32 @@
+<html>
+<title>Example file upload</title>
+<head>
+<script type="text/javascript">
+    var djConfig = {
+        isDebug: false,
+        parseOnLoad: true,
+        baseUrl: './',
+        modulePaths: { 'Hark': '.',
+           'unc': 'unc'  
+        },
+        dojoBlankHtmlUrl: 'blank.html'
+    };
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
+<script type="text/javascript" src="/libs/uow/trace.js"></script>
+<script type="text/javascript" src="/libs/uow.js"></script>
+<script type = "text/javascript">
+    function form() {
+        var form = dojo.create("form",{method:"POST", enctype:"multipart/form-data"},dojo.body());
+        var label1 = dojo.create("label",{innerHTML:"Text: "},form);
+        var text = dojo.create("input",null,form);
+        var label2 = dojo.create("label",{innerHTML:"Picture"},form);
+        var file = dojo.create("input",{type:"file"},form);
+    }
+    
+    dojo.onLoad(form);
+</script>
+</head>
+<body>
+</body>
+</html>
