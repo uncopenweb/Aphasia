@@ -1539,7 +1539,7 @@
         }*/
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
         
-            var form = dojo.byId("form1");
+            var form = dojo.byId("form123");
             var def = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
