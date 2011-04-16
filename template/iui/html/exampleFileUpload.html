@@ -27,8 +27,8 @@
     }
     function submit(aForm) {
         var def = uow.getDatabase({
-            database: 'Aphasia',
-            collection: 'AphasiaJson',
+            database: 'Media',
+            collection: 'Images',
             mode: 'crud' });
         def.addCallback(function(db) {
             db.upload({
