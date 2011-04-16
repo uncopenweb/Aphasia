@@ -838,11 +838,12 @@
         
         var tab1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
-        var name1 = dojo.create("form",{id:"form"+j, enctype:"multipart/form-data", method:"POST", className:"third"},tab1);
+        var name1 = dojo.create("div",{className:"third"}, tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},name1);
-        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled",className:"disabled"},name1);
+        var form1 = dojo.create("form",{id:"form"+j, enctype:"multipart/form-data", method:"POST", className:"third"},name1);
+        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},form1);
+        var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled",className:"disabled"},form1);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
