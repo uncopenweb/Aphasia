@@ -855,7 +855,7 @@
             text3.className = "";
         }
         
-        var name = dojo.create("input",{name:"description",value:"uploadForm"+j,style:{"display":"none"}},name1);
+        var name = dojo.create("input",{name:"description",value:"uploadForm",style:{"display":"none"}},name1);
         var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
 
         for (var i=0; i<10; i++) {
