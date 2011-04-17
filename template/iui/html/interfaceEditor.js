@@ -1060,13 +1060,11 @@
                 }
             }            
         }
-        for (j=0; j<s.options[s.selectedIndex].value; j++) {
-            if (dojo.byId("tab"+i+j)!=null) {
-                dojo.destroy("tab"+i+j);
-            }
+        if (dojo.byId("tab"+i)!=null) {
+            dojo.destroy("tab"+i);
         }
-        /*var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
-        var table = dojo.create("table",{className:"contentTable"},div);*/
+        var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
+        var table = dojo.create("table",{className:"contentTable"},div);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
@@ -1079,8 +1077,6 @@
                 item3 = "";
             }
             var v = j+1;
-            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
-            var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
