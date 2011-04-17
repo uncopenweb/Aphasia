@@ -1060,7 +1060,7 @@
                 }
             }            
         }
-        for (j=0; j<s.options[s.selectedIndex].value; j++) {
+        for (j=0; j<9; j++) {
             if (dojo.byId("tab"+i+j)!=null) {
                 dojo.destroy("tab"+i+j);
             }
