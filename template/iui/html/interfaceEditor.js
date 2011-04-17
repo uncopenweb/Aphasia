@@ -526,7 +526,7 @@
     array = [];
     
     
-    //only need the URL, originalName, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
+    //only need the URL, originalName, tags, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
     
     
     function start() {        
@@ -1065,8 +1065,6 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        /*var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
-        var table = dojo.create("table",{className:"contentTable"},div);*/
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
@@ -1541,12 +1539,14 @@
             delete thisItem.bottomTabs;
         }*/
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
-        
-            var form = dojo.byId("form1");
+
             var def = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
                 mode: 'crud' });
+ 
+        for (var i=0; i<6; i++) {
+            var form = dojo.byId("uploadForm"+i);
             def.addCallback(function(db) {
                 db.upload({
                     form: form,
@@ -1558,6 +1558,24 @@
                     }
                 });
             });
+            for (var j=0; j<9; j++) {
+                var form = dojo.byId("tab"+i+j);
+                if (form==null) {
+                    break;
+                }
+                def.addCallback(function(db) {
+                    db.upload({
+                        form: form,
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });            
+                }
+            }
+       }
         
         
         

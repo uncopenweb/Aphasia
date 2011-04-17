@@ -1,0 +1,66 @@
+tags[0]: (the id)
+description: (the names below)
+
+uploadForm1 
+    tab10
+    tab11
+    tab12
+    tab13
+    tab14
+    tab15
+    tab16
+    tab17
+    tab18
+uploadForm2
+    tab20
+    tab21
+    tab22
+    tab23
+    tab24
+    tab25
+    tab26
+    tab27
+    tab28
+uploadForm3
+    tab30
+    tab31
+    tab32
+    tab33
+    tab34
+    tab35
+    tab36
+    tab37
+    tab38
+uploadForm4
+    tab40
+    tab41
+    tab42
+    tab43
+    tab44
+    tab45
+    tab46
+    tab47
+    tab48
+uploadForm5
+    tab50
+    tab51
+    tab52
+    tab53
+    tab54
+    tab55
+    tab56
+    tab57
+    tab58
+uploadForm6
+    tab60
+    tab61
+    tab62
+    tab63
+    tab64
+    tab65
+    tab66
+    tab67
+    tab68
+    
+after getting the name (is it necessary to use originalName?), or the description, then retrieve the URL of the picture
+when deleting a JSON object, look up tags[0], and delete everything
