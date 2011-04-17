@@ -1060,8 +1060,10 @@
                 }
             }            
         }
-        if (dojo.byId("tab"+i)!=null) {
-            dojo.destroy("tab"+i);
+        for (j=0; j<s.options[s.selectedIndex].value; j++) {
+            if (dojo.byId("tab"+i+j)!=null) {
+                dojo.destroy("tab"+i+j);
+            }
         }
         /*var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
         var table = dojo.create("table",{className:"contentTable"},div);*/
