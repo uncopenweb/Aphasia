@@ -861,9 +861,10 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
+        var theDiv = dojo.create("div",{id:"tab"+j},name1);
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", j));
-            dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,tab1,j));
+            dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,theDiv,j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
         
@@ -894,7 +895,8 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab2,j+1));
+        var theDiv = dojo.create("div",{id:"tab"+k},name1);
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+1));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
@@ -927,7 +929,8 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,tab3,j+2));
+        var theDiv = dojo.create("div",{id:"tab"+k},name1);
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+2));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
@@ -1048,7 +1051,6 @@
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
-            var theDiv = dojo.create("div",{id:"tab"+i},tab);
             var theArray = arrays[--i];
             console.log(theArray);
             i++;
