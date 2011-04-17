@@ -1573,7 +1573,7 @@
                             console.log('error', msg);
                         }
                     });            
-                }
+                });
             }
        }
         
