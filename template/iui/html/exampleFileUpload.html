@@ -29,7 +29,7 @@
     function submit() {
         var def = uow.getDatabase({
             database: 'Media',
-            collection: 'Image',
+            collection: 'Audio',
             mode: 'crud' });
         def.addCallback(function(db) {
             db.upload({
@@ -47,7 +47,7 @@
     function show() {
         var def = uow.getDatabase({
             database: 'Media',
-            collection: 'Image',
+            collection: 'Audio',
             mode: 'crud' });
         def.then(function(db) {
             console.log(db);
