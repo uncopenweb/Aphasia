@@ -1074,6 +1074,7 @@
                 dojo.destroy("tab"+i+j);
             }
         }
+        var theDiv = dojo.create("div",{id:"tab"+i},tab);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
@@ -1086,7 +1087,7 @@
                 item3 = "";
             }
             var v = j+1;
-            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
+            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},theDiv);
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
