@@ -887,6 +887,9 @@
             text3.className = "";
             a.disabled = "";
         }
+        
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},name1);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
@@ -917,6 +920,9 @@
             text3.className = "";
             a.disabled = "";
         }
+        
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},name1);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
@@ -1102,6 +1108,8 @@
                 dojo.byId("contentItem"+i+j+"3").className = "disabled";
                 a.disabled = "disabled";
             }
+            var name = dojo.create("input",{name:"description",value:"tab"+i+j,style:{"display":"none"}},div);
+            var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},div);
         }
         
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
