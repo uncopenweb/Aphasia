@@ -29,7 +29,7 @@
     function submit() {
         var def = uow.getDatabase({
             database: 'Media',
-            collection: 'Images',
+            collection: 'Image',
             mode: 'crud' });
         def.addCallback(function(db) {
             db.upload({
