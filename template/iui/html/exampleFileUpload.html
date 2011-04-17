@@ -53,7 +53,7 @@
             console.log(db);
             db.fetch({
                 onItem: function(item) {
-                    dojo.create("p",{innerHTML:item},dojo.body());
+                    console.log(item);
                 }
             });
         });
