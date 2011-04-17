@@ -854,6 +854,9 @@
             text3.disabled = "";
             text3.className = "";
         }
+        
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+j,style:{"display":"none"}},name1);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
@@ -1541,28 +1544,12 @@
         if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
 
             var def = uow.getDatabase({
-                database: 'Aphasia',
-                collection: 'AphasiaJson',
+                database: 'Media',
+                collection: 'Image',
                 mode: 'crud' });
  
-        for (var i=0; i<6; i++) {
-            var form = dojo.byId("uploadForm"+i);
-            def.addCallback(function(db) {
-                db.upload({
-                    form: form,
-                    load: function(data, ioArgs) {
-                        console.log('load', data);
-                    },
-                    error: function(msg, ioArgs) {
-                        console.log('error', msg);
-                    }
-                });
-            });
-            for (var j=0; j<9; j++) {
-                var form = dojo.byId("tab"+i+j);
-                if (form==null) {
-                    break;
-                }
+            for (var i=0; i<6; i++) {
+                var form = dojo.byId("uploadForm"+i);
                 def.addCallback(function(db) {
                     db.upload({
                         form: form,
@@ -1572,8 +1559,24 @@
                         error: function(msg, ioArgs) {
                             console.log('error', msg);
                         }
-                    });            
+                    });
                 });
+                for (var j=0; j<9; j++) {
+                    var form = dojo.byId("tab"+i+j);
+                    if (form==null) {
+                        break;
+                    }
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });            
+                    });
             }
        }
         
