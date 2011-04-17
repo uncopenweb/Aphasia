@@ -50,7 +50,6 @@
             collection: 'Audio',
             mode: 'crud' });
         def.then(function(db) {
-            console.log(db);
             db.fetch({
                 onItem: function(item) {
                     console.log(item);
