@@ -50,6 +50,7 @@
             collection: 'Images',
             mode: 'crud' });
         def.then(function(db) {
+            console.log(db);
             db.fetch({
                 onItem: function(item) {
                     dojo.body.appendTextNode(item);
