@@ -44,6 +44,24 @@
         });
     }
     
+    function show() {
+        var def = uow.getDatabase({
+            database: 'Media',
+            collection: 'Images',
+            mode: 'crud' });
+        def.then(function(db) {
+            db.upload({
+                form: dojo.byId("upload_form"),
+                load: function(data, ioArgs) {
+                    console.log('load', data);
+                },
+                error: function(msg, ioArgs) {
+                    console.log('error', msg);
+                }
+            });
+        });
+    }
+    
     //dojo.addOnLoad(form);
 </script>
 </head>
@@ -73,6 +91,7 @@
         </table>
     </form> 
     <button onClick="submit()">Submit</button>
+    <button onClick="show()">Show Database</button>
 </div>
 </body>
 </html>
