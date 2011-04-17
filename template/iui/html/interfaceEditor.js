@@ -855,7 +855,7 @@
             text3.className = "";
         }
         
-        var name = dojo.create("input",{name:"description",innerHTML:"uploadForm"+j,style:{"display":"none"}},name1);
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+j,style:{"display":"none"}},name1);
         var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
 
         for (var i=0; i<10; i++) {
@@ -1045,29 +1045,31 @@
             }
         }
         else {
-            if (dojo.byId("tab"+i) != null) {
-                array = dojo.byId("tab"+i).getElementsByTagName("input");
-            }
-            var theArray = arrays[--i];
-            console.log(theArray);
-            i++;
-            if (theArray.length <= array.length) {
-                for (j=0; j<array.length; j++) {
-                    if (array[j].value!=null) {
-                        second[j] = array[j].value;
-                        theArray[j] = array[j].value;
-                    }
-                    else {
-                        second[j] = array[j];
-                        theArray[j] = array[j];                    
+            for (var k=0; k<9; k++) {
+                if (dojo.byId("tab"+i+k) != null) {
+                    array = dojo.byId("tab"+i+k).getElementsByTagName("input");
+                }
+                var theArray = arrays[--i];
+                console.log(theArray);
+                i++;
+                if (theArray.length <= array.length) {
+                    for (j=0; j<array.length; j++) {
+                        if (array[j].value!=null) {
+                            second[j] = array[j].value;
+                            theArray[j] = array[j].value;
+                        }
+                        else {
+                            second[j] = array[j];
+                            theArray[j] = array[j];                    
+                        }
                     }
                 }
+                else {
+                    for (j=0; j<theArray.length; j++) {
+                        second[j] = theArray[j];
+                    }
+                }            
             }
-            else {
-                for (j=0; j<theArray.length; j++) {
-                    second[j] = theArray[j];
-                }
-            }            
         }
         for (j=0; j<9; j++) {
             if (dojo.byId("tab"+i+j)!=null) {
