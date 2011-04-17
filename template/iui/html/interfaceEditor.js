@@ -1089,7 +1089,7 @@
                 item3 = "";
             }
             var v = j+1;
-            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},theDiv);
+            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
