@@ -1048,6 +1048,7 @@
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
+            var theDiv = dojo.create("div",{id:"tab"+i},tab);
             var theArray = arrays[--i];
             console.log(theArray);
             i++;
@@ -1074,7 +1075,6 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        var theDiv = dojo.create("div",{id:"tab"+i},tab);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
