@@ -929,7 +929,7 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-        var theDiv = dojo.create("div",{id:"tab"+k},name1);
+        var theDiv = dojo.create("div",{id:"tab"+k},tab3);
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+2));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
@@ -1082,11 +1082,15 @@
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
+                item4 = second[k++];
+                item5 = second[k++];
             }
             else {
                 item1 = "";
                 item2 = "";
                 item3 = "";
+                item4 = "";
+                item5 = "";
             }
             var v = j+1;
             var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
