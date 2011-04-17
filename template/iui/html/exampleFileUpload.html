@@ -49,8 +49,9 @@
             database: 'Media',
             collection: 'Audio',
             mode: 'crud' });
-        def.addCallback(function(db) {
+        def.then(function(db) {
             db.fetch({
+                query: {"title":""},
                 onItem: function(item) {
                     console.log(item);
                 }
