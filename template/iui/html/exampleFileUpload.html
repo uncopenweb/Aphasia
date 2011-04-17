@@ -53,7 +53,7 @@
             console.log(db);
             db.fetch({
                 onItem: function(item) {
-                    console.log(item);
+                    var image = dojo.create("img",{src:item.URL},dojo.body());
                 }
             });
         });
