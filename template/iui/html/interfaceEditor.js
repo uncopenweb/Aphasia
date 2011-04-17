@@ -1556,47 +1556,8 @@
             delete thisSchema.bottomTabs;
             delete thisItem.bottomTabs;
         }*/
-        if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {
-
-            var def = uow.getDatabase({
-                database: 'Media',
-                collection: 'Image',
-                mode: 'crud' });
- 
-            for (var i=0; i<6; i++) {
-                var form = dojo.byId("uploadForm"+i);
-                def.addCallback(function(db) {
-                    db.upload({
-                        form: form,
-                        load: function(data, ioArgs) {
-                            console.log('load', data);
-                        },
-                        error: function(msg, ioArgs) {
-                            console.log('error', msg);
-                        }
-                    });
-                });
-                for (var j=0; j<9; j++) {
-                    var form = dojo.byId("tab"+i+j);
-                    if (form==null) {
-                        break;
-                    }
-                    def.addCallback(function(db) {
-                        db.upload({
-                            form: form,
-                            load: function(data, ioArgs) {
-                                console.log('load', data);
-                            },
-                            error: function(msg, ioArgs) {
-                                console.log('error', msg);
-                            }
-                        });            
-                    });
-            }
-       }
-        
-        
-        
+        if (thisSchema.topTabs != null || thisSchema.bottomTabs != null) {  
+            
             var db = uow.getDatabase({
                 database: 'Aphasia',
                 collection: 'AphasiaJson',
@@ -1614,27 +1575,73 @@
                 // });
             // });
             
-                db.then(function(data) {
-                    if (thisSchema.id.trim()!="") {
-                        // data.updateOne({
-                            // query:{'_id':thisSchema.id},
-                            // data:{'topTabs':thisItem.topTabs,
-                                  // 'bottomTabs':thisItem.bottomTabs},
-                            // save:true
-                        // });
-                        data.setValues(thisItem,'topTabs',thisItem.topTabs);
-                        data.setValues(thisItem,'bottomTabs',thisItem.bottomTabs);
-                    }                    
-                    else {
-                        data.newItem(thisSchema);
-                    }
-                    data.save();
-                    donePage(ids);
-                });
+            db.then(function(data) {
+                var item = "";
+                if (thisSchema.id.trim()!="") {
+                    // data.updateOne({
+                        // query:{'_id':thisSchema.id},
+                        // data:{'topTabs':thisItem.topTabs,
+                              // 'bottomTabs':thisItem.bottomTabs},
+                        // save:true
+                    // });
+                    data.setValues(thisItem,'topTabs',thisItem.topTabs);
+                    data.setValues(thisItem,'bottomTabs',thisItem.bottomTabs);
+                }                    
+                else {
+                    item = data.newItem(thisSchema);
+                }
+                data.save();
+                if (item=="") {
+                    uploadPictures(ids, item._id);
+                }
+                else {
+                    uploadPictures(ids, thisItem._id);
+                }
+            });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
             });
         }
+    }
+    
+    function uploadPictures(ids, anID) {
+        var def = uow.getDatabase({
+            database: 'Media',
+            collection: 'Image',
+            mode: 'crud' });
+
+        for (var i=0; i<6; i++) {
+            var form = dojo.byId("uploadForm"+i);
+            def.addCallback(function(db) {
+                db.upload({
+                    form: form,
+                    load: function(data, ioArgs) {
+                        console.log('load', data);
+                    },
+                    error: function(msg, ioArgs) {
+                        console.log('error', msg);
+                    }
+                });
+            });
+            for (var j=0; j<9; j++) {
+                var form = dojo.byId("tab"+i+j);
+                if (form==null) {
+                    break;
+                }
+                def.addCallback(function(db) {
+                    db.upload({
+                        form: form,
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });
+                    donePage(ids);
+                });
+            }       
+        }        
     }
     
     function donePage(ids,deleteItem) {
