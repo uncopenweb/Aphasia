@@ -47,7 +47,7 @@
     function show() {
         var def = uow.getDatabase({
             database: 'Media',
-            collection: 'Images',
+            collection: 'Image',
             mode: 'crud' });
         def.then(function(db) {
             console.log(db);
