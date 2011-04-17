@@ -49,7 +49,7 @@
             database: 'Media',
             collection: 'Audio',
             mode: 'crud' });
-        def.then(function(db) {
+        def.addCallback(function(db) {
             db.fetch({
                 onItem: function(item) {
                     console.log(item);
