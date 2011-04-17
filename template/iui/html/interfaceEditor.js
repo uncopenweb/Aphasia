@@ -1050,7 +1050,6 @@
                     array = dojo.byId("tab"+i+k).getElementsByTagName("input");
                 }
                 var theArray = arrays[--i];
-                console.log(theArray);
                 i++;
                 if (theArray.length <= array.length) {
                     for (j=0; j<array.length; j++) {
