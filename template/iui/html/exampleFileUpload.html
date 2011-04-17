@@ -50,13 +50,9 @@
             collection: 'Images',
             mode: 'crud' });
         def.then(function(db) {
-            db.upload({
-                form: dojo.byId("upload_form"),
-                load: function(data, ioArgs) {
-                    console.log('load', data);
-                },
-                error: function(msg, ioArgs) {
-                    console.log('error', msg);
+            db.fetch({
+                onItem: function(item) {
+                    dojo.body.appendTextNode(item);
                 }
             });
         });
