@@ -526,7 +526,7 @@
     array = [];
     
     
-    //make everything into a form?......
+    //only need the URL, originalName, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
     
     
     function start() {        
@@ -836,7 +836,7 @@
         }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
-        var tab1 = dojo.create("div",{className:"second"},div);
+        var tab1 = dojo.create("form",{id:"uploadForm"+j,className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"}, tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
