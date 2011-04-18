@@ -25,7 +25,7 @@ dojo.declare('compapp',[], {
             var index = 0;
             var leftPhrases = ["Please give me a moment to respond.", "I don't understand.", "Can you repeat that, please?", "I need help."];
             var leftPics = ["stop.png","question.png","repeat.png","help.png"];
-            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'60%'},selected:"true"},dojo.body());
+            var leftTable = dojo.create("table",{id:"sideTable",style:{"width":'12.5%',"height":'30%'},selected:"true"},dojo.body());
                 /*dojo.forEach(leftPhrases, function(aPhrase) {
                     var td = dojo.create("table",{id:"sidetd1",style:{"height":"25%","width":"100%"},innerHTML:aPhrase},leftTable);
                         dojo.connect(td, 'onmouseup',dojo.hitch(self,'playSound',aPhrase));
