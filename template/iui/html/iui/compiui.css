@@ -68,6 +68,10 @@ body >.menu{
     position: fixed;
 }
 
+.selected {
+    background-color: yellow;
+}
+
 #tTable{
     padding-top: 0px;
     border-top: 1px solid black;
