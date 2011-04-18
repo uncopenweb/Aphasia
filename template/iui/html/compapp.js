@@ -34,7 +34,7 @@ dojo.declare('compapp',[], {
                     var tr = dojo.create("tr",null,leftTable);
                     var td = dojo.create("td",{id:"sidetd1",style:{"height":"43px"}},tr);
                     var div = dojo.create("a",{href:"javascript:;"},td);
-                    var img = dojo.create("img",{src:leftPics[index++],width:"45px",height:"43px"},div);
+                    var img = dojo.create("img",{src:leftPics[index++],width:"100%",height:"25%"},div);
                         dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
                 });
             
