@@ -32,7 +32,7 @@ dojo.declare('compapp',[], {
                 });*/
                 dojo.forEach(leftPhrases, function(aPhrase) {
                     var tr = dojo.create("tr",null,leftTable);
-                    var td = dojo.create("td",{id:"sidetd1",style:{"width":'100%', "height":"95px"}},tr);
+                    var td = dojo.create("td",{id:"sidetd1",style:{"width":'100%', "height":"100px"}},tr);
                     var div = dojo.create("a",{href:"javascript:;"},td);
                     var img = dojo.create("img",{src:leftPics[index++],width:"100%",height:"100%",border:"0"},div);
                         dojo.connect(td, 'onmouseup', dojo.hitch(self, 'playSound', aPhrase));
