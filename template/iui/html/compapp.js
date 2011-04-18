@@ -83,17 +83,17 @@ dojo.declare('compapp',[], {
                             if (self.currentTab!=null) {
                                 if (self.currentTab.nameTag!=null) {
                                     document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
-                                    document.getElementById(self.currentTab.nameTag).className = "";
+                                    td.className = "";
                                 }
                                 else {
                                     document.getElementById("form").setAttribute("selected","false");
-                                    document.getElementById("form").className = "";
+                                    td.className = "";
                                 }
                             }
                             self.currentTab = tab;
                             a.href = tab.name;
                             document.getElementById(self.currentTab.nameTag).setAttribute("selected","true");
-                            document.getElementById(self.currentTab.nameTag).className = "selected";
+                            td.className = "selected";
                         }
                         else {
                             a.href = "javascript://";
