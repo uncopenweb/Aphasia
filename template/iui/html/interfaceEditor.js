@@ -836,7 +836,7 @@
         }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
-        var tab1 = dojo.create("form",{id:"uploadForm"+j, enctype:"multipart/form-data",className:"second"},div);
+        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST" , enctype:"multipart/form-data",className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"}, tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
@@ -869,7 +869,7 @@
         
         
         var k=j+1;
-        var tab2 = dojo.create("form",{id:"uploadForm"+k, enctype:"multipart/form-data", className:"second"},div);
+        var tab2 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
         var name1 = dojo.create("div",{className:"third"},tab2);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
@@ -903,7 +903,7 @@
 
         
         k = j+2;
-        var tab3 = dojo.create("form",{id:"uploadForm"+k, enctype:"multipart/form-data", className:"second"},div);
+        var tab3 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
         var name1 = dojo.create("div",{className:"third"},tab3);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
@@ -1093,7 +1093,7 @@
                 item5 = "";
             }
             var v = j+1;
-            var div = dojo.create("form",{enctype:"multipart/form-data",id:"tab"+i+j},tab);
+            var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},tab);
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
