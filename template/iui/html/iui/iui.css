@@ -69,6 +69,10 @@ body >.menu{
     position: fixed;
 }
 
+.selected {
+    background-color: yellow;
+}
+
 #tTable, #tTd, #tTr {
     border: 1px solid black;
     border-collapse:collapse;
