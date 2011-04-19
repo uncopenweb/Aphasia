@@ -842,7 +842,7 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+j,type:"file", disabled:"disabled",className:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+j,type:"file", name:"file", disabled:"disabled",className:"disabled"},name1);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
@@ -875,7 +875,7 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[1].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},name1);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
@@ -909,7 +909,7 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[2].nameTag},name1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", disabled:"disabled",className:"disabled"},name1);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},name1);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
@@ -1098,7 +1098,7 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            var one = theForm[j][0] = dojo.create("input",{type:"file",value:"", id: "contentItem"+i+j+"1"},td);
+            var one = theForm[j][0] = dojo.create("input",{type:"file", name:"file", value:"", id: "contentItem"+i+j+"1"},td);
             var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
