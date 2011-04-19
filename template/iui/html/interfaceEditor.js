@@ -1611,7 +1611,7 @@
             mode: 'crud' });
 
         for (var i=0; i<6; i++) {
-            var form = document.getElementbyId("uploadForm"+i);
+            var form = document.getElementById("uploadForm"+i);
             def.addCallback(function(db) {
                 db.upload({
                     form: form,
@@ -1624,7 +1624,7 @@
                 });
             });
             for (var j=0; j<9; j++) {
-                var form = document.getElementBybyId("tab"+i+j);
+                var form = document.getElementById("tab"+i+j);
                 if (form==null) {
                     break;
                 }
