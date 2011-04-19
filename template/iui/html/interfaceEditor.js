@@ -817,7 +817,7 @@
                     dojo.byId("form1"+6).value = bottomNumbers[2];  
                     for (var i=1; i<7; i++) {
                         if (dojo.byId("form1"+i).value!=0) {
-                            dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode.parentNode,i);
+                            dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode,i);
                             dojo.byId("form1"+i).disabled = "";
                             dojo.byId("form1"+i).className = "";
                         }
