@@ -836,9 +836,9 @@
         }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
-        var name1 = dojo.create("div",{className:"third"}, div);        
+        var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
-        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST", enctype:"multipart/form-data",className:"second"},name1);
+        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST", enctype:"multipart/form-data",className:"third"},name1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},tab1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab1);
