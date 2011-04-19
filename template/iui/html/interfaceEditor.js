@@ -861,7 +861,7 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-        var theDiv = dojo.create("div",{id:"tab"+j},tab1);
+        var theDiv = dojo.create("div",{id:"tab"+j},name1);
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,theDiv,j));
@@ -869,33 +869,33 @@
         
         
         var k=j+1;
-        var tab2 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
+        var name1 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
-        var name1 = dojo.create("div",{className:"third"},tab2);
-        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[1].nameTag},name1);
-        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},name1);
+        var tab2 = dojo.create("div",{className:"third"},name1);
+        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab2);
+        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[1].nameTag},tab2);
+        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab2);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab2);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
         }
-        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
-        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},name1);
+        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},tab2);
+        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab2);
+        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},tab2);
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
             a.disabled = "";
         }
         
-        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},name1);
-        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab2);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},tab2);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-        var theDiv = dojo.create("div",{id:"tab"+k},tab2);
+        var theDiv = dojo.create("div",{id:"tab"+k},name1);
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+1));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", k));
@@ -903,33 +903,33 @@
 
         
         k = j+2;
-        var tab3 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
-        var bold = dojo.create("b",{innerHTML:"Tab 3"},tab3);
-        var name1 = dojo.create("div",{className:"third"},tab3);
-        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
-        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[2].nameTag},name1);
-        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},name1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},name1);
+        var name1 = dojo.create("div",{className:"third"},div);
+        var bold = dojo.create("b",{innerHTML:"Tab 3"},name1);
+        var tab3 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},name1);
+        var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab3);
+        var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[2].nameTag},tab3);
+        var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab3);
+        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab3);
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
         }
-        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},name1);
-        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},name1);
-        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},name1);
+        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},tab3);
+        var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab3);
+        var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},tab3);
         if (text2.value.trim()!="") {
             text3.disabled = "";
             text3.className = "";
             a.disabled = "";
         }
         
-        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},name1);
-        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},name1);
+        var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab3);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},tab3);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-        var theDiv = dojo.create("div",{id:"tab"+k},tab3);
+        var theDiv = dojo.create("div",{id:"tab"+k},name1);
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+2));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
