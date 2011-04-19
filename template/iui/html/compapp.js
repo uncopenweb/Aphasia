@@ -57,6 +57,12 @@ dojo.declare('compapp',[], {
                         self.currentTab = document.getElementById("form");
                         td.href = "form";
                         self.currentTab.setAttribute("selected","true");
+                        for (var i=0; i<document.getElementById("#tTable").getElementsByTagName("td").length; i++) {
+                            document.getElementById("#tTable").getElementsByTagName("td")[i].className = "";
+                        }                                    
+                        for (var i=0; i<document.getElementById("tTable").getElementsByTagName("td").length; i++) {
+                            document.getElementById("tTable").getElementsByTagName("td")[i].className = "";
+                        }
                     }
                     else {
                         td.href = "javascript://";
