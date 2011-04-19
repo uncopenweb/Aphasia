@@ -836,7 +836,7 @@
         }
         var h4 = dojo.create("div",{className:"first",innerHTML:"Customize Your "+word+" Tabs"},div);
         
-        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST" , enctype:"multipart/form-data",className:"second"},div);
+        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST", enctype:"multipart/form-data",className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 1"},tab1);
         var name1 = dojo.create("div",{className:"third"}, tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},name1);
