@@ -84,19 +84,19 @@ dojo.declare('compapp',[], {
                                 if (self.currentTab.nameTag!=null) {
                                     document.getElementById(self.currentTab.nameTag).setAttribute("selected","false");
                                     for (var i=0; i<documemnt.getElementById("#tTable").getElementsByTagName("td").length; i++) {
-                                        tr.getElementsByTagName("td")[i].className = "";
+                                        documemnt.getElementById("#tTable").getElementsByTagName("td")[i].className = "";
                                     }                                    
                                     for (var i=0; i<documemnt.getElementById("tTable").getElementsByTagName("td").length; i++) {
-                                        tr.getElementsByTagName("td")[i].className = "";
+                                        documemnt.getElementById("tTable").getElementsByTagName("td")[i].className = "";
                                     }
                                 }
                                 else {
                                     document.getElementById("form").setAttribute("selected","false");
                                     for (var i=0; i<documemnt.getElementById("#tTable").getElementsByTagName("td").length; i++) {
-                                        tr.getElementsByTagName("td")[i].className = "";
+                                        documemnt.getElementById("#tTable").getElementsByTagName("td")[i].className = "";
                                     }                                    
                                     for (var i=0; i<documemnt.getElementById("tTable").getElementsByTagName("td").length; i++) {
-                                        tr.getElementsByTagName("td")[i].className = "";
+                                        documemnt.getElementById("tTable").getElementsByTagName("td")[i].className = "";
                                     }
                                 }
                             }
