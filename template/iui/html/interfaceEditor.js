@@ -869,9 +869,9 @@
         
         
         var k=j+1;
-        var name1 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},div);
-        var bold = dojo.create("b",{innerHTML:"Tab 2"},tab2);
-        var tab2 = dojo.create("div",{className:"third"},name1);
+        var name1 = dojo.create("div",{className:"second"},div);
+        var bold = dojo.create("b",{innerHTML:"Tab 2"},name1);
+        var tab2 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"third"},name1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab2);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[1].nameTag},tab2);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab2);
@@ -903,9 +903,9 @@
 
         
         k = j+2;
-        var name1 = dojo.create("div",{className:"third"},div);
+        var name1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 3"},name1);
-        var tab3 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"second"},name1);
+        var tab3 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"third"},name1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab3);
         var text1 = dojo.create("input",{id:"text11"+k,className:"text",value:theTab[2].nameTag},tab3);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab3);
