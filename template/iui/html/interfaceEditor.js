@@ -993,6 +993,7 @@
     }
     
     function dynamicForm(s,tab,i) {
+        console.log(tab);
         var second = [];
         var theForm = forms[--i];
         array = [];
