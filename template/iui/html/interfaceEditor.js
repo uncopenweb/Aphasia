@@ -1613,22 +1613,7 @@
 
         for (var i=0; i<6; i++) {
             var form = document.getElementById("uploadForm"+i);
-            def.addCallback(function(db) {
-                db.upload({
-                    form: form,
-                    load: function(data, ioArgs) {
-                        console.log('load', data);
-                    },
-                    error: function(msg, ioArgs) {
-                        console.log('error', msg);
-                    }
-                });
-            });
-            for (var j=0; j<9; j++) {
-                var form = document.getElementById("tab"+i+j);
-                if (form==null) {
-                    break;
-                }
+            if (form!=null) {
                 def.addCallback(function(db) {
                     db.upload({
                         form: form,
@@ -1639,9 +1624,26 @@
                             console.log('error', msg);
                         }
                     });
-                    donePage(ids);
                 });
-            }       
+                for (var j=0; j<9; j++) {
+                    var form = document.getElementById("tab"+i+j);
+                    if (form==null) {
+                        break;
+                    }
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });
+                        donePage(ids);
+                    });
+                }       
+            }
         }        
     }
     
