@@ -839,6 +839,7 @@
         var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
         var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST", enctype:"multipart/form-data",className:"third"},name1);
+                var theDiv = dojo.create("div",{id:"tab"+j},name1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},tab1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab1);
@@ -861,7 +862,6 @@
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
-        var theDiv = dojo.create("div",{id:"tab"+j},name1);
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", j));
             dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,dojo.byId("tab"+j),j));
