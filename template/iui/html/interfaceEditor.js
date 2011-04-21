@@ -896,7 +896,7 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
         var theDiv = dojo.create("div",{id:"tab"+k},name1);
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+1));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,dojo.byId("tab"+k),j+1));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+1));
@@ -930,7 +930,7 @@
             dojo.create("option",{value:i,innerHTML:i},text3);
         }
         var theDiv = dojo.create("div",{id:"tab"+k},name1);
-            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,theDiv,j+2));
+            dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,dojo.byId("tab"+k),j+2));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
