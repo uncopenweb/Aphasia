@@ -1093,9 +1093,7 @@
                 item5 = "";
             }
             var v = j+1;
-            console.log(tab);
-            console.log(dojo.byId("tab"+i));
-            var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},tab);
+            var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},dojo.byId("tab"+i));
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
