@@ -993,7 +993,6 @@
     }
     
     function dynamicForm(s,tab,i) {
-        console.log(tab);
         var second = [];
         var theForm = forms[--i];
         array = [];
@@ -1613,6 +1612,7 @@
 
         for (var i=0; i<6; i++) {
             var form = document.getElementById("uploadForm"+i);
+            console.log(form);
             if (form!=null) {
                 def.addCallback(function(db) {
                     db.upload({
