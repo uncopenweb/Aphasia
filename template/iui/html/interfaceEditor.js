@@ -1610,7 +1610,7 @@
             collection: 'Image',
             mode: 'crud' });
 
-        for (var i=0; i<6; i++) {
+        for (var i=1; i<7; i++) {
             var form = document.getElementById("uploadForm"+i);
             console.log(form);
             if (form!=null) {
