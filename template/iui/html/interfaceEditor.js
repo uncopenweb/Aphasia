@@ -1612,8 +1612,8 @@
 
         for (var i=1; i<7; i++) {
             var form = document.getElementById("uploadForm"+i);
-            console.log(form.file);
-            if (form.file!=null) {
+            console.log(form);
+            if (form!=null) {
                 def.addCallback(function(db) {
                     db.upload({
                         form: form,
