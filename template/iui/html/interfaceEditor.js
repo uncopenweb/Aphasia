@@ -1612,7 +1612,7 @@
 
         for (var i=1; i<7; i++) {
             var form = document.getElementById("uploadForm"+i);
-            console.log(form);
+            console.log(form.file);
             if (form.file!=null) {
                 def.addCallback(function(db) {
                     db.upload({
