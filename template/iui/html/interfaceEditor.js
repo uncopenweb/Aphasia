@@ -1077,7 +1077,6 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        console.log(i);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
@@ -1094,7 +1093,7 @@
                 item5 = "";
             }
             var v = j+1;
-            var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},dojo.byId("tab"+i));
+            var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},tab);
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
