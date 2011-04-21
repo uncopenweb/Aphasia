@@ -864,7 +864,7 @@
         var theDiv = dojo.create("div",{id:"tab"+j},name1);
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a, text3, j));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a, "", j));
-            dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,theDiv,j));
+            dojo.connect(text3,'onchange',dojo.hitch(this, dynamicForm,text3,dojo.byId("tab"+j),j));
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
         
