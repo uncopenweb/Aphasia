@@ -29,7 +29,8 @@
         dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
     function form2() {
-        var name1 = dojo.create("div",{className:"second"}, dojo.body());        
+        var div = dojo.create("div",null,dojo.body());
+        var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
         var tab1 = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"uploadForm1", className:"third"},name1);
         var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},tab1);
@@ -50,7 +51,7 @@
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
-        var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
+        var button = dojo.create("button",{innerHTML:"Submit"},div);
         dojo.connect(button,'onclick',dojo.hitch(this,submit));
 
     }
