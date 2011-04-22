@@ -21,7 +21,7 @@
         var form = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"upload_form1"},dojo.body());
         var label1 = dojo.create("label",{innerHTML:"Text: "},form);
         var text = dojo.create("input",{name:"tags"},form);
-        var text = dojo.create("input",{innerHTML:"hello"},form);
+        var text = dojo.create("input",{value:"hello"},form);
         var label2 = dojo.create("label",{innerHTML:"Picture"},form);
         var file = dojo.create("input",{type:"file",name:"file"},form);
         var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
