@@ -1611,11 +1611,10 @@
             mode: 'crud' });
 
         for (var i=1; i<7; i++) {
-            var form = dojo.byId("uploadForm"+i);
+            var form = document.getElementById("uploadForm"+i);
             console.log(form.file.value);
             if (form.file.value!="") {
                 def.addCallback(function(db) {
-                    console.log("hi");
                     db.upload({
                         form: form,
                         load: function(data, ioArgs) {
@@ -1628,7 +1627,6 @@
                 });
                 for (var j=0; j<9; j++) {
                     var form = dojo.byId("tab"+i+j);
-                    console.log(form);
                     if (form==null) {
                         break;
                     }
