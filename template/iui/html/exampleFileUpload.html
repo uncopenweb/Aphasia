@@ -29,7 +29,7 @@
         dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
     function form2() {
-        var div = dojo.create("div",{id:"first"},dojo.body());
+        var div = dojo.create("div",{className:"first", innerHTML:"Customize your top tabs"},dojo.body());
         var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
         var tab1 = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"uploadForm1", className:"third"},name1);
