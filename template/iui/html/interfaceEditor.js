@@ -1640,11 +1640,11 @@
                                 console.log('error', msg);
                             }
                         });
-                        donePage(ids);
                     });
                 }       
             }
-        }        
+        }
+        donePage(ids);        
     }
     
     function donePage(ids,deleteItem) {
