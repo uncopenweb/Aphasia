@@ -838,8 +838,8 @@
         
         var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
-        var tab1 = dojo.create("form",{id:"uploadForm"+j, method:"POST", enctype:"multipart/form-data",className:"third"},name1);
-                var theDiv = dojo.create("div",{id:"tab"+j},name1);
+        var tab1 = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"uploadForm"+j, className:"third"},name1);
+        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},tab1);
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},tab1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab1);
@@ -857,7 +857,6 @@
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm"+j,style:{"display":"none"}},tab1);
-        var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},tab1);
 
         for (var i=0; i<10; i++) {
             dojo.create("option",{value:i,innerHTML:i},text3);
