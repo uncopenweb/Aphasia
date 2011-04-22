@@ -1627,7 +1627,7 @@
                 });
                 for (var j=0; j<9; j++) {
                     var form = dojo.byId("tab"+i+j);
-                    if (form!=null) {
+                    if (form==null) {
                         break;
                     }
                     if (form.file.value!="") {
