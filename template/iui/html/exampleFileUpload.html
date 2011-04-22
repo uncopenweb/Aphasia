@@ -24,11 +24,10 @@
         var text = dojo.create("input",{name:"description"},form);
         //var label2 = dojo.create("label",{innerHTML:"Picture"},form);
         var file = dojo.create("input",{type:"file",name:"file"},form);
-        var button = dojo.create("button",{innerHTML:"Submit",onClick:"submit()"},dojo.body());
-        //dojo.connect(button,'onclick',dojo.hitch(this,submit));
+        var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
+        dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
     function submit() {
-        console.log(dojo.byId("upload_form1").file.value);
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
