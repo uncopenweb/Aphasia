@@ -19,10 +19,11 @@
     dojo.require("dijit.form.Button");
     function form() {
         var form = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"upload_form1"},dojo.body());
-        var label1 = dojo.create("label",{innerHTML:"Text: "},form);
-        var text = dojo.create("input",{name:"description",innerHTML:""},form);
-        var label2 = dojo.create("label",{innerHTML:"Picture"},form);
-        var file = dojo.create("input",{type:"file",name:"file",innerHTML:""},form);
+        //var label1 = dojo.create("label",{innerHTML:"Text: "},form);
+        var text = dojo.create("input",{name:"tags"},form);
+        var text = dojo.create("input",{name:"description"},form);
+        //var label2 = dojo.create("label",{innerHTML:"Picture"},form);
+        var file = dojo.create("input",{type:"file",name:"file"},form);
         var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
         dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
@@ -65,17 +66,11 @@
 </head>
 <body>
 
-    <form id="upload_form" method="POST" enctype="multipart/form-data">
-  <div class="ImageUpload">      
-        <input name="tags">
-
-           <input name="description">
-           <input type="file" name="file">
-           <selected>
-           <option>0</option>
-           </selected>
-   </div>
-    </form> 
+  <form id="upload_form" method="POST" enctype="multipart/form-data">  
+    <input name="tags">
+    <input name="description">
+    <input type="file" name="file">
+   </form> 
     <button onClick="submit()">Submit</button>
     <button onClick="show()">Show Database</button>
 </body>
