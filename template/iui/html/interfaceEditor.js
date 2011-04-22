@@ -1591,7 +1591,7 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
-                if (item=="") {
+                if (item!="") {
                     uploadPictures(ids, item._id);
                 }
                 else {
