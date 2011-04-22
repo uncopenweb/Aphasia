@@ -1615,6 +1615,7 @@
             console.log(form.file.value);
             if (form.file.value!="") {
                 def.addCallback(function(db) {
+                    console.log("hi");
                     db.upload({
                         form: form,
                         load: function(data, ioArgs) {
