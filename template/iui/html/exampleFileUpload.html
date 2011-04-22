@@ -18,7 +18,7 @@
 <script type = "text/javascript">
     dojo.require("dijit.form.Button");
     function form() {
-        var form = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"upload_form"},dojo.body());
+        var form = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"upload_form"},dojo.body());
         var label1 = dojo.create("label",{innerHTML:"Text: "},form);
         var text = dojo.create("input",{name:"description",innerHTML:""},form);
         var label2 = dojo.create("label",{innerHTML:"Picture"},form);
