@@ -50,6 +50,8 @@
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
+        var button = dojo.create("button",{innerHTML:"Submit"},dojo.body());
+        dojo.connect(button,'onclick',dojo.hitch(this,submit));
 
     }
     function submit() {
