@@ -60,10 +60,10 @@
         dojo.byId("first").style.display = "none";
         var div = dojo.create("div",null,dojo.body());
         var button = dojo.create("button",{innerHTML:"Submit"},div);
-        dojo.connect(button,'onclick',dojo.hitch(this,submit));
+        dojo.connect(button,'onclick',dojo.hitch(this,submit, ""));
     }
     
-    function submit() {
+    function submit(something) {
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
