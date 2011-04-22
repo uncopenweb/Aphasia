@@ -29,7 +29,7 @@
         dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
     function form2() {
-        var div = dojo.create("div",null,dojo.body());
+        var div = dojo.create("div",{id:"first"},dojo.body());
         var name1 = dojo.create("div",{className:"second"}, div);        
         var bold = dojo.create("b",{innerHTML:"Tab 1"},name1);
         var tab1 = dojo.create("form",{enctype:"multipart/form-data", method:"POST", id:"uploadForm1", className:"third"},name1);
@@ -52,9 +52,17 @@
         
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
         var button = dojo.create("button",{innerHTML:"Submit"},div);
-        dojo.connect(button,'onclick',dojo.hitch(this,submit));
+        dojo.connect(button,'onclick',dojo.hitch(this,next));
 
     }
+    
+    function next() {
+        dojo.byId("first").style.display = "none";
+        var div = dojo.create("div",null,dojo.body());
+        var button = dojo.create("button",{innerHTML:"Submit"},div);
+        dojo.connect(button,'onclick',dojo.hitch(this,submit));
+    }
+    
     function submit() {
         var def = uow.getDatabase({
             database: 'Media',
