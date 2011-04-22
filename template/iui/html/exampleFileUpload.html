@@ -24,7 +24,6 @@
         var text = dojo.create("input",{name:"description"},form);
         //var label2 = dojo.create("label",{innerHTML:"Picture"},form);
         var file = dojo.create("input",{type:"file",name:"file"},form);
-        var textarea = dojo.create("input",{type:"textarea",style:{display:"none"}},form);
         var button = dojo.create("button",{innerHTML:"Submit",onClick:"submit()"},dojo.body());
         //dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
@@ -67,12 +66,12 @@
 </head>
 <body>
 
-  <form id="upload_form" method="POST" enctype="multipart/form-data">  
+<!--   <form id="upload_form" method="POST" enctype="multipart/form-data">  
     <input name="tags">
     <input name="description">
     <input type="file" name="file">
    </form> 
     <button onClick="submit()">Submit</button>
-    <button onClick="show()">Show Database</button>
+    <button onClick="show()">Show Database</button> -->
 </body>
 </html>
