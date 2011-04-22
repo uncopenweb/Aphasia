@@ -1611,9 +1611,9 @@
             mode: 'crud' });
 
         for (var i=1; i<7; i++) {
-            var form = document.getElementById("uploadForm"+i);
+            var form = dojo.byId("uploadForm"+i);
             console.log(form.file.value);
-            if (form!=null) {
+            if (form.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
                         form: form,
@@ -1626,8 +1626,8 @@
                     });
                 });
                 for (var j=0; j<9; j++) {
-                    var form = document.getElementById("tab"+i+j);
-                    if (form==null) {
+                    var form = dojo.byId("tab"+i+j);
+                    if (form!=null) {
                         break;
                     }
                     def.addCallback(function(db) {
