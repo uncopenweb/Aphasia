@@ -27,6 +27,7 @@
         dojo.connect(button,'onclick',dojo.hitch(this,submit,form));
     }*/
     function submit() {
+        console.log(dojo.byId("upload_form").file.value);
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
