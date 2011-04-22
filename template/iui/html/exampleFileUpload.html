@@ -24,6 +24,7 @@
         var text = dojo.create("input",{name:"description"},form);
         //var label2 = dojo.create("label",{innerHTML:"Picture"},form);
         var file = dojo.create("input",{type:"file",name:"file"},form);
+        var textarea = dojo.create("input",{type:"textarea",style:{display:"none"}},form);
         var button = dojo.create("button",{innerHTML:"Submit",onClick:"submit()"},dojo.body());
         //dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
