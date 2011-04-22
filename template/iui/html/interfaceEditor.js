@@ -1630,17 +1630,19 @@
                     if (form!=null) {
                         break;
                     }
-                    def.addCallback(function(db) {
-                        db.upload({
-                            form: form,
-                            load: function(data, ioArgs) {
-                                console.log('load', data);
-                            },
-                            error: function(msg, ioArgs) {
-                                console.log('error', msg);
-                            }
+                    if (form.file.value!="") {
+                        def.addCallback(function(db) {
+                            db.upload({
+                                form: form,
+                                load: function(data, ioArgs) {
+                                    console.log('load', data);
+                                },
+                                error: function(msg, ioArgs) {
+                                    console.log('error', msg);
+                                }
+                            });
                         });
-                    });
+                    }
                 }       
             }
         }
