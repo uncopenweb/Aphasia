@@ -53,7 +53,7 @@
         
         
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
-        var tags = dojo.create("input",{name:"tags",display:"none"},tab1);
+        var tags = dojo.create("input",{name:"tags",style:{display:"none"}},tab1);
         var button = dojo.create("button",{innerHTML:"Submit"},div);
         dojo.connect(button,'onclick',dojo.hitch(this,next));
 
