@@ -1594,10 +1594,94 @@
                 }
                 data.save();
                 if (item!="") { 
-                    uploadPictures(ids, item._id);
+                    //uploadPictures(ids, item._id);
+                            var def = uow.getDatabase({
+            database: 'Media',
+            collection: 'Image',
+            mode: 'crud' });
+
+        for (var i=1; i<7; i++) {
+            var form1 = dojo.byId("uploadForm"+i);
+            console.log(form1.file.value);
+            if (form1.file.value!="") {
+                def.addCallback(function(db) {
+                    db.upload({
+                        form: form1,
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });
+                });
+            }
+            for (var j=0; j<9; j++) {
+                var form2 = dojo.byId("tab"+i+j);
+                if (form2==null) {
+                    break;
+                }
+                if (form2.file.value!="") {
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form2,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });
+                    });
+                }
+            }       
+        }
+        donePage(ids);
                 }
                 else {
-                    uploadPictures(ids, thisItem._id);
+                    //uploadPictures(ids, thisItem._id);
+                            var def = uow.getDatabase({
+            database: 'Media',
+            collection: 'Image',
+            mode: 'crud' });
+
+        for (var i=1; i<7; i++) {
+            var form1 = dojo.byId("uploadForm"+i);
+            console.log(form1.file.value);
+            if (form1.file.value!="") {
+                def.addCallback(function(db) {
+                    db.upload({
+                        form: form1,
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
+                    });
+                });
+            }
+            for (var j=0; j<9; j++) {
+                var form2 = dojo.byId("tab"+i+j);
+                if (form2==null) {
+                    break;
+                }
+                if (form2.file.value!="") {
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form2,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });
+                    });
+                }
+            }       
+        }
+        donePage(ids);
                 }
             });
             db.addErrback(function(msg) {
@@ -1612,7 +1696,7 @@
             collection: 'Image',
             mode: 'crud' });
 
-        for (var i=2; i<7; i++) {
+        for (var i=1; i<7; i++) {
             var form1 = dojo.byId("uploadForm"+i);
             console.log(form1.file.value);
             if (form1.file.value!="") {
