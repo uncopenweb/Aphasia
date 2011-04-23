@@ -1046,7 +1046,6 @@
                     second[j] = theArray[j];
                 }
             }
-            console.log(second);
         }
         else {
             if (dojo.byId("tab"+i) != null) {
@@ -1078,7 +1077,7 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        console.log(second);
+        console.log(k);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
