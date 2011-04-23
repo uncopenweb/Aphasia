@@ -879,7 +879,7 @@
             text2.disabled = "";
             text2.className = "";
         }
-        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},tab2);
+        var a = dojo.create("input",{type:"button", value:"Clear", disabled:"disabled"},tab2);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab2);
         var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},tab2);
         if (text2.value.trim()!="") {
@@ -913,7 +913,7 @@
             text2.disabled = "";
             text2.className = "";
         }
-        var a = dojo.create("button",{innerHTML:"Clear", disabled:"disabled"},tab3);
+        var a = dojo.create("input",{type:"button", value:"Clear", disabled:"disabled"},tab3);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab3);
         var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},tab3);
         if (text2.value.trim()!="") {
