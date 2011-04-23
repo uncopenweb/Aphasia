@@ -71,6 +71,7 @@
             database: 'Media',
             collection: 'Image',
             mode: 'crud' });
+        var form = dojo.byId("uploadForm1");
         def.addCallback(function(db) {
             db.upload({
                 form: dojo.byId("uploadForm1"),
