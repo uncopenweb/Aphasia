@@ -1631,9 +1631,9 @@
             database: 'Media',
             collection: 'Image',
             mode: 'crud' });
-        console.log(anID);
         if (j==0) {
-            var form1 = dojo.byId("uploadForm"+i);           
+            var form1 = dojo.byId("uploadForm"+i);
+            form1.tags.value = anId;
             if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
@@ -1652,6 +1652,7 @@
         if (form2==null) {
             return;
         }
+        form2.tags.value = anId;
         if (form2.file.value!="") {
             def.addCallback(function(db) {
                 db.upload({
