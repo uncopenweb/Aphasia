@@ -1592,15 +1592,25 @@
                 }                    
                 else {
                     item = data.newItem(thisSchema);
+         });
                 }
                 data.save();
-                console.log(JSON.stringify(item));
                 if (item!="") {
-                    for (var i=1; i<7; i++) {
-                        for (var j=0; j<9; j++) {
-                            uploadPictures(i, j, ids, item._id);
-                        }   
-                    }
+                    db.then(function (data) {
+                        data.fetch({
+                            query:{'themeName':item.themeName},
+                            onItem: function(anItem) {
+                                item = anItem;
+                            },
+                            onComplete: function() {
+                                for (var i=1; i<7; i++) {
+                                    for (var j=0; j<9; j++) {
+                                        uploadPictures(i, j, ids, item._id);
+                                    }   
+                                }
+                            }
+                        });
+                    });
                 }
                 else {
                     for (var i=1; i<7; i++) {
