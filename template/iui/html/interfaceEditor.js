@@ -1602,7 +1602,7 @@
             if (form.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: form,
+                        form: dojo.byId("tab"+i+0),
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
