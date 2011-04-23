@@ -1639,7 +1639,7 @@
             }
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
-                break;
+                return;
             }
             if (form2.file.value!="") {
                 def.addCallback(function(db) {
