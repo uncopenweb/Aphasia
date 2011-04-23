@@ -1594,6 +1594,7 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
+                console.log(item);
                 if (item!="") {
                     for (var i=1; i<7; i++) {
                         for (var j=0; j<9; j++) {
@@ -1608,7 +1609,7 @@
                         }   
                     }
                 }
-                donePage(ids);
+                //donePage(ids);
             });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
@@ -1651,8 +1652,7 @@
                     },
                     error: function(msg, ioArgs) {
                         console.log('error', msg);
-                    },
-                    onComplete: alert("upload form "+i+j)
+                    }
                 });
             });
         }      
