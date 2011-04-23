@@ -1593,7 +1593,6 @@
                 else {
                     item = data.newItem(thisSchema);
                 }
-         });
                 data.save();
                 if (item!="") {
                     db.then(function (data) {
