@@ -1082,8 +1082,10 @@
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
-                //item4 = second[k++];
-                //item5 = second[k++];
+                if (!isPreload[m]) {
+                    item4 = second[k++];
+                    item5 = second[k++];
+                }
             }
             else {
                 item1 = "";
