@@ -83,6 +83,18 @@
                 }
             });
         });
+        var form = dojo.byId("uploadForm1");
+        def.addCallback(function(db) {
+            db.upload({
+                form: form,
+                load: function(data, ioArgs) {
+                    console.log('load', data);
+                },
+                error: function(msg, ioArgs) {
+                    console.log('error', msg);
+                }
+            });
+        });
     }
     
     function show() {
