@@ -1593,49 +1593,8 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
-                if (item!="") {
-                            var def = uow.getDatabase({
-            database: 'Media',
-            collection: 'Image',
-            mode: 'crud' });
-
-        for (var i=2; i<7; i++) {
-            var form = dojo.byId("uploadForm"+i);
-            console.log(form.file.value);
-            if (form.file.value!="") {
-                def.addCallback(function(db) {
-                    db.upload({
-                        form: form,
-                        load: function(data, ioArgs) {
-                            console.log('load', data);
-                        },
-                        error: function(msg, ioArgs) {
-                            console.log('error', msg);
-                        }
-                    });
-                });
-                for (var j=0; j<9; j++) {
-                    var form = dojo.byId("tab"+i+j);
-                    if (form==null) {
-                        break;
-                    }
-                    if (form.file.value!="") {
-                        def.addCallback(function(db) {
-                            db.upload({
-                                form: form,
-                                load: function(data, ioArgs) {
-                                    console.log('load', data);
-                                },
-                                error: function(msg, ioArgs) {
-                                    console.log('error', msg);
-                                }
-                            });
-                        });
-                    }
-                }       
-            }
-        }
-        donePage(ids); 
+                if (item!="") { 
+                    uploadPictures(ids, item._id);
                 }
                 else {
                     uploadPictures(ids, thisItem._id);
