@@ -1027,7 +1027,6 @@
                     array.push(aim.phrase);
                 });                    
             }
-            console.log(array);
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
@@ -1047,6 +1046,7 @@
                     second[j] = theArray[j];
                 }
             }
+            console.log(array);
         }
         else {
             if (dojo.byId("tab"+i) != null) {
