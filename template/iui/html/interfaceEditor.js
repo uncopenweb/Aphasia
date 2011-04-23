@@ -530,8 +530,7 @@
     
     
     function start() {  
-        var mainArea = dojo.body();
-        //var mainArea = dojo.byId("mainArea");
+        var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Top Tabs", "Step 3 -- Customize Your Bottom Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
         var tabs = dojo.create("table",{style:{"border-collapse":"collapse"}},mainArea);
         dojo.forEach(ulList, function(item) {
