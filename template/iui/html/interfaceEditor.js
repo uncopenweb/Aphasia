@@ -1083,6 +1083,7 @@
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
+                console.log(isPreload[m]);
                 if (isPreload[m]==false) {
                     item4 = second[k++];
                     item5 = second[k++];
