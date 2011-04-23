@@ -1602,7 +1602,6 @@
                                 item = anItem;
                             },
                             onComplete: function() {
-                                alert(item._id);
                                 for (var i=1; i<7; i++) {
                                     for (var j=0; j<9; j++) {
                                         uploadPictures(i, j, ids, item._id);
@@ -1634,7 +1633,7 @@
             mode: 'crud' });
         if (j==0) {
             var form1 = dojo.byId("uploadForm"+i);
-            form1.tags.value = anId;
+            form1.tags.value = anID;
             if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
@@ -1653,7 +1652,7 @@
         if (form2==null) {
             return;
         }
-        form2.tags.value = anId;
+        form2.tags.value = anID;
         if (form2.file.value!="") {
             def.addCallback(function(db) {
                 db.upload({
