@@ -1652,7 +1652,7 @@
 
         for (var i=1; i<7; i++) {
             var form1 = dojo.byId("uploadForm"+i);
-            console.log(form.file.value);
+            console.log(form1.file.value);
             if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
