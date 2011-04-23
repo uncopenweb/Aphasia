@@ -1651,7 +1651,8 @@
                     },
                     error: function(msg, ioArgs) {
                         console.log('error', msg);
-                    }
+                    },
+                    onComplete: alert("upload form "+i+j);
                 });
             });
         }      
