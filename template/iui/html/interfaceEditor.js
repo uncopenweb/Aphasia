@@ -867,7 +867,7 @@
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
         
-        var k=j+1;
+/*         var k=j+1;
         var name1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},name1);
         var tab2 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"third"},name1);
@@ -932,7 +932,7 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,dojo.byId("tab"+k),k));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
-            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2)); */
 
         
         if (j==4) {
