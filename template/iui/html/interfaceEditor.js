@@ -1072,6 +1072,7 @@
                 }
             }            
         }
+        console.log(isPreload[m]);
         for (j=0; j<9; j++) {
             if (dojo.byId("tab"+i+j)!=null) {
                 dojo.destroy("tab"+i+j);
