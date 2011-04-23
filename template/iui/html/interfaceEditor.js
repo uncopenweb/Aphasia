@@ -1046,7 +1046,7 @@
                     second[j] = theArray[j];
                 }
             }
-            console.log(array);
+            console.log(second);
         }
         else {
             if (dojo.byId("tab"+i) != null) {
