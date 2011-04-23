@@ -1594,7 +1594,7 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
-                console.log(item._id);
+                console.log("item id: "+item._id);
                 if (item!="") {
                     for (var i=1; i<7; i++) {
                         for (var j=0; j<9; j++) {
