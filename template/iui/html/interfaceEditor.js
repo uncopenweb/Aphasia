@@ -1077,14 +1077,13 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        console.log(second[1]);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
-                item4 = second[k++];
-                item5 = second[k++];
+                //item4 = second[k++];
+                //item5 = second[k++];
             }
             else {
                 item1 = "";
