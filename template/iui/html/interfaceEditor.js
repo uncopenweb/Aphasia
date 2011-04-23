@@ -1593,11 +1593,20 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
-                if (item!="") { 
-                    uploadPictures(ids, item._id);
+                if (item!="") {
+                    for (var i=1; i<7; i++) {
+                        for (var j=0; j<9; j++) {
+                            uploadPictures(i, j, ids, item._id);
+                        }   
+                    }
                 }
                 else {
-                    uploadPictures(ids, thisItem._id);
+                    //uploadPictures(ids, thisItem._id);
+                    for (var i=1; i<7; i++) {
+                        for (var j=0; j<9; j++) {
+                            uploadPictures(i, j, ids, thisItem._id);
+                        }   
+                    }
                 }
             });
             db.addErrback(function(msg) {
@@ -1606,19 +1615,19 @@
         }
     }
     
-    function uploadPictures(ids, anID) {
+    function uploadPictures(i, j, ids, anID) {
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
             mode: 'crud' });
-
-        for (var i=1; i<2; i++) {
-            var form1 = dojo.byId("uploadForm"+1);
-            console.log(form1.file.value);
+            
+            if (j==0) {
+            var form1 = dojo.byId("uploadForm"+i);
+            
             if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: dojo.byId("uploadForm"+1),
+                        form: form1,
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
@@ -1628,27 +1637,24 @@
                     });
                 });
             }
-            for (var j=0; j<1; j++) {
-                var form2 = dojo.byId("tab"+1+0);
-                if (form2==null) {
-                    break;
-                }
-                if (form2.file.value!="") {
-                    def.addCallback(function(db) {
-                        db.upload({
-                            form: form2,
-                            load: function(data, ioArgs) {
-                                console.log('load', data);
-                            },
-                            error: function(msg, ioArgs) {
-                                console.log('error', msg);
-                            }
-                        });
+            var form2 = dojo.byId("tab"+i+j);
+            if (form2==null) {
+                break;
+            }
+            if (form2.file.value!="") {
+                def.addCallback(function(db) {
+                    db.upload({
+                        form: form2,
+                        load: function(data, ioArgs) {
+                            console.log('load', data);
+                        },
+                        error: function(msg, ioArgs) {
+                            console.log('error', msg);
+                        }
                     });
-                }
-            }       
-        }
-        donePage(ids);        
+                });
+            }    
+        //donePage(ids);        
     }
     
     function donePage(ids,deleteItem) {
