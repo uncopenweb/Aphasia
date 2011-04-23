@@ -1596,13 +1596,13 @@
             collection: 'Image',
             mode: 'crud' });
 
-        for (var i=1; i<7; i++) {
-            var form = document.getElementById("uploadForm"+i);
+        for (var i=2; i<7; i++) {
+            var form = dojo.byId("uploadForm"+i);
             console.log(form.file.value);
             if (form.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: dojo.byId("uploadForm2"),
+                        form: form,
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
