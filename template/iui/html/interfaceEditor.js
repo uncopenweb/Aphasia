@@ -1004,7 +1004,7 @@
         var item3 = "";
         m=i-1;
         if (isPreload[m]) {
-            isPreload[m] = false;
+            //isPreload[m] = false;
             if (i<=3) {
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
@@ -1072,7 +1072,6 @@
                 }
             }            
         }
-        console.log(isPreload[m]);
         for (j=0; j<9; j++) {
             if (dojo.byId("tab"+i+j)!=null) {
                 dojo.destroy("tab"+i+j);
@@ -1083,9 +1082,7 @@
                 item1 = second[k++];
                 item2 = second[k++];
                 item3 = second[k++];
-                console.log(isPreload[m]);
                 if (isPreload[m]==false) {
-                    console.log(isPreload[m]);
                     item4 = second[k++];
                     item5 = second[k++];
                 }
@@ -1135,7 +1132,7 @@
             dojo.connect(two, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+v+""+i), j+1, theForm));
             dojo.connect(three, 'onkeyup', dojo.hitch(this, release2, one, two, three, dojo.byId("button"+v+""+i), j+1, theForm));  
         }
-        
+        isPreload[m] = false;
     }
     
     function summaryPage(ids,ulList) {
