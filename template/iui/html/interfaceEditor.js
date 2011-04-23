@@ -1600,7 +1600,7 @@
             collection: 'Image',
             mode: 'crud' });
 
-        for (var i=1; i<7; i++) {
+        for (var i=2; i<7; i++) {
             var form1 = dojo.byId("uploadForm"+i);
             console.log(form1.file.value);
             if (form1.file.value!="") {
@@ -1645,7 +1645,7 @@
             collection: 'Image',
             mode: 'crud' });
 
-        for (var i=1; i<7; i++) {
+        for (var i=2; i<7; i++) {
             var form1 = dojo.byId("uploadForm"+i);
             console.log(form1.file.value);
             if (form1.file.value!="") {
