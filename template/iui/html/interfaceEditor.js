@@ -1602,6 +1602,7 @@
                                 item = anItem;
                             },
                             onComplete: function() {
+                                alert(item._id);
                                 for (var i=1; i<7; i++) {
                                     for (var j=0; j<9; j++) {
                                         uploadPictures(i, j, ids, item._id);
