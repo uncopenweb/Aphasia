@@ -55,7 +55,7 @@
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
         var tags = dojo.create("input",{name:"tags",style:{display:"none"}},tab1);
         var button = dojo.create("button",{innerHTML:"Submit"},div);
-        dojo.connect(button,'onclick',dojo.hitch(this,next));
+        dojo.connect(button,'onclick',dojo.hitch(this,submit));
         
         var mainDiv = dojo.create("div",{style:{display:"block"}},dojo.body());
         var div = dojo.create("div",{className:"first", innerHTML:"Customize your top tabs"},mainDiv);
@@ -83,14 +83,7 @@
         var name = dojo.create("input",{name:"description",value:"uploadForm1",style:{"display":"none"}},tab1);
         var tags = dojo.create("input",{name:"tags",style:{display:"none"}},tab1);
         var button = dojo.create("button",{innerHTML:"Submit"},div);
-        dojo.connect(button,'onclick',dojo.hitch(this,next));
-    }
-    
-    function next() {
-        dojo.byId("first").style.display = "none";
-        var div = dojo.create("div",null,dojo.body());
-        var button = dojo.create("button",{innerHTML:"Submit"},div);
-        dojo.connect(button,'onclick',dojo.hitch(this,submit, ""));
+        dojo.connect(button,'onclick',dojo.hitch(this,submit));
     }
     
     function submit(something) {
@@ -110,7 +103,7 @@
                 }
             });
         });
-        var form = dojo.byId("uploadForm1");
+        var form = dojo.byId("uploadForm2");
         def.addCallback(function(db) {
             db.upload({
                 form: form,
