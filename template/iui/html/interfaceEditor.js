@@ -810,12 +810,12 @@
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);  
                     dojo.byId("form1"+1).value = topNumbers[0];
-                    // dojo.byId("form1"+2).value = topNumbers[1];
-                    // dojo.byId("form1"+3).value = topNumbers[2];
-                    // dojo.byId("form1"+4).value = bottomNumbers[0];
-                    // dojo.byId("form1"+5).value = bottomNumbers[1];
-                    // dojo.byId("form1"+6).value = bottomNumbers[2];  
-                    for (var i=1; i<2; i++) {
+                    dojo.byId("form1"+2).value = topNumbers[1];
+                    dojo.byId("form1"+3).value = topNumbers[2];
+                    dojo.byId("form1"+4).value = bottomNumbers[0];
+                    dojo.byId("form1"+5).value = bottomNumbers[1];
+                    dojo.byId("form1"+6).value = bottomNumbers[2];  
+                    for (var i=1; i<7; i++) {
                         if (dojo.byId("form1"+i).value!=0) {
                             dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode,i);
                             dojo.byId("form1"+i).disabled = "";
@@ -867,7 +867,7 @@
             dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j));
         
         
-/*         var k=j+1;
+        var k=j+1;
         var name1 = dojo.create("div",{className:"second"},div);
         var bold = dojo.create("b",{innerHTML:"Tab 2"},name1);
         var tab2 = dojo.create("form",{id:"uploadForm"+k, method:"POST", enctype:"multipart/form-data", className:"third"},name1);
@@ -932,7 +932,7 @@
             dojo.connect(text3,'onchange',dojo.hitch(this,dynamicForm,text3,dojo.byId("tab"+k),k));
             dojo.connect(text1, 'onkeyup', dojo.hitch(this, catchRelease, text1, text2,a,text3, k));
             dojo.connect(text2, 'onchange', dojo.hitch(this, catchRelease, text2, text3,a,"", k));
-            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2)); */
+            dojo.connect(a, 'onclick', dojo.hitch(this, clearForm, text2, text3, j+2));
 
         
         if (j==4) {
@@ -964,6 +964,7 @@
             dojo.connect(forwardButton1,'onclick',dojo.hitch(this,function() {
                 var m=j;
                 if (m==2) {
+                    console.log(dojo.byId("uploadForm1"));
                     dojo.empty(dojo.byId(ids[3]));
                     summaryPage(ids,ulList);
                 
