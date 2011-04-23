@@ -1651,12 +1651,12 @@
             mode: 'crud' });
 
         for (var i=1; i<7; i++) {
-            var form = document.getElementById("uploadForm"+i);
+            var form1 = dojo.byId("uploadForm"+i);
             console.log(form.file.value);
-            if (form.file.value!="") {
+            if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: form,
+                        form: form1,
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
@@ -1666,14 +1666,14 @@
                     });
                 });
                 for (var j=0; j<9; j++) {
-                    var form = dojo.byId("tab"+i+j);
-                    if (form==null) {
+                    var form2 = dojo.byId("tab"+i+j);
+                    if (form2==null) {
                         break;
                     }
-                    if (form.file.value!="") {
+                    if (form2.file.value!="") {
                         def.addCallback(function(db) {
                             db.upload({
-                                form: form,
+                                form: form2,
                                 load: function(data, ioArgs) {
                                     console.log('load', data);
                                 },
