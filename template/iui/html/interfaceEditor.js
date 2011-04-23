@@ -1622,20 +1622,21 @@
             mode: 'crud' });
             
             if (j==0) {
-            var form1 = dojo.byId("uploadForm"+i);
-            
-            if (form1.file.value!="") {
-                def.addCallback(function(db) {
-                    db.upload({
-                        form: form1,
-                        load: function(data, ioArgs) {
-                            console.log('load', data);
-                        },
-                        error: function(msg, ioArgs) {
-                            console.log('error', msg);
-                        }
+                var form1 = dojo.byId("uploadForm"+i);
+                
+                if (form1.file.value!="") {
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form1,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });
                     });
-                });
+                }
             }
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
@@ -1653,7 +1654,7 @@
                         }
                     });
                 });
-            }    
+            }
         //donePage(ids);        
     }
     
