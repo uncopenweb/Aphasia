@@ -1629,7 +1629,7 @@
                 });
             }
             for (var j=0; j<9; j++) {
-                var form2 = dojo.byId("tab"+i+j);
+                var form2 = dojo.byId("tab"+1+j);
                 if (form2==null) {
                     break;
                 }
