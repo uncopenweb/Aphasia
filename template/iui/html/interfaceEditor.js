@@ -1601,13 +1601,13 @@
                     }
                 }
                 else {
-                    //uploadPictures(ids, thisItem._id);
                     for (var i=1; i<7; i++) {
                         for (var j=0; j<9; j++) {
                             uploadPictures(i, j, ids, thisItem._id);
                         }   
                     }
                 }
+                donePage(ids);
             });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
@@ -1620,32 +1620,13 @@
             database: 'Media',
             collection: 'Image',
             mode: 'crud' });
-            
-            if (j==0) {
-                var form1 = dojo.byId("uploadForm"+i);
-                
-                if (form1.file.value!="") {
-                    def.addCallback(function(db) {
-                        db.upload({
-                            form: form1,
-                            load: function(data, ioArgs) {
-                                console.log('load', data);
-                            },
-                            error: function(msg, ioArgs) {
-                                console.log('error', msg);
-                            }
-                        });
-                    });
-                }
-            }
-            var form2 = dojo.byId("tab"+i+j);
-            if (form2==null) {
-                return;
-            }
-            if (form2.file.value!="") {
+        console.log(anID);
+        if (j==0) {
+            var form1 = dojo.byId("uploadForm"+i);           
+            if (form1.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: form2,
+                        form: form1,
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
@@ -1655,7 +1636,24 @@
                     });
                 });
             }
-        //donePage(ids);        
+        }
+        var form2 = dojo.byId("tab"+i+j);
+        if (form2==null) {
+            return;
+        }
+        if (form2.file.value!="") {
+            def.addCallback(function(db) {
+                db.upload({
+                    form: form2,
+                    load: function(data, ioArgs) {
+                        console.log('load', data);
+                    },
+                    error: function(msg, ioArgs) {
+                        console.log('error', msg);
+                    }
+                });
+            });
+        }      
     }
     
     function donePage(ids,deleteItem) {
