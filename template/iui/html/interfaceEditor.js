@@ -1628,8 +1628,8 @@
                     });
                 });
             }
-            for (var j=0; j<9; j++) {
-                var form2 = dojo.byId("tab"+1+j);
+            for (var j=0; j<1; j++) {
+                var form2 = dojo.byId("tab"+1+0);
                 if (form2==null) {
                     break;
                 }
