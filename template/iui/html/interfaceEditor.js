@@ -1611,25 +1611,25 @@
                         }
                     });
                 });
-                for (var j=0; j<9; j++) {
-                    var form = dojo.byId("tab"+i+j);
-                    if (form==null) {
-                        break;
-                    }
-                    if (form.file.value!="") {
-                        def.addCallback(function(db) {
-                            db.upload({
-                                form: form,
-                                load: function(data, ioArgs) {
-                                    console.log('load', data);
-                                },
-                                error: function(msg, ioArgs) {
-                                    console.log('error', msg);
-                                }
-                            });
-                        });
-                    }
-                }       
+                // for (var j=0; j<9; j++) {
+                    // var form = dojo.byId("tab"+i+j);
+                    // if (form==null) {
+                        // break;
+                    // }
+                    // if (form.file.value!="") {
+                        // def.addCallback(function(db) {
+                            // db.upload({
+                                // form: form,
+                                // load: function(data, ioArgs) {
+                                    // console.log('load', data);
+                                // },
+                                // error: function(msg, ioArgs) {
+                                    // console.log('error', msg);
+                                // }
+                            // });
+                        // });
+                    // }
+                // }       
             }
         }
         donePage(ids); 
