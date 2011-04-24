@@ -836,7 +836,7 @@
         });
         db.then(function(data) {
             data.fetch({
-                query:{'tags[0]':ID},
+                query:{'tags'[0]:ID},
                 onItem: function(item) {
                     alert(item.URL);
                 },
