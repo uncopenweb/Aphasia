@@ -834,6 +834,7 @@
             collection: 'Images',
             mode: 'crud' 
         });
+        alert(ID);
         db.then(function(data) {
             data.fetch({
                 query:{'tags':ID},
