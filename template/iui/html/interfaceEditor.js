@@ -836,7 +836,7 @@
         });
         db.then(function(data) {
             data.fetch({
-                query:{'description':'uploadForm1'},
+                query:{'description':"uploadForm1"},
                 onItem: function(item) {
                     alert(item.tags);
                 },
