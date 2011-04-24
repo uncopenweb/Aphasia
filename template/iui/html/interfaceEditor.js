@@ -807,8 +807,9 @@
                 },
                 onComplete: function(items) {
                     isPreload = [true,true,true,true,true,true];
-                    tabStep(ids,1,"Top",ulList);
-                    tabStep(ids,2,"Bottom",ulList);  
+                    //tabStep(ids,1,"Top",ulList);
+                    //tabStep(ids,2,"Bottom",ulList);  
+                    loadPictures(id,ids,ulList);
                     dojo.byId("form1"+1).value = topNumbers[0];
                     dojo.byId("form1"+2).value = topNumbers[1];
                     dojo.byId("form1"+3).value = topNumbers[2];
@@ -822,6 +823,25 @@
                             dojo.byId("form1"+i).className = "";
                         }
                     }
+                }
+            });
+        });
+    }
+    
+    function loadPictures(ID,ids,ulList) {
+        var db = uow.getDatabase({
+            database: 'Media',
+            collection: 'Images',
+            mode: 'crud' 
+        });
+        db.then(function(data) {
+            data.fetch({
+                query:{'tags':ID},
+                onItem: function(item) {
+                    alert(item.URL);
+                },
+                onComplete: function() {
+                    
                 }
             });
         });
