@@ -838,7 +838,7 @@
             data.fetch({
                 query:{'tags':ID},
                 onItem: function(item) {
-                    var a = dojo.create("a",{href:item.URL, innerHTML:item.URL},dojo.byId(ids[1]));
+                    console.log(item);
                 },
                 onComplete: function() {
                     
