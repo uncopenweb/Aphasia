@@ -831,13 +831,12 @@
     function loadPictures(ID,ids,ulList) {
         var db = uow.getDatabase({
             database: 'Media',
-            collection: 'Images',
+            collection: 'Image',
             mode: 'crud' 
         });
         db.then(function(data) {
-            console.log(data);
             data.fetch({
-                //query:{'description':"uploadForm1"},
+                query:{'tags':ID},
                 onItem: function(item) {
                     console.log(item);
                 },
