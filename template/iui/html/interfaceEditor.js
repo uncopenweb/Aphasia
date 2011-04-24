@@ -838,7 +838,7 @@
             data.fetch({
                 query:{'tags':ID},
                 onItem: function(item) {
-                    console.log(item);
+                    alert(item.URL);
                 },
                 onComplete: function() {
                     
