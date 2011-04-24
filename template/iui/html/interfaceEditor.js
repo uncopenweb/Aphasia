@@ -835,6 +835,7 @@
             mode: 'crud' 
         });
         db.then(function(data) {
+            console.log(data);
             data.fetch({
                 query:{'description':"uploadForm1"},
                 onItem: function(item) {
