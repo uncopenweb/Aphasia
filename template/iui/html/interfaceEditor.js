@@ -837,9 +837,9 @@
         db.then(function(data) {
             console.log(data);
             data.fetch({
-                query:{'description':"uploadForm1"},
+                //query:{'description':"uploadForm1"},
                 onItem: function(item) {
-                    alert(item.tags);
+                    console.log(item);
                 },
                 onComplete: function() {
                     
