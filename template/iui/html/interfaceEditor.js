@@ -526,6 +526,16 @@
     array = [];
     
     
+    var upload = [false, false, false, false, false, false];
+    var tab1 = [false, false, false, false, false, false, false, false, false];
+    var tab2 = [false, false, false, false, false, false, false, false, false];
+    var tab3 = [false, false, false, false, false, false, false, false, false];
+    var tab4 = [false, false, false, false, false, false, false, false, false];
+    var tab5 = [false, false, false, false, false, false, false, false, false];
+    var tab6 = [false, false, false, false, false, false, false, false, false];
+    
+    
+    
     //only need the URL, originalName, tags, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
     
     
