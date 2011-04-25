@@ -526,7 +526,7 @@
     array = [];
     
     
-    var upload = [false, false, false, false, false, false];
+    var uploadForm = [false, false, false, false, false, false];
     var tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
     
@@ -535,7 +535,7 @@
     
     
     function start() {  
-        upload = ["", false, false, false, false, false, false];
+        uploadForm = ["", false, false, false, false, false, false];
         tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
         var mainArea = dojo.byId("mainArea");
