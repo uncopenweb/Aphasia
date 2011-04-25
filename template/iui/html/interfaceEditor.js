@@ -527,12 +527,7 @@
     
     
     var upload = [false, false, false, false, false, false];
-    var tab1 = [false, false, false, false, false, false, false, false, false];
-    var tab2 = [false, false, false, false, false, false, false, false, false];
-    var tab3 = [false, false, false, false, false, false, false, false, false];
-    var tab4 = [false, false, false, false, false, false, false, false, false];
-    var tab5 = [false, false, false, false, false, false, false, false, false];
-    var tab6 = [false, false, false, false, false, false, false, false, false];
+    var tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
     
     
@@ -541,12 +536,7 @@
     
     function start() {  
         upload = ["", false, false, false, false, false, false];
-        tab1 = [false, false, false, false, false, false, false, false, false];
-        tab2 = [false, false, false, false, false, false, false, false, false];
-        tab3 = [false, false, false, false, false, false, false, false, false];
-        tab4 = [false, false, false, false, false, false, false, false, false];
-        tab5 = [false, false, false, false, false, false, false, false, false];
-        tab6 = [false, false, false, false, false, false, false, false, false];
+        tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
         var mainArea = dojo.byId("mainArea");
         var ulList = ["Step 1 -- Getting Started", "Step 2 -- Customize Your Top Tabs", "Step 3 -- Customize Your Bottom Tabs", "Step 4 -- Summary", "Step 5 -- You're Done!"];
@@ -863,14 +853,15 @@
                         }
                         for (var j=0; j<9; j++) {
                             if (item.description == "tab"+i+j) {
-                                tab+i[j] = item.URL;
+                                tab[i][j] = item.URL;
                                 break;
                             }
                         }
                     }
                 },
                 onComplete: function() {
-                    
+                    console.log(uploadForm);
+                    console.log(tab);
                 }
             });
         });
