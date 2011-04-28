@@ -1138,9 +1138,8 @@
             }));
     }
     
-    function dynamicForm(s,tab,i) {
+    function dynamicForm(s,aTab,i) {
         var n=i-1;
-        alert(tab[i]);
         var p=0;
         var second = [];
         var theForm = forms[--i];
