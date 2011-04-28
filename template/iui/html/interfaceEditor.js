@@ -1140,7 +1140,7 @@
     
     function dynamicForm(s,tab,i) {
         var n=i-1;
-        alert(n);
+        alert(tab[i]);
         var p=0;
         var second = [];
         var theForm = forms[--i];
