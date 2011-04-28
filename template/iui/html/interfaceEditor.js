@@ -860,8 +860,59 @@
                     }
                 },
                 onComplete: function() {
-                    console.log(uploadForm);
-                    console.log(tab);
+                    var i=0;
+                    var j=0;
+                    var k=0;
+                    topNumbers=[0,0,0];
+                    bottomNumbers=[0,0,0]; 
+                    dojo.forEach(thisItem.topTabs, function(aTab) {
+                        k=0;
+                        var m=i+1;
+                        thisSchema.topTabs[i].image = uploadForm[m];
+                        if (aTab.audioImages!=null) {
+                            dojo.forEach(aTab.audioImages,function(aPiece) {
+                                if(aPiece.pic=="") {
+                                    return;
+                                }
+                                thisSchema.topTabs[i].audioImages[k].image = tab[i][k];
+                                topNumbers[i]++;
+                                k++;
+                            });
+                        }
+                        i++;
+                    });
+                    dojo.forEach(thisItem.bottomTabs, function(aTab) {
+                        k=0;
+                        var m= j+3;
+                        var n= j+4;
+                        thisSchema.bottomTabs[j].image = uploadForm[n];
+                        if (aTab.audioImages!=null) {
+                            dojo.forEach(aTab.audioImages,function(aPiece) {
+                                if(aPiece.pic=="") {
+                                    return;
+                                }
+                                thisSchema.bottomTabs[j].audioImages[k].image = tab[m][k];
+                                bottomNumbers[j]++;
+                                k++;
+                            });
+                        }
+                        j++;
+                    });
+                    tabStep(ids,1,"Top",ulList);
+                    tabStep(ids,2,"Bottom",ulList);  
+                    dojo.byId("form1"+1).value = topNumbers[0];
+                    dojo.byId("form1"+2).value = topNumbers[1];
+                    dojo.byId("form1"+3).value = topNumbers[2];
+                    dojo.byId("form1"+4).value = bottomNumbers[0];
+                    dojo.byId("form1"+5).value = bottomNumbers[1];
+                    dojo.byId("form1"+6).value = bottomNumbers[2];  
+                    for (var i=1; i<7; i++) {
+                        if (dojo.byId("form1"+i).value!=0) {
+                            dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode,i);
+                            dojo.byId("form1"+i).disabled = "";
+                            dojo.byId("form1"+i).className = "";
+                        }
+                    }
                 }
             });
         });
