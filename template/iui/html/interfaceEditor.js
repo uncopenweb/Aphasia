@@ -528,7 +528,8 @@
     
     var uploadForm = ["",false, false, false, false, false, false];
     var tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
-    
+    var uploadForm2 = ["",false, false, false, false, false, false];
+    var tab2 = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
     
     //only need the URL, originalName, tags, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
@@ -849,11 +850,13 @@
                     for (var i=1; i<7; i++) {
                         if (item.description == "uploadForm"+i) {
                             uploadForm[i] = item.URL;
+                            uploadForm2[i] = item.originalName;
                             break;
                         }
                         for (var j=0; j<9; j++) {
                             if (item.description == "tab"+i+j) {
                                 tab[i][j] = item.URL;
+                                tab2[i][j] = item.originalName;
                                 break;
                             }
                         }
@@ -868,13 +871,13 @@
                     dojo.forEach(thisItem.topTabs, function(aTab) {
                         k=0;
                         var m=i+1;
-                        thisSchema.topTabs[i].image = uploadForm[m];
+                        thisSchema.topTabs[i].image = uploadForm2[m];
                         if (aTab.audioImages!=null) {
                             dojo.forEach(aTab.audioImages,function(aPiece) {
                                 if(aPiece.pic=="") {
                                     return;
                                 }
-                                thisSchema.topTabs[i].audioImages[k].image = tab[i][k];
+                                thisSchema.topTabs[i].audioImages[k].image = tab2[i][k];
                                 topNumbers[i]++;
                                 k++;
                             });
@@ -885,13 +888,13 @@
                         k=0;
                         var m= j+3;
                         var n= j+4;
-                        thisSchema.bottomTabs[j].image = uploadForm[n];
+                        thisSchema.bottomTabs[j].image = uploadForm2[n];
                         if (aTab.audioImages!=null) {
                             dojo.forEach(aTab.audioImages,function(aPiece) {
                                 if(aPiece.pic=="") {
                                     return;
                                 }
-                                thisSchema.bottomTabs[j].audioImages[k].image = tab[m][k];
+                                thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
                                 bottomNumbers[j]++;
                                 k++;
                             });
