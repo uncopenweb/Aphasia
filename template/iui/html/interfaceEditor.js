@@ -950,7 +950,7 @@
             }
         }
         else {
-            var text2 = dojo.create("a",{href:uploadForm[j],innerHTML:uploadForm[j]},tab1);
+            var text2 = dojo.create("a",{id:"form1"+k, href:uploadForm[j],innerHTML:uploadForm[j]},tab1);
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab1);
