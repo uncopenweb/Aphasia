@@ -772,7 +772,7 @@
                             k=0;
                             thisSchema.topTabs[i].nameTag = aTab.nameTag;
                             thisSchema.topTabs[i].name = "#"+aTab.nameTag;
-                            thisSchema.topTabs[i].image = aTab.image;
+                            //thisSchema.topTabs[i].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
                                     if(aPiece.pic=="") {
@@ -780,7 +780,7 @@
                                     }
                                     thisSchema.topTabs[i].audioImages[k].pic = aPiece.pic;
                                     thisSchema.topTabs[i].audioImages[k].word = aPiece.word;
-                                    thisSchema.topTabs[i].audioImages[k].image = aPiece.image;
+                                    //thisSchema.topTabs[i].audioImages[k].image = aPiece.image;
                                     thisSchema.topTabs[i].audioImages[k].phrase = aPiece.phrase;
                                     topNumbers[i]++;
                                     k++;
@@ -795,7 +795,7 @@
                             k=0;
                             thisSchema.bottomTabs[j].nameTag = aTab.nameTag;
                             thisSchema.bottomTabs[j].name = "#"+aTab.nameTag;
-                            thisSchema.bottomTabs[j].image = aTab.image;
+                            //thisSchema.bottomTabs[j].image = aTab.image;
                             if (aTab.audioImages!=null) {
                                 dojo.forEach(aTab.audioImages,function(aPiece) {
                                     if (aPiece.pic=="") {
@@ -803,7 +803,7 @@
                                     }
                                     thisSchema.bottomTabs[j].audioImages[k].pic = aPiece.pic;
                                     thisSchema.bottomTabs[j].audioImages[k].word = aPiece.word;
-                                    thisSchema.bottomTabs[j].audioImages[k].image = aPiece.image;
+                                    //thisSchema.bottomTabs[j].audioImages[k].image = aPiece.image;
                                     thisSchema.bottomTabs[j].audioImages[k].phrase = aPiece.phrase;
                                     bottomNumbers[j]++;
                                     k++;
