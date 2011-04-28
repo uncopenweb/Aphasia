@@ -1261,7 +1261,7 @@
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             else {
-                var one = theForm[j][0] = dojo.create("a",{href:tab[n][a], innerHTML:tab2[n][s], id: "contentItem"+i+j+"1"},td);
+                var one = theForm[j][0] = dojo.create("a",{href:tab[n][s], innerHTML:tab2[n][s], id: "contentItem"+i+j+"1"},td);
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             var td = dojo.create("td",{className:"contentItem"},tr);
