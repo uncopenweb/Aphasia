@@ -951,6 +951,17 @@
         }
         else {
             var text2 = dojo.create("a",{id:"form1"+k, href:uploadForm[j],innerHTML:uploadForm[j]},tab1);
+            if (text1.value.trim()!="") {
+                text2.disabled = "";
+                text2.className = "";
+            }
+            var a = dojo.create("input",{type:"button",value:"Clear", disabled:"disabled"},tab1);
+            var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab1);
+            var text3 = dojo.create("select",{id:"form1"+k, disabled:"disabled",className:"disabled"},tab1);
+            if (text2.trim()!="") {
+                text3.disabled = "";
+                text3.className = "";
+            }
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab1);
