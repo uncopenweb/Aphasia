@@ -935,10 +935,16 @@
         var label1 = dojo.create("label",{innerHTML:"Name of Tab:  "},tab1);
         var text1 = dojo.create("input",{id:"text11"+j,className:"text",value:theTab[0].nameTag},tab1);
         var label2 = dojo.create("label",{innerHTML:"&nbsp; Tab Picture: "},tab1);
-        var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab1);
+        if (uploadForm[j]==false) {
+            var text2 = dojo.create("input",{id:"text12"+k,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab1);
+        }
+        else {
+            var text2 = dojo.create("a",{href:uploadForm[j],innerHTML:uploadForm[j]},tab1);
+        }
         if (text1.value.trim()!="") {
             text2.disabled = "";
             text2.className = "";
+        }
         }
         var a = dojo.create("input",{type:"button",value:"Clear", disabled:"disabled"},tab1);
         var label3 = dojo.create("label",{innerHTML:"&nbsp; # Images for Tab: "},tab1);
