@@ -953,7 +953,7 @@
             }
         }
         else {
-            var text2 = dojo.create("a",{id:"form1"+k, href:uploadForm[j],innerHTML:uploadForm[j]},tab1);
+            var text2 = dojo.create("a",{id:"form1"+k, href:uploadForm[j],innerHTML:uploadForm2[j]},tab1);
             if (text1.value.trim()!="") {
                 text2.disabled = "";
                 text2.className = "";
