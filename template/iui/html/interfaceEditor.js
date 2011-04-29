@@ -1793,12 +1793,34 @@
             collection: 'Image',
             mode: 'crud' });
         if (j==0) {
-            var form1 = dojo.byId("uploadForm"+i);
-            form1.tags.value = anID;
-            if (form1.file.value!="") {
+            if (uploadForm[i]==false) {
+                var form1 = dojo.byId("uploadForm"+i);
+                form1.tags.value = anID;
+                if (form1.file.value!="") {
+                    def.addCallback(function(db) {
+                        db.upload({
+                            form: form1,
+                            load: function(data, ioArgs) {
+                                console.log('load', data);
+                            },
+                            error: function(msg, ioArgs) {
+                                console.log('error', msg);
+                            }
+                        });
+                    });
+                }
+            }
+        }
+        if (tab[i][j]==false) {
+            var form2 = dojo.byId("tab"+i+j);
+            if (form2==null) {
+                return;
+            }
+            form2.tags.value = anID;
+            if (form2.file.value!="") {
                 def.addCallback(function(db) {
                     db.upload({
-                        form: form1,
+                        form: form2,
                         load: function(data, ioArgs) {
                             console.log('load', data);
                         },
@@ -1808,25 +1830,7 @@
                     });
                 });
             }
-        }
-        var form2 = dojo.byId("tab"+i+j);
-        if (form2==null) {
-            return;
-        }
-        form2.tags.value = anID;
-        if (form2.file.value!="") {
-            def.addCallback(function(db) {
-                db.upload({
-                    form: form2,
-                    load: function(data, ioArgs) {
-                        console.log('load', data);
-                    },
-                    error: function(msg, ioArgs) {
-                        console.log('error', msg);
-                    }
-                });
-            });
-        }      
+        }        
     }
     
     function donePage(ids,deleteItem) {
