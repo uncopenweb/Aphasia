@@ -874,7 +874,7 @@
                         thisSchema.topTabs[i].image = uploadForm2[m];
                         if (aTab.audioImages!=null) {
                             dojo.forEach(aTab.audioImages,function(aPiece) {
-                                if(aPiece.pic=="") {
+                                if(tab2[i][k]==false) {
                                     return;
                                 }
                                 thisSchema.topTabs[i].audioImages[k].image = tab2[i][k];
@@ -892,7 +892,7 @@
                         thisSchema.bottomTabs[j].image = uploadForm2[n];
                         if (aTab.audioImages!=null) {
                             dojo.forEach(aTab.audioImages,function(aPiece) {
-                                if(aPiece.pic=="") {
+                                if(tab2[i][k]==false) {
                                     return;
                                 }
                                 thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
