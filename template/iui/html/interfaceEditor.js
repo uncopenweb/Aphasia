@@ -1811,7 +1811,7 @@
                 }
             }
         }
-        if (tab[i][j]==false) {
+        if (tab2[i][j]==false) {
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
                 return;
