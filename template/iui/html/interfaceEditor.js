@@ -1140,7 +1140,6 @@
     
     function dynamicForm(s,aTab,i) {
         var n=i-1;
-        console.log(tab[n][0]);
         var p=0;
         var second = [];
         var theForm = forms[--i];
@@ -1257,12 +1256,12 @@
             var tr = dojo.create("tr",{className:"contentRow"},table);
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Pic #"+v+": "},td);
-            if (tab[n][s]==false) {
+            if (tab[n][j]==false) {
                 var one = theForm[j][0] = dojo.create("input",{type:"file", name:"file", value:"", id: "contentItem"+i+j+"1"},td);
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             else {
-                var one = theForm[j][0] = dojo.create("a",{href:tab[n][s], innerHTML:tab2[n][s], id: "contentItem"+i+j+"1"},td);
+                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], innerHTML:tab2[n][j], id: "contentItem"+i+j+"1"},td);
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             var td = dojo.create("td",{className:"contentItem"},tr);
