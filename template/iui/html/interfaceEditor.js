@@ -1738,7 +1738,6 @@
                     // }
                 // });
             // });
-            alert(tab);
             db.then(function(data) {
                 var item = "";
                 if (thisSchema.id.trim()!="") {
@@ -1812,7 +1811,8 @@
                 }
             }
         }
-        if (tab[i][j]==false) {
+        var m=i-1;
+        if (tab[m][j]==false) {
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
                 return;
