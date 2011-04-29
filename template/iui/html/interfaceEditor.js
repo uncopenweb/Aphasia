@@ -1630,6 +1630,7 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
+                alert(tab);
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
@@ -1766,7 +1767,7 @@
                             onComplete: function() {
                                 for (var i=1; i<7; i++) {
                                     for (var j=0; j<9; j++) {
-                                        uploadPictures(i, j, ids, item._id, self);
+                                        uploadPictures(i, j, ids, item._id);
                                     }   
                                 }
                             }
@@ -1776,7 +1777,7 @@
                 else {
                     for (var i=1; i<7; i++) {
                         for (var j=0; j<9; j++) {
-                            uploadPictures(i, j, ids, thisItem._id, self);
+                            uploadPictures(i, j, ids, thisItem._id);
                         }   
                     }
                 }
@@ -1788,7 +1789,7 @@
         }
     }
     
-    function uploadPictures(i, j, ids, anID, self) {
+    function uploadPictures(i, j, ids, anID) {
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
@@ -1812,7 +1813,7 @@
                 }
             }
         }
-        if (self.tab[i][j]==false) {
+        if (tab[i][j]==false) {
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
                 return;
