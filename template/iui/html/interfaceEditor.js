@@ -1755,6 +1755,7 @@
                     item = data.newItem(thisSchema);
                 }
                 data.save();
+                var self = this;
                 if (item!="") {
                     db.then(function (data) {
                         data.fetch({
@@ -1765,7 +1766,7 @@
                             onComplete: function() {
                                 for (var i=1; i<7; i++) {
                                     for (var j=0; j<9; j++) {
-                                        uploadPictures(i, j, ids, item._id);
+                                        uploadPictures(i, j, ids, item._id, self);
                                     }   
                                 }
                             }
@@ -1775,7 +1776,7 @@
                 else {
                     for (var i=1; i<7; i++) {
                         for (var j=0; j<9; j++) {
-                            uploadPictures(i, j, ids, thisItem._id);
+                            uploadPictures(i, j, ids, thisItem._id, self);
                         }   
                     }
                 }
@@ -1787,7 +1788,7 @@
         }
     }
     
-    function uploadPictures(i, j, ids, anID) {
+    function uploadPictures(i, j, ids, anID, self) {
         var def = uow.getDatabase({
             database: 'Media',
             collection: 'Image',
@@ -1811,7 +1812,7 @@
                 }
             }
         }
-        if (tab[i][j]==false) {
+        if (self.tab[i][j]==false) {
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
                 return;
