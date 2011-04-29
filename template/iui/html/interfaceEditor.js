@@ -1630,7 +1630,6 @@
             }));
         var forwardButton2 = dojo.create("button",{innerHTML:"Confirm/Finish"},div);
             dojo.connect(forwardButton2,'onclick',dojo.hitch(this,function() {
-                alert(tab);
                 rearrange(ids);
             
                 dojo.byId(ulList[3]).className = "tabs";
@@ -1739,7 +1738,7 @@
                     // }
                 // });
             // });
-            
+            alert(tab);
             db.then(function(data) {
                 var item = "";
                 if (thisSchema.id.trim()!="") {
