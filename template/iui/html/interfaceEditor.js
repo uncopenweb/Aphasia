@@ -866,6 +866,7 @@
                     var i=0;
                     var j=0;
                     var k=0;
+                    console.log(tab[0]);
                     topNumbers=[0,0,0];
                     bottomNumbers=[0,0,0]; 
                     dojo.forEach(thisItem.topTabs, function(aTab) {
@@ -904,8 +905,6 @@
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);  
                     dojo.byId("form1"+1).value = topNumbers[0];
-                    console.log(topNumbers);
-                    console.log(bottomNumbers);
                     dojo.byId("form1"+2).value = topNumbers[1];
                     dojo.byId("form1"+3).value = topNumbers[2];
                     dojo.byId("form1"+4).value = bottomNumbers[0];
