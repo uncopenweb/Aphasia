@@ -854,7 +854,8 @@
                             break;
                         }
                         for (var j=0; j<9; j++) {
-                            if (item.description == "tab"+i+j) {
+                            var z=i-1;
+                            if (item.description == "tab"+z+j) {
                                 tab[i][j] = item.URL;
                                 tab2[i][j] = item.originalName;
                                 break;
@@ -866,7 +867,6 @@
                     var i=0;
                     var j=0;
                     var k=0;
-                    console.log(tab[0]);
                     topNumbers=[0,0,0];
                     bottomNumbers=[0,0,0]; 
                     dojo.forEach(thisItem.topTabs, function(aTab) {
