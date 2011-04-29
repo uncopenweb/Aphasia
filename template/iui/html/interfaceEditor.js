@@ -854,7 +854,7 @@
                             break;
                         }
                         for (var j=0; j<9; j++) {
-                            var z=i-1;
+                            var z=i+1;
                             if (item.description == "tab"+z+j) {
                                 tab[i][j] = item.URL;
                                 tab2[i][j] = item.originalName;
