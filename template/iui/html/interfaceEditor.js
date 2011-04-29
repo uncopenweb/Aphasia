@@ -1139,7 +1139,6 @@
     }
     
     function dynamicForm(s,aTab,i) {
-        var n=i-1;
         var p=0;
         var second = [];
         var theForm = forms[--i];
@@ -1250,7 +1249,8 @@
                 item5 = "";
             }
             var v = j+1;
-            console.log(dojo.byId("tab"+i));
+            var n = i-1;
+            console.log("n is "+n);
             var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},dojo.byId("tab"+i));
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
