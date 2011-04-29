@@ -878,6 +878,7 @@
                                     return;
                                 }
                                 thisSchema.topTabs[i].audioImages[k].image = tab2[i][k];
+                                console.log(thisSchema.topTabs[i].audioImages[k].image);
                                 topNumbers[i]++;
                                 k++;
                             });
@@ -895,6 +896,7 @@
                                     return;
                                 }
                                 thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
+                                console.log(thisSchema.topTabs[j].audioImages[k].image);
                                 bottomNumbers[j]++;
                                 k++;
                             });
