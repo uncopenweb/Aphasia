@@ -904,11 +904,13 @@
                     tabStep(ids,1,"Top",ulList);
                     tabStep(ids,2,"Bottom",ulList);  
                     dojo.byId("form1"+1).value = topNumbers[0];
+                    console.log(topNumbers);
+                    console.log(bottomNumbers);
                     dojo.byId("form1"+2).value = topNumbers[1];
                     dojo.byId("form1"+3).value = topNumbers[2];
                     dojo.byId("form1"+4).value = bottomNumbers[0];
                     dojo.byId("form1"+5).value = bottomNumbers[1];
-                    dojo.byId("form1"+6).value = bottomNumbers[2];  
+                    dojo.byId("form1"+6).value = bottomNumbers[2];                     
                     for (var i=1; i<7; i++) {
                         if (dojo.byId("form1"+i).value!=0) {
                             dynamicForm(dojo.byId("form1"+i),dojo.byId("form1"+i).parentNode,i);
