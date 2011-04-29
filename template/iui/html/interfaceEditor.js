@@ -953,7 +953,7 @@
             }
         }
         else {
-            var text2 = dojo.create("a",{id:"text12"+k, href:uploadForm[j],innerHTML:uploadForm2[j]},tab1);
+            var text2 = dojo.create("a",{id:"text12"+k, value:uploadForm2[j], href:uploadForm[j],innerHTML:uploadForm2[j]},tab1);
             if (text1.value.trim()!="") {
                 text2.disabled = "";
                 text2.className = "";
@@ -1003,7 +1003,7 @@
             }
         }
         else {
-            var text2 = dojo.create("a",{id:"text12"+k, href:uploadForm[k],innerHTML:uploadForm2[k]},tab1);
+            var text2 = dojo.create("a",{id:"text12"+k, value:uploadForm2[k], href:uploadForm[k],innerHTML:uploadForm2[k]},tab1);
             if (text1.value.trim()!="") {
                 text2.disabled = "";
                 text2.className = "";
@@ -1055,7 +1055,7 @@
             }
         }
         else {
-            var text2 = dojo.create("a",{id:"text12"+k, href:uploadForm[k],innerHTML:uploadForm2[k]},tab1);
+            var text2 = dojo.create("a",{id:"text12"+k, value:uploadForm2[k], href:uploadForm[k],innerHTML:uploadForm2[k]},tab1);
             if (text1.value.trim()!="") {
                 text2.disabled = "";
                 text2.className = "";
@@ -1261,7 +1261,7 @@
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             else {
-                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], innerHTML:tab2[n][j], id: "contentItem"+i+j+"1"},td);
+                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], value:tab2[n][j], innerHTML:tab2[n][j], id: "contentItem"+i+j+"1"},td);
                 var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             var td = dojo.create("td",{className:"contentItem"},tr);
