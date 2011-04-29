@@ -854,7 +854,6 @@
                             break;
                         }
                         for (var j=0; j<9; j++) {
-                            console.log(item.description);
                             if (item.description == "tab"+i+j) {
                                 tab[i][j] = item.URL;
                                 tab2[i][j] = item.originalName;
@@ -879,7 +878,6 @@
                                     return;
                                 }
                                 thisSchema.topTabs[i].audioImages[k].image = tab2[i][k];
-                                console.log(thisSchema.topTabs[i].audioImages[k].image);
                                 topNumbers[i]++;
                                 k++;
                             });
@@ -897,7 +895,6 @@
                                     return;
                                 }
                                 thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
-                                console.log(thisSchema.topTabs[j].audioImages[k].image);
                                 bottomNumbers[j]++;
                                 k++;
                             });
