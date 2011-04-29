@@ -526,10 +526,10 @@
     array = [];
     
     
-    var uploadForm = ["",false, false, false, false, false, false];
-    var tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
-    var uploadForm2 = ["",false, false, false, false, false, false];
-    var tab2 = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
+    uploadForm = ["",false, false, false, false, false, false];
+    tab = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
+    uploadForm2 = ["",false, false, false, false, false, false];
+    tab2 = [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]];
     
     
     //only need the URL, originalName, tags, and description (can use the "_id" from the JSON object) of the image/audio (put file into a form)
@@ -1811,7 +1811,7 @@
                 }
             }
         }
-        if (tab2[i][j]==false) {
+        if (tab[i][j]==false) {
             var form2 = dojo.byId("tab"+i+j);
             if (form2==null) {
                 return;
