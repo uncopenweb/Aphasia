@@ -1141,7 +1141,7 @@
     }
     
     function changeToFile(text,tab) {
-        text = dojo.create("input",{id:text.id,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab);
+        text = dojo.create("input",{id:text.id,type:"file", name:"file"},tab);
     }
     
     function dynamicForm(s,aTab,i) {
