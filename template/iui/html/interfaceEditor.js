@@ -1157,11 +1157,11 @@
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
                     console.log(tab[n][p]);
-                    if (aim.pic == "") {
-                        return;
-                    }
                     if (tab[n][p]!=false) {
                         aim.pic = tab2[n][p];
+                    }
+                    if (aim.pic == "") {
+                        return;
                     }
                     array.push(aim.pic);
                     array.push(aim.word);
@@ -1175,6 +1175,7 @@
                     if (aim.pic == "") {
                         return;
                     }
+                    console.log(tab[0][0]);
                     if (tab[n][p]!=false) {
                         aim.pic = tab2[n][p];
                     }
