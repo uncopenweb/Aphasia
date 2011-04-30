@@ -1175,7 +1175,7 @@
                     if (aim.pic == "") {
                         return;
                     }
-                    console.log(tab[0][0]);
+                    console.log(tab[n][0]);
                     if (tab[n][p]!=false) {
                         aim.pic = tab2[n][p];
                     }
