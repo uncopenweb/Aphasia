@@ -966,7 +966,7 @@
                 text3.disabled = "";
                 text3.className = "";
             }
-            dojo.connect(a,'onclick',dojo.hitch(this,changeToFile,text2,tab1));
+            dojo.connect(a,'onclick',dojo.hitch(this,changeToFile,text2, a, tab1));
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab1);
@@ -1140,8 +1140,9 @@
             }));
     }
     
-    function changeToFile(text,tab) {
+    function changeToFile(text,a,tab) {
         text = dojo.create("input",{id:text.id,type:"file", name:"file"},tab);
+        a = dojo.create("input",{type:"button",value:"Clear"},tab);
     }
     
     function dynamicForm(s,aTab,i) {
