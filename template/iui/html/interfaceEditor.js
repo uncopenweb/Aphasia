@@ -1264,8 +1264,8 @@
             }
             else {
                 var hidden = dojo.create("input",{type:"file", name:"file", style:{"display":"none"}},td);
-                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], value:tab2[n][j], innerHTML:tab2[n][j], id: "contentItem"+i+j+"1"},td);
-                var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
+                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], value:tab2[n][j], innerHTML:tab2[n][j]},td);
+                var a = dojo.create("button",{innerHTML:"Clear"},td);
             }
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
