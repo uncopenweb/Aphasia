@@ -966,6 +966,7 @@
                 text3.disabled = "";
                 text3.className = "";
             }
+            dojo.connect(a,'onclick',dojo.hitch(this,changeToFile,text2,tab1));
         }
         
         var name = dojo.create("input",{name:"description",value:"uploadForm"+k,style:{"display":"none"}},tab1);
@@ -1137,6 +1138,10 @@
                 //captureValue(j);
                 
             }));
+    }
+    
+    function changeToFile(text,tab) {
+        text = dojo.create("input",{id:text.id,type:"file", name:"file", disabled:"disabled",className:"disabled"},tab);
     }
     
     function dynamicForm(s,aTab,i) {
