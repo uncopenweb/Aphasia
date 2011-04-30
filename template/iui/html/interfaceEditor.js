@@ -897,7 +897,6 @@
                                 }
                                 thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
                                 bottomNumbers[j]++;
-                                console.log(bottomNumbers[j]);
                                 k++;
                             });
                         }
@@ -908,7 +907,6 @@
                     dojo.byId("form1"+1).value = topNumbers[0];
                     dojo.byId("form1"+2).value = topNumbers[1];
                     dojo.byId("form1"+3).value = topNumbers[2];
-                    console.log(bottomNumbers);
                     dojo.byId("form1"+4).value = bottomNumbers[0];
                     dojo.byId("form1"+5).value = bottomNumbers[1];
                     dojo.byId("form1"+6).value = bottomNumbers[2];                     
@@ -1158,6 +1156,7 @@
             if (i<=3) {
                 m = i-1;
                 dojo.forEach(thisSchema.topTabs[m].audioImages,function(aim) {
+                    console.log(tab[n][p]);
                     if (aim.pic == "") {
                         return;
                     }
