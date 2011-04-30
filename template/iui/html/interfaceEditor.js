@@ -1771,6 +1771,7 @@
                                         uploadPictures(i, j, ids, item._id);
                                     }   
                                 }
+                                donePage(ids);
                             }
                         });
                     });
@@ -1781,8 +1782,8 @@
                             uploadPictures(i, j, ids, thisItem._id);
                         }   
                     }
+                    donePage(ids);
                 }
-                //donePage(ids);
             });
             db.addErrback(function(msg) {
                 console.log("error occured: couldn't upload schema");
