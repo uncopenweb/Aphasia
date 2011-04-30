@@ -1234,6 +1234,7 @@
                 dojo.destroy("tab"+i+j);
             }
         }
+        console.log(second);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
