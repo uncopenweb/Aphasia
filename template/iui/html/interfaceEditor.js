@@ -907,6 +907,7 @@
                     dojo.byId("form1"+1).value = topNumbers[0];
                     dojo.byId("form1"+2).value = topNumbers[1];
                     dojo.byId("form1"+3).value = topNumbers[2];
+                    console.log(bottomNumbers);
                     dojo.byId("form1"+4).value = bottomNumbers[0];
                     dojo.byId("form1"+5).value = bottomNumbers[1];
                     dojo.byId("form1"+6).value = bottomNumbers[2];                     
@@ -1141,7 +1142,6 @@
     
     function dynamicForm(s,aTab,i) {
         var n = i-1;
-        console.log(tab[n][0]);
         var p=0;
         var second = [];
         var theForm = forms[--i];
@@ -1209,7 +1209,6 @@
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
             var theArray = arrays[--i];
-            console.log(theArray);
             i++;
             if (theArray.length <= array.length) {
                 for (j=0; j<array.length; j++) {
@@ -1234,7 +1233,6 @@
                 dojo.destroy("tab"+i+j);
             }
         }
-        console.log("i is "+i);
         for (j=0; j<s.options[s.selectedIndex].value; j++) {
             if(k<second.length) {
                 item1 = second[k++];
@@ -1253,7 +1251,6 @@
                 item5 = "";
             }
             var v = j+1;
-            console.log("n is "+n);
             var div = dojo.create("form",{method:"POST", enctype:"multipart/form-data",id:"tab"+i+j},dojo.byId("tab"+i));
             var table = dojo.create("table",{className:"contentTable"},div);
             var tr = dojo.create("tr",{className:"contentRow"},table);
