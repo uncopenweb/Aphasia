@@ -889,6 +889,7 @@
                         k=0;
                         var m= j+3;
                         var n= j+4;
+                        console.log("bottom tabs");
                         thisSchema.bottomTabs[j].image = uploadForm2[n];
                         if (aTab.audioImages!=null) {
                             dojo.forEach(aTab.audioImages,function(aPiece) {
