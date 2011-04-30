@@ -891,8 +891,8 @@
                         var n= j+4;
                         thisSchema.bottomTabs[j].image = uploadForm2[n];
                         if (aTab.audioImages!=null) {
-                            console.log(aTab.audioImages);
                             dojo.forEach(aTab.audioImages,function(aPiece) {
+                                console.log(aPiece);
                                 if(tab2[i][k]==false) {
                                     return;
                                 }
