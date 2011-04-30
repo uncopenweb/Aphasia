@@ -897,6 +897,7 @@
                                 }
                                 thisSchema.bottomTabs[j].audioImages[k].image = tab2[m][k];
                                 bottomNumbers[j]++;
+                                console.log(bottomNumbers[j]);
                                 k++;
                             });
                         }
