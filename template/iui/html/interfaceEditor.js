@@ -1208,6 +1208,7 @@
             if (dojo.byId("tab"+i) != null) {
                 array = dojo.byId("tab"+i).getElementsByTagName("input");
             }
+            console.log(array);
             var theArray = arrays[--i];
             i++;
             if (theArray.length <= array.length) {
