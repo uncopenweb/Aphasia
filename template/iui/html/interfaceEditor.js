@@ -1264,8 +1264,8 @@
             }
             else {
                 var hidden = dojo.create("input",{type:"file", name:"file", style:{"display":"none"}},td);
-                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], value:tab2[n][j], innerHTML:tab2[n][j]},td);
-                var a = dojo.create("button",{innerHTML:"Clear"},td);
+                var one = theForm[j][0] = dojo.create("a",{href:tab[n][j], value:tab2[n][j], innerHTML:tab2[n][j], id: "contentItem"+i+j+"1"},td);
+                var a = dojo.create("button",{id:"button"+j+""+i, innerHTML:"Clear"},td);
             }
             var td = dojo.create("td",{className:"contentItem"},tr);
             dojo.create("label",{innerHTML:"Word for Pic #"+v+": "},td);
@@ -1274,13 +1274,19 @@
             dojo.create("label",{innerHTML:"Phrase: "},td);
             var three = theForm[j][2] = dojo.create("input",{style:{"width":"100%"},value:item3, id: "contentItem"+i+j+"3"},td);
             if (j!=0) {
-                dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
-                dojo.byId("contentItem"+i+j+"1").className = "disabled";
-                dojo.byId("contentItem"+i+j+"2").disabled = "disabled";
-                dojo.byId("contentItem"+i+j+"2").className = "disabled";
-                dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
-                dojo.byId("contentItem"+i+j+"3").className = "disabled";
-                a.disabled = "disabled";
+                if(dojo.byId("contentItem"+i+j+"1").href==null || dojo.byId("contentItem"+i+j+"1").href=="") {
+                    dojo.byId("contentItem"+i+j+"1").disabled = "disabled";
+                    dojo.byId("contentItem"+i+j+"1").className = "disabled";
+                    a.disabled = "disabled";
+                }
+                if(dojo.byId("contentItem"+i+j+"2").href==null || dojo.byId("contentItem"+i+j+"3").href=="") {
+                    dojo.byId("contentItem"+i+j+"2").disabled = "disabled";
+                    dojo.byId("contentItem"+i+j+"2").className = "disabled";
+                }
+                if(dojo.byId("contentItem"+i+j+"2").href==null || dojo.byId("contentItem"+i+j+"3").href=="") {
+                    dojo.byId("contentItem"+i+j+"3").disabled = "disabled";
+                    dojo.byId("contentItem"+i+j+"3").className = "disabled";
+                }
             }
             var name = dojo.create("input",{name:"description",value:"tab"+i+j,style:{"display":"none"}},div);
             var tag = dojo.create("input",{name:"tags",style:{"display":"none"}},div);
